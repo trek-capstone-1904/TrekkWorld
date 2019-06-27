@@ -1,23 +1,19 @@
-// const firebase = require('firebase')
-// // Required for side-effects
-// require('firebase/firestore')
+import * as secret from './secrets'
+const firebase = require('firebase')
+// Required for side-effects
+require('firebase/firestore')
 
-// require('../secrets')
+require('./secrets')
 
-// // Initialize Cloud Firestore through Firebase
-// firebase.initializeApp({
-//   apiKey: process.env.APIKEY,
-//   authDomain: process.env.AUTHDOMAIN,
-//   projectId: process.env.PROJECTID
-// })
+// Initialize Cloud Firestore through Firebase
+firebase.initializeApp({
+  apiKey: secret.apiKey,
+  authDomain: secret.authDomain,
+  projectId: secret.projectId
+})
 
-// var db = firebase.firestore()
+var db = firebase.firestore()
+export default db;
 
-// db
-//   .collection('Users')
-//   .get()
-//   .then(querySnapshot => {
-//     querySnapshot.forEach(doc => {
-//       console.log(`${doc.id} => ${doc.data()}`)
-//     })
-//   })
+
+
