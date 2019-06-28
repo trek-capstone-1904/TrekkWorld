@@ -30,18 +30,34 @@ export class UserProfile extends Component {
     };
   }
   async componentDidMount() {
+    // let users = await db
+    //   .collection('Users')
+    //   .doc('oXLPsIdgUTNcph63Xeew')
+    //   .get();
+
+    // this.setState({ trips: Object.keys(users.data().trips) });
     let users = await db
       .collection('Users')
-      .doc('oXLPsIdgUTNcph63Xeew')
+      .doc('lQNWEtdOGjXlIdmUIRb9')
       .get();
-    // console.log(users.data().trips);
-    this.setState({ trips: Object.keys(users.data().trips) });
-    // let details = Object.values(users.data().trips)
-    // console.log(tripss);
+    console.log(Object.values(users.data().Trips));
+    let allTrips = Object.keys(users.data().Trips);
+    console.log(allTrips);
+    let info = [];
+    let trip = await db
+      .collection('Trips')
+      .doc('5ujEWhzj0Tgc4nCu5Jgq')
+      .get();
 
-    // users.forEach(trip => {
-    //   console.log(trip.data());
+    // let details = allTrips.forEach(async trip => {
+    //   let detailTrip = await db
+    //     .collection('Trips')
+    //     .doc(trip)
+    //     .get();
+    //   return info.push(detailTrip);
     // });
+
+    console.log('trip: ', trip.data());
   }
 
   render() {
