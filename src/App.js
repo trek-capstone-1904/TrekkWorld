@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import db from './firebase';
 import Routes from './Routes';
 import NavigationBar from './Components/NavigationBar';
 
