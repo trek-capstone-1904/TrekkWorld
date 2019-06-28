@@ -1,7 +1,4 @@
 import * as secret from './secrets'
-// const firebase = require('firebase')
-// // Required for side-effects
-// require('firebase/firestore')
 
 import firebase from 'firebase/app'
 import 'firebase/auth'
@@ -11,7 +8,7 @@ import 'firebase/firestore' // <- needed if using firestore
 // import 'firebase/functions' // <- needed if using httpsCallable
 // import { reduxFirestore, firestoreReducer } from 'redux-firestore' // <- needed if using firestore
 
-require('./secrets')
+
 
 // Initialize Cloud Firestore through Firebase
 firebase.initializeApp({
