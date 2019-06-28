@@ -19,7 +19,7 @@ export class TripSingle extends Component {
       .doc(this.props.match.params.tripId)
       .get();
     this.setState({ details: tripDocument.data() });
-    console.log(this.state.details);
+
     let travelers = tripDocument.data().Users;
     this.setState({ travelers: Object.values(travelers) });
   }

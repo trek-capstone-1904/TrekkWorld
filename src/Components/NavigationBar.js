@@ -10,9 +10,6 @@ export const NavigationBar = () => {
         <LinkContainer to="/user">
           <Nav.Link>User Profile</Nav.Link>
         </LinkContainer>
-        {/* <LinkContainer to="/user">
-          <Nav.Link>Trips</Nav.Link>
-        </LinkContainer> */}
       </Nav>
     </Navbar>
   );
