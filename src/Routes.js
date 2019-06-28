@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import UserProfile from './Components/UserProfile';
+import TripSingle from './Components/TripSingle';
 
 export class Routes extends Component {
   render() {
-    return <Route path="/user/" component={UserProfile} />;
+    return (
+      <Switch>
+        <Route path="/user/" component={UserProfile} />
+        <Route path="/trip/:tripId" component={TripSingle} />
+      </Switch>
+    );
   }
 }
 

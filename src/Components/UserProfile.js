@@ -26,8 +26,8 @@ export class UserProfile extends Component {
   constructor() {
     super();
     this.state = {
+      user: '',
       trips: [],
-      info: [],
     };
     this.componentDidMount = this.componentDidMount.bind(this);
   }
@@ -38,18 +38,20 @@ export class UserProfile extends Component {
     //   .get();
 
     // this.setState({ trips: Object.keys(users.data().trips) });
-    console.log('beginning of component did mount')
     let users = await db
       .collection('Users')
       .doc('lQNWEtdOGjXlIdmUIRb9')
       .get();
     console.log(
-      'Object values user.data.trips:',
-      Object.values(users.data().Trips)
+      'users.data():',
+      users.data()
     );
+    this.setState({
+      user: users.data().name
+    })
     let allTrips = Object.keys(users.data().Trips);
-    console.log('allTrips', allTrips);
-    let info = [];
+    // console.log('allTrips', allTrips);
+    let trips = [];
     // let trip = await db
     //   .collection('Trips')
     //   .doc('5ujEWhzj0Tgc4nCu5Jgq')
@@ -61,9 +63,9 @@ export class UserProfile extends Component {
     //     .doc(trip)
     //     .get();
     //   const tripData = detailTrip.data();
-    //   info.push(tripData);
+    //   trips.push(tripData);
     //   // this.setState({
-    //   //   info: this.state.info.push(detailTrip.data()),
+    //   //   trips: this.state.trips.push(detailTrip.data()),
     //   // });
     //   console.log('detailTrip.data: ', detailTrip.data());
     // });
@@ -72,28 +74,29 @@ export class UserProfile extends Component {
         .collection('Trips')
         .doc(trip)
         .get();
-      const tripData = detailTrip.data();
-      info.push(tripData);
+      const tripData = {id: trip, ...detailTrip.data()};
+      trips.push(tripData);
       // this.setState({
-      //   info: this.state.info.push(detailTrip.data()),
+      //   trips: this.state.trips.push(detailTrip.data()),
       // });
-      console.log('detailTrip.data: ', detailTrip.data());
+      // console.log('detailTrip.data: ', detailTrip.data());
     });
     await Promise.all(mapReturn)
-    console.log('just info array:', info);
+    // console.log('just trips array:', trips);
     this.setState({
-      info,
+      trips,
     });
-    console.log('this.state.info in component did mount:', this.state.info[0]);
+    // console.log('this.state.trips in component did mount:', this.state.trips[0]);
   }
 
   render() {
-    console.log('this.state.info in render:', this.state.info[1]);
+    console.log('this.state.trips in render:', this.state);
     return (
       <div>
+        <h1>Welcome, {this.state.user} </h1>
         <ListGroup>
           {this.state.trips.map(trip => (
-            <Trips key={trip} trip={trip} />
+            <Trips key={trip.id} trip={trip} />
           ))}
         </ListGroup>
       </div>
