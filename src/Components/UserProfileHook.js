@@ -17,14 +17,12 @@ export const UserProfileHook = () => {
   // if()
   return (
     <div>
-      <p>
         {error && <strong>Error: {error}</strong>}
         {loading && <span>Document: Loading...</span>}
         {/* {value && <span>Document: {JSON.stringify(value.data())}</span>} */}
         {value && Object.keys(value.data().Trips).map(trip=>(
           <TripListItem key={trip} tripId={trip}></TripListItem>
         ))}
-      </p>
     </div>
   );
 };

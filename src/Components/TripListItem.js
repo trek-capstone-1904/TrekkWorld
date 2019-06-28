@@ -7,14 +7,14 @@ export const TripListItem = props => {
     valueListenOptions: { includeMetadataChanges: true },
   });
 
-  console.log(value && value.data());
+  // console.log(value && value.data());
   // if()
   return (
     <>
       {error && <strong>Error: {error}</strong>}
       {loading && <span>Document: Loading...</span>}
       {/* {value && <span>Document: {JSON.stringify(value.data())}</span>} */}
-      {value && <span>{value.data().Name}</span>}
+      {value && <p>{value.data().Name}</p>}
     </>
   );
 };
