@@ -10,6 +10,7 @@ import 'firebase/firestore' // <- needed if using firestore
 
 
 
+
 // Initialize Cloud Firestore through Firebase
 firebase.initializeApp({
   apiKey: secret.apiKey,
