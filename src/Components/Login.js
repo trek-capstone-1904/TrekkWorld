@@ -1,7 +1,7 @@
 import React from 'react'
 import db from '../firebase';
 import firebase from 'firebase/app'
-import firebaseui from 'firebaseui'
+import * as firebaseui from 'firebaseui'
 import StyleFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
 
 
@@ -11,6 +11,7 @@ import StyleFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
 // const uiConfig = {
 //   sign
 // }
+var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
 export const Login = () => {
 
@@ -41,7 +42,6 @@ export const Login = () => {
   };
 
   // Initialize the FirebaseUI Widget using Firebase.
-  var ui = new firebaseui.auth.AuthUI(firebase.auth());
   // The start method will wait until the DOM is loaded.
   ui.start('#firebaseui-auth-container', uiConfig);
 

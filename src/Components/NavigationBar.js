@@ -10,6 +10,9 @@ export const NavigationBar = () => {
         <LinkContainer to="/user">
           <Nav.Link>User Profile</Nav.Link>
         </LinkContainer>
+        <LinkContainer to="/login">
+          <Nav.Link>Log In</Nav.Link>
+        </LinkContainer>
       </Nav>
     </Navbar>
   );
