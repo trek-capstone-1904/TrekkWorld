@@ -20,7 +20,7 @@ export class TripSingle extends Component {
       .get();
     this.setState({ details: tripDocument.data() });
 
-    let travelers = tripDocument.data().Users;
+    let travelers = tripDocument.data().users;
     this.setState({ travelers: Object.values(travelers) });
   }
   render() {
@@ -28,7 +28,7 @@ export class TripSingle extends Component {
     return (
       <div>
         <h2>{this.state.details.Name}</h2>
-        <p>Location: {this.state.details.Location}</p>
+        <p>Location: {this.state.details.locations}</p>
         <p>Travelers: {this.state.travelers}</p>
         <p>Id {tripId}</p>
       </div>
