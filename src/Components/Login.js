@@ -41,6 +41,13 @@ export const Login = () => {
     }
   };
 
+  if(firebaseui.auth.AuthUI.getInstance()) {
+    const ui = firebaseui.auth.AuthUI.getInstance()
+    ui.start('#firebaseui-auth-container', uiConfig)
+  } else {
+    const ui = new firebaseui.auth.AuthUI(firebase.auth())
+    ui.start('#firebaseui-auth-container', uiConfig)
+  }
   // Initialize the FirebaseUI Widget using Firebase.
   // The start method will wait until the DOM is loaded.
   ui.start('#firebaseui-auth-container', uiConfig);
