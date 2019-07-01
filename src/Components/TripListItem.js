@@ -16,9 +16,9 @@ export const TripListItem = props => {
       {value && (
         <ListGroup.Item>
           <Link to={`/trip/${props.tripId}`}>
-            <h3>{value.data().Name}</h3>
+            <h3>{value.data().tripName}</h3>
           </Link>
-          {Object.entries(value.data().Users).map(user => (
+          {Object.entries(value.data().users).map(user => (
             <p key={user[0]}>{user[1]}</p>
           ))}
         </ListGroup.Item>
