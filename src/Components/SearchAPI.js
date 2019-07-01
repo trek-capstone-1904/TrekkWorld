@@ -4,7 +4,7 @@ import SearchAPICard from './SearchAPICard';
 
 function useFetch(url, defaultData) {
   const [data, updateData] = useState(defaultData);
-  console.log('Hit Query')
+  console.log('Hit Query');
   useEffect(() => {
     async function fetchData() {
       const resp = await fetch(url);
@@ -28,28 +28,48 @@ function fakeData(type) {
 }
 
 function useFetchSights(city, country) {
-  const query = `https://www.triposo.com/api/20181213/poi.json?tag_labels=eatingout|sightseeing&location_id=${city}&countrycode=${country}&order_by=-score&count=10&fields=snippet,id,name,location_id,score,tag_labels,coordinates&account=${
+  const initials = {
+    Colombia: 'CO',
+    France: 'FR',
+    Peru: 'PE',
+    Chile: 'CL',
+    Australia: 'AU',
+    Korea: 'KR',
+    Egypt: 'EG',
+  };
+  const query = `https://www.triposo.com/api/20181213/poi.json?tag_labels=eatingout|sightseeing&location_id=${city}&countrycode=${initials[country]}&order_by=-score&count=10&fields=snippet,id,name,location_id,score,tag_labels,coordinates&account=${
     secret.triposoAccount
   }&token=${secret.triposoToken}`;
 
   // //Uncomment this to use actual query
-  // return useFetch(query, {});
+  return useFetch(query, {});
   //To use saved json file of France Query
-  const type = 'sights';
-  return fakeData(type);
+  // const type = 'sights';
+  // return fakeData(type);
 }
 
 function useFetchCities(country) {
-  const query = `https://www.triposo.com/api/20181213/location.json?tag_labels=city&countrycode=${country}&order_by=-score&count=7&&fields=name,id,snippet,intro,score&account=${
+  const initials = {
+    Colombia: 'CO',
+    France: 'FR',
+    Peru: 'PE',
+    Chile: 'CL',
+    Australia: 'AU',
+    Korea: 'KR',
+    Egypt: 'EG',
+  };
+  const query = `https://www.triposo.com/api/20181213/location.json?tag_labels=city&countrycode=${
+    initials[country]
+  }&order_by=-score&count=7&&fields=name,id,snippet,intro,score&account=${
     secret.triposoAccount
   }&token=${secret.triposoToken}`;
 
   // /*UNCOMMENT TO USE REAL DATA*/
-  // return useFetch(query, {});
+  return useFetch(query, {});
   ///////////////////////////////////////
   // /*COMMENT OUT TO USE REAL DATA*/
-  const type = 'cities';
-  return fakeData(type);
+  // const type = 'cities';
+  // return fakeData(type);
 }
 
 export const SearchAPI = props => {
@@ -68,12 +88,16 @@ export const SearchAPI = props => {
       {/* {sightsToSee.results &&
         sightsToSee.results.map(sight => <p key={sight.id}>{sight.name}</p>)} */}
       {sightsToSee.results &&
-        sightsToSee.results.map(sight => <SearchAPICard key={sight.id} sight={sight} type="sights"/>)}
+        sightsToSee.results.map(sight => (
+          <SearchAPICard key={sight.id} sight={sight} type="sights" />
+        ))}
       <h4>Popular Cities</h4>
       {/* {popularCities.results &&
         popularCities.results.map(sight => <p key={sight.id}>{sight.name}</p>)} */}
       {popularCities.results &&
-        popularCities.results.map(sight => <SearchAPICard key={sight.id} sight={sight} type="city"/>)}
+        popularCities.results.map(sight => (
+          <SearchAPICard key={sight.id} sight={sight} type="city" />
+        ))}
     </div>
   );
 };

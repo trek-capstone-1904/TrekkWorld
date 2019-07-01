@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Jumbotron, Form, Button } from 'react-bootstrap';
 import styles from './TripPlanning.module.css';
-import { SearchAPI } from './index.js';
+import { SearchAPI, TripSearch } from './index.js';
 
 export const TripPlanning = () => {
   const [city, setCity] = useState('');
@@ -54,13 +54,13 @@ export const TripPlanning = () => {
               onChange={handleChange}
             >
               <option value="Select...">Select...</option>
-              <option value="FR">France</option>
-              <option value="PE">Peru</option>
-              <option value="CL">Chile</option>
-              <option value="AU">Australia</option>
-              <option value="CO">Colombia</option>
-              <option value="KO">Korea</option>
-              <option value="EG">Egypt</option>
+              <option value="France">France</option>
+              <option value="Peru">Peru</option>
+              <option value="Chile">Chile</option>
+              <option value="Australia">Australia</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Korea">Korea</option>
+              <option value="Egypt">Egypt</option>
             </Form.Control>
           </Form.Group>
           <Button variant="primary" type="submit">
@@ -71,6 +71,7 @@ export const TripPlanning = () => {
       <div className={styles.searchResults}>
         <div className={styles.placeholderTripSearch}>
           <h2>Trips</h2>
+          {submitted && <TripSearch city={city} />}
         </div>
         <div className={styles.searchAPI}>
           <h2>Things to Do</h2>
