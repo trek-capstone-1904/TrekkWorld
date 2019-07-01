@@ -20,10 +20,10 @@ function useFetchSights(location) {
   // const query = `https://www.triposo.com/api/20181213/poi.json?tag_labels=eatingout|sightseeing&location_id=Paris&countrycode=${location}&order_by=-score&count=10&fields=snippet,id,name,location_id,score,tag_labels,coordinates&account=${
   //   secret.triposoAccount
   // }&token=${secret.triposoToken}`;
-  let locationArr= location.split(',');
+  let locationArr = location.split(',');
   let city = locationArr[0];
   let country = locationArr[1];
-  console.log(locationArr)
+  console.log(locationArr);
   const query = `https://www.triposo.com/api/20181213/poi.json?tag_labels=eatingout|sightseeing&location_id=${city}&countrycode=${country}&order_by=-score&count=10&fields=snippet,id,name,location_id,score,tag_labels,coordinates&account=${
     secret.triposoAccount
   }&token=${secret.triposoToken}`;
@@ -32,7 +32,7 @@ function useFetchSights(location) {
 
 export const SearchAPI = () => {
   const [hasError, setErrors] = useState({});
-  const [location, setLocation] = useState("Paris,FR");
+  const [location, setLocation] = useState('Paris,FR');
   const [sights, setSights] = useState({});
   const { results } = useFetchSights(location);
 
