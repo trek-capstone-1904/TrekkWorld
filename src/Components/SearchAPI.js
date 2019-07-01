@@ -4,7 +4,7 @@ import SearchAPICard from './SearchAPICard';
 
 function useFetch(url, defaultData) {
   const [data, updateData] = useState(defaultData);
-
+  console.log('Hit Query')
   useEffect(() => {
     async function fetchData() {
       const resp = await fetch(url);

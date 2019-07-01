@@ -9,7 +9,7 @@ export const TripPlanning = () => {
   const [submitted, setSubmit] = useState(false);
 
   const handleChange = (evt, type) => {
-    console.log(evt.currentTarget.name);
+    setSubmit(false);
     if (evt.currentTarget.name === 'city') {
       setCity(evt.target.value);
     } else if (evt.currentTarget.name === 'country') {
@@ -22,7 +22,7 @@ export const TripPlanning = () => {
     if (country === 'Select...' || country === '') {
       alert('Please select a country');
     } else {
-      alert(`Submitting city: ${city}, ${country}`);
+      // alert(`Submitting city: ${city}, ${country}`);
       setSubmit('true');
     }
   };
@@ -42,7 +42,6 @@ export const TripPlanning = () => {
               type="text"
               placeholder="Enter city i.e. Paris"
             />
-            <input type="text"></input>
           </Form.Group>
           <Form.Group>
             <Form.Label className={styles.tripPlanningLabel}>
