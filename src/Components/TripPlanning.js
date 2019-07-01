@@ -68,6 +68,7 @@ export const TripPlanning = () => {
           </Button>
         </Form>
       </Jumbotron>
+      {/* TODO: For now search requires a city and uses city to search locations. Make it flexible so city is optional ALSO fix that city must be capital for it to work*/}
       <div className={styles.searchResults}>
         <div className={styles.placeholderTripSearch}>
           <h2>Trips</h2>
