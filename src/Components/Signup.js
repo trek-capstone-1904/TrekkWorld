@@ -1,16 +1,26 @@
 //using hooks and firebase auth
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form, Button, Input } from "react-bootstrap";
+import firebase from 'firebase/app'
+import 'firebase/auth'
+import db from "../firebase";
 
 export const Signup = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+
+useEffect(() => console.log("state", [email]))
 
   return (
     <div>
       <Form>
+      <Form.Group controlId="formBasicName">
+          <Form.Label>Name</Form.Label>
+          <Form.Control type="name" placeholder="Enter email" value={name} onChange={e => setName(e.target.value)}/>
+        </Form.Group>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" value={email} onChange={e => setEmail(e.target.value)}/>
@@ -32,7 +42,15 @@ export const Signup = () => {
 
   async function onSignUp(){
     try{
-      await firebase.register(name, email, password)
+      console.log(useState)
+      await firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+      })
+
+      //db.collection("Users").add();
 
 			//props.history.replace('/')
     } catch (error){
