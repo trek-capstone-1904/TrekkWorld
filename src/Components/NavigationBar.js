@@ -4,7 +4,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 export const NavigationBar = () => {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="dark" variant="dark" sticky="top">
       <Navbar.Brand>Trekk</Navbar.Brand>
       <Nav className="mr-auto">
         <LinkContainer to="/user">
