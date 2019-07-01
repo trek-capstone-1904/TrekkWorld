@@ -1,0 +1,259 @@
+{
+  "results": [
+    {
+      "name": "Louvre",
+      "tag_labels": [
+        "subtype-Art_museums",
+        "topattractions",
+        "museums",
+        "district-1st_arrondissement",
+        "subtype-Archaeological_museums",
+        "subtype-History_museums",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.9864575963372,
+      "coordinates": {
+        "latitude": 48.86083852377311,
+        "longitude": 2.3363326891938296
+      },
+      "snippet": "Only at the start of the twentieth century did its role as an art treasury begin.The Louvre's collections include western art from the medieval period to 1848 and are organised into different departments. paintings, Egyptian antiquities, Greek/Roman/Etruscan antiquities, Near Eastern antiquities, sculpture, decorative arts, Islamic arts, prints & drawings, and the Pavillon de l’Horloge (once the royal palace).The departments are color coded to help you navigate what is a vast and potentially confusing space.",
+      "intro": "The Louvre or the Louvre Museum , is the world's largest art museum and a historic monument in Paris, France. A central landmark of the city, it is located on the Right Bank of the Seine in the city's 1st arrondissement (district or ward). Approximately 38,000 objects from prehistory to the 21st century are exhibited over an area of 72,735 square metres (782,910 square feet). In 2017, the Louvre was the world's most visited art museum, receiving 8.1 million visitors.\nThe museum is housed in the Louvre Palace, originally built as a fortress in the late 12th to 13th century under Philip II. Remnants of the fortress are visible in the basement of the museum. Due to the urban expansion of the city, the fortress eventually lost its defensive function and, in 1546, was converted by Francis I into the main residence of the French Kings. The building was extended many times to form the present Louvre Palace. In 1682, Louis XIV chose the Palace of Versailles for his household, leaving the Louvre primarily as a place to display the royal collection, including, from 1692, a collection of ancient Greek and Roman sculpture. In 1692, the building was occupied by the Académie des Inscriptions et Belles-Lettres and the Académie Royale de Peinture et de Sculpture, which in 1699 held the first of a series of salons. The Académie remained at the Louvre for 100 years. During the French Revolution, the National Assembly decreed that the Louvre should be used as a museum to display the nation's masterpieces.\nThe museum opened on 10 August 1793 with an exhibition of 537 paintings, the majority of the works being royal and confiscated church property. Because of structural problems with the building, the museum was closed in 1796 until 1801. The collection was increased under Napoleon and the museum was renamed Musée Napoléon, but after Napoleon's abdication many works seized by his armies were returned to their original owners. The collection was further increased during the reigns of Louis XVIII and Charles X, and during the Second French Empire the museum gained 20,000 pieces. Holdings have grown steadily through donations and bequests since the Third Republic. The collection is divided among eight curatorial departments: Egyptian Antiquities; Near Eastern Antiquities; Greek, Etruscan and Roman Antiquities; Islamic Art; Sculpture; Decorative Arts; Paintings; Prints and Drawings.",
+      "eatingout_score": null,
+      "score": 9.9864575963372,
+      "location_id": "Paris",
+      "id": "T__34e2331607b3"
+    },
+    {
+      "name": "Les Deux Magots",
+      "tag_labels": [
+        "coffee",
+        "cuisine-Dessert",
+        "cuisine-Boule",
+        "cuisine-Wine",
+        "cuisine-Omelette",
+        "district-6th_arrondissement",
+        "poitype-Cafe",
+        "cuisine-Croissant",
+        "lunch",
+        "dinner",
+        "poitype-Restaurant",
+        "district-saint-germain-des-prc3a9s",
+        "eatingout",
+        "breakfast",
+        "feature-Outdoor_seating"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 48.854069,
+        "longitude": 2.3330634
+      },
+      "snippet": "Another famous literary café, right next door to its great rival Café de Flore.",
+      "intro": "Les Deux Magots is a famous café in the Saint-Germain-des-Prés area of Paris, France. It once had a reputation as the rendezvous of the literary and intellectual élite of the city. It is now a popular tourist destination. Its historical reputation is derived from the patronage of Surrealist artists, intellectuals such as Simone de Beauvoir and Jean-Paul Sartre, and young writers, such as Ernest Hemingway. Other patrons included Albert Camus, Pablo Picasso, James Joyce, Bertolt Brecht, Julia Child, and the American writers James Baldwin, Alison Machin, Chester Himes, Charles Sutherland, and Richard Wright.\nThe Deux Magots literary prize has been awarded to a French novel every year since 1933.",
+      "eatingout_score": 9.97009377207274,
+      "score": 9.97009377207274,
+      "location_id": "Paris",
+      "id": "N__251699775"
+    },
+    {
+      "name": "Eiffel Tower",
+      "tag_labels": [
+        "district-7th_arrondissement",
+        "architectural_style-high-tech_architecture",
+        "topattractions",
+        "poitype-Tower",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.96919766400221,
+      "coordinates": {
+        "latitude": 48.8585238,
+        "longitude": 2.2939989
+      },
+      "snippet": "A symbol of Paris and one of the most famous landmarks in the world.",
+      "intro": "The Eiffel Tower is a wrought iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower.\nConstructed from 1887–89 as the entrance to the 1889 World's Fair, it was initially criticized by some of France's leading artists and intellectuals for its design, but it has become a global cultural icon of France and one of the most recognisable structures in the world. The Eiffel Tower is the most-visited paid monument in the world; 6.91 million people ascended it in 2015.\nThe tower is 324m tall, about the same height as an 81- building, and the tallest structure in Paris. Its base is square, measuring 125m on each side. During its construction, the Eiffel Tower surpassed the Washington Monument to become the tallest man-made structure in the world, a title it held for 41 years until the Chrysler Building in New York City was finished in 1930. Due to the addition of a broadcasting aerial at the top of the tower in 1957, it is now taller than the Chrysler Building by 17ft. Excluding transmitters, the Eiffel Tower is the second tallest structure in France after the Millau Viaduct.\nThe tower has three levels for visitors, with restaurants on the first and second levels. The top level's upper platform is 276m above the ground – the highest observation deck accessible to the public in the European Union. Tickets can be purchased to ascend by stairs or lift to the first and second levels. The climb from ground level to the first level is over 300 steps, as is the climb from the first level to the second. Although there is a staircase to the top level, it is usually accessible only by lift.",
+      "eatingout_score": null,
+      "score": 9.96919766400221,
+      "location_id": "Paris",
+      "id": "W__5013364"
+    },
+    {
+      "name": "Jardin du Luxembourg",
+      "tag_labels": [
+        "poitype-Park",
+        "district-6th_arrondissement",
+        "architectural_style-vernacular_architecture",
+        "topattractions",
+        "relaxinapark",
+        "architectural_style-renaissance_architecture",
+        "character-Kid_friendly",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.94844362245753,
+      "coordinates": {
+        "latitude": 48.84662674047892,
+        "longitude": 2.3358738985034275
+      },
+      "snippet": "The Jardin du Luxembourg, also known in English as the Luxembourg Gardens, is located in the 6th arrondissement of Paris, France.",
+      "intro": "The Jardin du Luxembourg, also known in English as the Luxembourg Gardens, is located in the 6th arrondissement of Paris, France. It was created beginning in 1612 by Marie de' Medici, the widow of King Henry IV of France, for a new residence she constructed, the Luxembourg Palace. The garden today is owned by the French Senate, which meets in the Palace. It covers 23 hectares and is known for its lawns, tree-lined promenades, flowerbeds, model sailboats on its circular basin, and picturesque Medici Fountain, built in 1620.",
+      "eatingout_score": null,
+      "score": 9.94844362245753,
+      "location_id": "Paris",
+      "id": "Jardin_du_Luxembourg"
+    },
+    {
+      "name": "Le Procope",
+      "tag_labels": [
+        "cuisine-French_onion_soup",
+        "coffee",
+        "cuisine-Dessert",
+        "cuisine-French",
+        "cuisine-Wine",
+        "cuisine-Seafood",
+        "cuisine-Steak",
+        "poitype-Cafe",
+        "character-Romantic",
+        "cuisine-Coq_au_vin",
+        "lunch",
+        "dinner",
+        "poitype-Restaurant",
+        "eatingout",
+        "district-6th_arrondissement",
+        "cuisine-Italian",
+        "cuisine-Escargot"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 48.8530641,
+        "longitude": 2.3387326
+      },
+      "snippet": "Good wines in a very nice atmosphere.",
+      "intro": "The Café Procope, in rue de l'Ancienne Comédie, 6th arrondissement, is called the oldest restaurant of Paris in continuous operation. It was opened in 1686 by the Sicilian chef Francesco Procopio dei Coltelli, with a slyly subversive name adopted from the historian Procopius, whose Secret History, the Anekdota, long known of, had been discovered in the Vatican Library and published for the first time ever in 1623: it told the scandals of Emperor Justinian, his consort and his court.",
+      "eatingout_score": 9.9481175887566,
+      "score": 9.9481175887566,
+      "location_id": "Paris",
+      "id": "CafC3A9_Procope"
+    },
+    {
+      "name": "Arc de Triomphe",
+      "tag_labels": [
+        "architectural_style-neoclassical_architecture",
+        "architectural_style-empire_architecture",
+        "district-17th_arrondissement",
+        "topattractions",
+        "person_architect-jean-franc3a7ois-thc3a9rc3a8se_chalgrin",
+        "poitype-Arch",
+        "architectural_style-ancient_roman_architecture",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.94122998837688,
+      "coordinates": {
+        "latitude": 48.8737846,
+        "longitude": 2.2950252
+      },
+      "snippet": "This iconic triumphal arch forms the focus of the main east-west road axis of Paris, running between the Louvre and the Grande Arche de la Défense in the west.",
+      "intro": "The Arc de Triomphe de l'Étoile is one of the most famous monuments in Paris, standing at the western end of the Champs-Élysées at the center of Place Charles de Gaulle, formerly named Place de l'Étoile — the étoile or \"star\" of the juncture formed by its twelve radiating avenues. \nThe Arc de Triomphe should not be confused with a smaller arch, the Arc de Triomphe du Carrousel, which stands west of the Louvre. The Arc de Triomphe honours those who fought and died for France in the French Revolutionary and Napoleonic Wars, with the names of all French victories and generals inscribed on its inner and outer surfaces. Beneath its vault lies the Tomb of the Unknown Soldier from World War I.\nAs the central cohesive element of the Axe historique (historic axis, a sequence of monuments and grand thoroughfares on a route running from the courtyard of the Louvre to the Grande Arche de la Défense), the Arc de Triomphe was designed by Jean Chalgrin in 1806, and its iconographic program pits heroically nude French youths against bearded Germanic warriors in chain mail. It set the tone for public monuments with triumphant patriotic messages.\nInspired by the Arch of Titus in Rome, Italy, the Arc de Triomphe has an overall height of 50m, width of 45m, and depth of 22m, while its large vault is 29.19m high and 14.62m wide. The smaller transverse vaults are 18.68m high and 8.44m wide. Three weeks after the Paris victory parade in 1919 (marking the end of hostilities in World War I), Charles Godefroy flew his Nieuport biplane under the arch's primary vault, with the event captured on newsreel.\nParis's Arc de Triomphe was the tallest triumphal arch until the completion of the Monumento a la Revolución in Mexico City in 1938, which is 67m high. The Arch of Triumph in Pyongyang, completed in 1982, is modelled on the Arc de Triomphe and is slightly taller at 60m.",
+      "eatingout_score": null,
+      "score": 9.94122998837688,
+      "location_id": "Paris",
+      "id": "W__69686753"
+    },
+    {
+      "name": "Café de Flore",
+      "tag_labels": [
+        "coffee",
+        "cuisine-Dessert",
+        "cuisine-Quiche",
+        "district-6th_arrondissement",
+        "cuisine-Wine",
+        "cuisine-Omelette",
+        "district-saint-germain-des-prc3a9s",
+        "poitype-Cafe",
+        "cuisine-Croissant",
+        "lunch",
+        "dinner",
+        "cuisine-Sandwich",
+        "poitype-Restaurant",
+        "eatingout",
+        "breakfast",
+        "feature-Outdoor_seating"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 48.8541444,
+        "longitude": 2.3326307
+      },
+      "snippet": "This café is famous as the favored coffee and smoking venue for the Surrealists during the 1920s and '30s, the Existentialists in the 1940s and '50s, and still attracts an artistic / literati crowd...",
+      "intro": "The Café de Flore is one of the oldest coffeehouses in Paris, celebrated for its famous clientele, which in the past included high-profile writers and philosophers. It is located at the corner of Boulevard Saint-Germain and Rue Saint-Benoît, in Saint-Germain-des-Prés in the 6th arrondissement. The nearest underground station is Saint-Germain-des-Prés, served by line 4 of Paris Métro. The coffeehouse still remains a popular hang-out spot for celebrities and its status attracts numerous tourists.",
+      "eatingout_score": 9.93540910798119,
+      "score": 9.93540910798119,
+      "location_id": "Paris",
+      "id": "N__251699776"
+    },
+    {
+      "name": "Notre-Dame de Paris",
+      "tag_labels": [
+        "district-c38ele_de_la_citc3a9",
+        "poitype-Church",
+        "topattractions",
+        "architectural_style-gothic_architecture",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.93410553869139,
+      "coordinates": {
+        "latitude": 48.8533658,
+        "longitude": 2.3493036
+      },
+      "snippet": "The early Gothic Cathédrale de Notre Dame has a 12th century design but wasn't completed until the 14th.",
+      "intro": "Notre-Dame de Paris also known as Notre-Dame Cathedral or simply Notre-Dame, is a medieval Catholic cathedral on the Île de la Cité in the fourth arrondissement of Paris, France. The cathedral is widely considered to be one of the finest examples of French Gothic architecture, and it is among the largest and best-known church buildings in the Catholic Church in France, and in the world. The naturalism of its sculptures and stained glass serve to contrast it with earlier Romanesque architecture.\nAs the cathedral of the Archdiocese of Paris, Notre-Dame contains the cathedra of the Archbishop of Paris, currently Michel Aupetit. The cathedral treasury contains a reliquary, which houses some of Catholicism's most important relics, including the purported Crown of Thorns, a fragment of the True Cross, and one of the Holy Nails.\nIn the 1790s, Notre-Dame suffered desecration in the radical phase of the French Revolution when much of its religious imagery was damaged or destroyed. An extensive restoration supervised by Eugène Viollet-le-Duc began in 1845. A project of further restoration and maintenance began in 1991.",
+      "eatingout_score": null,
+      "score": 9.93410553869139,
+      "location_id": "Paris",
+      "id": "W__49360101"
+    },
+    {
+      "name": "Champ de Mars",
+      "tag_labels": [
+        "district-7th_arrondissement",
+        "poitype-Park",
+        "topattractions",
+        "relaxinapark",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.92268064212042,
+      "coordinates": {
+        "latitude": 48.856046249229394,
+        "longitude": 2.2979231216834686
+      },
+      "snippet": "The Champ de Mars is a large public greenspace in Paris, France, located in the seventh arrondissement, between the Eiffel Tower to the northwest and the École Militaire to the southeast.",
+      "intro": "The Champ de Mars is a large public greenspace in Paris, France, located in the seventh arrondissement, between the Eiffel Tower to the northwest and the École Militaire to the southeast. The park is named after the Campus Martius (\"Mars Field\") in Rome, a tribute to the Latin name of the Roman God of war. The name also alludes to the fact that the lawns here were formerly used as drilling and marching grounds by the French military.\nThe nearest Métro stations are La Motte-Picquet–Grenelle, École Militaire, and Champ de Mars-Tour Eiffel, an RER suburban-commuter-railway station. A disused station, Champ de Mars is also nearby.",
+      "eatingout_score": null,
+      "score": 9.92268064212042,
+      "location_id": "Paris",
+      "id": "W__4208595"
+    },
+    {
+      "name": "Sacré-Cœur",
+      "tag_labels": [
+        "district-18th_arrondissement",
+        "topattractions",
+        "architectural_style-neo-byzantine_architecture",
+        "architectural_style-romanesque_revival_architecture",
+        "poitype-Church",
+        "architectural_style-eclectic_architecture",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.89877926084073,
+      "coordinates": {
+        "latitude": 48.886078,
+        "longitude": 2.3427355
+      },
+      "snippet": "This wedding cake-white church rises visibly above the north part of Paris.",
+      "intro": "The Basilica of the Sacred Heart of Paris, commonly known as Sacré-Cœur Basilica and often simply Sacré-Cœur is a Roman Catholic church and minor basilica, dedicated to the Sacred Heart of Jesus, in Paris, France. A popular landmark, the basilica is located at the summit of the butte Montmartre, the highest point in the city. Sacré-Cœur is a double monument, political and cultural, both a national penance for the defeat of France in the 1870 Franco-Prussian War and the socialist Paris Commune of 1871 crowning its most rebellious neighborhood, and an embodiment of conservative moral order, publicly dedicated to the Sacred Heart of Jesus, which was an increasingly popular vision of a loving and sympathetic Christ.\nThe basilica was designed by Paul Abadie. Construction began in 1875 and was completed in 1914. The basilica was consecrated after the end of World War I in 1919.",
+      "eatingout_score": null,
+      "score": 9.89877926084073,
+      "location_id": "Paris",
+      "id": "W__23762981"
+    }
+  ],
+  "estimated_total": 4,
+  "more": true
+}

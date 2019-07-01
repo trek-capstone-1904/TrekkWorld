@@ -23,8 +23,8 @@ export const TripPlanning = () => {
       alert('Please select a country');
     } else {
       alert(`Submitting city: ${city}, ${country}`);
+      setSubmit('true');
     }
-    setSubmit('true');
   };
 
   console.log(submitted);
@@ -61,6 +61,7 @@ export const TripPlanning = () => {
               <option value="AU">Australia</option>
               <option value="CO">Colombia</option>
               <option value="KO">Korea</option>
+              <option value="EG">Egypt</option>
             </Form.Control>
           </Form.Group>
           <Button variant="primary" type="submit">
