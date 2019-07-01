@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { ListGroup, InputGroup, Button, FormControl } from 'react-bootstrap';
+import { InputGroup, Button, FormControl, CardGroup } from 'react-bootstrap';
 import db from '../firebase';
 import { useCollectionOnce } from 'react-firebase-hooks/firestore';
+import TripResultCard from './TripResultCard';
 
 export const TripSearch = () => {
   const [values, setValues] = useState({
@@ -14,20 +15,17 @@ export const TripSearch = () => {
 
   const [snapshot, loading, error] = useCollectionOnce(
     db.collection('Trips').where('locations', 'array-contains', 'Lima'),
-    options
+    {
+      valueListenOptions: { includeMetadataChanges: true },
+    }
   );
-  console.log('snapshot');
-  // let searchTerm = 'Lima';
-  // let tripsRef = db.collection('Trips');
-
-  // tripsRef.where('locations', 'array-contains', searchTerm);
 
   return (
     <div>
       <InputGroup className="mb-3">
         <FormControl
-          placeholder="Recipient's username"
-          aria-label="Recipient's username"
+          placeholder="city or country"
+          aria-label="city or country"
           aria-describedby="basic-addon2"
           value={values.searchTerm}
           onChange={handleChange('searchTerm')}
@@ -36,7 +34,15 @@ export const TripSearch = () => {
           <Button variant="outline-secondary">Search</Button>
         </InputGroup.Append>
       </InputGroup>
-      <ListGroup />
+      <CardGroup>
+        {error && <strong>Error: {error}</strong>}
+        {loading && <span>Document: Loading...</span>}
+        {snapshot &&
+          snapshot.docs.map(doc => <TripResultCard card={doc.data()} />)}
+        {console.log(snapshot)}
+      </CardGroup>
     </div>
   );
 };
+
+export default TripSearch;
