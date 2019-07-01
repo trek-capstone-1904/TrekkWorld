@@ -6,7 +6,8 @@ export const SearchAPICard = props => {
   //type = city if from query for top cities OR type= sights if for top sights in a city
   const { type } = props;
   const { name, country, snippet, score, intro } = props.sight;
-
+  // const {country} = props;
+  // console.log('country: ', country)
   return (
     <Card style={{ margin: '.5rem 1rem' }}>
       <Card.Body>

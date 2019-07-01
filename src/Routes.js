@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import {TripSingle, UserProfileTrips, Login, SearchAPI, TripPlanning, TripSearch, Signup} from './Components'
+import {TripSingle, UserProfile, Login, SearchAPI, TripPlanning, TripSearch, Signup} from './Components'
 
 
 
@@ -8,7 +8,7 @@ export class Routes extends Component {
   render() {
     return (
       <Switch>
-        <Route path="/user" component={UserProfileTrips} />
+        <Route path="/user" component={UserProfile} />
         <Route exact path="/plantrip" component={TripPlanning} />
         <Route path="/trip/:tripId" component={TripSingle} />
         <Route path="/login" component={Login} />

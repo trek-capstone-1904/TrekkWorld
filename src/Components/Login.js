@@ -3,7 +3,7 @@ import db from '../firebase';
 import firebase from 'firebase/app'
 import * as firebaseui from 'firebaseui'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
-
+import styles from './Login.module.css';
 
 
 const uiConfig = {
@@ -22,7 +22,7 @@ const uiConfig = {
 class SignInScreen extends React.Component {
   render() {
     return (
-      <div>
+      <div className={styles.LogIn}>
         <h1>My App</h1>
         <p>Please sign-in:</p>
         <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()}/>
