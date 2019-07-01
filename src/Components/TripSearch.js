@@ -4,6 +4,7 @@ import db from '../firebase';
 import { useCollectionOnce } from 'react-firebase-hooks/firestore';
 import TripResultCard from './TripResultCard';
 
+
 export const TripSearch = (props) => {
   const [values, setValues] = useState({
     searchTerm: '',
@@ -22,6 +23,7 @@ export const TripSearch = (props) => {
 
   return (
     <div>
+
       <CardGroup>
         {error && <strong>Error: {error}</strong>}
         {loading && <span>Document: Loading...</span>}

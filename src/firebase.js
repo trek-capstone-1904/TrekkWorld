@@ -15,26 +15,19 @@ firebase.initializeApp({
   projectId: secret.projectId,
 });
 
-class Firebase {
-  constructor() {
-    this.auth = firebase.auth();
-    this.db = firebase.firestore();
-  }
 
-  login(email, password) {
-    return this.auth.signInWithEmailAndPassword(email, password);
+export let loggedUser = '';
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+
+    loggedUser = firebase.auth().currentUser
+  } else {
+    // No user is signed in.
   }
-  logout() {
-    return this.auth.signOut();
-  }
-  async register(name, email, password) {
-    await this.auth.createUserWithEmailAndPassword(email, password);
-    return this.auth.currentUser;
-  }
-}
+});
 
 export const auth = firebase.auth();
-
 var db = firebase.firestore();
 
 export default db;

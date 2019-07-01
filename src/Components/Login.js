@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import db from '../firebase';
 import firebase from 'firebase/app'
 import * as firebaseui from 'firebaseui'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
+import setUserContext from '../Contexts/setUserContext'
+import userContext from '../Contexts/userContext'
 
 
 
@@ -28,26 +30,33 @@ const uiConfig = {
       // Do something with the returned AuthResult.
       // Return type determines whether we continue the redirect automatically
       // or whether we leave that to developer to handle.
-      console.log("hi")
       console.log(user.uid, user.email, user.displayName, isNewUser)
+      console.log("Current user", firebase.auth().currentUser)
       if(isNewUser){
         db.collection("Users").doc(user.uid).set({
           userName: user.displayName,
           email: user.email,
         })
       }
-
+      runSetUser();
       return true;
     }
   }
 }
 
 const SignInScreen = () => {
+  const runSetUser = () => {
+    const setUser = useContext(setUserContext);
+    setUser(firebase.auth().currentUser);
+    const user = useContext(userContext)
+    console.log(user);
+
+  }
 
     return (
       <div>
         <h1>TREKK</h1>
-        <p>Please sign-in:</p>
+        <p>Please log in or sign-up:</p>
         <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()}/>
       </div>
     );

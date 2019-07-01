@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Jumbotron, Form, Button } from 'react-bootstrap';
 import styles from './TripPlanning.module.css';
 import { SearchAPI, TripSearch } from './index.js';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import loggedUser from '../firebase'
 
 export const TripPlanning = () => {
   const [city, setCity] = useState('');
@@ -27,9 +30,22 @@ export const TripPlanning = () => {
     }
   };
 
-  console.log(submitted);
+  // firebase.auth().onAuthStateChanged(function(user) {
+  //   if (user) {
+  //     // User is signed in.
+
+  //     let loggedUser = firebase.auth().currentUser
+  //   } else {
+  //     // No user is signed in.
+  //   }
+  // })
+  // console.log("Current user", firebase.auth().currentUser)
+  // console.log(loggedUser)
+ // const user = firebase.auth().currentUser.uid
+
   return (
     <div>
+      <h1>{loggedUser.uid}</h1>
       <Jumbotron className={styles.tripPlanningJumbo}>
         <h1>Where in the world are YOU trekking?</h1>
         <Form onSubmit={handleSubmit}>
