@@ -13,6 +13,9 @@ export const NavigationBar = () => {
         <LinkContainer to="/login">
           <Nav.Link>Log In</Nav.Link>
         </LinkContainer>
+        <LinkContainer to="/plantrip">
+          <Nav.Link>Plan Trip</Nav.Link>
+        </LinkContainer>
       </Nav>
     </Navbar>
   );

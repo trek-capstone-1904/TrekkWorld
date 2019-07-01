@@ -6,7 +6,7 @@ import NavigationBar from './Components/NavigationBar';
 function App() {
   return (
     <div className="App">
-      <h1>Trekk</h1>
+      {/* <h1>Trekk</h1> */}
       <NavigationBar />
       <Routes />
     </div>

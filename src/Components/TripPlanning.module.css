@@ -1,0 +1,51 @@
+.tripPlanningJumbo {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../map-and-gear.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 45vh;
+  padding: 2rem;
+}
+
+.tripPlanningJumbo > h1 {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}
+
+.tripPlanningJumbo > form{
+  width: 35vw;
+  text-align: center;
+  margin: auto;
+}
+
+.tripPlanningLabel{
+  color:white;
+  font-weight:bold;
+}
+
+.searchResults{
+  display: flex;
+}
+
+.placeholderTripSearch{
+  width:33vw;
+  background-color: aquamarine;
+  height:500px;
+}
+
+.searchAPI{
+  width: 33vw;
+  background-color: rgb(219, 212, 212)
+  /* text-align:center; */
+}
+
+
+
+@media only screen and (max-width: 750px){
+	.tripPlanningJumbo > form{
+    width: 80vw;
+  }
+}
