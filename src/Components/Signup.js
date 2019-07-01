@@ -19,7 +19,7 @@ useEffect(() => console.log("state", [email]))
       <Form>
       <Form.Group controlId="formBasicName">
           <Form.Label>Name</Form.Label>
-          <Form.Control type="name" placeholder="Enter email" value={name} onChange={e => setName(e.target.value)}/>
+          <Form.Control type="text" placeholder="Enter name" value={name} onChange={e => setName(e.target.value)}/>
         </Form.Group>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
