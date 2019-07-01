@@ -33,5 +33,8 @@ class Firebase {
   }
 }
 
+export const auth = firebase.auth();
+
 var db = firebase.firestore();
+
 export default db;

@@ -2,61 +2,33 @@ import React from 'react'
 import db from '../firebase';
 import firebase from 'firebase/app'
 import * as firebaseui from 'firebaseui'
-import StyleFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
 
 
-// Initialize the FirebaseUI Widget using Firebase.
-// var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
-// const uiConfig = {
-//   sign
-// }
-var ui = new firebaseui.auth.AuthUI(firebase.auth());
+const uiConfig = {
+  // Popup signin flow rather than redirect flow.
+  signInFlow: 'popup',
+  // Redirect to /signedIn after sign in is successful. Alternatively you can provide a callbacks.signInSuccess function.
+  signInSuccessUrl: '/plantrip',
+  // We will display Google and Facebook as auth providers.
+  signInOptions: [
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+    firebase.auth.EmailAuthProvider.PROVIDER_ID,
+  ]
+};
 
-export const Login = () => {
-
-  // const [email, setEmail] = useState('');
-  // const [password, setPassword] = useState('');
-
-
-  var uiConfig = {
-    signInSuccessUrl: '<url-to-redirect-to-on-success>',
-    signInOptions: [
-      // Leave the lines as is for the providers you want to offer your users.
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-      firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-      firebase.auth.GithubAuthProvider.PROVIDER_ID,
-      firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      firebase.auth.PhoneAuthProvider.PROVIDER_ID,
-      firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
-    ],
-    // tosUrl and privacyPolicyUrl accept either url string or a callback
-    // function.
-    // Terms of service url/callback.
-    tosUrl: '<your-tos-url>',
-    // Privacy policy url/callback.
-    privacyPolicyUrl: function() {
-      window.location.assign('<your-privacy-policy-url>');
-    }
-  };
-
-  if(firebaseui.auth.AuthUI.getInstance()) {
-    const ui = firebaseui.auth.AuthUI.getInstance()
-    ui.start('#firebaseui-auth-container', uiConfig)
-  } else {
-    const ui = new firebaseui.auth.AuthUI(firebase.auth())
-    ui.start('#firebaseui-auth-container', uiConfig)
+class SignInScreen extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>My App</h1>
+        <p>Please sign-in:</p>
+        <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()}/>
+      </div>
+    );
   }
-  // Initialize the FirebaseUI Widget using Firebase.
-  // The start method will wait until the DOM is loaded.
-  ui.start('#firebaseui-auth-container', uiConfig);
-
-  return(
-    <div id='firebaseui-auth-container'>
-    </div>
-
-  )
 }
 
-export default Login;
+export default SignInScreen;

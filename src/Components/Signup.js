@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import { Form, Button, Input } from "react-bootstrap";
-import firebase from 'firebase/app'
-import 'firebase/auth'
-import db from "../firebase";
+import firebase from 'firebase/app';
+import auth from '../firebase';
+//import db from "../firebase";
 
 export const Signup = () => {
 
@@ -12,7 +12,7 @@ export const Signup = () => {
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
 
-useEffect(() => console.log("state", [email]))
+// useEffect(() => console.log("state", [name]))
 
   return (
     <div>
@@ -33,29 +33,32 @@ useEffect(() => console.log("state", [email]))
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)}/>
         </Form.Group>
-        <Button variant="primary" type="submit" onClick={onSignUp}>
+        <Button variant="primary" type="button" onClick={onSignUp}>
           Submit
         </Button>
       </Form>
     </div>
   );
 
-  async function onSignUp(){
-    try{
-      console.log(useState)
-      await firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+function onSignUp(){
+
+      console.log("email", email)
+      console.log("password", password)
+
+      firebase.auth().signInWithEmailAndPassword(email, password).then(user => {
+        console.log(user)
+      }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
         // ...
+        alert(errorMessage)
       })
 
       //db.collection("Users").add();
 
 			//props.history.replace('/')
-    } catch (error){
-      alert(error.message)
-    }
+
   }
 
 };
