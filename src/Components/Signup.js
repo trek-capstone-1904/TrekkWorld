@@ -12,7 +12,6 @@ export const Signup = () => {
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
 
-// useEffect(() => console.log("state", [name]))
 
   return (
     <div>
@@ -55,9 +54,7 @@ function onSignUp(){
         alert(errorMessage)
       })
 
-      //db.collection("Users").add();
 
-			//props.history.replace('/')
 
   }
 
