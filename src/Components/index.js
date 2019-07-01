@@ -4,14 +4,14 @@ import UserProfileTrips from './UserProfileTrips';
 import Login from './Login';
 import SearchAPI from './SearchAPI'
 import TripPlanning from './TripPlanning'
-import TripSearch from './Components/TripSearch';
-import Signup from './Components/Signup';
+import TripSearch from './TripSearch';
+import Signup from './Signup';
 
 
-export * from './TripSingle'
-export * from './UserProfileTrips'
-export * from './Login'
-export * from './SearchAPI'
-export * from './TripPlanning'
-export * from './Components/TripSearch'
-export * from './Components/Signup';
+export {default as TripSingle} from './TripSingle'
+export {default as UserProfileTrips} from './UserProfileTrips'
+export {default as Login}  from './Login'
+export {default as SearchAPI}  from './SearchAPI'
+export {default as TripPlanning}  from './TripPlanning'
+export {default as TripSearch}  from './TripSearch'
+export {default as Signup}  from './Signup';
