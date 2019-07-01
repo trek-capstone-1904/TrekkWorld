@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import {TripSingle, UserProfileTrips, Login, SearchAPI, TripPlanning, TripSearch, Signup} from './Components'
-
-
+import {
+  TripSingle,
+  UserProfileTrips,
+  Login,
+  SearchAPI,
+  TripPlanning,
+  TripSearch,
+  Signup,
+} from './Components';
 
 export class Routes extends Component {
   render() {
