@@ -15,37 +15,36 @@
   font-weight: 700;
 }
 
-.tripPlanningJumbo > form{
+.tripPlanningJumbo > form {
   width: 35vw;
   text-align: center;
   margin: auto;
 }
 
-.tripPlanningLabel{
-  color:white;
-  font-weight:bold;
+.tripPlanningLabel {
+  color: white;
+  font-weight: bold;
 }
 
-.searchResults{
+.searchResults {
   display: flex;
 }
 
-.placeholderTripSearch{
-  width:33vw;
-  /* background-color: aquamarine; */
-
-}
-
-.searchAPI{
+.placeholderTripSearch {
   width: 33vw;
-  background-color: rgb(219, 212, 212)
+  /* background-color: aquamarine; */
+}
+.BucketList {
+  width: 34vw;
+}
+.searchAPI {
+  width: 33vw;
+  background-color: rgb(219, 212, 212);
   /* text-align:center; */
 }
 
-
-
-@media only screen and (max-width: 750px){
-	.tripPlanningJumbo > form{
+@media only screen and (max-width: 750px) {
+  .tripPlanningJumbo > form {
     width: 80vw;
   }
 }
