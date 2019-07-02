@@ -37,7 +37,9 @@ function useFetchSights(city, country) {
     Korea: 'KR',
     Egypt: 'EG',
   };
-  const query = `https://www.triposo.com/api/20181213/poi.json?tag_labels=eatingout|sightseeing&location_id=${city}&countrycode=${initials[country]}&order_by=-score&count=10&fields=snippet,id,name,location_id,score,tag_labels,coordinates&account=${
+  const query = `https://www.triposo.com/api/20181213/poi.json?tag_labels=eatingout|sightseeing&location_id=${city}&countrycode=${
+    initials[country]
+  }&order_by=-score&count=10&fields=snippet,id,name,location_id,score,tag_labels,coordinates&account=${
     secret.triposoAccount
   }&token=${secret.triposoToken}`;
 
@@ -89,14 +91,24 @@ export const SearchAPI = props => {
         sightsToSee.results.map(sight => <p key={sight.id}>{sight.name}</p>)} */}
       {sightsToSee.results &&
         sightsToSee.results.map(sight => (
-          <SearchAPICard key={sight.id} sight={sight} type="sights" />
+          <SearchAPICard
+            key={sight.id}
+            sight={sight}
+            country={country}
+            type="sights"
+          />
         ))}
       <h4>Popular Cities</h4>
       {/* {popularCities.results &&
         popularCities.results.map(sight => <p key={sight.id}>{sight.name}</p>)} */}
       {popularCities.results &&
         popularCities.results.map(sight => (
-          <SearchAPICard key={sight.id} sight={sight} type="city" />
+          <SearchAPICard
+            key={sight.id}
+            sight={sight}
+            country={country}
+            type="city"
+          />
         ))}
     </div>
   );

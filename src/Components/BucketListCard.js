@@ -4,8 +4,8 @@ import styles from './SearchAPICard.module.css';
 
 export const BucketListCard = props => {
   //type = city if from query for top cities OR type= sights if for top sights in a city
-  const { type } = props;
-  const { name, country, snippet, score, intro } = props.sight;
+  const { type, country } = props;
+  const { name, snippet, score, intro } = props.sight;
 
   return (
     <Card style={{ margin: '.5rem 1rem' }}>

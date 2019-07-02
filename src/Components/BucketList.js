@@ -5,29 +5,45 @@
 import React, { useState } from 'react';
 import { CardGroup, SearchAPICard } from 'react-bootstrap';
 import db from '../firebase';
-import { useCollectionOnce } from 'react-firebase-hooks/firestore';
+import { useCollection } from 'react-firebase-hooks/firestore';
 import BucketListCard from './BucketListCard';
 
-export const BucketList = props => {
-  const { city } = props;
-  const [snapshot, loading, error] = useCollectionOnce(
-    db.collection('Trips').where('locations', 'array-contains', city),
+export const BucketList = () => {
+  const [value, loading, error] = useCollection(
+    db
+      .collection('Users')
+      .doc('cRClyp5mjI2WIH114XZk')
+      .collection('BucketList'),
     {
       valueListenOptions: { includeMetadataChanges: true },
     }
   );
-
+  // console.log('snapshot', snapshot);
   return (
     <div>
-      <CardGroup>
-        {error && <strong>Error: {error}</strong>}
-        {loading && <span>Document: Loading...</span>}
-        {snapshot &&
-          snapshot.docs.map(doc => <BucketListCard card={doc.data()} />)}
-        {console.log(snapshot)}
-      </CardGroup>
+      {/* <CardGroup> */}
+      {/* {error && <strong>Error: {error}</strong>}
+        {loading && <span>Document: Loading...</span>} */}
+
+      {/* {snapshot && snapshot.docs.map(doc => <BucketListCard card={doc.data()} />)} */}
+      {/* </CardGroup> */}
+      {/* <p>
+        {value && (
+           <span>
+            {value.docs.map(doc => ( 
+          <BucketListCard key={doc.id} card={doc.data()}> 
+           ))}
+          </span>
+         )}
+      </p> */}
     </div>
   );
 };
 
 export default BucketList;
+
+// db
+//       .collection('Users')
+//       .doc('cRClyp5mjI2WIH114XZk') //TODO make id dynamic
+//       .collection('BucketList')
+//       .doc('cSwjQgwvpkWNj3ijgIoz')

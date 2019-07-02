@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Jumbotron, Form, Button } from 'react-bootstrap';
 import styles from './TripPlanning.module.css';
-import { SearchAPI, TripSearch } from './index.js';
+import { SearchAPI, TripSearch, BucketList } from './index.js';
 
 export const TripPlanning = () => {
   const [city, setCity] = useState('');
@@ -77,6 +77,10 @@ export const TripPlanning = () => {
         <div className={styles.searchAPI}>
           <h2>Things to Do</h2>
           {submitted && <SearchAPI city={city} country={country} />}
+        </div>
+        <div className={styles.BucketList}>
+          <h2>Bucket List</h2>
+          <BucketList />
         </div>
       </div>
     </div>
