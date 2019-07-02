@@ -7,14 +7,9 @@ import styles from './Login.module.css';
 
 const SignInScreen = props => {
   const uiConfig = {
-    // Popup signin flow rather than redirect flow.
     signInFlow: "popup",
-    // Redirect to /signedIn after sign in is successful.
-    signInSuccessUrl: "/plantrip",
-    // We will display Google and Facebook as auth providers.
     signInOptions: [
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
       firebase.auth.EmailAuthProvider.PROVIDER_ID
     ],
     callbacks: {
@@ -25,6 +20,9 @@ const SignInScreen = props => {
         var providerId = authResult.additionalUserInfo.providerId;
         var operationType = authResult.operationType;
 
+
+        console.log("user's uid", user.uid)
+        console.log("is new user?", isNewUser)
         //add user to the database if not already there
         if (isNewUser) {
           db.collection("Users")
@@ -32,9 +30,16 @@ const SignInScreen = props => {
             .set({
               userName: user.displayName,
               email: user.email
-            });
+            }).then(
+              function(){
+                props.history.push('/plantrip')
+              }
+            );
+
+        } else {
+          props.history.push('/plantrip')
         }
-        return true;
+        return false;
       }
     }
   };
