@@ -1,0 +1,284 @@
+{
+  "Countries": {
+    "Australia": {
+      "name": "Australia",
+      "code": "AU",
+      "capital": "Canberra",
+      "region": "Oceania",
+      "population": 24117360,
+      "flag": "https://restcountries.eu/data/aus.svg"
+    },
+    "Austria": {
+      "name": "Austria",
+      "code": "AT",
+      "capital": "Vienna",
+      "region": "Europe",
+      "population": 8725931,
+      "flag": "https://restcountries.eu/data/aut.svg"
+    },
+    "Belgium": {
+      "name": "Belgium",
+      "code": "BE",
+      "capital": "Brussels",
+      "region": "Europe",
+      "population": 11319511,
+      "flag": "https://restcountries.eu/data/bel.svg"
+    },
+    "Brazil": {
+      "name": "Brazil",
+      "code": "BR",
+      "capital": "BrasÃ­lia",
+      "region": "Americas",
+      "population": 206135893,
+      "flag": "https://restcountries.eu/data/bra.svg"
+    },
+    "Canada": {
+      "name": "Canada",
+      "code": "CA",
+      "capital": "Ottawa",
+      "region": "Americas",
+      "population": 36155487,
+      "flag": "https://restcountries.eu/data/can.svg"
+    },
+    "China": {
+      "name": "China",
+      "code": "CN",
+      "capital": "Beijing",
+      "region": "Asia",
+      "population": 1377422166,
+      "flag": "https://restcountries.eu/data/chn.svg"
+    },
+    "Czech Republic": {
+      "name": "Czech Republic",
+      "code": "CZ",
+      "capital": "Prague",
+      "region": "Europe",
+      "population": 10558524,
+      "flag": "https://restcountries.eu/data/cze.svg"
+    },
+    "Denmark": {
+      "name": "Denmark",
+      "code": "DK",
+      "capital": "Copenhagen",
+      "region": "Europe",
+      "population": 5717014,
+      "flag": "https://restcountries.eu/data/dnk.svg"
+    },
+    "Egypt": {
+      "name": "Egypt",
+      "code": "EG",
+      "capital": "Cairo",
+      "region": "Africa",
+      "population": 91290000,
+      "flag": "https://restcountries.eu/data/egy.svg"
+    },
+    "France": {
+      "name": "France",
+      "code": "FR",
+      "capital": "Paris",
+      "region": "Europe",
+      "population": 66710000,
+      "flag": "https://restcountries.eu/data/fra.svg"
+    },
+    "Germany": {
+      "name": "Germany",
+      "code": "DE",
+      "capital": "Berlin",
+      "region": "Europe",
+      "population": 81770900,
+      "flag": "https://restcountries.eu/data/deu.svg"
+    },
+    "Greece": {
+      "name": "Greece",
+      "code": "GR",
+      "capital": "Athens",
+      "region": "Europe",
+      "population": 10858018,
+      "flag": "https://restcountries.eu/data/grc.svg"
+    },
+    "Hungary": {
+      "name": "Hungary",
+      "code": "HU",
+      "capital": "Budapest",
+      "region": "Europe",
+      "population": 9823000,
+      "flag": "https://restcountries.eu/data/hun.svg"
+    },
+    "Iceland": {
+      "name": "Iceland",
+      "code": "IS",
+      "capital": "ReykjavÃ­k",
+      "region": "Europe",
+      "population": 334300,
+      "flag": "https://restcountries.eu/data/isl.svg"
+    },
+    "India": {
+      "name": "India",
+      "code": "IN",
+      "capital": "New Delhi",
+      "region": "Asia",
+      "population": 1295210000,
+      "flag": "https://restcountries.eu/data/ind.svg"
+    },
+    "Ireland": {
+      "name": "Ireland",
+      "code": "IE",
+      "capital": "Dublin",
+      "region": "Europe",
+      "population": 6378000,
+      "flag": "https://restcountries.eu/data/irl.svg"
+    },
+    "Israel": {
+      "name": "Israel",
+      "code": "IL",
+      "capital": "Jerusalem",
+      "region": "Asia",
+      "population": 8527400,
+      "flag": "https://restcountries.eu/data/isr.svg"
+    },
+    "Italy": {
+      "name": "Italy",
+      "code": "IT",
+      "capital": "Rome",
+      "region": "Europe",
+      "population": 60665551,
+      "flag": "https://restcountries.eu/data/ita.svg"
+    },
+    "Japan": {
+      "name": "Japan",
+      "code": "JP",
+      "capital": "Tokyo",
+      "region": "Asia",
+      "population": 126960000,
+      "flag": "https://restcountries.eu/data/jpn.svg"
+    },
+    "Malaysia": {
+      "name": "Malaysia",
+      "code": "MY",
+      "capital": "Kuala Lumpur",
+      "region": "Asia",
+      "population": 31405416,
+      "flag": "https://restcountries.eu/data/mys.svg"
+    },
+    "Mexico": {
+      "name": "Mexico",
+      "code": "MX",
+      "capital": "Mexico City",
+      "region": "Americas",
+      "population": 122273473,
+      "flag": "https://restcountries.eu/data/mex.svg"
+    },
+    "Netherlands": {
+      "name": "Netherlands",
+      "code": "NL",
+      "capital": "Amsterdam",
+      "region": "Europe",
+      "population": 17019800,
+      "flag": "https://restcountries.eu/data/nld.svg"
+    },
+    "New Zealand": {
+      "name": "New Zealand",
+      "code": "NZ",
+      "capital": "Wellington",
+      "region": "Oceania",
+      "population": 4697854,
+      "flag": "https://restcountries.eu/data/nzl.svg"
+    },
+    "Korea": {
+      "name": "Korea",
+      "code": "KP",
+      "capital": "Pyongyang",
+      "region": "Asia",
+      "population": 25281000,
+      "flag": "https://restcountries.eu/data/prk.svg"
+    },
+    "Norway": {
+      "name": "Norway",
+      "code": "NO",
+      "capital": "Oslo",
+      "region": "Europe",
+      "population": 5223256,
+      "flag": "https://restcountries.eu/data/nor.svg"
+    },
+    "Peru": {
+      "name": "Peru",
+      "code": "PE",
+      "capital": "Lima",
+      "region": "Americas",
+      "population": 31488700,
+      "flag": "https://restcountries.eu/data/per.svg"
+    },
+    "Poland": {
+      "name": "Poland",
+      "code": "PL",
+      "capital": "Warsaw",
+      "region": "Europe",
+      "population": 38437239,
+      "flag": "https://restcountries.eu/data/pol.svg"
+    },
+    "Portugal": {
+      "name": "Portugal",
+      "code": "PT",
+      "capital": "Lisbon",
+      "region": "Europe",
+      "population": 10374822,
+      "flag": "https://restcountries.eu/data/prt.svg"
+    },
+    "Singapore": {
+      "name": "Singapore",
+      "code": "SG",
+      "capital": "Singapore",
+      "region": "Asia",
+      "population": 5535000,
+      "flag": "https://restcountries.eu/data/sgp.svg"
+    },
+    "Spain": {
+      "name": "Spain",
+      "code": "ES",
+      "capital": "Madrid",
+      "region": "Europe",
+      "population": 46438422,
+      "flag": "https://restcountries.eu/data/esp.svg"
+    },
+    "Sweden": {
+      "name": "Sweden",
+      "code": "SE",
+      "capital": "Stockholm",
+      "region": "Europe",
+      "population": 9894888,
+      "flag": "https://restcountries.eu/data/swe.svg"
+    },
+    "Switzerland": {
+      "name": "Switzerland",
+      "code": "CH",
+      "capital": "Bern",
+      "region": "Europe",
+      "population": 8341600,
+      "flag": "https://restcountries.eu/data/che.svg"
+    },
+    "Thailand": {
+      "name": "Thailand",
+      "code": "TH",
+      "capital": "Bangkok",
+      "region": "Asia",
+      "population": 65327652,
+      "flag": "https://restcountries.eu/data/tha.svg"
+    },
+    "Turkey": {
+      "name": "Turkey",
+      "code": "TR",
+      "capital": "Ankara",
+      "region": "Asia",
+      "population": 78741053,
+      "flag": "https://restcountries.eu/data/tur.svg"
+    },
+    "United States of America": {
+      "name": "United States of America",
+      "code": "US",
+      "capital": "Washington, D.C.",
+      "region": "Americas",
+      "population": 323947000,
+      "flag": "https://restcountries.eu/data/usa.svg"
+    }
+  }
+}

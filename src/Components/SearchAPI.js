@@ -83,7 +83,6 @@ export const SearchAPI = props => {
   // const [sights, setSights] = useState({});
   const sightsToSee = useFetchSights(city, country);
   const popularCities = useFetchCities(country);
-
   return (
     <div>
       <h4>Sightseeing Spots</h4>

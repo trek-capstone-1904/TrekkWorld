@@ -1,0 +1,17 @@
+
+
+.LogIn {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('../images/login-background.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 92vh;
+  padding: 20vh;
+}
+
+.LogIn > h1, .LogIn p{
+  color:white;
+  font-family: 'Oswald', sans-serif;
+}

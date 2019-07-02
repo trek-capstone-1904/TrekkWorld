@@ -16,7 +16,7 @@ export const NavigationBar = () => {
   }
 
   return (
-    <Navbar bg="dark" variant="dark" sticky="top">
+    <Navbar bg="dark" variant="dark" sticky="top" style={{height:'8vh'}}>
       <Navbar.Brand>Trekk</Navbar.Brand>
       <Nav className="mr-auto">
         <LinkContainer to="/user">
