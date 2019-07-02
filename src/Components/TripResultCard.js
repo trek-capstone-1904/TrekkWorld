@@ -25,24 +25,26 @@ export const TripResultCard = props => {
             {user[1]}
           </Badge>
         ))}
-        <Accordion defaultActiveKey="0">
-          <Card>
-            <Accordion.Toggle as={Card.Header} eventKey="0">
-              Highlights
-            </Accordion.Toggle>
-            <Accordion.Collapse eventKey="0">
-              <Card.Body>
-                <ListGroup>
-                  {Object.entries(card.places).map(place => (
-                    <ListGroup.Item key={place[0]}>
-                      {place[1].name}
-                    </ListGroup.Item>
-                  ))}
-                </ListGroup>
-              </Card.Body>
-            </Accordion.Collapse>
-          </Card>
-        </Accordion>
+        {card.places && (
+          <Accordion defaultActiveKey="0">
+            <Card>
+              <Accordion.Toggle as={Card.Header} eventKey="0">
+                Highlights
+              </Accordion.Toggle>
+              <Accordion.Collapse eventKey="0">
+                <Card.Body>
+                  <ListGroup>
+                    {Object.entries(card.places).map(place => (
+                      <ListGroup.Item key={place[0]}>
+                        {place[1].name}
+                      </ListGroup.Item>
+                    ))}
+                  </ListGroup>
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
+          </Accordion>
+        )}
       </Card.Body>
     </Card>
   );

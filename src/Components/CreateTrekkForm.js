@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { Form, Button, Col, Spinner } from 'react-bootstrap';
 import db from '../firebase';
@@ -5,12 +6,14 @@ import db from '../firebase';
 //TODO add a created by for Trips, add trip to user with submit
 
 export const CreateTrekkForm = () => {
+  //TODO update to represent actual current user ID
   const userId = 'lQNWEtdOGjXlIdmUIRb9';
-  const userName= 'Patricia'
+  const userName = 'Patricia';
+
   const [values, setValues] = useState({
     tripName: '',
     locations: '',
-    users: {[userId]: userName},
+    users: { [userId]: userName },
     startDate: '',
     endDate: '',
     tripImageUrl: '',
@@ -28,18 +31,13 @@ export const CreateTrekkForm = () => {
 
   const handleSubmit = async event => {
     event.preventDefault();
-    // setValues(values => ({
-    //   ...values,
-    //   [values.loading]: true,
-    // }));
+
     setLoading(true);
     try {
       //Create Trip
       const docRef = await db.collection('Trips').add(values);
-      setLoading(false);
-      setSuccess(true);
       const tripDocId = docRef.id;
-      console.log(docRef.id);
+      console.log('Created trip/doc id:', tripDocId);
 
       //Add Trekk List SubCollection
       const trekkListCollection = await db
@@ -48,17 +46,16 @@ export const CreateTrekkForm = () => {
         .add({ location: values.locations });
 
       //Add Trip to User
-      // const newTrip = {};
-      // newTrip[`Trips.${tripDocId}`]
-      const userTrip = await db
-        .doc(`Users/${userId}`)
-        .update({
-          [`Trips.${tripDocId}`]: {
-            tripName: values.tripName,
-            startDate: values.startDate,
-            endDate: values.endDate,
-          },
-        });
+      const userTrip = await db.doc(`Users/${userId}`).update({
+        [`Trips.${tripDocId}`]: {
+          tripName: values.tripName,
+          startDate: values.startDate,
+          endDate: values.endDate,
+        },
+      });
+      //reset state to remove spinner & show comment of Trip Created Successfully!
+      setLoading(false);
+      setSuccess(true);
     } catch (err) {
       console.log(err);
     }
@@ -96,14 +93,6 @@ export const CreateTrekkForm = () => {
             </Form.Control>
           </Form.Group>
           <Form.Group>
-            <Form.Label>Add Travelers</Form.Label>
-            {/* <Form.Control
-              name="users"
-              value={values.users}
-              onChange={handleChange}
-              type="email"
-              placeholder="Add friends i.e example@email.com"
-            /> */}
             <Form.Label>Start Date</Form.Label>
             <Form.Control
               type="date"

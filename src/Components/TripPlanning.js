@@ -22,7 +22,6 @@ export const TripPlanning = () => {
     if (country === 'Select...' || country === '') {
       alert('Please select a country');
     } else {
-      // alert(`Submitting city: ${city}, ${country}`);
       setSubmit('true');
     }
   };

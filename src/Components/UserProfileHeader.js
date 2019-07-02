@@ -14,11 +14,6 @@ export const UserProfileHeader = props => {
     setIsShowing(false)
   }
 
-  function handleSave(){
-
-  }
-
-  console.log(props);
   return (
     <div>
       <Jumbotron>
@@ -48,9 +43,6 @@ export const UserProfileHeader = props => {
                   <Button variant="secondary" onClick={handleClose}>
                     Close
                   </Button>
-                  {/* <Button variant="info" onClick={handleSave}>
-                    Save Changes
-                  </Button> */}
                 </Modal.Footer>
               </Modal>
             </Col>
