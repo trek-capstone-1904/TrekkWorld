@@ -8,14 +8,20 @@ import history from "./history";
 
 import ProviderWrapper from "./Components/ProviderWrapper";
 
-ReactDOM.render(
-  <Router history={history}>
-    <ProviderWrapper>
-      <App />
-    </ProviderWrapper>
-  </Router>,
-  document.getElementById("root")
-);
+function renderApplication (user=null) {
+  ReactDOM.render(
+    <Router history={history}>
+      <App user={user}/>
+    </Router>,
+    document.getElementById("root")
+  );
+}
+
+firebase.auth().onAuthStateChanged(function(user) {
+  renderApplication(user)
+})
+
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
