@@ -11,24 +11,26 @@ export const SearchAPICard = props => {
 
   const { type, country } = props;
   const { name, snippet, score, intro } = props.sight;
-  console.log('props:', props);
-  // Users/cRClyp5mjI2WIH114XZk/BucketList
 
-  //how can I query the collection only when an add to bucketlist button is clicked?
-  //make the button a subcomponent
-  // const [snapshot, loading, error] = useCollectionOnce(
-  //   db.collection('Places'),
-  //   {
-  //     valueListenOptions: { includeMetadataChanges: true },
-  //   }
-  // );
-  // .where('id', '==', 'W__56185523')
-  // console.log('snapshot: ', snapshot);
+  const [snapshot, loading, error] = useCollectionOnce(
+    db.collection('Places').where('id', '==', 'W__54667456'),
+    {
+      valueListenOptions: { includeMetadataChanges: false },
+    }
+  );
 
-  const placesRef = db.collection('Places');
-  console.log('placesRef: ', placesRef);
-  const foundPlace = placesRef.where('id', '==', 'W__56185523');
-  console.log('foundPlace', foundPlace);
+  if (!loading) {
+    snapshot.docs.map(doc => {
+      console.log('doc.data()', doc.data());
+    });
+    console.log('just snapshot', snapshot.docs.length);
+  }
+
+  // console.log('snapshot.data()', snapshot.data());
+  // const placesRef = db.collection('Places');
+  // console.log('placesRef: ', placesRef);
+  // const foundPlace = placesRef;
+  // console.log('foundPlace', foundPlace);
   // let data = {};
   // snapshot.docs.map(doc => (data[doc.id] = doc.data()));
   // console.log('data', data);
