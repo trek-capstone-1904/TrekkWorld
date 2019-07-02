@@ -12,7 +12,7 @@ export const TripResultCard = props => {
     Object.entries(card.users).map(card => card[1])
   );
   return (
-    <Card style={{ width: '18px' }}>
+    <Card border="info" style={{ width: '18px', margin: '.5rem' }}>
       {/* <Card.Img variant="top" src={`../${card.tripImageUrl}`} /> */}
       <Card.Body>
         <Card.Title>{card.tripName}</Card.Title>
