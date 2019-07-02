@@ -1,8 +1,9 @@
-import React from "react";
-import db from "../firebase";
-import firebase from "firebase/app";
+import React from 'react'
+import db from '../firebase';
+import firebase from 'firebase/app'
 
-import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
+import styles from './Login.module.css';
 
 const SignInScreen = props => {
   const uiConfig = {
@@ -38,7 +39,7 @@ const SignInScreen = props => {
     }
   };
   return (
-    <div>
+    <div className={styles.LogIn}>
       <h1>TREKK</h1>
       <p>Please log in or sign-up:</p>
       <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />

@@ -2,7 +2,8 @@ import React from 'react';
 import { useDocument } from 'react-firebase-hooks/firestore';
 import db from '../firebase';
 import { Link } from 'react-router-dom';
-import { ListGroup } from 'react-bootstrap';
+import { ListGroup, Spinner, CardGroup } from 'react-bootstrap';
+import TripResultCard from './TripResultCard';
 
 export const TripListItem = props => {
   const [value, loading, error] = useDocument(db.doc(`Trips/${props.tripId}`), {
@@ -12,16 +13,11 @@ export const TripListItem = props => {
   return (
     <>
       {error && <strong>Error: {error}</strong>}
-      {loading && <span>Document: Loading...</span>}
+      {loading && <Spinner animation="grow" variant="info" />}
       {value && (
-        <ListGroup.Item>
-          <Link to={`/trip/${props.tripId}`}>
-            <h3>{value.data().tripName}</h3>
-          </Link>
-          {Object.entries(value.data().users).map(user => (
-            <p key={user[0]}>{user[1]}</p>
-          ))}
-        </ListGroup.Item>
+        <CardGroup>
+          <TripResultCard card={value.data()} />
+        </CardGroup>
       )}
     </>
   );
