@@ -4,12 +4,8 @@ import db from '../firebase';
 import { useCollectionOnce } from 'react-firebase-hooks/firestore';
 import TripResultCard from './TripResultCard';
 
-export const TripSearch = (props) => {
-  const [values, setValues] = useState({
-    searchTerm: '',
-  });
-
-  const {city} = props
+export const TripSearch = props => {
+  const { city } = props;
   const [snapshot, loading, error] = useCollectionOnce(
     db.collection('Trips').where('locations', 'array-contains', city),
     {
@@ -19,6 +15,7 @@ export const TripSearch = (props) => {
 
   return (
     <div>
+
       <CardGroup>
         {error && <strong>Error: {error}</strong>}
         {loading && <Spinner animation="grow" variant="info" />}

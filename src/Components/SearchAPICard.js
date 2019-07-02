@@ -1,20 +1,68 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import styles from './SearchAPICard.module.css';
+import { useCollectionOnce } from 'react-firebase-hooks/firestore';
+import db from '../firebase';
+
+// import { DocumentSnapshot } from '@google-cloud/firestore';
 
 export const SearchAPICard = props => {
   //type = city if from query for top cities OR type= sights if for top sights in a city
-  const { type } = props;
-  const { name, country, snippet, score, intro } = props.sight;
-  // const {country} = props;
-  // console.log('country: ', country)
+
+  const { type, country } = props;
+  const { name, snippet, score, intro } = props.sight;
+  console.log('props:', props);
+  // Users/cRClyp5mjI2WIH114XZk/BucketList
+
+  //how can I query the collection only when an add to bucketlist button is clicked?
+  //make the button a subcomponent
+  // const [snapshot, loading, error] = useCollectionOnce(
+  //   db.collection('Places'),
+  //   {
+  //     valueListenOptions: { includeMetadataChanges: true },
+  //   }
+  // );
+  // .where('id', '==', 'W__56185523')
+  // console.log('snapshot: ', snapshot);
+
+  const placesRef = db.collection('Places');
+  console.log('placesRef: ', placesRef);
+  const foundPlace = placesRef.where('id', '==', 'W__56185523');
+  console.log('foundPlace', foundPlace);
+  // let data = {};
+  // snapshot.docs.map(doc => (data[doc.id] = doc.data()));
+  // console.log('data', data);
+
+  // const allPlaces = snapshot.docs.map(doc => JSON.stringify(doc.data()));
+
+  // console.log('allPlaces: ', allPlaces);
+
+  // const addToBucketList = () => {
+  //   //check if place exists in db
+
+  //   if (placeFound) {
+  //     db.collection('Users')
+  //       .doc('cRClyp5mjI2WIH114XZk')
+  //       // TODO update so that it adapts to specific user
+  //       //add it to the map
+  //       .add(props.sight);
+  //   }
+  //if not create a new place w/ props
+
+  //
+  // };
+
   return (
     <Card style={{ margin: '.5rem 1rem' }}>
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">{country}</Card.Subtitle>
         <Card.Text className={styles.cardText}>{snippet}</Card.Text>
-        <Button style={{ margin: '0 1rem' }} variant="info">
+        <Button
+          style={{ margin: '0 1rem' }}
+          variant="info"
+          // onClick={addToBucketList}
+        >
           + Bucket
         </Button>
         <Button style={{ margin: '0 1rem' }} variant="info">

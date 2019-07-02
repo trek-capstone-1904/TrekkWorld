@@ -1,34 +1,50 @@
 import React from 'react'
 import db from '../firebase';
 import firebase from 'firebase/app'
-import * as firebaseui from 'firebaseui'
+
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
 import styles from './Login.module.css';
 
+const SignInScreen = props => {
+  const uiConfig = {
+    // Popup signin flow rather than redirect flow.
+    signInFlow: "popup",
+    // Redirect to /signedIn after sign in is successful.
+    signInSuccessUrl: "/plantrip",
+    // We will display Google and Facebook as auth providers.
+    signInOptions: [
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+      firebase.auth.EmailAuthProvider.PROVIDER_ID
+    ],
+    callbacks: {
+      signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+        var user = authResult.user;
+        var credential = authResult.credential;
+        var isNewUser = authResult.additionalUserInfo.isNewUser;
+        var providerId = authResult.additionalUserInfo.providerId;
+        var operationType = authResult.operationType;
 
-const uiConfig = {
-  // Popup signin flow rather than redirect flow.
-  signInFlow: 'popup',
-  // Redirect to /signedIn after sign in is successful. Alternatively you can provide a callbacks.signInSuccess function.
-  signInSuccessUrl: '/plantrip',
-  // We will display Google and Facebook as auth providers.
-  signInOptions: [
-    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-    firebase.auth.EmailAuthProvider.PROVIDER_ID,
-  ]
+        //add user to the database if not already there
+        if (isNewUser) {
+          db.collection("Users")
+            .doc(user.uid)
+            .set({
+              userName: user.displayName,
+              email: user.email
+            });
+        }
+        return true;
+      }
+    }
+  };
+  return (
+    <div className={styles.LogIn}>
+      <h1>TREKK</h1>
+      <p>Please log in or sign-up:</p>
+      <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
+    </div>
+  );
 };
-
-class SignInScreen extends React.Component {
-  render() {
-    return (
-      <div className={styles.LogIn}>
-        <h1>My App</h1>
-        <p>Please sign-in:</p>
-        <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()}/>
-      </div>
-    );
-  }
-}
 
 export default SignInScreen;

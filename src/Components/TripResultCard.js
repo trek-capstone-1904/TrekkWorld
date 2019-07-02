@@ -21,7 +21,7 @@ export const TripResultCard = props => {
         </Card.Subtitle>
 
         {Object.entries(card.users).map(user => (
-          <Badge variant="info" key={user[0]}>
+          <Badge variant="primary" key={user[0]}>
             {user[1]}
           </Badge>
         ))}

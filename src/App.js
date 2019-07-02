@@ -3,6 +3,7 @@ import './App.css';
 import Routes from './Routes';
 import NavigationBar from './Components/NavigationBar';
 
+
 function App() {
   return (
     <div className="App">
