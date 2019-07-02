@@ -1,20 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-<<<<<<< HEAD
 import {TripSingle, UserProfile, Login, SearchAPI, TripPlanning, TripSearch, Signup} from './Components'
 
 
-=======
-import {
-  TripSingle,
-  UserProfileTrips,
-  Login,
-  SearchAPI,
-  TripPlanning,
-  TripSearch,
-  Signup,
-} from './Components';
->>>>>>> master
 
 export class Routes extends Component {
   render() {
