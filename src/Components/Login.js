@@ -19,14 +19,15 @@ const SignInScreen = props => {
         var isNewUser = authResult.additionalUserInfo.isNewUser;
         var providerId = authResult.additionalUserInfo.providerId;
         var operationType = authResult.operationType;
-
+        console.log(user)
         //add user to the database if not already there
         if (isNewUser) {
           db.collection("Users")
             .doc(user.uid)
             .set({
               userName: user.displayName,
-              email: user.email
+              email: user.email,
+              userPicture: user.providerData[0].photoURL
             })
             .then(function() {
               props.history.push("/plantrip");

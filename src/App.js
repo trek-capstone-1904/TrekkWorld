@@ -5,7 +5,7 @@ import NavigationBar from './Components/NavigationBar';
 import { Route, Switch } from 'react-router-dom'
 import Login from './Components/Login';
 import userContext from './Contexts/userContext'
-import ProviderWrapper from './Components/ProviderWrapper'
+
 
 function App(props) {
   if(!props.user){
@@ -18,13 +18,15 @@ function App(props) {
     )
   } else {
     return (
-      <ProviderWrapper>
+
+      <userContext.Provider value={props.user}>
       <div className="App">
-        {/* <h1>Trekk</h1> */}
+
         <NavigationBar />
         <Routes />
       </div>
-      </ProviderWrapper>
+      </userContext.Provider>
+
     );
 
   }
