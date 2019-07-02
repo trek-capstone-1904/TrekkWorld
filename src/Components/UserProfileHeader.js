@@ -1,8 +1,23 @@
-import React from 'react';
-import { Jumbotron, Image, Col, Row, Container, Button } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Jumbotron, Image, Col, Row, Container, Button, Modal } from 'react-bootstrap';
+import {CreateTrekkForm} from './CreateTrekkForm'
 
 export const UserProfileHeader = props => {
   const { bio, email, userName, userPicture } = props.user;
+  const [isShowing, setIsShowing] = useState(false);
+
+  function toggle() {
+    setIsShowing(!isShowing);
+  }
+
+  function handleClose(){
+    setIsShowing(false)
+  }
+
+  function handleSave(){
+
+  }
+
   console.log(props);
   return (
     <div>
@@ -10,14 +25,35 @@ export const UserProfileHeader = props => {
         <Container>
           <Row>
             <Col xs={6} md={4}>
-              <Image src={userPicture} roundedCircle style={{width: '10rem', border:'1px solid black'}} />
+              <Image
+                src={userPicture}
+                roundedCircle
+                style={{ width: '10rem', border: '1px solid black' }}
+              />
             </Col>
             <Col xs={6} md={4}>
               <h1>{userName}</h1>
               <p>{bio}</p>
-              <Button variant="info">+ Create New Trekk</Button>
+              <Button variant="info" onClick={toggle}>
+                + Create New Trekk
+              </Button>
+              <Modal show={isShowing} onHide={handleClose}>
+                <Modal.Header closeButton>
+                  <Modal.Title>Where in the world are we trekking?</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <CreateTrekkForm/>
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={handleClose}>
+                    Close
+                  </Button>
+                  {/* <Button variant="info" onClick={handleSave}>
+                    Save Changes
+                  </Button> */}
+                </Modal.Footer>
+              </Modal>
             </Col>
-
           </Row>
         </Container>
       </Jumbotron>
