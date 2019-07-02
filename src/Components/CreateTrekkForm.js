@@ -1,14 +1,16 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Form, Button, Col, Spinner } from 'react-bootstrap';
 import db from '../firebase';
+import userContext from '../Contexts/userContext'
 
 //TODO add a created by for Trips, add trip to user with submit
 
 export const CreateTrekkForm = () => {
   //TODO update to represent actual current user ID
-  const userId = 'lQNWEtdOGjXlIdmUIRb9';
-  const userName = 'Patricia';
+  const loggedInUser = useContext(userContext)
+  const userId = `${loggedInUser.uid}`;
+  const userName = `${loggedInUser.displayName}`;
 
   const [values, setValues] = useState({
     tripName: '',
