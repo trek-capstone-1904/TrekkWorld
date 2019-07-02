@@ -5,10 +5,12 @@ import db from '../firebase';
 //TODO add a created by for Trips, add trip to user with submit
 
 export const CreateTrekkForm = () => {
+  const userId = 'lQNWEtdOGjXlIdmUIRb9';
+  const userName= 'Patricia'
   const [values, setValues] = useState({
     tripName: '',
     locations: '',
-    users: '',
+    users: {[userId]: userName},
     startDate: '',
     endDate: '',
     tripImageUrl: '',
@@ -16,7 +18,6 @@ export const CreateTrekkForm = () => {
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const userId = 'lQNWEtdOGjXlIdmUIRb9';
   const handleChange = event => {
     event.persist();
     setValues(values => ({
@@ -96,13 +97,13 @@ export const CreateTrekkForm = () => {
           </Form.Group>
           <Form.Group>
             <Form.Label>Add Travelers</Form.Label>
-            <Form.Control
+            {/* <Form.Control
               name="users"
               value={values.users}
               onChange={handleChange}
               type="email"
               placeholder="Add friends i.e example@email.com"
-            />
+            /> */}
             <Form.Label>Start Date</Form.Label>
             <Form.Control
               type="date"
