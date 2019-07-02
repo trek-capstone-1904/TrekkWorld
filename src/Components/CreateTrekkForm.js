@@ -43,7 +43,7 @@ export const CreateTrekkForm = () => {
       const trekkListCollection = await db
         .doc(`Trips/${tripDocId}`)
         .collection('TrekkList')
-        .add({ location: values.locations });
+        .add({ locations: values.locations });
 
       //Add Trip to User
       const userTrip = await db.doc(`Users/${userId}`).update({
