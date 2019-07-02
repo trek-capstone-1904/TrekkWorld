@@ -7,7 +7,18 @@ import { Router } from 'react-router-dom';
 import history from './history';
 
 import ProviderWrapper from './Components/ProviderWrapper';
+import firebase from 'firebase/app'
 
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    console.log(user)
+  } else {
+    // No user is signed in.
+    console.log("user not logged in")
+  }
+});
 
 ReactDOM.render(
   <Router history={history}>

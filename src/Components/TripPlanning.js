@@ -1,15 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Jumbotron, Form, Button } from 'react-bootstrap';
 import styles from './TripPlanning.module.css';
 import { SearchAPI, TripSearch } from './index.js';
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import loggedUser from '../firebase'
+import loggedUser from '../firebase';
+import userContext from '../Contexts/userContext'
 
 export const TripPlanning = () => {
   const [city, setCity] = useState('');
   const [country, setCountry] = useState('');
   const [submitted, setSubmit] = useState(false);
+
+
+  let loggedInUser = useContext(userContext);
+
 
   const handleChange = (evt, type) => {
     setSubmit(false);
@@ -42,10 +47,10 @@ export const TripPlanning = () => {
   // console.log("Current user", firebase.auth().currentUser)
   // console.log(loggedUser)
  // const user = firebase.auth().currentUser.uid
-
+if(loggedInUser){
   return (
     <div>
-      <h1>{loggedUser.uid}</h1>
+      <h1>{loggedInUser.uid}</h1>
       <Jumbotron className={styles.tripPlanningJumbo}>
         <h1>Where in the world are YOU trekking?</h1>
         <Form onSubmit={handleSubmit}>
@@ -97,6 +102,12 @@ export const TripPlanning = () => {
       </div>
     </div>
   );
+
+} else {
+  return (
+    <div>Loading</div>
+  )
+}
 };
 
 export default TripPlanning;

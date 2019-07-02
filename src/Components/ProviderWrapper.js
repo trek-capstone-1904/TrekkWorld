@@ -1,23 +1,31 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import userContext from '../Contexts/userContext'
-import setUserContext from '../Contexts/setUserContext'
+import firebase from 'firebase/app'
+
+
 
 
 export const ProviderWrapper = (props) => {
-
   let [user, setUser] = useState(null)
-  setUser = (user) => {
-    console.log("user in setUser", user)
-    setUser(user)
-  }
+
+  useEffect(function(){
+    const unsubscribe = firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        setUser(user);
+      } else {
+        // No user is signed in.
+        console.log("user not logged in")
+      }
+    });
+    return unsubscribe;
+  }, [])
   console.log("state in provider wrapper", user)
 
   return (
-    <setUserContext.Provider value={setUser}>
       <userContext.Provider value={user}>
       {props.children}
       </userContext.Provider>
-    </setUserContext.Provider>
   )
 }
 
