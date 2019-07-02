@@ -10,7 +10,7 @@ const SignInScreen = props => {
     signInFlow: "popup",
     // We will display Google and Facebook as auth providers.
     // Redirect to /signedIn after sign in is successful.
-    signInSuccessUrl: "/plantrip",
+    //signInSuccessUrl: "/plantrip",
     signInOptions: [
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
       //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
@@ -37,7 +37,7 @@ const SignInScreen = props => {
               email: user.email
             }).then(
               function(){
-                returnVal = true;
+                props.history.push('/plantrip')
               }
             );
 
