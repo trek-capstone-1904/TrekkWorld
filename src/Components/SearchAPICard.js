@@ -3,6 +3,7 @@ import { Card, Button } from 'react-bootstrap';
 import styles from './SearchAPICard.module.css';
 import { useCollectionOnce } from 'react-firebase-hooks/firestore';
 import db from '../firebase';
+
 // import { DocumentSnapshot } from '@google-cloud/firestore';
 
 export const SearchAPICard = props => {
@@ -15,14 +16,26 @@ export const SearchAPICard = props => {
 
   //how can I query the collection only when an add to bucketlist button is clicked?
   //make the button a subcomponent
-  const [snapshot, loading, error] = useCollectionOnce(
-    db.collection('Places').where('name', '==', name),
-    {
-      valueListenOptions: { includeMetadataChanges: true },
-    }
-  );
+  // const [snapshot, loading, error] = useCollectionOnce(
+  //   db.collection('Places'),
+  //   {
+  //     valueListenOptions: { includeMetadataChanges: true },
+  //   }
+  // );
+  // .where('id', '==', 'W__56185523')
+  // console.log('snapshot: ', snapshot);
 
-  snapshot.docs.data();
+  const placesRef = db.collection('Places');
+  console.log('placesRef: ', placesRef);
+  const foundPlace = placesRef.where('id', '==', 'W__56185523');
+  console.log('foundPlace', foundPlace);
+  // let data = {};
+  // snapshot.docs.map(doc => (data[doc.id] = doc.data()));
+  // console.log('data', data);
+
+  // const allPlaces = snapshot.docs.map(doc => JSON.stringify(doc.data()));
+
+  // console.log('allPlaces: ', allPlaces);
 
   // const addToBucketList = () => {
   //   //check if place exists in db
