@@ -1,24 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import { Router } from 'react-router-dom';
-import history from './history';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import { Router } from "react-router-dom";
+import history from "./history";
 
-import ProviderWrapper from './Components/ProviderWrapper';
-import firebase from 'firebase/app'
-
-
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    console.log(user)
-  } else {
-    // No user is signed in.
-    console.log("user not logged in")
-  }
-});
+import ProviderWrapper from "./Components/ProviderWrapper";
 
 ReactDOM.render(
   <Router history={history}>
@@ -26,7 +14,7 @@ ReactDOM.render(
       <App />
     </ProviderWrapper>
   </Router>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
