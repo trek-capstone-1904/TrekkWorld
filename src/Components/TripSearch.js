@@ -15,6 +15,7 @@ export const TripSearch = props => {
 
   return (
     <div>
+
       <CardGroup>
         {error && <strong>Error: {error}</strong>}
         {loading && <span>Document: Loading...</span>}
