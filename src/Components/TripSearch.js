@@ -11,9 +11,9 @@ import { useCollectionOnce } from 'react-firebase-hooks/firestore';
 import TripResultCard from './TripResultCard';
 
 export const TripSearch = props => {
-  const { city } = props;
+  const { city, country } = props;
   const [snapshot, loading, error] = useCollectionOnce(
-    db.collection('Trips').where('locations', 'array-contains', city),
+    db.collection('Trips').where('locations', 'array-contains', country),
     {
       valueListenOptions: { includeMetadataChanges: true },
     }

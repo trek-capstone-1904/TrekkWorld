@@ -26,6 +26,7 @@ export const CreateTrekkForm = () => {
   const handleChange = event => {
     event.persist();
     if (event.target.name === 'locations') {
+      //TODO currently only allows for one country to be selected otherwise will overwrite maybe?
       setValues(values => ({
         ...values,
         [event.target.name]: [event.target.value],
