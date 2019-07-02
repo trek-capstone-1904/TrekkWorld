@@ -16,7 +16,7 @@ export const CreateTrekkForm = () => {
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-
+  const userId = 'lQNWEtdOGjXlIdmUIRb9';
   const handleChange = event => {
     event.persist();
     setValues(values => ({
@@ -33,21 +33,40 @@ export const CreateTrekkForm = () => {
     // }));
     setLoading(true);
     try {
-      let docRef = await db.collection('Trips').add(values);
+      //Create Trip
+      const docRef = await db.collection('Trips').add(values);
       setLoading(false);
       setSuccess(true);
+      const tripDocId = docRef.id;
       console.log(docRef.id);
-      console.log(docRef);
+
+      //Add Trekk List SubCollection
+      const trekkListCollection = await db
+        .doc(`Trips/${tripDocId}`)
+        .collection('TrekkList')
+        .add({ location: values.locations });
+
+      //Add Trip to User
+      // const newTrip = {};
+      // newTrip[`Trips.${tripDocId}`]
+      const userTrip = await db
+        .doc(`Users/${userId}`)
+        .update({
+          [`Trips.${tripDocId}`]: {
+            tripName: values.tripName,
+            startDate: values.startDate,
+            endDate: values.endDate,
+          },
+        });
     } catch (err) {
       console.log(err);
     }
   };
 
-  console.log(values);
   return (
     <div>
       {loading && <Spinner animation="grow" variant="info" />}
-      {!loading && !success &&(
+      {!loading && !success && (
         <Form onSubmit={handleSubmit}>
           <Form.Group>
             <Form.Label>Trip Name</Form.Label>
