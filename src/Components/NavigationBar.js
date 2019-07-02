@@ -1,8 +1,20 @@
-import React from 'react';
-import { Nav, Navbar } from 'react-bootstrap';
+import React, { useState, useContext } from 'react';
+import { Nav, Navbar, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import userContext from "../Contexts/userContext";
+import firebase from 'firebase/app'
 
 export const NavigationBar = () => {
+  let loggedInUser = useContext(userContext)
+
+  const handleClick = e => {
+    firebase.auth().signOut().then(function(){
+      console.log("signout successful")
+    }).catch(function(error){
+      console.log(error)
+    })
+  }
+
   return (
     <Navbar bg="dark" variant="dark" sticky="top">
       <Navbar.Brand>Trekk</Navbar.Brand>
@@ -16,6 +28,9 @@ export const NavigationBar = () => {
         <LinkContainer to="/plantrip">
           <Nav.Link>Plan Trip</Nav.Link>
         </LinkContainer>
+        {(loggedInUser &&
+          <Button onClick={handleClick}>Logout</Button>
+        )}
       </Nav>
     </Navbar>
   );

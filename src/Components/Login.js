@@ -19,9 +19,6 @@ const SignInScreen = props => {
         var providerId = authResult.additionalUserInfo.providerId;
         var operationType = authResult.operationType;
 
-
-        console.log("user's uid", user.uid)
-        console.log("is new user?", isNewUser)
         //add user to the database if not already there
         if (isNewUser) {
           db.collection("Users")
@@ -29,14 +26,12 @@ const SignInScreen = props => {
             .set({
               userName: user.displayName,
               email: user.email
-            }).then(
-              function(){
-                props.history.push('/plantrip')
-              }
-            );
-
+            })
+            .then(function() {
+              props.history.push("/plantrip");
+            });
         } else {
-          props.history.push('/plantrip')
+          props.history.push("/plantrip");
         }
         return false;
       }

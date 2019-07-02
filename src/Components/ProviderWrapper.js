@@ -2,9 +2,6 @@ import React, {useState, useEffect} from 'react';
 import userContext from '../Contexts/userContext'
 import firebase from 'firebase/app'
 
-
-
-
 export const ProviderWrapper = (props) => {
   let [user, setUser] = useState(null)
 
