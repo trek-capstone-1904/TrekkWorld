@@ -30,4 +30,5 @@ firebase.auth().onAuthStateChanged(function(user) {
 export const auth = firebase.auth();
 var db = firebase.firestore();
 
+
 export default db;

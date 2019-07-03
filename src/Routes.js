@@ -10,6 +10,7 @@ import {
   Signup,
   WorldMap,
 } from './Components';
+import {PhotoLoad} from './Components/PhotoLoad'
 
 export class Routes extends Component {
   render() {
@@ -23,6 +24,7 @@ export class Routes extends Component {
         {/* Testing Routes */}
         <Route path="/triposoAPI" component={SearchAPI} />
         <Route exact path="/tripSearch" component={TripSearch} />
+        <Route exact path="/addPhoto" component={PhotoLoad} />
       </Switch>
     );
   }
