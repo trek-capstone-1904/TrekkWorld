@@ -30,10 +30,10 @@ const SignInScreen = props => {
               userPicture: user.providerData[0].photoURL
             })
             .then(function() {
-              props.history.push("/plantrip");
+              props.history.push("/user");
             });
         } else {
-          props.history.push("/plantrip");
+          props.history.push("/user");
         }
         return false;
       }
