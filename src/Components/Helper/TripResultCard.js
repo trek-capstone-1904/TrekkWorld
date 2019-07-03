@@ -4,14 +4,8 @@ import moment from 'moment';
 import { Link } from 'react-router-dom'
 
 export const TripResultCard = props => {
-  // console.log('this is props: ', props);
   const card = props.card;
-  // console.log('this is card: ', card);
-  // console.log('picture path', `../${card.tripImageUrl}`);
-  // console.log(
-  //   'Object.entries(card.users)',
-  //   Object.entries(card.users).map(card => card[1])
-  // );
+
   return (
     <Card border="info" style={{ width: '18px', margin: '.5rem' }}>
       {/* <Card.Img variant="top" src={`../${card.tripImageUrl}`} /> */}

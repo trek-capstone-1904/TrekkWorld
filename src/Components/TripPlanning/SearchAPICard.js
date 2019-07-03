@@ -10,10 +10,8 @@ export const SearchAPICard = props => {
 
   const { type, country } = props;
   const { name, snippet, score, intro, id } = props.sight;
-  console.log('props:', props);
 
   const loggedInUser = useContext(userContext);
-  console.log('loggedInUser', loggedInUser);
 
   return (
     <Card style={{ margin: '.5rem 1rem' }}>
@@ -40,10 +38,8 @@ const handleClick = (props, uid) => {
   //query Places
   const placeRef = db.collection('Places').doc(props.sight.id);
   const userRef = db.collection('Users').doc(uid);
-  console.log('placeRef', placeRef);
-  console.log('userRef', userRef);
 
-  const { placeName, snippet } = props.sight;
+  const { name, snippet } = props.sight;
 
   placeRef
     .get()
@@ -52,19 +48,7 @@ const handleClick = (props, uid) => {
         //add the props.id to the user
         console.log('Document data:', doc.data());
 
-        userRef
-          .update({
-            bucketList: placeRef,
-          })
-          .then(function() {
-            console.log('Document successfully updated!');
-          })
-          .catch(function(error) {
-            // The document probably doesn't exist.
-            console.error('Error updating document: ', error);
-          });
-
-        addToBucketList(userRef, placeRef, placeName, snippet);
+        addToBucketList(uid, props.sight.id, name, snippet);
       } else {
         // doc is created in 'Places' collection
         console.log('Place document did not exist');
@@ -77,6 +61,7 @@ const handleClick = (props, uid) => {
           .catch(function(error) {
             console.error('Error writing document: ', error);
           });
+        addToBucketList(uid, props.sight.id, name, snippet);
       }
     })
     .catch(function(error) {
@@ -84,21 +69,27 @@ const handleClick = (props, uid) => {
     });
 };
 
-const addToBucketList = (userRef, placeRef, placeName, snippet) => {
-  db.collection('Users')
-    .doc('userRef')
-    .update({
-      [`bucketList.${placeRef}`]: {
-        placeName: placeName,
-        snippet: snippet,
-      },
-    });
+const addToBucketList = async (userRef, placeId, placeName, snippet) => {
+  const userDoc = await db.doc(`Users/${userRef}`).update({
+    [`bucketList.${placeId}`]: {
+      placeName: placeName,
+      snippet: snippet,
+    },
+  });
 };
 
 export default SearchAPICard;
 
 // const userTrip = await db.doc(`Users/${userRef}`).update({
 //   [`bucketList.${placeRef}`]: {
+//     tripName: values.tripName,
+//     startDate: values.startDate,
+//     endDate: values.endDate,
+//   },
+// });
+
+// const userTrip = await db.doc(`Users/${userId}`).update({
+//   [`Trips.${tripDocId}`]: {
 //     tripName: values.tripName,
 //     startDate: values.startDate,
 //     endDate: values.endDate,
