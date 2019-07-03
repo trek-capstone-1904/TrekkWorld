@@ -3,7 +3,7 @@ import * as secret from "./secrets.js";
 import firebase from "firebase/app";
 import "firebase/auth";
 // import 'firebase/database'
-// import 'firebase/storage' // <- needed if using storage
+import 'firebase/storage' // <- needed if using storage
 import "firebase/firestore"; // <- needed if using firestore
 // import 'firebase/functions' // <- needed if using httpsCallable
 // import { reduxFirestore, firestoreReducer } from 'redux-firestore' // <- needed if using firestore
@@ -12,7 +12,8 @@ import "firebase/firestore"; // <- needed if using firestore
 firebase.initializeApp({
   apiKey: secret.apiKey,
   authDomain: secret.authDomain,
-  projectId: secret.projectId
+  projectId: secret.projectId,
+  storageBucket: secret.storage
 });
 
 export let loggedUser = "";
@@ -28,5 +29,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 export const auth = firebase.auth();
 var db = firebase.firestore();
+
 
 export default db;
