@@ -132,7 +132,7 @@ export const CreateTrekkForm = () => {
                 type="radio"
                 label="Romantic"
                 name="tripTags"
-                value="Romantic"
+                value="Couples"
                 onChange={handleChange}
               />
               <Form.Check

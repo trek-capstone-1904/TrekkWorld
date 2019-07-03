@@ -30,10 +30,11 @@ export const WorldMap = () => {
   if (value) {
     const countries = value && value.data().countriesVisited;
     const dataCountries = value && countries.map(country => [country]);
+    dataCountries.unshift(["Countries"])
     return (
       <div>
         <h1>Countries Visited</h1>
-        <h3>{dataCountries.length - 1}</h3>
+        <h3>{dataCountries.length-1}</h3>
         <p style={{ textAlign: 'right' }}>
           <button onClick={toggle} style={{ border: '0', outline: 'none' }}>
             <img style={{ width: '1rem' }} src={zoom} alt="zoom" />

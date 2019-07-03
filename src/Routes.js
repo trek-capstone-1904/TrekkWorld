@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import {TripSingle, UserProfile, Login, SearchAPI, TripPlanning, TripSearch, Signup, WorldMap} from './Components'
-
-
+import {
+  TripSingle,
+  UserProfile,
+  Login,
+  SearchAPI,
+  TripPlanning,
+  TripSearch,
+  Signup,
+  WorldMap,
+} from './Components';
 
 export class Routes extends Component {
   render() {
@@ -16,8 +23,6 @@ export class Routes extends Component {
         {/* Testing Routes */}
         <Route path="/triposoAPI" component={SearchAPI} />
         <Route exact path="/tripSearch" component={TripSearch} />
-        <Route exact path="/WorldMap" component={WorldMap} />
-
       </Switch>
     );
   }
