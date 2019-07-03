@@ -50,7 +50,7 @@ export const WorldMap = () => {
         >
           <Modal.Header>
             <Modal.Title>
-              Countries Visited - Total: {dataCountries.length - 1}
+              Countries Visited (Total: {dataCountries.length - 1})
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>

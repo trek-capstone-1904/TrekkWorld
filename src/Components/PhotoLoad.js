@@ -8,6 +8,7 @@ import { Modal, Button } from 'react-bootstrap';
 export const PhotoLoad = () => {
   const [progressValue, setProgressValue] = useState(0);
   const [loaded, setLoaded] = useState(false);
+  const [imageUrl, setImageUrl]=useState('')
   function handleClose() {
     setLoaded(false);
   }
@@ -39,6 +40,11 @@ export const PhotoLoad = () => {
         console.log(err);
       },
       function complete() {
+        console.log(uploadFile)
+        uploadFile.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+          console.log('File available at', downloadURL);
+          setImageUrl(downloadURL)
+        });
         setLoaded(true);
       }
     );
@@ -51,9 +57,6 @@ export const PhotoLoad = () => {
       </progress>
       <br />
       <input type="file" id="fileButton" onChange={handleChange} />
-      {/* {loaded && (
-        <div><h1>SUCCESS!</h1></div>
-      )} */}
       <Modal show={loaded} onHide={handleClose}>
         <Modal.Body>
           <h1 style={{textAlign:'center'}}>Loaded Successfully!</h1>
