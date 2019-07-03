@@ -1,58 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import styles from './SearchAPICard.module.css';
 import { useCollectionOnce } from 'react-firebase-hooks/firestore';
 import db from '../firebase';
-
-// import { DocumentSnapshot } from '@google-cloud/firestore';
+import userContext from '../Contexts/userContext';
 
 export const SearchAPICard = props => {
   //type = city if from query for top cities OR type= sights if for top sights in a city
 
   const { type, country } = props;
-  const { name, snippet, score, intro } = props.sight;
+  const { name, snippet, score, intro, id } = props.sight;
+  console.log('props:', props);
 
-  const [snapshot, loading, error] = useCollectionOnce(
-    db.collection('Places').where('id', '==', 'W__54667456'),
-    {
-      valueListenOptions: { includeMetadataChanges: false },
-    }
-  );
-
-  if (!loading) {
-    snapshot.docs.map(doc => {
-      console.log('doc.data()', doc.data());
-    });
-    console.log('just snapshot', snapshot.docs.length);
-  }
-
-  // console.log('snapshot.data()', snapshot.data());
-  // const placesRef = db.collection('Places');
-  // console.log('placesRef: ', placesRef);
-  // const foundPlace = placesRef;
-  // console.log('foundPlace', foundPlace);
-  // let data = {};
-  // snapshot.docs.map(doc => (data[doc.id] = doc.data()));
-  // console.log('data', data);
-
-  // const allPlaces = snapshot.docs.map(doc => JSON.stringify(doc.data()));
-
-  // console.log('allPlaces: ', allPlaces);
-
-  // const addToBucketList = () => {
-  //   //check if place exists in db
-
-  //   if (placeFound) {
-  //     db.collection('Users')
-  //       .doc('cRClyp5mjI2WIH114XZk')
-  //       // TODO update so that it adapts to specific user
-  //       //add it to the map
-  //       .add(props.sight);
-  //   }
-  //if not create a new place w/ props
-
-  //
-  // };
+  const loggedInUser = useContext(userContext);
+  console.log('loggedInUser', loggedInUser);
 
   return (
     <Card style={{ margin: '.5rem 1rem' }}>
@@ -63,7 +24,7 @@ export const SearchAPICard = props => {
         <Button
           style={{ margin: '0 1rem' }}
           variant="info"
-          // onClick={addToBucketList}
+          onClick={() => handleClick(props, loggedInUser.uid)}
         >
           + Bucket
         </Button>
@@ -75,4 +36,71 @@ export const SearchAPICard = props => {
   );
 };
 
+const handleClick = (props, uid) => {
+  //query Places
+  const placeRef = db.collection('Places').doc(props.sight.id);
+  const userRef = db.collection('Users').doc(uid);
+  console.log('placeRef', placeRef);
+  console.log('userRef', userRef);
+
+  const { placeName, snippet } = props.sight;
+
+  placeRef
+    .get()
+    .then(function(doc) {
+      if (doc.exists) {
+        //add the props.id to the user
+        console.log('Document data:', doc.data());
+
+        userRef
+          .update({
+            bucketList: placeRef,
+          })
+          .then(function() {
+            console.log('Document successfully updated!');
+          })
+          .catch(function(error) {
+            // The document probably doesn't exist.
+            console.error('Error updating document: ', error);
+          });
+
+        addToBucketList(userRef, placeRef, placeName, snippet);
+      } else {
+        // doc is created in 'Places' collection
+        console.log('Place document did not exist');
+        db.collection('Places')
+          .doc(props.sight.id)
+          .set(props)
+          .then(function() {
+            console.log('Document successfully written!');
+          })
+          .catch(function(error) {
+            console.error('Error writing document: ', error);
+          });
+      }
+    })
+    .catch(function(error) {
+      console.log('Error getting document:', error);
+    });
+};
+
+const addToBucketList = (userRef, placeRef, placeName, snippet) => {
+  db.collection('Users')
+    .doc('userRef')
+    .update({
+      [`bucketList.${placeRef}`]: {
+        placeName: placeName,
+        snippet: snippet,
+      },
+    });
+};
+
 export default SearchAPICard;
+
+// const userTrip = await db.doc(`Users/${userRef}`).update({
+//   [`bucketList.${placeRef}`]: {
+//     tripName: values.tripName,
+//     startDate: values.startDate,
+//     endDate: values.endDate,
+//   },
+// });

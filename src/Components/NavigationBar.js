@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Nav, Navbar, Button } from 'react-bootstrap';
+import { Nav, Navbar, Button, NavDropdown } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import userContext from "../Contexts/userContext";
 import firebase from 'firebase/app'
@@ -28,9 +28,15 @@ export const NavigationBar = () => {
         <LinkContainer to="/plantrip">
           <Nav.Link>Plan Trip</Nav.Link>
         </LinkContainer>
-        {(loggedInUser &&
-          <Button onClick={handleClick}>Logout</Button>
-        )}
+        <NavDropdown title="Account">
+        <NavDropdown.Item>
+        Welcome {loggedInUser.displayName}
+        </NavDropdown.Item>
+        <NavDropdown.Item>
+        </NavDropdown.Item>
+        <Button align='right' onClick={handleClick}>Logout</Button>
+        </NavDropdown>
+
       </Nav>
     </Navbar>
   );

@@ -33,10 +33,10 @@ const SignInScreen = props => {
                 `https://robohash.org/${user.displayName}`,
             })
             .then(function() {
-              props.history.push('/plantrip');
+              props.history.push("/user");
             });
         } else {
-          props.history.push('/plantrip');
+          props.history.push("/user");
         }
         return false;
       },
