@@ -1,0 +1,22 @@
+.userProfileBody {
+  display: flex;
+  flex: space-between;
+  justify-content: space-around;
+}
+
+.Map {
+  width: 90%;
+  max-width: 1000px !important;
+  margin: 0;
+}
+
+/* @media (min-width: 992px) .modal-lg, .modal-xl {
+  max-width: 975px;
+} */
+
+/* @media all {
+  .Map {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+} */
