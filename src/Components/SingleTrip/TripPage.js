@@ -11,9 +11,13 @@ export const TripPage = props => {
       valueListenOptions: { includeMetadataChanges: true },
     }
   );
-  // function handleClick(){
-  //   console.log(props.history)
-  // }
+  const tripId = props.match.params.tripId
+  console.log(tripId)
+  function handleClick(){
+    console.log(props.history)
+    console.log(props.match)
+    props.history.push(`${tripId}/journal`)
+  }
 
   if (error) throw error;
   if (loading) return <Spinner animation="grow" variant="info" />;
@@ -32,9 +36,9 @@ export const TripPage = props => {
       <div>
         <Jumbotron>
           <h1>{tripName}</h1>
-          <Link to={`trip/${props.match.params.tripId}/journal`}>
-            <Button>Open Journal</Button>
-          </Link>
+          {/* <Link to={`trip/${props.match.params.tripId}/journal`}> */}
+            <Button onClick={handleClick}>Open Journal</Button>
+          {/* </Link> */}
         </Jumbotron>
         {/* <div className={styles.FellowTravelers}> */}
         <div style={{ border: '1px solid teal', width: '33vw' }}>
