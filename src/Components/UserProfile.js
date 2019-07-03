@@ -1,7 +1,8 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import { useDocument } from 'react-firebase-hooks/firestore';
 import db from '../firebase';
-import {UserProfileHeader, UserProfileTrips} from './index.js';
+import { UserProfileHeader, UserProfileTrips, WorldMap } from './index.js';
+import styles from "./UserProfile.module.css";
 import {
   InputGroup,
   Button,
@@ -12,7 +13,7 @@ import {
 import userContext from '../Contexts/userContext';
 
 export const UserProfile = () => {
-  const loggedInUser = useContext(userContext)
+  const loggedInUser = useContext(userContext);
 
   const [value, loading, error] = useDocument(
     db.doc(`Users/${loggedInUser.uid}`),
@@ -20,16 +21,20 @@ export const UserProfile = () => {
       valueListenOptions: { includeMetadataChanges: true },
     }
   );
-
-  const userInfo = value && value.data();
-  return (
-    <div>
-      {error && <strong>Error: {error}</strong>}
-      {loading && <Spinner animation="grow" variant="info" />}
-      {value && <UserProfileHeader user={userInfo} />}
-      {value && value.data().Trips && <UserProfileTrips trips={userInfo.Trips}/>}
-    </div>
-  );
+  if (error) throw error;
+  if (loading) return <Spinner animation="grow" variant="info" />;
+  if (value) {
+    const userInfo = value.data();
+    return (
+      <div>
+        <UserProfileHeader user={userInfo} />
+        <div className={styles.userProfileBody}>
+          {userInfo.Trips && <UserProfileTrips trips={userInfo.Trips} />}
+          {userInfo.countriesVisited && <WorldMap />}
+        </div>
+      </div>
+    );
+  }
 };
 
 export default UserProfile;

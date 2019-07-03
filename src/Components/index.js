@@ -10,6 +10,7 @@ import TripSearch from './TripSearch';
 import Signup from './Signup';
 import BucketListCard from './BucketListCard';
 import BucketList from './BucketList';
+import WorldMap from './WorldMap'
 
 export { default as TripSingle } from './TripSingle';
 export { default as UserProfile } from './UserProfile';
@@ -22,3 +23,4 @@ export { default as TripSearch } from './TripSearch';
 export { default as Signup } from './Signup';
 export { default as BucketListCard } from './BucketListCard';
 export { default as BucketList } from './BucketList';
+export { default as WorldMap } from './WorldMap';

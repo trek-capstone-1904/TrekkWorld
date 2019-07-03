@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
-import { Jumbotron, Image, Col, Row, Container, Button, Modal } from 'react-bootstrap';
-import {CreateTrekkForm} from './CreateTrekkForm'
+import {
+  Jumbotron,
+  Image,
+  Col,
+  Row,
+  Container,
+  Button,
+  Modal,
+} from 'react-bootstrap';
+// import WorldMap from './WorldMap'
+import { CreateTrekkForm } from './CreateTrekkForm';
 
 export const UserProfileHeader = props => {
   const { bio, email, userName, userPicture } = props.user;
@@ -10,8 +19,8 @@ export const UserProfileHeader = props => {
     setIsShowing(!isShowing);
   }
 
-  function handleClose(){
-    setIsShowing(false)
+  function handleClose() {
+    setIsShowing(false);
   }
 
   return (
@@ -37,7 +46,7 @@ export const UserProfileHeader = props => {
                   <Modal.Title>Where in the world are we trekking?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                  <CreateTrekkForm/>
+                  <CreateTrekkForm />
                 </Modal.Body>
                 <Modal.Footer>
                   <Button variant="secondary" onClick={handleClose}>
@@ -45,6 +54,9 @@ export const UserProfileHeader = props => {
                   </Button>
                 </Modal.Footer>
               </Modal>
+            </Col>
+            <Col>
+              {/* <WorldMap /> */}
             </Col>
           </Row>
         </Container>
