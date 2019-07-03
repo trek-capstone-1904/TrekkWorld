@@ -66,6 +66,7 @@ export const TripPlanning = () => {
                 <option value="Colombia">Colombia</option>
                 <option value="Korea">Korea</option>
                 <option value="Egypt">Egypt</option>
+                <option value="Spain">Spain</option>
               </Form.Control>
             </Form.Group>
             <Button variant="primary" type="submit">

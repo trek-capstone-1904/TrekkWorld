@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext} from 'react';
 import firebase from 'firebase/app';
 import 'firebase/storage';
 import UserProfileHeader from '../User/UserProfileHeader';
 import bucket from '../../firebase';
 import { Modal, Button } from 'react-bootstrap';
+import userContext from '../../Contexts/userContext';
 
 export const PhotoLoad = () => {
+  const loggedInUser = useContext(userContext);
   const [progressValue, setProgressValue] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [imageUrl, setImageUrl]=useState('')
@@ -21,7 +23,8 @@ export const PhotoLoad = () => {
     //Create a storage ref
     const storageRef = firebase
       .storage()
-      .ref(`tripImages/${tripId}/${file.name}`);
+      // .ref(`tripImages/${tripId}/${file.name}`);
+      .ref(`userProfilePics/${loggedInUser.uid}/${file.name}`);
 
     // //Upload File
     let uploadFile = storageRef.put(file);
