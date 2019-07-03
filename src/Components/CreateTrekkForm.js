@@ -3,7 +3,7 @@ import React, { useState, useContext } from 'react';
 import { Form, Button, Col, Spinner } from 'react-bootstrap';
 import db from '../firebase';
 import userContext from '../Contexts/userContext';
-
+import CountriesSelect from './CountrySelect';
 //TODO add a created by for Trips, add trip to user with submit
 
 export const CreateTrekkForm = () => {
@@ -70,7 +70,7 @@ export const CreateTrekkForm = () => {
       console.log(err);
     }
   };
-  console.log(values && values)
+  console.log(values && values);
   return (
     <div>
       {loading && <Spinner animation="grow" variant="info" />}
@@ -101,6 +101,10 @@ export const CreateTrekkForm = () => {
               <option value="Korea">Korea</option>
               <option value="Egypt">Egypt</option>
             </Form.Control>
+            {/* <CountriesSelect
+              value={values.locations[0]}
+              onChange={handleChange}
+            /> */}
           </Form.Group>
           <Form.Group>
             <Form.Label>Start Date</Form.Label>
