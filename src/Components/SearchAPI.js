@@ -20,9 +20,9 @@ function useFetch(url, defaultData) {
 function fakeData(type) {
   let data;
   if (type === 'sights') {
-    data = require('./APIResultsTest/ParisQuery.json');
+    data = require('../TestAPIResults/ParisQuery.json');
   } else if (type === 'cities') {
-    data = require('./APIResultsTest/FranceQuery.json');
+    data = require('../TestAPIResults/FranceQuery.json');
   }
   return data;
 }
