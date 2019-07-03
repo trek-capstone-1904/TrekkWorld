@@ -5,6 +5,7 @@ import NavigationBar from './Components/NavigationBar';
 import { Route, Switch } from 'react-router-dom'
 import Login from './Components/Login';
 import userContext from './Contexts/userContext'
+import history from './history'
 
 
 function App(props) {
@@ -19,7 +20,7 @@ function App(props) {
   } else {
     return (
 
-      <userContext.Provider value={props.user}>
+      <userContext.Provider value={props.user} history={history}>
       <div className="App">
 
         <NavigationBar />

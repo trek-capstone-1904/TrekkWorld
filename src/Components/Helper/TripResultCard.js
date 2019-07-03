@@ -3,14 +3,14 @@ import { Card, Badge, Accordion, ListGroup } from 'react-bootstrap';
 import moment from 'moment';
 
 export const TripResultCard = props => {
-  console.log('this is props: ', props);
+  // console.log('this is props: ', props);
   const card = props.card;
-  console.log('this is card: ', card);
+  // console.log('this is card: ', card);
   // console.log('picture path', `../${card.tripImageUrl}`);
-  console.log(
-    'Object.entries(card.users)',
-    Object.entries(card.users).map(card => card[1])
-  );
+  // console.log(
+  //   'Object.entries(card.users)',
+  //   Object.entries(card.users).map(card => card[1])
+  // );
   return (
     <Card border="info" style={{ width: '18px', margin: '.5rem' }}>
       {/* <Card.Img variant="top" src={`../${card.tripImageUrl}`} /> */}

@@ -30,17 +30,27 @@ export const WorldMap = () => {
   if (value) {
     const countries = value && value.data().countriesVisited;
     const dataCountries = value && countries.map(country => [country]);
-    dataCountries.unshift(["Countries"])
+    dataCountries.unshift(['Countries']);
     return (
       <div>
         <h1>Countries Visited</h1>
-        <h3>{dataCountries.length-1}</h3>
+        <h3>{dataCountries.length - 1}</h3>
         <p style={{ textAlign: 'right' }}>
           <button onClick={toggle} style={{ border: '0', outline: 'none' }}>
             <img style={{ width: '1rem' }} src={zoom} alt="zoom" />
           </button>
         </p>
-        <Chart chartType="GeoChart" width="30rem" data={dataCountries} />
+        <Chart
+          chartType="GeoChart"
+          width="30rem"
+          data={dataCountries}
+          options={{
+            // colorAxis: { colors: 'blue' },
+            backgroundColor: 'none',
+            datalessRegionColor: 'lightgray',
+            defaultColor: '#17a2b8',
+          }}
+        />
         <Modal
           // dialogClassName="modal-90w"
           // className={styles.Map}
@@ -54,7 +64,16 @@ export const WorldMap = () => {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Chart chartType="GeoChart" data={dataCountries} />
+            <Chart
+              chartType="GeoChart"
+              data={dataCountries}
+              options={{
+                // colorAxis: { colors: 'blue' },
+                backgroundColor: 'none',
+                datalessRegionColor: 'lightgray',
+                defaultColor: '#17a2b8',
+              }}
+            />
           </Modal.Body>
           <Modal.Footer>
             <Button variant="info" onClick={handleClose}>

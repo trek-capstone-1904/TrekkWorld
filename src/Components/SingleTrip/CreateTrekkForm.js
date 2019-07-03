@@ -4,13 +4,16 @@ import { Form, Button, Col, Spinner } from 'react-bootstrap';
 import db from '../../firebase';
 import userContext from '../../Contexts/userContext';
 import CountriesSelect from '../Helper/CountrySelect';
+import history from '../../history';
+
 //TODO add a created by for Trips, add trip to user with submit
 
-export const CreateTrekkForm = () => {
+export const CreateTrekkForm = props => {
   //TODO update to represent actual current user ID
   const loggedInUser = useContext(userContext);
   const userId = `${loggedInUser.uid}`;
   const userName = `${loggedInUser.displayName}`;
+  console.log('history in TrekkForm', history);
 
   const [values, setValues] = useState({
     tripName: '',
@@ -23,6 +26,7 @@ export const CreateTrekkForm = () => {
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [tripId, setTripId] = useState('');
   const handleChange = event => {
     event.persist();
     if (event.target.name === 'locations') {
@@ -47,6 +51,7 @@ export const CreateTrekkForm = () => {
       //Create Trip
       const docRef = await db.collection('Trips').add(values);
       const tripDocId = docRef.id;
+      setTripId(tripDocId);
       console.log('Created trip/doc id:', tripDocId);
 
       //Add Trekk List SubCollection
@@ -70,6 +75,9 @@ export const CreateTrekkForm = () => {
       console.log(err);
     }
   };
+  function handleClick(evt) {
+    history.push(`/trip/${tripId}`);
+  }
   console.log(values && values);
   return (
     <div>
@@ -100,6 +108,7 @@ export const CreateTrekkForm = () => {
               <option value="Colombia">Colombia</option>
               <option value="Korea">Korea</option>
               <option value="Egypt">Egypt</option>
+              <option value="Spain">Spain</option>
             </Form.Control>
             {/* <CountriesSelect
               value={values.locations[0]}
@@ -130,7 +139,7 @@ export const CreateTrekkForm = () => {
               <Form.Check
                 inline
                 type="radio"
-                label="Romantic"
+                label="Couples"
                 name="tripTags"
                 value="Couples"
                 onChange={handleChange}
@@ -168,7 +177,12 @@ export const CreateTrekkForm = () => {
           </div>
         </Form>
       )}
-      {success && <h4>Successfully Created Trip!</h4>}
+      {success && (
+        <h4>
+          Successfully Created Trip!{' '}
+          <Button onClick={handleClick}> > Go To Trip Page</Button>
+        </h4>
+      )}
     </div>
   );
 };

@@ -21,6 +21,7 @@ export const UserProfileHeader = props => {
 
   function handleClose() {
     setIsShowing(false);
+    // props.history.push(`/trip/${trip}`);
   }
 
   return (
@@ -46,7 +47,7 @@ export const UserProfileHeader = props => {
                   <Modal.Title>Where in the world are we trekking?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                  <CreateTrekkForm />
+                  <CreateTrekkForm props={props}/>
                 </Modal.Body>
                 <Modal.Footer>
                   <Button variant="secondary" onClick={handleClose}>

@@ -8,9 +8,10 @@ import {
   TripPlanning,
   TripSearch,
   WorldMap,
+  CreateTrekkForm,
 } from './Components';
-import {PhotoLoad} from './Components/Helper/PhotoLoad'
-import {Welcome} from './Components/Welcome/Welcome'
+import { PhotoLoad } from './Components/Helper/PhotoLoad';
+import { Welcome } from './Components/Welcome/Welcome';
 
 export class Routes extends Component {
   render() {

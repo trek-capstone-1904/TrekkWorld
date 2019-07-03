@@ -12,9 +12,9 @@ import {
 } from 'react-bootstrap';
 import userContext from '../../Contexts/userContext';
 
-export const UserProfile = () => {
+export const UserProfile = (props) => {
   const loggedInUser = useContext(userContext);
-
+  console.log('props in userprofile:', props)
   const [value, loading, error] = useDocument(
     db.doc(`Users/${loggedInUser.uid}`),
     {
@@ -27,7 +27,7 @@ export const UserProfile = () => {
     const userInfo = value.data();
     return (
       <div>
-        <UserProfileHeader user={userInfo} />
+        <UserProfileHeader user={userInfo}/>
         <div className={styles.userProfileBody}>
           {userInfo.Trips && <UserProfileTrips trips={userInfo.Trips} />}
           {userInfo.countriesVisited && <WorldMap />}
