@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useContext } from 'react';
 import { Form, Button, Col, Spinner } from 'react-bootstrap';
-import db from '../firebase';
-import userContext from '../Contexts/userContext';
-import CountriesSelect from './CountrySelect';
+import db from '../../firebase';
+import userContext from '../../Contexts/userContext';
+import CountriesSelect from '../Helper/CountrySelect';
 //TODO add a created by for Trips, add trip to user with submit
 
 export const CreateTrekkForm = () => {

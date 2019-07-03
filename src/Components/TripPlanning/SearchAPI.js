@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import * as secret from '../secrets';
+import * as secret from '../../secrets';
 import SearchAPICard from './SearchAPICard';
 
 function useFetch(url, defaultData) {
@@ -20,9 +20,9 @@ function useFetch(url, defaultData) {
 function fakeData(type) {
   let data;
   if (type === 'sights') {
-    data = require('../TestAPIResults/ParisQuery.json');
+    data = require('../../TestAPIResults/ParisQuery.json');
   } else if (type === 'cities') {
-    data = require('../TestAPIResults/FranceQuery.json');
+    data = require('../../TestAPIResults/FranceQuery.json');
   }
   return data;
 }

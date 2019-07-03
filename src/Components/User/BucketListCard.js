@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
-import styles from './SearchAPICard.module.css';
+import styles from '../SearchAPICard.module.css';
 
 export const BucketListCard = props => {
   //type = city if from query for top cities OR type= sights if for top sights in a city

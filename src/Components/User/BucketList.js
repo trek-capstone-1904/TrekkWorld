@@ -4,9 +4,10 @@
 
 import React, { useState } from 'react';
 import { CardGroup, SearchAPICard } from 'react-bootstrap';
-import db from '../firebase';
+import db from '../../firebase';
 import { useCollection } from 'react-firebase-hooks/firestore';
-import BucketListCard from './BucketListCard';
+import {BucketListCard} from '../index'
+
 
 export const BucketList = () => {
   const [value, loading, error] = useCollection(
@@ -30,8 +31,8 @@ export const BucketList = () => {
       {/* <p>
         {value && (
            <span>
-            {value.docs.map(doc => ( 
-          <BucketListCard key={doc.id} card={doc.data()}> 
+            {value.docs.map(doc => (
+          <BucketListCard key={doc.id} card={doc.data()}>
            ))}
           </span>
          )}

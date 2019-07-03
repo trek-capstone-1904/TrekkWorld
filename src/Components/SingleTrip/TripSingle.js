@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import db from '../firebase';
+import db from '../../firebase';
 
 export class TripSingle extends Component {
   constructor() {

@@ -6,9 +6,9 @@ import {
   CardGroup,
   Spinner,
 } from 'react-bootstrap';
-import db from '../firebase';
+import db from '../../firebase';
 import { useCollectionOnce } from 'react-firebase-hooks/firestore';
-import TripResultCard from './TripResultCard';
+import TripResultCard from '../Helper/TripResultCard';
 
 export const TripSearch = props => {
   const { city, country } = props;

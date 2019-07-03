@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { useDocument } from 'react-firebase-hooks/firestore';
-import db from '../firebase';
-import { UserProfileHeader, UserProfileTrips, WorldMap } from './index.js';
-import styles from "./UserProfile.module.css";
+import db from '../../firebase';
+import { UserProfileHeader, UserProfileTrips, WorldMap } from '../index.js';
+import styles from "../UserProfile.module.css";
 import {
   InputGroup,
   Button,
@@ -10,7 +10,7 @@ import {
   CardGroup,
   Spinner,
 } from 'react-bootstrap';
-import userContext from '../Contexts/userContext';
+import userContext from '../../Contexts/userContext';
 
 export const UserProfile = () => {
   const loggedInUser = useContext(userContext);

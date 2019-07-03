@@ -9,7 +9,7 @@ import {
   Modal,
 } from 'react-bootstrap';
 // import WorldMap from './WorldMap'
-import { CreateTrekkForm } from './CreateTrekkForm';
+import { CreateTrekkForm } from '../SingleTrip/CreateTrekkForm';
 
 export const UserProfileHeader = props => {
   const { bio, email, userName, userPicture } = props.user;

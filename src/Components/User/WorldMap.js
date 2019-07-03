@@ -1,11 +1,11 @@
 import React, { useContext, useState } from 'react';
 import Chart from 'react-google-charts';
 import { useDocument } from 'react-firebase-hooks/firestore';
-import db from '../firebase';
-import userContext from '../Contexts/userContext';
+import db from '../../firebase';
+import userContext from '../../Contexts/userContext';
 import { Spinner, Button } from 'react-bootstrap';
-import zoom from '../images/baseline_zoom_out_map_black_18dp.png';
-import styles from './UserProfile.module.css';
+import zoom from '../../images/baseline_zoom_out_map_black_18dp.png';
+import styles from '../UserProfile.module.css';
 import Modal from 'react-bootstrap/Modal';
 
 export const WorldMap = () => {

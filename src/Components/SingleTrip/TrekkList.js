@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import userContext from '../Contexts/userContext'
+import userContext from '../../Contexts/userContext'
 
 export const TrekkList = () => {
   const loggedInUser = useContext(userContext);

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import firebase from 'firebase/app';
 import 'firebase/storage';
-import UserProfileHeader from './UserProfileHeader';
-import bucket from '../firebase';
+import UserProfileHeader from '../User/UserProfileHeader';
+import bucket from '../../firebase';
 import { Modal, Button } from 'react-bootstrap';
 
 export const PhotoLoad = () => {

@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { Card, Button } from 'react-bootstrap';
-import styles from './SearchAPICard.module.css';
+import styles from '../SearchAPICard.module.css';
 import { useCollectionOnce } from 'react-firebase-hooks/firestore';
-import db from '../firebase';
-import userContext from '../Contexts/userContext';
+import db from '../../firebase';
+import userContext from '../../Contexts/userContext';
 
 export const SearchAPICard = props => {
   //type = city if from query for top cities OR type= sights if for top sights in a city

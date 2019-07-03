@@ -1,9 +1,9 @@
 import React, { useState, useContext } from "react";
 import { Jumbotron, Form, Button } from "react-bootstrap";
-import styles from "./TripPlanning.module.css";
-import { SearchAPI, TripSearch, BucketList } from "./index.js";
+import styles from "../TripPlanning.module.css";
+import { SearchAPI, TripSearch, BucketList } from "../index.js";
 import "firebase/auth";
-import userContext from "../Contexts/userContext";
+import userContext from "../../Contexts/userContext";
 
 export const TripPlanning = () => {
   const [city, setCity] = useState("");
