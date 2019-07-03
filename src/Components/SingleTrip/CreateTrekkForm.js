@@ -5,6 +5,7 @@ import db from '../../firebase';
 import userContext from '../../Contexts/userContext';
 import CountriesSelect from '../Helper/CountrySelect';
 import history from '../../history';
+import { useDocumentOnce } from 'react-firebase-hooks/firestore';
 
 //TODO add a created by for Trips, add trip to user with submit
 
@@ -13,12 +14,17 @@ export const CreateTrekkForm = props => {
   const loggedInUser = useContext(userContext);
   const userId = `${loggedInUser.uid}`;
   const userName = `${loggedInUser.displayName}`;
-  console.log('history in TrekkForm', history);
+  const [userPicture, setUserPicture] = useState('');
 
   const [values, setValues] = useState({
     tripName: '',
     locations: '',
-    users: { [userId]: userName },
+    users: {
+      [userId]: {
+        userName: userName,
+        userPicture: props.userDoc.user.userPicture,
+      },
+    },
     startDate: '',
     endDate: '',
     tripImageUrl: '',
@@ -27,6 +33,7 @@ export const CreateTrekkForm = props => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [tripId, setTripId] = useState('');
+
   const handleChange = event => {
     event.persist();
     if (event.target.name === 'locations') {
@@ -47,6 +54,7 @@ export const CreateTrekkForm = props => {
     event.preventDefault();
 
     setLoading(true);
+
     try {
       //Create Trip
       const docRef = await db.collection('Trips').add(values);
@@ -78,7 +86,7 @@ export const CreateTrekkForm = props => {
   function handleClick(evt) {
     history.push(`/trip/${tripId}`);
   }
-  console.log(values && values);
+
   return (
     <div>
       {loading && <Spinner animation="grow" variant="info" />}
@@ -178,10 +186,10 @@ export const CreateTrekkForm = props => {
         </Form>
       )}
       {success && (
-        <h4>
-          Successfully Created Trip!{' '}
+        <div>
+          <h4>Successfully Created Trip!</h4>
           <Button onClick={handleClick}> > Go To Trip Page</Button>
-        </h4>
+        </div>
       )}
     </div>
   );

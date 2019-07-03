@@ -16,7 +16,7 @@ export const TripListItem = props => {
       {loading && <Spinner animation="grow" variant="info" />}
       {value && (
         <CardGroup>
-          <TripResultCard card={value.data()} />
+          <TripResultCard tripId={props.tripId} card={value.data()} />
         </CardGroup>
       )}
     </>

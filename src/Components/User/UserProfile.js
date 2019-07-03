@@ -14,7 +14,6 @@ import userContext from '../../Contexts/userContext';
 
 export const UserProfile = (props) => {
   const loggedInUser = useContext(userContext);
-  console.log('props in userprofile:', props)
   const [value, loading, error] = useDocument(
     db.doc(`Users/${loggedInUser.uid}`),
     {

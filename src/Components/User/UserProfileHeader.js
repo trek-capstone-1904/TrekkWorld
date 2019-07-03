@@ -14,7 +14,7 @@ import { CreateTrekkForm } from '../SingleTrip/CreateTrekkForm';
 export const UserProfileHeader = props => {
   const { bio, email, userName, userPicture } = props.user;
   const [isShowing, setIsShowing] = useState(false);
-
+  // console.log('userprofileheader', props.user)
   function toggle() {
     setIsShowing(!isShowing);
   }
@@ -47,7 +47,7 @@ export const UserProfileHeader = props => {
                   <Modal.Title>Where in the world are we trekking?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                  <CreateTrekkForm props={props}/>
+                  <CreateTrekkForm userDoc={props}/>
                 </Modal.Body>
                 <Modal.Footer>
                   <Button variant="secondary" onClick={handleClose}>
