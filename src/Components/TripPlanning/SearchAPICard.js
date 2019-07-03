@@ -10,10 +10,8 @@ export const SearchAPICard = props => {
 
   const { type, country } = props;
   const { name, snippet, score, intro, id } = props.sight;
-  console.log('props:', props);
 
   const loggedInUser = useContext(userContext);
-  console.log('loggedInUser', loggedInUser);
 
   return (
     <Card style={{ margin: '.5rem 1rem' }}>
@@ -40,8 +38,6 @@ const handleClick = (props, uid) => {
   //query Places
   const placeRef = db.collection('Places').doc(props.sight.id);
   const userRef = db.collection('Users').doc(uid);
-  console.log('placeRef', placeRef);
-  console.log('userRef', userRef);
 
   const { name, snippet } = props.sight;
 
@@ -74,20 +70,12 @@ const handleClick = (props, uid) => {
 };
 
 const addToBucketList = async (userRef, placeId, placeName, snippet) => {
-  console.log(
-    'userRef, placeId, placeName, snippet',
-    `${userRef}`,
-    `${placeId}`,
-    placeName,
-    snippet
-  );
   const userDoc = await db.doc(`Users/${userRef}`).update({
     [`bucketList.${placeId}`]: {
       placeName: placeName,
       snippet: snippet,
     },
   });
-  console.log(userDoc);
 };
 
 export default SearchAPICard;
