@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import db from '../../firebase';
-import { Spinner, Jumbotron, Media, Button } from 'react-bootstrap';
+import { Spinner, Jumbotron, Media, Button, Modal } from 'react-bootstrap';
 import { useDocument } from 'react-firebase-hooks/firestore';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 export const TripPage = props => {
   const [trip, loading, error] = useDocument(
@@ -11,12 +11,25 @@ export const TripPage = props => {
       valueListenOptions: { includeMetadataChanges: true },
     }
   );
-  const tripId = props.match.params.tripId
-  console.log(tripId)
-  function handleClick(){
-    console.log(props.history)
-    console.log(props.match)
-    props.history.push(`${tripId}/journal`)
+  const tripId = props.match.params.tripId;
+
+  //redirects to journal
+  function handleClick() {
+    props.history.push(`${tripId}/journal`);
+  }
+
+  const [isShowing, setIsShowing] = useState(false);
+
+  function toggleForm() {
+    //Open Form
+    setIsShowing(!isShowing);
+    //Find user by email
+    //add to user map on Trips
+    //add trip to user collection
+  }
+  function handleClose() {
+    setIsShowing(false);
+    // props.history.push(`/trip/${trip}`);
   }
 
   if (error) throw error;
@@ -31,79 +44,66 @@ export const TripPage = props => {
       tripImageUrl,
       users,
     } = trip.data();
-    console.log(Object.keys(users));
+    console.log(users);
     return (
       <div>
         <Jumbotron>
           <h1>{tripName}</h1>
           {/* <Link to={`trip/${props.match.params.tripId}/journal`}> */}
-            <Button onClick={handleClick}>Open Journal</Button>
+          <Button onClick={handleClick}>Open Journal</Button>
           {/* </Link> */}
         </Jumbotron>
+
         {/* <div className={styles.FellowTravelers}> */}
-        <div style={{ border: '1px solid teal', width: '33vw' }}>
+        <div
+          style={{
+            width: '33vw',
+            border: '1.5px solid #17a2b8',
+            padding: '1rem',
+          }}
+        >
           <h3>Fellow Trekkers</h3>
-          <ul className="list-unstyled">
-            <Media as="li">
-              <img
-                width={64}
-                height={64}
-                className="mr-3"
-                src="holder.js/64x64"
-                alt="Generic placeholder"
-              />
-              <Media.Body>
-                <h5>List-based media object</h5>
-                <p>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-                  scelerisque ante sollicitudin commodo. Cras purus odio,
-                  vestibulum in vulputate at, tempus viverra turpis. Fusce
-                  condimentum nunc ac nisi vulputate fringilla. Donec lacinia
-                  congue felis in faucibus.
-                </p>
-              </Media.Body>
-            </Media>
-
-            <Media as="li">
-              <img
-                width={64}
-                height={64}
-                className="mr-3"
-                src="holder.js/64x64"
-                alt="Generic placeholder"
-              />
-              <Media.Body>
-                <h5>List-based media object</h5>
-                <p>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-                  scelerisque ante sollicitudin commodo. Cras purus odio,
-                  vestibulum in vulputate at, tempus viverra turpis. Fusce
-                  condimentum nunc ac nisi vulputate fringilla. Donec lacinia
-                  congue felis in faucibus.
-                </p>
-              </Media.Body>
-            </Media>
-
-            <Media as="li">
-              <img
-                width={64}
-                height={64}
-                className="mr-3"
-                src="holder.js/64x64"
-                alt="Generic placeholder"
-              />
-              <Media.Body>
-                <h5>List-based media object</h5>
-                <p>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-                  scelerisque ante sollicitudin commodo. Cras purus odio,
-                  vestibulum in vulputate at, tempus viverra turpis. Fusce
-                  condimentum nunc ac nisi vulputate fringilla. Donec lacinia
-                  congue felis in faucibus.
-                </p>
-              </Media.Body>
-            </Media>
+          <Button
+            variant="info"
+            style={{ margin: '.5rem' }}
+            onClick={toggleForm}
+          >
+            {' '}
+            + New Trekker
+          </Button>
+          <ul
+            className="list-unstyled"
+            style={{ display: 'flex', justifyContent: 'space-around' }}
+          >
+            {Object.entries(users).map(user => (
+              <Media key={user[0]} as="li" style={{ margin: '.5rem' }}>
+                {console.log(users)}
+                <img
+                  width={64}
+                  height={64}
+                  className="mr-3"
+                  src={user[1].userPicture}
+                  alt="Profile Pic"
+                />
+                <Media.Body>
+                  <h5>{user[1].userName}</h5>
+                </Media.Body>
+              </Media>
+            ))}
           </ul>
+          <Modal show={isShowing} onHide={handleClose}>
+            <Modal.Header closeButton>
+              <Modal.Title>Who's trekking with?</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              {/* <AddTrekker userDoc={props} /> */}
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handleClose}>
+                Close
+              </Button>
+            </Modal.Footer>
+          </Modal>
         </div>
       </div>
     );
