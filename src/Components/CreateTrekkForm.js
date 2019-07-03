@@ -1,14 +1,16 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Form, Button, Col, Spinner } from 'react-bootstrap';
 import db from '../firebase';
+import userContext from '../Contexts/userContext';
 
 //TODO add a created by for Trips, add trip to user with submit
 
 export const CreateTrekkForm = () => {
   //TODO update to represent actual current user ID
-  const userId = 'lQNWEtdOGjXlIdmUIRb9';
-  const userName = 'Patricia';
+  const loggedInUser = useContext(userContext);
+  const userId = `${loggedInUser.uid}`;
+  const userName = `${loggedInUser.displayName}`;
 
   const [values, setValues] = useState({
     tripName: '',
@@ -23,10 +25,18 @@ export const CreateTrekkForm = () => {
   const [success, setSuccess] = useState(false);
   const handleChange = event => {
     event.persist();
-    setValues(values => ({
-      ...values,
-      [event.target.name]: event.target.value,
-    }));
+    if (event.target.name === 'locations') {
+      //TODO currently only allows for one country to be selected otherwise will overwrite maybe?
+      setValues(values => ({
+        ...values,
+        [event.target.name]: [event.target.value],
+      }));
+    } else {
+      setValues(values => ({
+        ...values,
+        [event.target.name]: event.target.value,
+      }));
+    }
   };
 
   const handleSubmit = async event => {
@@ -60,7 +70,7 @@ export const CreateTrekkForm = () => {
       console.log(err);
     }
   };
-
+  console.log(values && values)
   return (
     <div>
       {loading && <Spinner animation="grow" variant="info" />}
@@ -78,7 +88,7 @@ export const CreateTrekkForm = () => {
             <Form.Label>Country</Form.Label>
             <Form.Control
               name="locations"
-              value={values.locations}
+              value={values.locations[0]}
               as="select"
               onChange={handleChange}
             >

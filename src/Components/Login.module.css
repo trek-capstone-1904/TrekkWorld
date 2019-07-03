@@ -7,11 +7,12 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 92vh;
-  padding: 20vh;
+  height: 100vh;
+  padding: 25vh;
 }
 
 .LogIn > h1, .LogIn p{
   color:white;
   font-family: 'Oswald', sans-serif;
+  text-align: center
 }

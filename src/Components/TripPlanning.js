@@ -77,7 +77,7 @@ export const TripPlanning = () => {
         <div className={styles.searchResults}>
           <div className={styles.placeholderTripSearch}>
             <h2>Trips</h2>
-            {submitted && <TripSearch city={city} />}
+            {submitted && <TripSearch city={city} country={country}/>}
           </div>
           <div className={styles.searchAPI}>
             <h2>Things to Do</h2>
