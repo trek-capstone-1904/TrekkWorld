@@ -1,33 +1,33 @@
-import React, { useState, useContext } from "react";
-import { Jumbotron, Form, Button } from "react-bootstrap";
-import styles from "../TripPlanning.module.css";
-import { SearchAPI, TripSearch, BucketList } from "../index.js";
-import "firebase/auth";
-import userContext from "../../Contexts/userContext";
+import React, { useState, useContext } from 'react';
+import { Jumbotron, Form, Button } from 'react-bootstrap';
+import styles from '../TripPlanning.module.css';
+import { SearchAPI, TripSearch, BucketList } from '../index.js';
+import 'firebase/auth';
+import userContext from '../../Contexts/userContext';
 
 export const TripPlanning = () => {
-  const [city, setCity] = useState("");
-  const [country, setCountry] = useState("");
+  const [city, setCity] = useState('');
+  const [country, setCountry] = useState('');
   const [submitted, setSubmit] = useState(false);
 
   const loggedInUser = useContext(userContext);
 
   const handleChange = (evt, type) => {
     setSubmit(false);
-    if (evt.currentTarget.name === "city") {
+    if (evt.currentTarget.name === 'city') {
       setCity(evt.target.value);
-    } else if (evt.currentTarget.name === "country") {
+    } else if (evt.currentTarget.name === 'country') {
       setCountry(evt.target.value);
     }
   };
   const handleSubmit = evt => {
     evt.preventDefault();
 
-    if (country === "Select..." || country === "") {
-      alert("Please select a country");
+    if (country === 'Select...' || country === '') {
+      alert('Please select a country');
     } else {
       // alert(`Submitting city: ${city}, ${country}`);
-      setSubmit("true");
+      setSubmit('true');
     }
   };
 
@@ -77,16 +77,16 @@ export const TripPlanning = () => {
         <div className={styles.searchResults}>
           <div className={styles.placeholderTripSearch}>
             <h2>Trips</h2>
-            {submitted && <TripSearch city={city} country={country}/>}
+            {submitted && <TripSearch city={city} country={country} />}
           </div>
           <div className={styles.searchAPI}>
             <h2>Things to Do</h2>
             {submitted && <SearchAPI city={city} country={country} />}
           </div>
-        </div>
-        <div className={styles.BucketList}>
-          <h2>Bucket List</h2>
-          <BucketList />
+          <div className={styles.BucketList}>
+            <h2>Bucket List</h2>
+            <BucketList />
+          </div>
         </div>
       </div>
     );
