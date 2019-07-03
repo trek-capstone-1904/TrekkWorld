@@ -11,6 +11,7 @@ import {
   WorldMap,
 } from './Components';
 import {PhotoLoad} from './Components/PhotoLoad'
+import {Welcome} from './Components/Welcome'
 
 export class Routes extends Component {
   render() {
@@ -25,6 +26,7 @@ export class Routes extends Component {
         <Route path="/triposoAPI" component={SearchAPI} />
         <Route exact path="/tripSearch" component={TripSearch} />
         <Route exact path="/addPhoto" component={PhotoLoad} />
+        <Route exact path="/welcome" component={Welcome} />
       </Switch>
     );
   }
