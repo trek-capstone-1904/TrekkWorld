@@ -38,7 +38,7 @@ export const BucketList = () => {
       <CardGroup>
         {error && <strong>Error: {error}</strong>}
         {loading && <span>Document: Loading...</span>}
-        {snapshot && (
+        {snapshot && snapshot.data().bucketList && (
           <span>
             {Object.keys(snapshot.data().bucketList).map(key => {
               return (

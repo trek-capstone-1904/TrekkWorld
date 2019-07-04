@@ -35,9 +35,11 @@ export const BucketListCard = props => {
 const handleClick = (uid, placeId) => {
   //remove entry from User
   const userRef = db.collection('Users').doc(uid);
-  console.log('handleClick has executed');
+  console.log('handleClick has executed', placeId);
+  console.log(userRef)
   // Remove the 'capital' field from the document
   const removeBucketListItem = userRef.update({
+
     [`${placeId}`]: firebase.firestore.FieldValue.delete(),
   });
 };

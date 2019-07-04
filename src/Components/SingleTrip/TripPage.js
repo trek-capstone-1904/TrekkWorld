@@ -3,6 +3,8 @@ import db from '../../firebase';
 import { Spinner, Jumbotron, Media, Button, Modal } from 'react-bootstrap';
 import { useDocument } from 'react-firebase-hooks/firestore';
 import { Link } from 'react-router-dom';
+import { AddTrekker } from '../index';
+import firebase from 'firebase/app';
 
 export const TripPage = props => {
   const [trip, loading, error] = useDocument(
@@ -21,16 +23,30 @@ export const TripPage = props => {
   const [isShowing, setIsShowing] = useState(false);
 
   function toggleForm() {
-    //Open Form
+    //open add trekker form
     setIsShowing(!isShowing);
-    //Find user by email
-    //add to user map on Trips
-    //add trip to user collection
   }
+
   function handleClose() {
     setIsShowing(false);
-    // props.history.push(`/trip/${trip}`);
   }
+
+  const handleDelete = (uid, tripId) => {
+    //remove entry from User
+    const userRef = db.collection('Users').doc(uid);
+    const tripRef = db.collection('Trips').doc(tripId);
+
+    // Remove the Trip from the User collection
+
+    const removeTripfromUser = userRef.update({
+      [`Trips.${tripId}`]: firebase.firestore.FieldValue.delete(),
+    });
+
+    // //Remove User from Trip Collection doc
+    const removeUserfromTrip = tripRef.update({
+      [`users.${uid}`]: firebase.firestore.FieldValue.delete(),
+    });
+  };
 
   if (error) throw error;
   if (loading) return <Spinner animation="grow" variant="info" />;
@@ -53,8 +69,6 @@ export const TripPage = props => {
           <Button onClick={handleClick}>Open Journal</Button>
           {/* </Link> */}
         </Jumbotron>
-
-        {/* <div className={styles.FellowTravelers}> */}
         <div
           style={{
             width: '33vw',
@@ -71,13 +85,9 @@ export const TripPage = props => {
             {' '}
             + New Trekker
           </Button>
-          <ul
-            className="list-unstyled"
-            style={{ display: 'flex', justifyContent: 'space-around' }}
-          >
+          <ul className="list-unstyled" style={{ padding: '0 2rem' }}>
             {Object.entries(users).map(user => (
               <Media key={user[0]} as="li" style={{ margin: '.5rem' }}>
-                {console.log(users)}
                 <img
                   width={64}
                   height={64}
@@ -88,6 +98,13 @@ export const TripPage = props => {
                 <Media.Body>
                   <h5>{user[1].userName}</h5>
                 </Media.Body>
+                <Button
+                  onClick={() => handleDelete(user[0], tripId)}
+                  variant="info"
+                >
+                  {' '}
+                  X{' '}
+                </Button>
               </Media>
             ))}
           </ul>
@@ -96,7 +113,7 @@ export const TripPage = props => {
               <Modal.Title>Who's trekking with?</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              {/* <AddTrekker userDoc={props} /> */}
+              <AddTrekker userDoc={props} tripId={tripId} trip={trip.data()} />
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary" onClick={handleClose}>
