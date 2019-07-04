@@ -8,6 +8,9 @@ import {
   TripPlanning,
   TripSearch,
   WorldMap,
+  CreateTrekkForm,
+  TripPage,
+  Journal
 } from './Components';
 import { PhotoLoad } from './Components/Helper/PhotoLoad';
 import { Welcome } from './Components/Welcome/Welcome';
@@ -18,7 +21,8 @@ export class Routes extends Component {
       <Switch>
         <Route path="/user" component={UserProfile} />
         <Route exact path="/plantrip" component={TripPlanning} />
-        <Route path="/trip/:tripId" component={TripSingle} />
+        <Route path="/trip/:tripId/journal" component={Journal} />
+        <Route path="/trip/:tripId" component={TripPage} />
         <Route path="/login" component={Login} />
         {/* Testing Routes */}
         <Route path="/triposoAPI" component={SearchAPI} />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Badge, Accordion, ListGroup } from 'react-bootstrap';
 import moment from 'moment';
+import { Link } from 'react-router-dom'
 
 export const TripResultCard = props => {
   const card = props.card;
@@ -8,14 +9,14 @@ export const TripResultCard = props => {
     <Card border="info" style={{ width: '18px', margin: '.5rem' }}>
       {/* <Card.Img variant="top" src={`../${card.tripImageUrl}`} /> */}
       <Card.Body>
-        <Card.Title>{card.tripName}</Card.Title>
+        <Link to={`trip/${props.tripId}`}><Card.Title>{card.tripName}</Card.Title></Link>
         <Card.Subtitle className="mb-2 text-muted">
           {moment(card.startDate).format('MMM D, YYYY')}
         </Card.Subtitle>
 
         {Object.entries(card.users).map(user => (
           <Badge variant="primary" key={user[0]}>
-            {user[1]}
+            {user[1].userName}
           </Badge>
         ))}
         {card.places && (

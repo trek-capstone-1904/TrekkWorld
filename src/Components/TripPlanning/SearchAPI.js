@@ -35,6 +35,7 @@ function useFetchSights(city, country) {
     Australia: 'AU',
     Korea: 'KR',
     Egypt: 'EG',
+    Spain: 'ES'
   };
   const query = `https://www.triposo.com/api/20181213/poi.json?tag_labels=eatingout|sightseeing&location_id=${city}&countrycode=${
     initials[country]

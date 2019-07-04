@@ -4,18 +4,27 @@ import { Form, Button, Col, Spinner } from 'react-bootstrap';
 import db from '../../firebase';
 import userContext from '../../Contexts/userContext';
 import CountriesSelect from '../Helper/CountrySelect';
+import history from '../../history';
+import { useDocumentOnce } from 'react-firebase-hooks/firestore';
+
 //TODO add a created by for Trips, add trip to user with submit
 
-export const CreateTrekkForm = () => {
+export const CreateTrekkForm = props => {
   //TODO update to represent actual current user ID
   const loggedInUser = useContext(userContext);
   const userId = `${loggedInUser.uid}`;
   const userName = `${loggedInUser.displayName}`;
+  const [userPicture, setUserPicture] = useState('');
 
   const [values, setValues] = useState({
     tripName: '',
     locations: '',
-    users: { [userId]: userName },
+    users: {
+      [userId]: {
+        userName: userName,
+        userPicture: props.userDoc.user.userPicture,
+      },
+    },
     startDate: '',
     endDate: '',
     tripImageUrl: '',
@@ -23,6 +32,8 @@ export const CreateTrekkForm = () => {
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [tripId, setTripId] = useState('');
+
   const handleChange = event => {
     event.persist();
     if (event.target.name === 'locations') {
@@ -43,10 +54,12 @@ export const CreateTrekkForm = () => {
     event.preventDefault();
 
     setLoading(true);
+
     try {
       //Create Trip
       const docRef = await db.collection('Trips').add(values);
       const tripDocId = docRef.id;
+      setTripId(tripDocId);
       console.log('Created trip/doc id:', tripDocId);
 
       //Add Trekk List SubCollection
@@ -70,7 +83,10 @@ export const CreateTrekkForm = () => {
       console.log(err);
     }
   };
-  console.log(values && values);
+  function handleClick(evt) {
+    history.push(`/trip/${tripId}`);
+  }
+
   return (
     <div>
       {loading && <Spinner animation="grow" variant="info" />}
@@ -100,6 +116,7 @@ export const CreateTrekkForm = () => {
               <option value="Colombia">Colombia</option>
               <option value="Korea">Korea</option>
               <option value="Egypt">Egypt</option>
+              <option value="Spain">Spain</option>
             </Form.Control>
             {/* <CountriesSelect
               value={values.locations[0]}
@@ -130,7 +147,7 @@ export const CreateTrekkForm = () => {
               <Form.Check
                 inline
                 type="radio"
-                label="Romantic"
+                label="Couples"
                 name="tripTags"
                 value="Couples"
                 onChange={handleChange}
@@ -168,7 +185,12 @@ export const CreateTrekkForm = () => {
           </div>
         </Form>
       )}
-      {success && <h4>Successfully Created Trip!</h4>}
+      {success && (
+        <div>
+          <h4>Successfully Created Trip!</h4>
+          <Button onClick={handleClick}> > Go To Trip Page</Button>
+        </div>
+      )}
     </div>
   );
 };

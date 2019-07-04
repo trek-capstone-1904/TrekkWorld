@@ -11,6 +11,8 @@ import BucketListCard from './User/BucketListCard';
 import BucketList from './User/BucketList';
 import WorldMap from './User/WorldMap'
 import CreateTrekkForm from './SingleTrip/CreateTrekkForm'
+import TripPage from './SingleTrip/TripPage'
+import Journal from './SingleTrip/Journal'
 
 export { default as TripSingle } from './SingleTrip/TripSingle';
 export { default as UserProfile } from './User/UserProfile';
@@ -24,3 +26,6 @@ export { default as BucketListCard } from './User/BucketListCard';
 export { default as BucketList } from './User/BucketList';
 export { default as WorldMap } from './User/WorldMap';
 export { default as CreateTrekkForm } from './SingleTrip/CreateTrekkForm';
+export { default as TripPage } from './SingleTrip/TripPage';
+export { default as Journal } from './SingleTrip/Journal';
+

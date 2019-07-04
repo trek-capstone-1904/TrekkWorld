@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
-import {
-  InputGroup,
-  Button,
-  FormControl,
-  CardGroup,
-  Spinner,
-} from 'react-bootstrap';
+import { CardGroup, Spinner } from 'react-bootstrap';
 import db from '../../firebase';
 import { useCollectionOnce } from 'react-firebase-hooks/firestore';
 import TripResultCard from '../Helper/TripResultCard';
@@ -27,7 +21,7 @@ export const TripSearch = props => {
         {snapshot &&
           snapshot.docs.map(
             doc => console.log('doc.data()', doc.data())
-            // <TripResultCard card={doc.data()} />
+            <TripResultCard card={doc.data()} />
           )}
       </CardGroup>
     </div>
