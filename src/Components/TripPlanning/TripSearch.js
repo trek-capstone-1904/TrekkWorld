@@ -25,7 +25,10 @@ export const TripSearch = props => {
         {error && <strong>Error: {error}</strong>}
         {loading && <Spinner animation="grow" variant="info" />}
         {snapshot &&
-          snapshot.docs.map(doc => <TripResultCard card={doc.data()} />)}
+          snapshot.docs.map(
+            doc => console.log('doc.data()', doc.data())
+            // <TripResultCard card={doc.data()} />
+          )}
       </CardGroup>
     </div>
   );

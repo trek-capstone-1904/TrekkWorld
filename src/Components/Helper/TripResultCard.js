@@ -4,7 +4,6 @@ import moment from 'moment';
 
 export const TripResultCard = props => {
   const card = props.card;
-
   return (
     <Card border="info" style={{ width: '18px', margin: '.5rem' }}>
       {/* <Card.Img variant="top" src={`../${card.tripImageUrl}`} /> */}
