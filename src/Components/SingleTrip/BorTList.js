@@ -23,25 +23,31 @@ export const BorTList = props => {
         {loading && <span>Document: Loading...</span>}
         {snapshot && (
           <span>
-            {snapshot.data()[`${list}`] && Object.keys(snapshot.data()[`${list}`]).map(key => {
-              if (list === 'bucketList') {
-                return (
-                  <BucketListCard
-                    key={key}
-                    placeId={key}
-                    card={snapshot.data()[`${list}`][key]}
-                  />
-                );
-              } else if (list === 'trekkList') {
-                return (
-                  <TrekkListCard
-                    key={key}
-                    placeId={key}
-                    card={snapshot.data()[`${list}`][key]}
-                  />
-                );
-              }
-            })}
+            {snapshot.data()[`${list}`] && (
+              <p style={{ fontSize: '.8rem', fontStyle: 'italic', padding:'.2rem' }}>
+                Add places you'd love to visit one day but haven't planned a trip there yet
+              </p>
+            )}
+            {snapshot.data()[`${list}`] &&
+              Object.keys(snapshot.data()[`${list}`]).map(key => {
+                if (list === 'bucketList') {
+                  return (
+                    <BucketListCard
+                      key={key}
+                      placeId={key}
+                      card={snapshot.data()[`${list}`][key]}
+                    />
+                  );
+                } else if (list === 'trekkList') {
+                  return (
+                    <TrekkListCard
+                      key={key}
+                      placeId={key}
+                      card={snapshot.data()[`${list}`][key]}
+                    />
+                  );
+                }
+              })}
           </span>
         )}
       </CardGroup>
