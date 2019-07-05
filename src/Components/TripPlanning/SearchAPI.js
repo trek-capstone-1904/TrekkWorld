@@ -35,7 +35,7 @@ function useFetchSights(city, country) {
     Australia: 'AU',
     Korea: 'KR',
     Egypt: 'EG',
-    Spain: 'ES'
+    Spain: 'ES',
   };
   const query = `https://www.triposo.com/api/20181213/poi.json?tag_labels=eatingout|sightseeing&location_id=${city}&countrycode=${
     initials[country]
@@ -76,6 +76,7 @@ function useFetchCities(country) {
 
 export const SearchAPI = props => {
   const { city, country } = props;
+  const { tripId } = props;
   const [hasError, setErrors] = useState({});
   // const [location, setLocation] = useState("Paris,FR");
   // const [searchCity, setSearchCity] = useState(city);
@@ -95,6 +96,7 @@ export const SearchAPI = props => {
             sight={sight}
             country={country}
             type="sights"
+            tripId={tripId}
           />
         ))}
       <h4>Popular Cities</h4>
@@ -107,6 +109,7 @@ export const SearchAPI = props => {
             sight={sight}
             country={country}
             type="city"
+            tripId={tripId}
           />
         ))}
     </div>
