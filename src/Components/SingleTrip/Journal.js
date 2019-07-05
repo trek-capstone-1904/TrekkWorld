@@ -1,10 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import userContext from "../../Contexts/userContext";
-import { Jumbotron } from "react-bootstrap";
 import db from "../../firebase";
 import { useDocument } from "react-firebase-hooks/firestore";
-import { Spinner, Button, Form } from "react-bootstrap";
+import {
+  Spinner,
+  Button,
+  Form,
+  Card,
+  Jumbotron,
+  CardDeck
+} from "react-bootstrap";
 import Rating from "react-rating";
+import Select from "react-select";
+import JournalCard from "./JournalCard";
 
 export const Journal = props => {
   const loggedInUser = useContext(userContext);
@@ -15,6 +23,16 @@ export const Journal = props => {
 
   const tripInfoRef = db.collection("Trips").doc("bKT7bzthLifDFIwRlnPH");
   const [value, loading, error] = useDocument(tripInfoRef);
+  const [selectedOption, setSelectedOptions] = useState([]);
+
+
+  function onChange(option) {
+    setSelectedOptions(option);
+    console.log("selected options", selectedOption);
+  }
+
+
+  useEffect(() => console.log("selected options", selectedOption));
   //const [notes, setNotes] =
 
   //console.log(snapshot.data())
@@ -27,12 +45,12 @@ export const Journal = props => {
     console.log(new Date(tripInfo.startDate));
     console.log(new Date(tripInfo.endDate));
 
-    console.log(props);
-    console.log(tripInfo.locations);
-
-
+    const options = [];
+    tripInfo.locations.map(e => options.push({ value: e, label: e }));
     //push each day to an array
     //const totalDayCount = Math.ceil()
+    //create when trip is created
+    //for each doc in journal, render a div
 
     return (
       <div>
@@ -49,10 +67,32 @@ export const Journal = props => {
                   </option>
                 ))}
               </Form.Control>
-                  <Form.Label>Add Your Review</Form.Label>
-                  <div></div>
-                <Rating />
-                <div></div>
+              <Form.Label>Where did I go today?</Form.Label>
+              <Select
+                isMulti
+                name="places"
+                options={options}
+                value={selectedOption}
+                onChange={onChange}
+              />
+
+              <div>
+                <CardDeck>
+                  {selectedOption.map(place => {
+                    console.log("mapping", place);
+                    return (
+                      <JournalCard
+                        border="success"
+                        style={{ width: "18rem" }}
+                        key={place.value}
+                        place={place}
+                      />
+
+                    )
+                  })}
+                </CardDeck>
+              </div>
+
               <Form.Label>Notes for Today</Form.Label>
               <Form.Control as="textarea" rows="3" />
             </Form>
