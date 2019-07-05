@@ -47,7 +47,7 @@ export const UserProfileHeader = props => {
                   <Modal.Title>Where in the world are we trekking?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                  <CreateTrekkForm userDoc={props}/>
+                  <CreateTrekkForm userDoc={props} />
                 </Modal.Body>
                 <Modal.Footer>
                   <Button variant="secondary" onClick={handleClose}>
@@ -56,9 +56,7 @@ export const UserProfileHeader = props => {
                 </Modal.Footer>
               </Modal>
             </Col>
-            <Col>
-              {/* <WorldMap /> */}
-            </Col>
+            <Col>{/* <WorldMap /> */}</Col>
           </Row>
         </Container>
       </Jumbotron>

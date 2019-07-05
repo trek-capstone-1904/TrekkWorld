@@ -1,15 +1,14 @@
 import React, { useContext } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import styles from '../SearchAPICard.module.css';
-import { useCollectionOnce } from 'react-firebase-hooks/firestore';
 import db from '../../firebase';
 import userContext from '../../Contexts/userContext';
 
 export const SearchAPICard = props => {
   //type = city if from query for top cities OR type= sights if for top sights in a city
 
-  const { type, country } = props;
-  const { name, snippet, score, intro, id } = props.sight;
+  const { country } = props;
+  const { name, snippet } = props.sight;
 
   const loggedInUser = useContext(userContext);
 
@@ -22,11 +21,15 @@ export const SearchAPICard = props => {
         <Button
           style={{ margin: '0 1rem' }}
           variant="info"
-          onClick={() => handleClick(props, loggedInUser.uid)}
+          onClick={() => handleClick(props, loggedInUser.uid, 'bucketList')}
         >
           + Bucket
         </Button>
-        <Button style={{ margin: '0 1rem' }} variant="info">
+        <Button
+          style={{ margin: '0 1rem' }}
+          variant="info"
+          onClick={() => handleClick(props, loggedInUser.uid, 'trekkList')}
+        >
           + Trekk List
         </Button>
       </Card.Body>
@@ -34,7 +37,7 @@ export const SearchAPICard = props => {
   );
 };
 
-const handleClick = (props, uid) => {
+const handleClick = (props, uid, list) => {
   //query Places
   const placeRef = db.collection('Places').doc(props.sight.id);
   const userRef = db.collection('Users').doc(uid);
@@ -48,7 +51,7 @@ const handleClick = (props, uid) => {
         //add the props.id to the user
         console.log('Document data:', doc.data());
 
-        addToBucketList(uid, props.sight.id, name, snippet);
+        addToList(uid, props.sight.id, name, snippet, list);
       } else {
         // doc is created in 'Places' collection
         console.log('Place document did not exist');
@@ -61,7 +64,7 @@ const handleClick = (props, uid) => {
           .catch(function(error) {
             console.error('Error writing document: ', error);
           });
-        addToBucketList(uid, props.sight.id, name, snippet);
+        addToList(uid, props.sight.id, name, snippet, list);
       }
     })
     .catch(function(error) {
@@ -69,9 +72,9 @@ const handleClick = (props, uid) => {
     });
 };
 
-const addToBucketList = async (userRef, placeId, placeName, snippet) => {
-  const userDoc = await db.doc(`Users/${userRef}`).update({
-    [`bucketList.${placeId}`]: {
+const addToList = (userRef, placeId, placeName, snippet, list) => {
+  db.doc(`Users/${userRef}`).update({
+    [`${list}.${placeId}`]: {
       placeName: placeName,
       snippet: snippet,
     },
@@ -79,19 +82,3 @@ const addToBucketList = async (userRef, placeId, placeName, snippet) => {
 };
 
 export default SearchAPICard;
-
-// const userTrip = await db.doc(`Users/${userRef}`).update({
-//   [`bucketList.${placeRef}`]: {
-//     tripName: values.tripName,
-//     startDate: values.startDate,
-//     endDate: values.endDate,
-//   },
-// });
-
-// const userTrip = await db.doc(`Users/${userId}`).update({
-//   [`Trips.${tripDocId}`]: {
-//     tripName: values.tripName,
-//     startDate: values.startDate,
-//     endDate: values.endDate,
-//   },
-// });

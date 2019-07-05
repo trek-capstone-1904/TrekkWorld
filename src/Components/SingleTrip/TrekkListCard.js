@@ -5,7 +5,7 @@ import userContext from '../../Contexts/userContext';
 import db from '../../firebase';
 import firebase from 'firebase/app';
 
-export const BucketListCard = props => {
+export const TrekkListCard = props => {
   const loggedInUser = useContext(userContext);
   const uid = loggedInUser.uid;
 
@@ -21,18 +21,11 @@ export const BucketListCard = props => {
           variant="info"
           onClick={() => handleClick(uid, placeId)}
         >
-          - Bucket
+          - Trekk List
         </Button>
-        <Button
-          style={{ margin: '0 1rem' }}
-          variant="info"
-          onClick={() => {
-            handleClick(uid, placeId);
-            addToList(uid, placeId, placeName, snippet, 'trekkList');
-          }}
-        >
+        {/* <Button style={{ margin: '0 1rem' }} variant="info">
           + Trekk List
-        </Button>
+        </Button> */}
       </Card.Body>
     </Card>
   );
@@ -43,17 +36,8 @@ const handleClick = (uid, placeId) => {
   db.collection('Users')
     .doc(uid)
     .update({
-      [`bucketList.${placeId}`]: firebase.firestore.FieldValue.delete(),
+      [`trekkList.${placeId}`]: firebase.firestore.FieldValue.delete(),
     });
 };
 
-const addToList = (userRef, placeId, placeName, snippet, list) => {
-  db.doc(`Users/${userRef}`).update({
-    [`${list}.${placeId}`]: {
-      placeName: placeName,
-      snippet: snippet,
-    },
-  });
-};
-
-export default BucketListCard;
+export default TrekkListCard;
