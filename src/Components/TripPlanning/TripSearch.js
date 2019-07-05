@@ -20,7 +20,7 @@ export const TripSearch = props => {
         {loading && <Spinner animation="grow" variant="info" />}
         {snapshot &&
           snapshot.docs.map(doc => (
-            <TripResultCard key={doc.data()} card={doc.data()} />
+            <TripResultCard key={doc.id} card={doc.data()} />
           ))}
       </CardGroup>
     </div>
