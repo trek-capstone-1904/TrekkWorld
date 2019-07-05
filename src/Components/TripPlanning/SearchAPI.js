@@ -26,7 +26,7 @@ function fakeData(type) {
   return data;
 }
 
-function useFetchSights(city, country) {
+function useFetchSights(city, country, code) {
   const initials = {
     Colombia: 'CO',
     France: 'FR',
@@ -35,11 +35,9 @@ function useFetchSights(city, country) {
     Australia: 'AU',
     Korea: 'KR',
     Egypt: 'EG',
-    Spain: 'ES'
+    Spain: 'ES',
   };
-  const query = `https://www.triposo.com/api/20181213/poi.json?tag_labels=eatingout|sightseeing&location_id=${city}&countrycode=${
-    initials[country]
-  }&order_by=-score&count=10&fields=snippet,id,name,location_id,score,tag_labels,coordinates&account=${
+  const query = `https://www.triposo.com/api/20181213/poi.json?tag_labels=eatingout|sightseeing&location_id=${city}&countrycode=${code}&order_by=-score&count=10&fields=snippet,id,name,location_id,score,tag_labels,coordinates&account=${
     secret.triposoAccount
   }&token=${secret.triposoToken}`;
 
@@ -50,7 +48,7 @@ function useFetchSights(city, country) {
   // return fakeData(type);
 }
 
-function useFetchCities(country) {
+function useFetchCities(country, code) {
   const initials = {
     Colombia: 'CO',
     France: 'FR',
@@ -60,9 +58,8 @@ function useFetchCities(country) {
     Korea: 'KR',
     Egypt: 'EG',
   };
-  const query = `https://www.triposo.com/api/20181213/location.json?tag_labels=city&countrycode=${
-    initials[country]
-  }&order_by=-score&count=7&&fields=name,id,snippet,intro,score&account=${
+
+  const query = `https://www.triposo.com/api/20181213/location.json?tag_labels=city&countrycode=${code}&order_by=-score&count=7&&fields=name,id,snippet,intro,score&account=${
     secret.triposoAccount
   }&token=${secret.triposoToken}`;
 
@@ -75,14 +72,14 @@ function useFetchCities(country) {
 }
 
 export const SearchAPI = props => {
-  const { city, country } = props;
+  const { code, city, country } = props;
   const [hasError, setErrors] = useState({});
   // const [location, setLocation] = useState("Paris,FR");
   // const [searchCity, setSearchCity] = useState(city);
   // const [popularCities, setPopularCities] = useState(country);
   // const [sights, setSights] = useState({});
-  const sightsToSee = useFetchSights(city, country);
-  const popularCities = useFetchCities(country);
+  const sightsToSee = useFetchSights(city, country, code);
+  const popularCities = useFetchCities(country, code);
   return (
     <div>
       <h4>Sightseeing Spots</h4>
@@ -94,6 +91,7 @@ export const SearchAPI = props => {
             key={sight.id}
             sight={sight}
             country={country}
+            code={code}
             type="sights"
           />
         ))}
@@ -106,6 +104,7 @@ export const SearchAPI = props => {
             key={sight.id}
             sight={sight}
             country={country}
+            code={code}
             type="city"
           />
         ))}

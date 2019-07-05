@@ -14,6 +14,7 @@ import CreateTrekkForm from './SingleTrip/CreateTrekkForm'
 import TripPage from './SingleTrip/TripPage'
 import Journal from './SingleTrip/Journal'
 import AddTrekker from './SingleTrip/AddTrekker'
+import CountrySelect from './Helper/CountrySelect'
 
 export { default as TripSingle } from './SingleTrip/TripSingle';
 export { default as UserProfile } from './User/UserProfile';
@@ -30,4 +31,5 @@ export { default as CreateTrekkForm } from './SingleTrip/CreateTrekkForm';
 export { default as TripPage } from './SingleTrip/TripPage';
 export { default as Journal } from './SingleTrip/Journal';
 export { default as AddTrekker } from './SingleTrip/AddTrekker';
+export { default as CountrySelect } from './Helper/CountrySelect';
 

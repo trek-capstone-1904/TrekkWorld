@@ -51,6 +51,7 @@ export const AddTrekker = props => {
             });
         });
         if (querySnapshot.empty) {
+          alert('User does not exist. Please have them create an account')
           console.log(
             'User does not exist. Please have them create an account'
           );
