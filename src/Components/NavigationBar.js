@@ -20,13 +20,13 @@ export const NavigationBar = () => {
       <Navbar.Brand>Trekk</Navbar.Brand>
       <Nav className="mr-auto">
         <LinkContainer to="/user">
-          <Nav.Link>User Profile</Nav.Link>
+          <Nav.Link>My Profile</Nav.Link>
         </LinkContainer>
         <LinkContainer to="/login">
           <Nav.Link>Log In</Nav.Link>
         </LinkContainer>
         <LinkContainer to="/plantrip">
-          <Nav.Link>Plan Trip</Nav.Link>
+          <Nav.Link>Plan Trekk</Nav.Link>
         </LinkContainer>
         <NavDropdown title="Account">
         <NavDropdown.Item>
