@@ -1,7 +1,8 @@
 import React from 'react';
 import { Card, Badge, Accordion, ListGroup } from 'react-bootstrap';
 import moment from 'moment';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import SearchAPICard from '../TripPlanning/SearchAPICard';
 
 export const TripResultCard = props => {
   const card = props.card;
@@ -9,7 +10,9 @@ export const TripResultCard = props => {
     <Card border="info" style={{ width: '18px', margin: '.5rem' }}>
       {/* <Card.Img variant="top" src={`../${card.tripImageUrl}`} /> */}
       <Card.Body>
-        <Link to={`trip/${props.tripId}`}><Card.Title>{card.tripName}</Card.Title></Link>
+        <Link to={`trip/${props.tripId}`}>
+          <Card.Title>{card.tripName}</Card.Title>
+        </Link>
         <Card.Subtitle className="mb-2 text-muted">
           {moment(card.startDate).format('MMM D, YYYY')}
         </Card.Subtitle>
@@ -27,13 +30,16 @@ export const TripResultCard = props => {
               </Accordion.Toggle>
               <Accordion.Collapse eventKey="0">
                 <Card.Body>
-                  <ListGroup>
-                    {Object.entries(card.places).map(place => (
+                  {/* <ListGroup> */}
+                  {/* {Object.entries(card.places).map(place => (
                       <ListGroup.Item key={place[0]}>
                         {place[1].name}
                       </ListGroup.Item>
-                    ))}
-                  </ListGroup>
+                    ))} */}
+                  {Object.entries(card.places).map(place => (
+                    <SearchAPICard key={place[0]} card={place[1]} />
+                  ))}
+                  {/* </ListGroup> */}
                 </Card.Body>
               </Accordion.Collapse>
             </Card>
