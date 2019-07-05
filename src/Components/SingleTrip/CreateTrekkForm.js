@@ -63,15 +63,15 @@ export const CreateTrekkForm = props => {
       console.log('Created trip/doc id:', tripDocId);
 
       //Add Trekk List SubCollection
-      const trekkListCollection = await db
-        .doc(`Trips/${tripDocId}`)
-        .collection('TrekkList')
-        .add();
-      //Add Journal
-      const Journal = await db
-        .doc(`Trips/${tripDocId}`)
-        .collection('Journal')
-        .add();
+      // const trekkListCollection = await db
+      //   .doc(`Trips/${tripDocId}`)
+      //   .collection('TrekkList')
+      //   .add();
+      // //Add Journal
+      // const Journal = await db
+      //   .doc(`Trips/${tripDocId}`)
+      //   .collection('Journal')
+
 
       //Add Trip to User
       const userTrip = await db.doc(`Users/${userId}`).update({

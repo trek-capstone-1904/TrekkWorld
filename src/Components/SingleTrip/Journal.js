@@ -43,7 +43,7 @@ export const Journal = props => {
     tripJournal.add({
       notes
     }).then(function(){
-      console.log(notes)
+      alert('Journal Entry Added!')
     })
 
     //send to firebase journal
@@ -77,7 +77,7 @@ export const Journal = props => {
           <div>
             <Jumbotron>{tripInfo.tripName} Journal</Jumbotron>
             <h3>Day 1</h3>
-            <Form>
+            <Form style={{maxWidth:'40vw',margin:"auto"}}>
               {/* <Form.Label>Favorite Pick</Form.Label> */}
               {/* <Form.Control as="select">
                 {tripInfo.locations.map((e, key) => (
