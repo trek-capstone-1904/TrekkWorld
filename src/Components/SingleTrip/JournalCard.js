@@ -10,11 +10,12 @@ import {
 import Rating from "react-rating";
 
 export const JournalCard = props => {
-  console.log(props)
+  console.log(props);
   return (
     <div>
       <Card>
         <Card.Body>{props.place.value}</Card.Body>
+
         <Button>+ Review</Button>
 
         {/* <Form.Label>Add Your Review</Form.Label>

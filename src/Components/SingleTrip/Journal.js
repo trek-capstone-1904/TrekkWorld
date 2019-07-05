@@ -15,15 +15,17 @@ import Select from "react-select";
 import JournalCard from "./JournalCard";
 
 export const Journal = props => {
+  console.log(props)
   const loggedInUser = useContext(userContext);
   const tripJournal = db
     .collection("Trips")
-    .doc("bKT7bzthLifDFIwRlnPH")
+    .doc(props.match.params.tripId)
     .collection("Journal");
 
-  const tripInfoRef = db.collection("Trips").doc("bKT7bzthLifDFIwRlnPH");
+  const tripInfoRef = db.collection("Trips").doc(props.match.params.tripId);
   const [value, loading, error] = useDocument(tripInfoRef);
   const [selectedOption, setSelectedOptions] = useState([]);
+  const [notes, setNotes] = useState("")
 
 
   function onChange(option) {
@@ -31,8 +33,25 @@ export const Journal = props => {
     console.log("selected options", selectedOption);
   }
 
+  function handleChangeNotes(e){
+    setNotes(e.target.value)
+  }
 
-  useEffect(() => console.log("selected options", selectedOption));
+  function handleClick(event){
+    //event.preventDefault()
+    console.log("in submit")
+    tripJournal.add({
+      notes
+    }).then(function(){
+      console.log(notes)
+    })
+
+    //send to firebase journal
+  }
+
+
+  useEffect(() => {console.log("selected options", selectedOption)
+  console.log("notes", notes)});
   //const [notes, setNotes] =
 
   //console.log(snapshot.data())
@@ -59,14 +78,14 @@ export const Journal = props => {
             <Jumbotron>{tripInfo.tripName} Journal</Jumbotron>
             <div>Day 1</div>
             <Form>
-              <Form.Label>Favorite Pick</Form.Label>
-              <Form.Control as="select">
+              {/* <Form.Label>Favorite Pick</Form.Label> */}
+              {/* <Form.Control as="select">
                 {tripInfo.locations.map((e, key) => (
                   <option key={key} value={e.value}>
                     {e}
                   </option>
                 ))}
-              </Form.Control>
+              </Form.Control> */}
               <Form.Label>Where did I go today?</Form.Label>
               <Select
                 isMulti
@@ -94,9 +113,9 @@ export const Journal = props => {
               </div>
 
               <Form.Label>Notes for Today</Form.Label>
-              <Form.Control as="textarea" rows="3" />
+              <Form.Control as="input" rows="3" onChange={handleChangeNotes} value={notes}/>
             </Form>
-            <Button>Submit</Button>
+            <Button type="submit" onClick={handleClick}>Submit</Button>
             {/* dropdown of places on the trek list to select one  */}
             {/* add review  */}
 
