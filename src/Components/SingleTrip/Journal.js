@@ -76,7 +76,7 @@ export const Journal = props => {
         <span>
           <div>
             <Jumbotron>{tripInfo.tripName} Journal</Jumbotron>
-            <div>Day 1</div>
+            <h3>Day 1</h3>
             <Form>
               {/* <Form.Label>Favorite Pick</Form.Label> */}
               {/* <Form.Control as="select">
