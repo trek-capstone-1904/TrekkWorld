@@ -23,7 +23,7 @@ export const BorTList = props => {
         {loading && <span>Document: Loading...</span>}
         {snapshot && (
           <span>
-            {Object.keys(snapshot.data()[`${list}`]).map(key => {
+            {snapshot.data()[`${list}`] && Object.keys(snapshot.data()[`${list}`]).map(key => {
               if (list === 'bucketList') {
                 return (
                   <BucketListCard

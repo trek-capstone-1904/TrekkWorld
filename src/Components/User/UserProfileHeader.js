@@ -39,6 +39,7 @@ export const UserProfileHeader = props => {
             <Col xs={6} md={4}>
               <h1>{userName}</h1>
               <p>{bio}</p>
+              <p>Trekking somewhere new?</p>
               <Button variant="info" onClick={toggle}>
                 + Create New Trekk
               </Button>
