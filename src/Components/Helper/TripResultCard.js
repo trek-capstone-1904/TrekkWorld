@@ -30,16 +30,16 @@ export const TripResultCard = props => {
               </Accordion.Toggle>
               <Accordion.Collapse eventKey="0">
                 <Card.Body>
-                  {/* <ListGroup> */}
-                  {/* {Object.entries(card.places).map(place => (
+                  <ListGroup>
+                    {Object.entries(card.places).map(place => (
                       <ListGroup.Item key={place[0]}>
                         {place[1].name}
                       </ListGroup.Item>
-                    ))} */}
-                  {Object.entries(card.places).map(place => (
+                    ))}
+                    {/* {Object.entries(card.places).map(place => (
                     <SearchAPICard key={place[0]} card={place[1]} />
-                  ))}
-                  {/* </ListGroup> */}
+                  ))} */}
+                  </ListGroup>
                 </Card.Body>
               </Accordion.Collapse>
             </Card>
