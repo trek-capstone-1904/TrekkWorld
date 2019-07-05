@@ -35,7 +35,6 @@ export const TripPlanning = () => {
   if (loggedInUser) {
     return (
       <div>
-        <h1>{loggedInUser.uid}</h1>
         <Jumbotron className={styles.tripPlanningJumbo}>
           <h1>Where in the world are YOU trekking?</h1>
           <Form onSubmit={handleSubmit}>
