@@ -6,7 +6,6 @@ import userContext from '../../Contexts/userContext';
 
 export const SearchAPICard = props => {
   //type = city if from query for top cities OR type= sights if for top sights in a city
-
   const { country } = props;
   const { name, snippet } = props.sight;
   const { tripId } = props;
