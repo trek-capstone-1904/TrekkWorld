@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
+import moment from 'moment';
 import db from '../../firebase';
-import { Spinner, Jumbotron, Media, Button, Modal } from 'react-bootstrap';
+import {
+  Spinner,
+  Jumbotron,
+  Media,
+  Button,
+  Modal,
+  Card,
+  Badge,
+  Row,
+} from 'react-bootstrap';
 import { useDocument } from 'react-firebase-hooks/firestore';
 import { Link } from 'react-router-dom';
 import { AddTrekker } from '../index';
@@ -16,7 +26,7 @@ export const TripPage = props => {
   const tripId = props.match.params.tripId;
 
   //redirects to journal
-  function handleClick() {
+  function openJournal() {
     props.history.push(`${tripId}/journal`);
   }
 
@@ -60,34 +70,79 @@ export const TripPage = props => {
       tripImageUrl,
       users,
     } = trip.data();
-    console.log(users);
+
+    const today = new Date();
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+
+    const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+    const daysRemaining = Math.floor((start - today) / _MS_PER_DAY);
+    const totalDays = Math.floor((end - start) / _MS_PER_DAY);
+    console.log('days left', daysRemaining);
+    // console.log(users);
     return (
       <div>
-        <Jumbotron>
-          <h1>{tripName}</h1>
-          {/* <Link to={`trip/${props.match.params.tripId}/journal`}> */}
-          <Button onClick={handleClick}>Open Journal</Button>
-          {/* </Link> */}
+        <Jumbotron style={{ display: 'flex', justifyContent: 'space-around' }}>
+          <div style={{ textAlign: 'left' }}>
+            <h1>{tripName}</h1>
+            {daysRemaining < 0 ? (
+              <Badge style={{ margin: '.5rem' }} variant="success">
+                Trip completed
+              </Badge>
+            ) : (
+              <Badge variant="info"> Days until Trekk: {daysRemaining}!</Badge>
+            )}
+            <hr />
+            <Button onClick={openJournal}>Open Journal</Button>
+          </div>
+          <Card style={{ width: '20rem', textAlign: 'left' }}>
+            <Card.Body>
+              <Card.Title>Trip Details</Card.Title>
+              <Card.Text>
+                Start: {moment(startDate).format('MMM D, YYYY')}{' '}
+              </Card.Text>
+              <Card.Text>
+                End: {moment(endDate).format('MMM D, YYYY')}{' '}
+              </Card.Text>
+              <Card.Text>Total Days: {totalDays} </Card.Text>
+              {locations.map(country => (
+                <Card.Text key={country}>Countries: {country}</Card.Text>
+              ))}
+              <Card.Text> Trip type: {tripTags} </Card.Text>
+            </Card.Body>
+          </Card>
         </Jumbotron>
-        <div
+        {/* <div
           style={{
             width: '33vw',
             border: '1.5px solid #17a2b8',
             padding: '1rem',
           }}
-        >
-          <h3>Fellow Trekkers</h3>
-          <Button
-            variant="info"
-            style={{ margin: '.5rem' }}
-            onClick={toggleForm}
-          >
-            {' '}
-            + New Trekker
-          </Button>
+        > */}
+        <Card border="info" style={{ maxWidth: '25rem', margin: '.5rem' }}>
+          <Card.Header>
+            <h4>Fellow Trekkers</h4>
+            <Button
+              variant="info"
+              style={{ margin: '.5rem' }}
+              onClick={toggleForm}
+            >
+              {' '}
+              + New Trekker
+            </Button>
+          </Card.Header>
           <ul className="list-unstyled" style={{ padding: '0 2rem' }}>
             {Object.entries(users).map(user => (
-              <Media key={user[0]} as="li" style={{ margin: '.5rem' }}>
+              <Media
+                key={user[0]}
+                as="li"
+                style={{
+                  margin: '.5rem',
+                  alignItems: 'center',
+                  border: '1px dotted teal',
+                  padding: '0 1.5rem',
+                }}
+              >
                 <img
                   width={64}
                   height={64}
@@ -98,13 +153,14 @@ export const TripPage = props => {
                 <Media.Body>
                   <h5>{user[1].userName}</h5>
                 </Media.Body>
-                <Button
+                <button
                   onClick={() => handleDelete(user[0], tripId)}
-                  variant="info"
+                  type="button"
+                  className="close"
+                  aria-label="Close"
                 >
-                  {' '}
-                  X{' '}
-                </Button>
+                  <span aria-hidden="true">&times;</span>
+                </button>
               </Media>
             ))}
           </ul>
@@ -121,7 +177,8 @@ export const TripPage = props => {
               </Button>
             </Modal.Footer>
           </Modal>
-        </div>
+        </Card>
+
       </div>
     );
   }
