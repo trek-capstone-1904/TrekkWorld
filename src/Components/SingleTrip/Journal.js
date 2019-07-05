@@ -8,11 +8,14 @@ import {
   Form,
   Card,
   Jumbotron,
-  CardDeck
+  CardDeck,
+  Carousel
 } from "react-bootstrap";
 import Rating from "react-rating";
 import Select from "react-select";
 import JournalCard from "./JournalCard";
+import moment from 'moment';
+
 
 export const Journal = props => {
   console.log(props)
@@ -64,6 +67,33 @@ export const Journal = props => {
     console.log(new Date(tripInfo.startDate));
     console.log(new Date(tripInfo.endDate));
 
+
+    const start = new Date(tripInfo.startDate);
+    const end = new Date(tripInfo.endDate);
+    console.log("end date", end)
+
+    const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+    const totalDays = Math.floor((end - start) / _MS_PER_DAY);
+
+
+
+    const tripDays = []
+    function calcDays(start, end){
+      while(start <= end){
+        start = moment(start).add(1, 'days')
+        let formattedStart = start.format('MMM D,YYYY');
+        tripDays.push(formattedStart)
+        console.log(start)
+      }
+      return tripDays;
+    }
+
+    const days = calcDays(start, end);
+
+
+
+  console.log("dates", days)
+
     const options = [];
     tripInfo.locations.map(e => options.push({ value: e, label: e }));
     //push each day to an array
@@ -77,6 +107,14 @@ export const Journal = props => {
           <div>
             <Jumbotron>{tripInfo.tripName} Journal</Jumbotron>
             <h3>Day 1</h3>
+            <Carousel>
+              <Carousel.Item>
+                Day 1
+              </Carousel.Item>
+              <Carousel.Item>
+                Day 2
+              </Carousel.Item>
+            </Carousel>
             <Form style={{maxWidth:'40vw',margin:"auto"}}>
               {/* <Form.Label>Favorite Pick</Form.Label> */}
               {/* <Form.Control as="select">
@@ -96,6 +134,7 @@ export const Journal = props => {
               />
 
               <div>
+                {selectedOption &&
                 <CardDeck>
                   {selectedOption.map(place => {
                     console.log("mapping", place);
@@ -110,6 +149,7 @@ export const Journal = props => {
                     )
                   })}
                 </CardDeck>
+                 }
               </div>
 
               <Form.Label>Notes for Today</Form.Label>
