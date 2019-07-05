@@ -20,6 +20,7 @@ export const BucketList = () => {
       <CardGroup>
         {error && <strong>Error: {error}</strong>}
         {loading && <span>Document: Loading...</span>}
+        {/* //TODO: add spinner */}
         {snapshot && snapshot.data().bucketList && (
           <span>
             {Object.keys(snapshot.data().bucketList).map(key => {

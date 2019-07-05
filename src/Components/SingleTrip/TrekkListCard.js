@@ -8,10 +8,10 @@ import firebase from 'firebase/app';
 export const TrekkListCard = props => {
   const loggedInUser = useContext(userContext);
   const uid = loggedInUser.uid;
-
+  const { trekk } = props;
   const { placeName, snippet } = props.card;
   const placeId = props.placeId;
-
+  console.log('trekk on listCard Props', trekk);
   return (
     <Card style={{ margin: '.5rem 1rem' }}>
       <Card.Body>
@@ -24,24 +24,15 @@ export const TrekkListCard = props => {
         >
           - Trekk List
         </Button>
-        <Button
+        {/* <Button
           style={{ margin: '0 1rem' }}
           variant="info"
           onClick={() => {
-            addToTrip(uid, placeId, placeName, snippet, 'n7vQJBfxHGb0WlVLtqor');
+            addToTrekk(uid, placeId, placeName, snippet, trekk);
           }}
         >
           + Trip
-        </Button>
-        <DropdownButton
-          id="dropdown-basic-button"
-          title="+ Trip"
-          onClick={() => queryTrips(uid)}
-        >
-          <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-        </DropdownButton>
+        </Button> */}
       </Card.Body>
     </Card>
   );
@@ -60,7 +51,7 @@ const queryTrips = userRef => {
   db.doc(`Users/${userRef}`);
 };
 
-const addToTrip = (userRef, placeId, placeName, snippet, trip) => {
+const addToTrekk = (userRef, placeId, placeName, snippet, trip) => {
   db.doc(`Users/${userRef}`).update({
     [`Trips.${trip}.${placeId}`]: {
       placeName: placeName,

@@ -12,7 +12,7 @@ import {
   Spinner,
 } from 'react-bootstrap';
 import userContext from '../../Contexts/userContext';
-import TrekkList, { BorTList } from '../SingleTrip/BorTList';
+import TrekkList from '../SingleTrip/TrekkList';
 
 export const UserProfile = props => {
   const loggedInUser = useContext(userContext);
@@ -38,11 +38,11 @@ export const UserProfile = props => {
           <div className={styles.BucketList}>
             <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
               <Tab eventKey="Bucket List" title="Trekk List">
-                <BorTList list={'trekkList'} />
+                {/* <BorTList list={'trekkList'} /> */}
               </Tab>
               <Tab eventKey="Trekk List" title="Bucket List">
                 {/* <BucketList /> */}
-                <BorTList list={'bucketList'} />
+                {/* <BorTList list={'bucketList'} /> */}
               </Tab>
             </Tabs>
           </div>

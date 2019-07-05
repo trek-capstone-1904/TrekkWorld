@@ -8,7 +8,7 @@ export const SearchAPICard = props => {
   //type = city if from query for top cities OR type= sights if for top sights in a city
   const { country } = props;
   const { name, snippet } = props.sight;
-
+  const { tripId } = props;
   const loggedInUser = useContext(userContext);
 
   return (
@@ -27,7 +27,7 @@ export const SearchAPICard = props => {
         <Button
           style={{ margin: '0 1rem' }}
           variant="info"
-          onClick={() => handleClick(props, loggedInUser.uid, 'trekkList')}
+          onClick={() => handleClick(props, loggedInUser.uid, tripId)}
         >
           + Trekk List
         </Button>
@@ -35,6 +35,9 @@ export const SearchAPICard = props => {
     </Card>
   );
 };
+
+//use a generic handleClick so that it adds a new place to the place db
+// after it adds the place to the db, it assigns the place to either the bucketList or the TrekkList
 
 const handleClick = (props, uid, list) => {
   //query Places
@@ -49,8 +52,11 @@ const handleClick = (props, uid, list) => {
       if (doc.exists) {
         //add the props.id to the user
         console.log('Document data:', doc.data());
-
-        addToList(uid, props.sight.id, name, snippet, list);
+        if (list === 'bucketList') {
+          addToBucketList(uid, props.sight.id, name, snippet, list);
+        } else {
+          addToTrekk(props.sight.id, name, snippet, list);
+        }
       } else {
         // doc is created in 'Places' collection
         console.log('Place document did not exist');
@@ -63,7 +69,11 @@ const handleClick = (props, uid, list) => {
           .catch(function(error) {
             console.error('Error writing document: ', error);
           });
-        addToList(uid, props.sight.id, name, snippet, list);
+        if (list === 'bucketList') {
+          addToBucketList(uid, props.sight.id, name, snippet, list);
+        } else {
+          addToTrekk(props.sight.id, name, snippet, list);
+        }
       }
     })
     .catch(function(error) {
@@ -71,13 +81,29 @@ const handleClick = (props, uid, list) => {
     });
 };
 
-const addToList = (userRef, placeId, placeName, snippet, list) => {
+const addToBucketList = (userRef, placeId, placeName, snippet, list) => {
   db.doc(`Users/${userRef}`).update({
     [`${list}.${placeId}`]: {
       placeName: placeName,
       snippet: snippet,
     },
   });
+};
+
+const addToTrekk = (placeId, placeName, snippet, tripId) => {
+  db.collection('Trips')
+    .doc(`${tripId}`)
+    .collection('TrekkList')
+    .doc(`${placeId}`)
+    .set(
+      {
+        placeName: placeName,
+        snippet: snippet,
+      },
+      { merge: true }
+    );
+
+  // db.doc(`Trips/${trekk}`)
 };
 
 export default SearchAPICard;

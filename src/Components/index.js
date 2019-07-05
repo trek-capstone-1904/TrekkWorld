@@ -9,12 +9,13 @@ import TripPlanning from './TripPlanning/TripPlanning';
 import TripSearch from './TripPlanning/TripSearch';
 import BucketListCard from './User/BucketListCard';
 import BucketList from './User/BucketList';
-import WorldMap from './User/WorldMap'
-import CreateTrekkForm from './SingleTrip/CreateTrekkForm'
-import TripPage from './SingleTrip/TripPage'
-import Journal from './SingleTrip/Journal'
-import AddTrekker from './SingleTrip/AddTrekker'
-import CountrySelect from './Helper/CountrySelect'
+import TrekkList from './SingleTrip/TrekkList';
+import WorldMap from './User/WorldMap';
+import CreateTrekkForm from './SingleTrip/CreateTrekkForm';
+import TripPage from './SingleTrip/TripPage';
+import Journal from './SingleTrip/Journal';
+import AddTrekker from './SingleTrip/AddTrekker';
+import CountrySelect from './Helper/CountrySelect';
 
 export { default as TripSingle } from './SingleTrip/TripSingle';
 export { default as UserProfile } from './User/UserProfile';
@@ -26,10 +27,10 @@ export { default as TripPlanning } from './TripPlanning/TripPlanning';
 export { default as TripSearch } from './TripPlanning/TripSearch';
 export { default as BucketListCard } from './User/BucketListCard';
 export { default as BucketList } from './User/BucketList';
+export { default as TrekkList } from './SingleTrip/TrekkList';
 export { default as WorldMap } from './User/WorldMap';
 export { default as CreateTrekkForm } from './SingleTrip/CreateTrekkForm';
 export { default as TripPage } from './SingleTrip/TripPage';
 export { default as Journal } from './SingleTrip/Journal';
 export { default as AddTrekker } from './SingleTrip/AddTrekker';
 export { default as CountrySelect } from './Helper/CountrySelect';
-

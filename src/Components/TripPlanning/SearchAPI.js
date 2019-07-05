@@ -72,6 +72,7 @@ function useFetchCities(country, code) {
 }
 
 export const SearchAPI = props => {
+  const { tripId } = props;
   const { code, city, country } = props;
   const [hasError, setErrors] = useState({});
   // const [location, setLocation] = useState("Paris,FR");
@@ -93,6 +94,7 @@ export const SearchAPI = props => {
             country={country}
             code={code}
             type="sights"
+            tripId={tripId}
           />
         ))}
       <h4>Popular Cities</h4>
@@ -106,6 +108,7 @@ export const SearchAPI = props => {
             country={country}
             code={code}
             type="city"
+            tripId={tripId}
           />
         ))}
     </div>

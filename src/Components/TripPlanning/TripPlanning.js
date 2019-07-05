@@ -1,18 +1,28 @@
 import React, { useState, useContext } from 'react';
-import { Jumbotron, Form, Button, Tabs, Tab } from 'react-bootstrap';
+import {
+  Jumbotron,
+  Form,
+  Button,
+  Tabs,
+  Tab,
+  DropdownButton,
+  Dropdown,
+} from 'react-bootstrap';
 import styles from '../TripPlanning.module.css';
-import { SearchAPI, TripSearch, CountrySelect } from '../index.js';
+import { SearchAPI, TripSearch, BucketList, TrekkList } from '../index.js';
 import 'firebase/auth';
 import userContext from '../../Contexts/userContext';
-import BorTList from '../SingleTrip/BorTList';
-// import CountrySelect from '../Helper/CountrySelect'
+
+import db from '../../firebase';
+import { useDocument } from 'react-firebase-hooks/firestore';
 
 export const TripPlanning = () => {
   const [city, setCity] = useState('');
   const [country, setCountry] = useState('');
-  const [code, setCode]=useState('')
+  const [code, setCode] = useState('');
   const [submitted, setSubmit] = useState(false);
 
+  const [tripId, setTripId] = useState('');
   const loggedInUser = useContext(userContext);
 
   const handleChange = (evt, type) => {
@@ -23,9 +33,12 @@ export const TripPlanning = () => {
       setCity(evt.target.value);
     } else if (evt.currentTarget.name === 'country') {
       setCountry(evt.target.value);
-      setCode(evt.target.selectedOptions[0].dataset.code)
+      setCode(evt.target.selectedOptions[0].dataset.code);
+    } else if (evt.currentTarget.name === 'tripId') {
+      setTripId(evt.target.value);
     }
   };
+
   const handleSubmit = evt => {
     evt.preventDefault();
     // console.log()
@@ -36,6 +49,14 @@ export const TripPlanning = () => {
       setSubmit('true');
     }
   };
+
+  //create route for trips associated with loggedInUser
+  const [snapshot, loading, error] = useDocument(
+    db.collection('Users').doc(`${loggedInUser.uid}`),
+    {
+      snapshotListenOptions: { includeMetadataChanges: false },
+    }
+  );
 
   if (loggedInUser) {
     return (
@@ -80,16 +101,45 @@ export const TripPlanning = () => {
           </div>
           <div className={styles.searchAPI}>
             <h2>Things to Do</h2>
-            {submitted && <SearchAPI code={code} city={city} country={country} />}
+            {submitted && (
+              <SearchAPI
+                city={city}
+                country={country}
+                tripId={tripId}
+                code={code}
+              />
+            )}
           </div>
           <div className={styles.BucketList}>
+            {/* <DropdownButton id="dropdown-basic-button" title="Trekk">
+              {snapshot &&
+                Object.entries(snapshot.data().Trips).map(trip => (
+                  <option value={trekk} onChange={handleChange}>
+                    {trip[1].tripName}
+                  </option>
+                ))}
+            </DropdownButton> */}
+            <Form.Control
+              name="tripId"
+              value={tripId}
+              as="select"
+              onChange={handleChange}
+            >
+              <option>select</option>
+              {snapshot &&
+                Object.entries(snapshot.data().Trips).map(trip => (
+                  <option key={trip[0]} value={trip[0]}>
+                    {trip[1].tripName}
+                  </option>
+                ))}
+            </Form.Control>
             <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
               <Tab eventKey="Bucket List" title="Trekk List">
-                <BorTList list={'trekkList'} />
+                <TrekkList list={'trekkList'} tripId={tripId} />
               </Tab>
               <Tab eventKey="Trekk List" title="Bucket List">
                 {/* <BucketList /> */}
-                <BorTList list={'bucketList'} />
+                <BucketList />
               </Tab>
             </Tabs>
           </div>
