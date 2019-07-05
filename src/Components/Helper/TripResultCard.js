@@ -7,7 +7,7 @@ import SearchAPICard from '../TripPlanning/SearchAPICard';
 export const TripResultCard = props => {
   const card = props.card;
   return (
-    <Card border="info" style={{ width: '18px', margin: '.5rem' }}>
+    <Card border="info" style={{ margin: '.5rem' }}>
       {/* <Card.Img variant="top" src={`../${card.tripImageUrl}`} /> */}
       <Card.Body>
         <Link to={`trip/${props.tripId}`}>
