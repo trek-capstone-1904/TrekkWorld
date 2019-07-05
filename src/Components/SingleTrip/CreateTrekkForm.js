@@ -6,6 +6,7 @@ import userContext from '../../Contexts/userContext';
 import CountriesSelect from '../Helper/CountrySelect';
 import history from '../../history';
 import { useDocumentOnce } from 'react-firebase-hooks/firestore';
+import { CountrySelect } from '../index.js';
 
 //TODO add a created by for Trips, add trip to user with submit
 
@@ -72,7 +73,6 @@ export const CreateTrekkForm = props => {
       //   .doc(`Trips/${tripDocId}`)
       //   .collection('Journal')
 
-
       //Add Trip to User
       const userTrip = await db.doc(`Users/${userId}`).update({
         [`Trips.${tripDocId}`]: {
@@ -113,15 +113,7 @@ export const CreateTrekkForm = props => {
               as="select"
               onChange={handleChange}
             >
-              <option value="Select...">Select...</option>
-              <option value="France">France</option>
-              <option value="Peru">Peru</option>
-              <option value="Chile">Chile</option>
-              <option value="Australia">Australia</option>
-              <option value="Colombia">Colombia</option>
-              <option value="Korea">Korea</option>
-              <option value="Egypt">Egypt</option>
-              <option value="Spain">Spain</option>
+              <CountrySelect />
             </Form.Control>
             {/* <CountriesSelect
               value={values.locations[0]}
