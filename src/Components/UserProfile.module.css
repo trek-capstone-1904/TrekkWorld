@@ -10,6 +10,9 @@
   margin: 0;
 }
 
+.BucketList {
+  width: 34vw;
+}
 /* @media (min-width: 992px) .modal-lg, .modal-xl {
   max-width: 975px;
 } */

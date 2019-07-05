@@ -1,9 +1,10 @@
 import React, { useState, useContext } from 'react';
-import { Jumbotron, Form, Button } from 'react-bootstrap';
+import { Jumbotron, Form, Button, Tabs, Tab } from 'react-bootstrap';
 import styles from '../TripPlanning.module.css';
-import { SearchAPI, TripSearch, BucketList } from '../index.js';
+import { SearchAPI, TripSearch } from '../index.js';
 import 'firebase/auth';
 import userContext from '../../Contexts/userContext';
+import BorTList from '../SingleTrip/BorTList';
 
 export const TripPlanning = () => {
   const [city, setCity] = useState('');
@@ -85,8 +86,15 @@ export const TripPlanning = () => {
             {submitted && <SearchAPI city={city} country={country} />}
           </div>
           <div className={styles.BucketList}>
-            <h2>Bucket List</h2>
-            <BucketList />
+            <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+              <Tab eventKey="Bucket List" title="Trekk List">
+                <BorTList list={'trekkList'} />
+              </Tab>
+              <Tab eventKey="Trekk List" title="Bucket List">
+                {/* <BucketList /> */}
+                <BorTList list={'bucketList'} />
+              </Tab>
+            </Tabs>
           </div>
         </div>
       </div>

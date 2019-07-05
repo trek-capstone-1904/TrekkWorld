@@ -1,16 +1,17 @@
 import React, { useContext } from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, DropdownButton, Dropdown } from 'react-bootstrap';
 import styles from '../SearchAPICard.module.css';
 import userContext from '../../Contexts/userContext';
 import db from '../../firebase';
 import firebase from 'firebase/app';
 
-export const BucketListCard = props => {
+export const TrekkListCard = props => {
   const loggedInUser = useContext(userContext);
   const uid = loggedInUser.uid;
 
   const { placeName, snippet } = props.card;
   const placeId = props.placeId;
+
   return (
     <Card style={{ margin: '.5rem 1rem' }}>
       <Card.Body>
@@ -21,18 +22,26 @@ export const BucketListCard = props => {
           variant="info"
           onClick={() => handleClick(uid, placeId)}
         >
-          - Bucket
+          - Trekk List
         </Button>
         <Button
           style={{ margin: '0 1rem' }}
           variant="info"
           onClick={() => {
-            handleClick(uid, placeId);
-            addToList(uid, placeId, placeName, snippet, 'trekkList');
+            addToTrip(uid, placeId, placeName, snippet, 'n7vQJBfxHGb0WlVLtqor');
           }}
         >
-          + Trekk List
+          + Trip
         </Button>
+        <DropdownButton
+          id="dropdown-basic-button"
+          title="+ Trip"
+          onClick={() => queryTrips(uid)}
+        >
+          <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+          <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+          <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        </DropdownButton>
       </Card.Body>
     </Card>
   );
@@ -43,17 +52,21 @@ const handleClick = (uid, placeId) => {
   db.collection('Users')
     .doc(uid)
     .update({
-      [`bucketList.${placeId}`]: firebase.firestore.FieldValue.delete(),
+      [`trekkList.${placeId}`]: firebase.firestore.FieldValue.delete(),
     });
 };
 
-const addToList = (userRef, placeId, placeName, snippet, list) => {
+const queryTrips = userRef => {
+  db.doc(`Users/${userRef}`);
+};
+
+const addToTrip = (userRef, placeId, placeName, snippet, trip) => {
   db.doc(`Users/${userRef}`).update({
-    [`${list}.${placeId}`]: {
+    [`Trips.${trip}.${placeId}`]: {
       placeName: placeName,
       snippet: snippet,
     },
   });
 };
 
-export default BucketListCard;
+export default TrekkListCard;
