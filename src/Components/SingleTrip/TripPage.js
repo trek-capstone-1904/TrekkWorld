@@ -90,12 +90,14 @@ export const TripPage = props => {
                 Trip completed
               </Badge>
             ) : (
-              <Badge variant="info"> Days until Trekk: {daysRemaining}!</Badge>
+              <h3>
+                Days until Trekk: <Badge className="badge-pill" variant="success">{daysRemaining}</Badge>
+              </h3>
             )}
             <hr />
-            <Button onClick={openJournal}>Open Journal</Button>
+            <Button variant="info" onClick={openJournal}>Open Journal</Button>
           </div>
-          <Card style={{ width: '20rem', textAlign: 'left' }}>
+          <Card border="info" bg="info" style={{ width: '20rem', textAlign: 'left', color:'white' }}>
             <Card.Body>
               <Card.Title>Trip Details</Card.Title>
               <Card.Text>
@@ -151,7 +153,7 @@ export const TripPage = props => {
                   alt="Profile Pic"
                 />
                 <Media.Body>
-                  <h5>{user[1].userName}</h5>
+                  <h5 style={{ margin: '0' }}> {user[1].userName}</h5>
                 </Media.Body>
                 <button
                   onClick={() => handleDelete(user[0], tripId)}
@@ -178,7 +180,6 @@ export const TripPage = props => {
             </Modal.Footer>
           </Modal>
         </Card>
-
       </div>
     );
   }
