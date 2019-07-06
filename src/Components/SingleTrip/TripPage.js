@@ -15,6 +15,7 @@ import { useDocument } from 'react-firebase-hooks/firestore';
 import { Link } from 'react-router-dom';
 import { AddTrekker } from '../index';
 import firebase from 'firebase/app';
+import styles from '../TripPage.module.css';
 
 export const TripPage = props => {
   const [trip, loading, error] = useDocument(
@@ -79,11 +80,11 @@ export const TripPage = props => {
     const daysRemaining = Math.floor((start - today) / _MS_PER_DAY);
     const totalDays = Math.floor((end - start) / _MS_PER_DAY);
     console.log('days left', daysRemaining);
-    // console.log(users);
+
     return (
       <div>
-        <Jumbotron style={{ display: 'flex', justifyContent: 'space-around' }}>
-          <div style={{ textAlign: 'left' }}>
+        <Jumbotron className={styles.Jumbotron}>
+          <div className={styles.tripHeader}>
             <h1>{tripName}</h1>
             {daysRemaining < 0 ? (
               <Badge style={{ margin: '.5rem' }} variant="success">
@@ -97,7 +98,7 @@ export const TripPage = props => {
             <hr />
             <Button variant="info" onClick={openJournal}>Open Journal</Button>
           </div>
-          <Card border="info" bg="info" style={{ width: '20rem', textAlign: 'left', color:'white' }}>
+          <Card border="info" bg="info" className={styles.tripInfoCard}>
             <Card.Body>
               <Card.Title>Trip Details</Card.Title>
               <Card.Text>

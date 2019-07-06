@@ -10,6 +10,7 @@ import {
 } from 'react-bootstrap';
 // import WorldMap from './WorldMap'
 import { CreateTrekkForm } from '../SingleTrip/CreateTrekkForm';
+import { WorldMap } from '../index';
 
 export const UserProfileHeader = props => {
   const { bio, email, userName, userPicture } = props.user;
@@ -29,14 +30,14 @@ export const UserProfileHeader = props => {
       <Jumbotron>
         <Container>
           <Row>
-            <Col xs={6} md={4}>
+            <Col>
               <Image
                 src={userPicture}
                 roundedCircle
                 style={{ width: '10rem', border: '1px solid black' }}
               />
             </Col>
-            <Col xs={6} md={4}>
+            <Col>
               <h1>{userName}</h1>
               <p>{bio}</p>
               <p>Trekking somewhere new?</p>
@@ -57,7 +58,7 @@ export const UserProfileHeader = props => {
                 </Modal.Footer>
               </Modal>
             </Col>
-            <Col>{/* <WorldMap /> */}</Col>
+            {/* <Col><WorldMap /></Col> */}
           </Row>
         </Container>
       </Jumbotron>

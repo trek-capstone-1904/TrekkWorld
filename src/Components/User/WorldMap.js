@@ -32,14 +32,10 @@ export const WorldMap = () => {
     const dataCountries = value && countries.map(country => [country]);
     dataCountries.unshift(['Countries']);
     return (
-      <div>
+      <div styles={{maxWidth:'100vw'}}>
         <h1>Countries Visited</h1>
         <h3>{dataCountries.length - 1}</h3>
-        <p style={{ textAlign: 'right' }}>
-          <button onClick={toggle} style={{ border: '0', outline: 'none' }}>
-            <img style={{ width: '1rem' }} src={zoom} alt="zoom" />
-          </button>
-        </p>
+
         <Chart
           chartType="GeoChart"
           width="30rem"
@@ -51,6 +47,11 @@ export const WorldMap = () => {
             defaultColor: '#17a2b8',
           }}
         />
+        <span>
+          <button onClick={toggle} style={{ border: '0', outline: 'none' }}>
+            <img style={{ width: '1rem' }} src={zoom} alt="zoom" />
+          </button>
+        </span>
         <Modal
           // dialogClassName="modal-90w"
           // className={styles.Map}
