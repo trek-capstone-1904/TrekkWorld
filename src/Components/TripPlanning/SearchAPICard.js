@@ -3,6 +3,7 @@ import { Card, Button } from 'react-bootstrap';
 import styles from '../SearchAPICard.module.css';
 import db from '../../firebase';
 import userContext from '../../Contexts/userContext';
+import firebase from 'firebase/app';
 
 export const SearchAPICard = props => {
   //type = city if from query for top cities OR type= sights if for top sights in a city
@@ -10,7 +11,7 @@ export const SearchAPICard = props => {
   const { name, snippet } = props.sight;
   const { tripId } = props;
   const loggedInUser = useContext(userContext);
-
+  console.log('tripId on searchAPIcard', tripId);
   return (
     <Card style={{ margin: '.5rem 1rem' }}>
       <Card.Body>
@@ -20,7 +21,7 @@ export const SearchAPICard = props => {
         <Button
           style={{ margin: '0 1rem' }}
           variant="info"
-          onClick={() => handleClick(props, loggedInUser.uid, 'bucketList')}
+          onClick={() => handleClick(props, loggedInUser.uid)}
         >
           + Bucket
         </Button>
@@ -39,10 +40,9 @@ export const SearchAPICard = props => {
 //use a generic handleClick so that it adds a new place to the place db
 // after it adds the place to the db, it assigns the place to either the bucketList or the TrekkList
 
-const handleClick = (props, uid, list) => {
+const handleClick = (props, uid, tripId) => {
   //query Places
   const placeRef = db.collection('Places').doc(props.sight.id);
-  const userRef = db.collection('Users').doc(uid);
 
   const { name, snippet } = props.sight;
 
@@ -52,10 +52,10 @@ const handleClick = (props, uid, list) => {
       if (doc.exists) {
         //add the props.id to the user
         console.log('Document data:', doc.data());
-        if (list === 'bucketList') {
-          addToBucketList(uid, props.sight.id, name, snippet, list);
+        if (tripId) {
+          addToTrekk(uid, props.sight.id, name, snippet, tripId);
         } else {
-          addToTrekk(props.sight.id, name, snippet, list);
+          addToBucketList(uid, props.sight.id, name, snippet);
         }
       } else {
         // doc is created in 'Places' collection
@@ -69,10 +69,10 @@ const handleClick = (props, uid, list) => {
           .catch(function(error) {
             console.error('Error writing document: ', error);
           });
-        if (list === 'bucketList') {
-          addToBucketList(uid, props.sight.id, name, snippet, list);
+        if (tripId) {
+          addToTrekk(uid, props.sight.id, name, snippet, tripId);
         } else {
-          addToTrekk(props.sight.id, name, snippet, list);
+          addToBucketList(uid, props.sight.id, name, snippet);
         }
       }
     })
@@ -81,16 +81,17 @@ const handleClick = (props, uid, list) => {
     });
 };
 
-const addToBucketList = (userRef, placeId, placeName, snippet, list) => {
-  db.doc(`Users/${userRef}`).update({
-    [`${list}.${placeId}`]: {
+const addToBucketList = (uid, placeId, placeName, snippet) => {
+  db.doc(`Users/${uid}`).update({
+    [`bucketList.${placeId}`]: {
       placeName: placeName,
       snippet: snippet,
     },
   });
 };
 
-const addToTrekk = (placeId, placeName, snippet, tripId) => {
+const addToTrekk = (uid, placeId, placeName, snippet, tripId) => {
+  //add to Trekklist
   db.collection('Trips')
     .doc(`${tripId}`)
     .collection('TrekkList')
@@ -103,7 +104,12 @@ const addToTrekk = (placeId, placeName, snippet, tripId) => {
       { merge: true }
     );
 
-  // db.doc(`Trips/${trekk}`)
+  //delete from bucketList
+  db.collection('Users')
+    .doc(uid)
+    .update({
+      [`bucketList.${placeId}`]: firebase.firestore.FieldValue.delete(),
+    });
 };
 
 export default SearchAPICard;

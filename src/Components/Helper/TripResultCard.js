@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Card, Badge, Accordion, ListGroup } from 'react-bootstrap';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 import SearchAPICard from '../TripPlanning/SearchAPICard';
+import db from '../../firebase';
+import userContext from '../../Contexts/userContext';
+import { useCollection } from 'react-firebase-hooks/firestore';
+import { MDBContainer, MDBScrollbar } from 'mdbreact';
+import './scrollbar.css';
+import TripResultPlaceCard from '../TripPlanning/TripResultPlaceCard';
 
 export const TripResultCard = props => {
-  const card = props.card;
+  const { card, tripId } = props;
+
+  const [value, loading, error] = useCollection(
+    db
+      .collection('Trips')
+      .doc(tripId)
+      .collection('TrekkList'),
+    {
+      snapshotListenOptions: { includeMetadataChanges: true },
+    }
+  );
+
+  const scrollContainerStyle = { width: '66vw', maxHeight: '30vw' };
   return (
     <Card border="info" style={{ margin: '.5rem' }}>
       {/* <Card.Img variant="top" src={`../${card.tripImageUrl}`} /> */}
@@ -22,29 +40,27 @@ export const TripResultCard = props => {
             {user[1].userName}
           </Badge>
         ))}
-        {card.places && (
-          <Accordion defaultActiveKey="0">
-            <Card>
-              <Accordion.Toggle as={Card.Header} eventKey="0">
-                Highlights
-              </Accordion.Toggle>
-              <Accordion.Collapse eventKey="0">
-                <Card.Body>
-                  <ListGroup>
-                    {Object.entries(card.places).map(place => (
-                      <ListGroup.Item key={place[0]}>
-                        {place[1].name}
-                      </ListGroup.Item>
-                    ))}
-                    {/* {Object.entries(card.places).map(place => (
-                    <SearchAPICard key={place[0]} card={place[1]} />
-                  ))} */}
-                  </ListGroup>
-                </Card.Body>
-              </Accordion.Collapse>
-            </Card>
-          </Accordion>
-        )}
+        <MDBContainer>
+          <div
+            className="scrollbar scrollbar-primary  mt-5 mx-auto"
+            style={scrollContainerStyle}
+          >
+            {value && (
+              <span>
+                {value.docs
+                  .filter(doc => !doc.data().locations)
+                  .map(doc => (
+                    <TripResultPlaceCard
+                      key={doc.id}
+                      placeId={doc.id}
+                      card={doc.data()}
+                      tripId={tripId}
+                    />
+                  ))}
+              </span>
+            )}
+          </div>
+        </MDBContainer>
       </Card.Body>
     </Card>
   );

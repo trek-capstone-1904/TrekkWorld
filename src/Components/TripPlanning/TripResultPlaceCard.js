@@ -1,16 +1,16 @@
 import React, { useContext } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import styles from '../SearchAPICard.module.css';
-import userContext from '../../Contexts/userContext';
 import db from '../../firebase';
-import firebase from 'firebase/app';
+import userContext from '../../Contexts/userContext';
 
-export const BucketListCard = props => {
-  const loggedInUser = useContext(userContext);
-  const uid = loggedInUser.uid;
-  const { tripId } = props;
+export const TripResultPlaceCard = props => {
   const { placeName, snippet } = props.card;
-  const placeId = props.placeId;
+  const { tripId, placeId } = props;
+  const loggedInUser = useContext(userContext);
+  const { uid } = loggedInUser;
+
+  console.log('tripId on TripResultPlaceCard', tripId);
   return (
     <Card style={{ margin: '.5rem 1rem' }}>
       <Card.Body>
@@ -19,17 +19,14 @@ export const BucketListCard = props => {
         <Button
           style={{ margin: '0 1rem' }}
           variant="info"
-          onClick={() => handleClick(uid, placeId)}
+          onClick={() => addToBucketList(uid, placeId, placeName, snippet)}
         >
-          - Bucket
+          + Bucket
         </Button>
         <Button
           style={{ margin: '0 1rem' }}
           variant="info"
-          onClick={() => {
-            handleClick(uid, placeId);
-            addToTrekk(placeId, placeName, snippet, tripId);
-          }}
+          onClick={() => addToTrekk(uid, placeId, placeName, snippet, tripId)}
         >
           + Trekk List
         </Button>
@@ -38,16 +35,16 @@ export const BucketListCard = props => {
   );
 };
 
-const handleClick = (uid, placeId) => {
-  //remove entry from User.userId.bucketList
-  db.collection('Users')
-    .doc(uid)
-    .update({
-      [`bucketList.${placeId}`]: firebase.firestore.FieldValue.delete(),
-    });
+const addToBucketList = (uid, placeId, placeName, snippet) => {
+  db.doc(`Users/${uid}`).update({
+    [`bucketList.${placeId}`]: {
+      placeName: placeName,
+      snippet: snippet,
+    },
+  });
 };
 
-const addToTrekk = (placeId, placeName, snippet, tripId) => {
+const addToTrekk = (uid, placeId, placeName, snippet, tripId) => {
   db.collection('Trips')
     .doc(`${tripId}`)
     .collection('TrekkList')
@@ -61,4 +58,4 @@ const addToTrekk = (placeId, placeName, snippet, tripId) => {
     );
 };
 
-export default BucketListCard;
+export default TripResultPlaceCard;
