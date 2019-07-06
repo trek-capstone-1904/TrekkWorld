@@ -9,9 +9,10 @@ import {
   Dropdown,
 } from 'react-bootstrap';
 import styles from '../TripPlanning.module.css';
-import { SearchAPI, TripSearch, BucketList, TrekkList } from '../index.js';
+import { SearchAPI, TripSearch, BucketList, TrekkList, CountrySelect } from '../index.js';
 import 'firebase/auth';
 import userContext from '../../Contexts/userContext';
+
 
 import db from '../../firebase';
 import { useDocument } from 'react-firebase-hooks/firestore';
