@@ -13,7 +13,7 @@ import TrekkList from './SingleTrip/TrekkList';
 import WorldMap from './User/WorldMap';
 import CreateTrekkForm from './SingleTrip/CreateTrekkForm';
 import TripPage from './SingleTrip/TripPage';
-import Journal from './SingleTrip/Journal';
+import Journal from './SingleTrip/Journal/Journal';
 import AddTrekker from './SingleTrip/AddTrekker';
 import CountrySelect from './Helper/CountrySelect';
 
@@ -31,6 +31,6 @@ export { default as TrekkList } from './SingleTrip/TrekkList';
 export { default as WorldMap } from './User/WorldMap';
 export { default as CreateTrekkForm } from './SingleTrip/CreateTrekkForm';
 export { default as TripPage } from './SingleTrip/TripPage';
-export { default as Journal } from './SingleTrip/Journal';
+export { default as Journal } from './SingleTrip/Journal/Journal';
 export { default as AddTrekker } from './SingleTrip/AddTrekker';
 export { default as CountrySelect } from './Helper/CountrySelect';
