@@ -107,7 +107,7 @@ export const Journal = props => {
               <Carousel.Item>Day 1</Carousel.Item>
               <Carousel.Item>Day 2</Carousel.Item>
             </Carousel>
-            <Form style={{ maxWidth: '40vw', margin: 'auto' }}>
+            <Form style={{maxWidth:'40rem',margin:"auto"}}>
               {/* <Form.Label>Favorite Pick</Form.Label> */}
               {/* <Form.Control as="select">
                 {tripInfo.locations.map((e, key) => (

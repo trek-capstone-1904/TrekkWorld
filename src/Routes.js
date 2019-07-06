@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import {
   TripSingle,
   UserProfile,
@@ -20,7 +20,7 @@ export class Routes extends Component {
   render() {
     return (
       <Switch>
-        <Route path="/user" component={UserProfile} />
+        <Route path="/profile" component={UserProfile} />
         <Route exact path="/plantrip" component={TripPlanning} />
         <Route path="/trip/:tripId/journal" component={Journal} />
         <Route path="/trip/:tripId" component={TripPage} />
@@ -31,6 +31,7 @@ export class Routes extends Component {
         <Route exact path="/addPhoto" component={PhotoLoad} />
         <Route exact path="/welcome" component={Welcome} />
         <Route exact path="/countries" component={CountrySelect} />
+        <Redirect from="/" to="/profile" />
       </Switch>
     );
   }

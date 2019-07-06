@@ -13,6 +13,15 @@
 .BucketList {
   width: 34vw;
 }
+
+@media only screen and (max-width: 750px) {
+  .userProfileBody{
+    display: block;
+  }
+  .BucketList{
+    max-width:40rem;
+  }
+}
 /* @media (min-width: 992px) .modal-lg, .modal-xl {
   max-width: 975px;
 } */
@@ -23,3 +32,4 @@
     margin: 0 auto;
   }
 } */
+/* style={{flexBasis:'unset'}} */

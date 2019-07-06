@@ -8,12 +8,10 @@ import zoom from '../../images/baseline_zoom_out_map_black_18dp.png';
 import styles from '../UserProfile.module.css';
 import Modal from 'react-bootstrap/Modal';
 
-export const WorldMap = () => {
-  const loggedInUser = useContext(userContext);
+export const TripMap = props => {
   const [isZoom, setIsZoom] = useState(false);
-
   const [value, loading, error] = useDocument(
-    db.doc(`Users/${loggedInUser.uid}`),
+    db.doc(`Countries/${props.countries[0]}`),
     {
       valueListenOptions: { includeMetadataChanges: true },
     }
@@ -25,29 +23,42 @@ export const WorldMap = () => {
   function handleClose() {
     setIsZoom(false);
   }
+  console.log(props);
+  const regions = {
+    Africa: '002',
+    Europe: '150',
+    Americas: '019',
+    Asia: '142',
+    Oceania: '009',
+    'South America': '005',
+    'Central America': '013',
+    'North America': '021'
+  };
+  // const countries = value && value.data().countriesVisited;
+  const dataCountries = props.countries.map(country => [country]);
+  dataCountries.unshift(['Countries']);
   if (error) throw error;
   if (loading) return <Spinner animation="grow" variant="info" />;
   if (value) {
-    const countries = value && value.data().countriesVisited;
-    const dataCountries = value && countries.map(country => [country]);
-    dataCountries.unshift(['Countries']);
+    console.log(value.data());
+    const regionCode = regions[value.data().region];
+    console.log(regionCode);
     return (
-      <div styles={{maxWidth:'100vw'}}>
-        <h1>Countries Visited</h1>
-        <h3>{dataCountries.length - 1}</h3>
-
-        <Chart
-          chartType="GeoChart"
-          width="30rem"
-          data={dataCountries}
-          options={{
-            // colorAxis: { colors: 'blue' },
-            backgroundColor: 'none',
-            datalessRegionColor: 'lightgray',
-            defaultColor: '#17a2b8',
-          }}
-        />
+      // <div>hi</div>
+      <div styles={{ maxWidth: '30rem' }}>
         <span>
+          <Chart
+            chartType="GeoChart"
+            width="30rem"
+            data={dataCountries}
+            options={{
+              region: regionCode,
+              backgroundColor: 'none',
+              datalessRegionColor: 'lightgray',
+              defaultColor: '#17a2b8',
+            }}
+          />
+
           <button onClick={toggle} style={{ border: '0', outline: 'none' }}>
             <img style={{ width: '1rem' }} src={zoom} alt="zoom" />
           </button>
@@ -87,4 +98,4 @@ export const WorldMap = () => {
   }
 };
 
-export default WorldMap;
+export default TripMap;
