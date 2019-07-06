@@ -5,9 +5,9 @@ import { useDocument } from 'react-firebase-hooks/firestore';
 import { BucketListCard } from '../index';
 import userContext from '../../Contexts/userContext';
 
-export const BucketList = () => {
+export const BucketList = props => {
   const loggedInUser = useContext(userContext);
-
+  const { tripId } = props;
   const [snapshot, loading, error] = useDocument(
     db.collection('Users').doc(`${loggedInUser.uid}`),
     {
@@ -28,6 +28,7 @@ export const BucketList = () => {
                 <BucketListCard
                   key={key}
                   placeId={key}
+                  tripId={tripId}
                   card={snapshot.data().bucketList[key]}
                 />
               );

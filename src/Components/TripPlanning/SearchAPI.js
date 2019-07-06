@@ -27,6 +27,8 @@ function fakeData(type) {
 }
 
 function useFetchSights(city, country, code) {
+  city = city.slice(0, 1).toUpperCase() + city.slice(1);
+  console.log(city);
   const initials = {
     Colombia: 'CO',
     France: 'FR',
@@ -37,6 +39,8 @@ function useFetchSights(city, country, code) {
     Egypt: 'EG',
     Spain: 'ES',
   };
+  console.log(country)
+  console.log(code)
   const query = `https://www.triposo.com/api/20181213/poi.json?tag_labels=eatingout|sightseeing&location_id=${city}&countrycode=${code}&order_by=-score&count=10&fields=snippet,id,name,location_id,score,tag_labels,coordinates&account=${
     secret.triposoAccount
   }&token=${secret.triposoToken}`;
