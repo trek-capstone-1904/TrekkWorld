@@ -13,7 +13,8 @@ export const JournalCard = props => {
   console.log(props);
   return (
     <div>
-      <Card>
+      <Card border="success"
+                        style={{ width: "10rem" }}>
         <Card.Body>{props.place.value}</Card.Body>
 
         <Button>+ Review</Button>
@@ -28,3 +29,5 @@ export const JournalCard = props => {
 };
 
 export default JournalCard;
+
+
