@@ -27,6 +27,8 @@ function fakeData(type) {
 }
 
 function useFetchSights(city, country, code) {
+  city = city.slice(0, 1).toUpperCase() + city.slice(1);
+  console.log(city);
   const initials = {
     Colombia: 'CO',
     France: 'FR',

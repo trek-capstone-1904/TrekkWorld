@@ -31,17 +31,18 @@
 }
 
 .placeholderTripSearch {
-  width: 33vw;
+  width: 66vw;
   /* background-color: aquamarine; */
 }
 .BucketList {
   width: 34vw;
 }
-.searchAPI {
+
+/* 
+ .searchAPI {
   width: 33vw;
   background-color: rgb(219, 212, 212);
   /* text-align:center; */
-}
 
 @media only screen and (max-width: 750px) {
   .tripPlanningJumbo > form {

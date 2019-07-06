@@ -1,15 +1,13 @@
 import React, { useState, useContext } from 'react';
-import {
-  Jumbotron,
-  Form,
-  Button,
-  Tabs,
-  Tab,
-  DropdownButton,
-  Dropdown,
-} from 'react-bootstrap';
+import { Jumbotron, Form, Button, Tabs, Tab } from 'react-bootstrap';
 import styles from '../TripPlanning.module.css';
-import { SearchAPI, TripSearch, BucketList, TrekkList } from '../index.js';
+import {
+  SearchAPI,
+  TripSearch,
+  BucketList,
+  TrekkList,
+  CountrySelect,
+} from '../index.js';
 import 'firebase/auth';
 import userContext from '../../Contexts/userContext';
 
@@ -21,8 +19,8 @@ export const TripPlanning = () => {
   const [country, setCountry] = useState('');
   const [code, setCode] = useState('');
   const [submitted, setSubmit] = useState(false);
-
   const [tripId, setTripId] = useState('');
+
   const loggedInUser = useContext(userContext);
 
   const handleChange = (evt, type) => {
@@ -96,36 +94,30 @@ export const TripPlanning = () => {
         {/* TODO: For now search requires a city and uses city to search locations. Make it flexible so city is optional ALSO fix that city must be capital for it to work*/}
         <div className={styles.searchResults}>
           <div className={styles.placeholderTripSearch}>
-            <h2>Trips</h2>
-            {submitted && <TripSearch city={city} country={country} />}
-          </div>
-          <div className={styles.searchAPI}>
-            <h2>Things to Do</h2>
-            {submitted && (
-              <SearchAPI
-                city={city}
-                country={country}
-                tripId={tripId}
-                code={code}
-              />
-            )}
+            <Tabs defaultActiveKey="Search-API" id="Trip Search Results">
+              <Tab eventKey="Search-API" title="Search API">
+                {submitted && (
+                  <SearchAPI
+                    city={city}
+                    country={country}
+                    tripId={tripId}
+                    code={code}
+                  />
+                )}
+              </Tab>
+              <Tab eventKey="Trip-Search" title="Trip Search">
+                {submitted && <TripSearch city={city} country={country} />}
+              </Tab>
+            </Tabs>
           </div>
           <div className={styles.BucketList}>
-            {/* <DropdownButton id="dropdown-basic-button" title="Trekk">
-              {snapshot &&
-                Object.entries(snapshot.data().Trips).map(trip => (
-                  <option value={trekk} onChange={handleChange}>
-                    {trip[1].tripName}
-                  </option>
-                ))}
-            </DropdownButton> */}
             <Form.Control
               name="tripId"
               value={tripId}
               as="select"
               onChange={handleChange}
             >
-              <option>select</option>
+              <option>select a trip to plan</option>
               {snapshot &&
                 Object.entries(snapshot.data().Trips).map(trip => (
                   <option key={trip[0]} value={trip[0]}>
@@ -133,13 +125,12 @@ export const TripPlanning = () => {
                   </option>
                 ))}
             </Form.Control>
-            <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-              <Tab eventKey="Bucket List" title="Trekk List">
-                <TrekkList list={'trekkList'} tripId={tripId} />
+            <Tabs defaultActiveKey="Bucket List" id="Trekk-Bucket-List">
+              <Tab eventKey="Bucket List" title="Bucket List">
+                <BucketList tripId={tripId} />
               </Tab>
-              <Tab eventKey="Trekk List" title="Bucket List">
-                {/* <BucketList /> */}
-                <BucketList />
+              <Tab eventKey="Trekk List" title="Trekk List">
+                {tripId && <TrekkList list={'trekkList'} tripId={tripId} />}
               </Tab>
             </Tabs>
           </div>
