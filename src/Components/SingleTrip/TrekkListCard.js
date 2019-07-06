@@ -8,10 +8,8 @@ import firebase from 'firebase/app';
 export const TrekkListCard = props => {
   const loggedInUser = useContext(userContext);
   const uid = loggedInUser.uid;
-  const { trekk } = props;
+  const { tripId, placeId } = props;
   const { placeName, snippet } = props.card;
-  const placeId = props.placeId;
-  console.log('trekk on listCard Props', trekk);
   return (
     <Card style={{ margin: '.5rem 1rem' }}>
       <Card.Body>
@@ -20,44 +18,22 @@ export const TrekkListCard = props => {
         <Button
           style={{ margin: '0 1rem' }}
           variant="info"
-          onClick={() => handleClick(uid, placeId)}
+          onClick={() => handleClick(tripId, placeId)}
         >
           - Trekk List
         </Button>
-        {/* <Button
-          style={{ margin: '0 1rem' }}
-          variant="info"
-          onClick={() => {
-            addToTrekk(uid, placeId, placeName, snippet, trekk);
-          }}
-        >
-          + Trip
-        </Button> */}
       </Card.Body>
     </Card>
   );
 };
 
-const handleClick = (uid, placeId) => {
-  //remove entry from User.userId.bucketList
-  db.collection('Users')
-    .doc(uid)
-    .update({
-      [`trekkList.${placeId}`]: firebase.firestore.FieldValue.delete(),
-    });
-};
-
-const queryTrips = userRef => {
-  db.doc(`Users/${userRef}`);
-};
-
-const addToTrekk = (userRef, placeId, placeName, snippet, trip) => {
-  db.doc(`Users/${userRef}`).update({
-    [`Trips.${trip}.${placeId}`]: {
-      placeName: placeName,
-      snippet: snippet,
-    },
-  });
+const handleClick = (tripId, placeId) => {
+  //remove entry from Trips.tripId.TrekkList.placeId
+  db.collection('Trips')
+    .doc(tripId)
+    .collection('TrekkList')
+    .doc(placeId)
+    .delete();
 };
 
 export default TrekkListCard;

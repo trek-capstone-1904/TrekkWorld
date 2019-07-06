@@ -14,6 +14,13 @@ import {
 import { useDocument } from 'react-firebase-hooks/firestore';
 import { Link } from 'react-router-dom';
 import { AddTrekker, TripMap } from '../index';
+import {
+  SearchAPI,
+  TripSearch,
+  BucketList,
+  TrekkList,
+  CountrySelect,
+} from '../index.js';
 import firebase from 'firebase/app';
 import styles from '../TripPage.module.css';
 
@@ -92,13 +99,18 @@ export const TripPage = props => {
               </Badge>
             ) : (
               <h3>
-                Days until Trekk: <Badge className="badge-pill" variant="success">{daysRemaining}</Badge>
+                Days until Trekk:{' '}
+                <Badge className="badge-pill" variant="success">
+                  {daysRemaining}
+                </Badge>
               </h3>
             )}
             <hr />
-            <Button variant="info" onClick={openJournal}>Open Journal</Button>
+            <Button variant="info" onClick={openJournal}>
+              Open Journal
+            </Button>
           </div>
-          <TripMap countries={locations}/>
+          <TripMap countries={locations} />
           <Card border="info" bg="info" className={styles.tripInfoCard}>
             <Card.Body>
               <Card.Title>Trip Details</Card.Title>
