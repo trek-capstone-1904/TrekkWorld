@@ -26,7 +26,6 @@ export const UserProfile = props => {
   if (loading) return <Spinner animation="grow" variant="info" />;
   if (value) {
     const userInfo = value.data();
-    console.log('userInfo', userInfo.Trips);
     return (
       <div>
         <UserProfileHeader user={userInfo} />
