@@ -20,7 +20,6 @@ import {
 import 'firebase/auth';
 import userContext from '../../Contexts/userContext';
 
-
 import db from '../../firebase';
 import { useDocument } from 'react-firebase-hooks/firestore';
 import history from '../../history';
@@ -140,20 +139,22 @@ export const TripPlanning = props => {
             </Tabs>
           </div>
           <div className={styles.BucketList}>
-            <Form.Control
-              name="tripId"
-              value={tripId}
-              as="select"
-              onChange={handleChange}
-            >
-              <option>select a trip to plan</option>
-              {snapshot &&
-                Object.entries(snapshot.data().Trips).map(trip => (
-                  <option key={trip[0]} value={trip[0]}>
-                    {trip[1].tripName}
-                  </option>
-                ))}
-            </Form.Control>
+            {snapshot && snapshot.data().Trips &&
+              Object.keys(snapshot.data().Trips).length !== 0 && (
+                <Form.Control
+                  name="tripId"
+                  value={tripId}
+                  as="select"
+                  onChange={handleChange}
+                >
+                  <option>select a trip to plan</option>
+                  {Object.entries(snapshot.data().Trips).map(trip => (
+                    <option key={trip[0]} value={trip[0]}>
+                      {trip[1].tripName}
+                    </option>
+                  ))}
+                </Form.Control>
+              )}
             <Tabs defaultActiveKey="Bucket List" id="Trekk-Bucket-List">
               <Tab eventKey="Bucket List" title="Bucket List">
                 <BucketList tripId={tripId} />

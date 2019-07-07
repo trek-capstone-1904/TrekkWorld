@@ -29,7 +29,7 @@ export const NavigationBar = () => {
       <Nav>
         <img src="https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/website%2FiconTeal.png?alt=media&token=e04d9ccf-a0cc-4d6f-8f24-f51ecf1bc5b5" alt="travel icon" height="42" width="42"/>
         <Navbar.Brand>Trekk </Navbar.Brand>
-        <p style={{margin:'auto', color:'#696969'}}>{loggedInUser.displayName}</p>
+        <p style={{margin:'auto', color:'teal'}}>{loggedInUser.displayName}</p>
       </Nav>
       <Nav className="justify-content-end">
         <LinkContainer to="/profile">
@@ -38,12 +38,6 @@ export const NavigationBar = () => {
         <LinkContainer to="/plantrip">
           <Nav.Link>Plan Trekk</Nav.Link>
         </LinkContainer>
-        {/* <NavDropdown title="Account" id="basic-nav-dropdown">
-          <NavDropdown.Item>
-          Welcome {loggedInUser.displayName}
-          </NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item> */}
         <Nav.Link
           to="/"
           style={{ textDecoration: 'none' }}
@@ -51,8 +45,6 @@ export const NavigationBar = () => {
         >
           Log Out
         </Nav.Link>
-        {/* </NavDropdown.Item> */}
-        {/* </NavDropdown> */}
       </Nav>
     </Navbar>
   );
