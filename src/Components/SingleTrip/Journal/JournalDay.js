@@ -29,7 +29,7 @@ const JournalDay = props => {
     return (
       <div>
         <h3>{props.date}</h3>
-        <Form style={{ maxWidth: "40vw", margin: "auto" }}>
+        <Form style={{ maxWidth: "40rem", margin: "auto" }}>
           <Form.Label>Where did I go today?</Form.Label>
           <Selector tripId={props.tripId} />
 
@@ -37,8 +37,8 @@ const JournalDay = props => {
         {(placesArray.length > 0) && (
             <CardDeck>
               {placesArray.map(place => (
+                <JournalCard key={place} place={place} />
 
-                 <JournalCard key={place} place={place} />
               ))}
             </CardDeck>
           )}
