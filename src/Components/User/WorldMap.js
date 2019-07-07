@@ -33,8 +33,8 @@ export const WorldMap = () => {
     dataCountries.unshift(['Countries']);
     return (
       <div styles={{maxWidth:'100vw'}}>
-        <h1>Countries Visited</h1>
-        <h3>{dataCountries.length - 1}</h3>
+        {/* <h1>Countries Visited</h1> */}
+        {/* <h3>{dataCountries.length - 1}</h3> */}
 
         <Chart
           chartType="GeoChart"
