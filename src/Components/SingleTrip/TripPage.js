@@ -10,6 +10,7 @@ import {
   Card,
   Badge,
   Row,
+  CardColumns
 } from 'react-bootstrap';
 import userContext from '../../Contexts/userContext';
 import { useDocument } from 'react-firebase-hooks/firestore';
@@ -138,76 +139,87 @@ export const TripPage = props => {
                 End: {moment(endDate).format('MMM D, YYYY')}{' '}
               </Card.Text>
               <Card.Text>Total Days: {totalDays} </Card.Text>
-              {locations.map(country => (
-                <Card.Text key={country}>Countries: {country}</Card.Text>
-              ))}
+              <Card.Text>
+                Countries:
+                {locations.map(country => (
+                  <Badge variant="info"> {country}</Badge>
+                ))}
+              </Card.Text>
               <Card.Text> Trip type: {tripTags} </Card.Text>
             </Card.Body>
           </Card>
         </Jumbotron>
-        <Card border="info" style={{ maxWidth: '25rem', margin: '.5rem' }}>
-          <Card.Header>
-            <h4>Fellow Trekkers</h4>
-            {isThisAFellowTrekker() && (
-              <Button
-                variant="info"
-                style={{ margin: '.5rem' }}
-                onClick={toggleForm}
-              >
-                + New Trekker
-              </Button>
-            )}
-          </Card.Header>
-          <ul className="list-unstyled" style={{ padding: '0 2rem' }}>
-            {Object.entries(users).map(user => (
-              <Media
-                key={user[0]}
-                as="li"
-                style={{
-                  margin: '.5rem',
-                  alignItems: 'center',
-                  border: '1px dotted teal',
-                  padding: '0 1.5rem',
-                }}
-              >
-                <img
-                  width={64}
-                  height={64}
-                  className="mr-3"
-                  src={user[1].userPicture}
-                  alt="Profile Pic"
-                />
-                <Media.Body>
-                  <h5 style={{ margin: '0' }}> {user[1].userName}</h5>
-                </Media.Body>
+        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+          {/* <CardColumns> */}
+            <Card border="info" style={{ maxWidth: '25rem', margin: '.5rem' }}>
+              <Card.Header>
+                <h4>Fellow Trekkers</h4>
                 {isThisAFellowTrekker() && (
-                  <button
-                    onClick={() => handleDelete(user[0], tripId)}
-                    type="button"
-                    className="close"
-                    aria-label="Close"
+                  <Button
+                    variant="info"
+                    style={{ margin: '.5rem' }}
+                    onClick={toggleForm}
                   >
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+                    + New Trekker
+                  </Button>
                 )}
-              </Media>
-            ))}
-          </ul>
-          <Modal show={isShowing} onHide={handleClose}>
-            <Modal.Header closeButton>
-              <Modal.Title>Who's trekking with?</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <AddTrekker userDoc={props} tripId={tripId} trip={trip.data()} />
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-            </Modal.Footer>
-          </Modal>
-        </Card>
-        <TripAlbum fellowTrekker={isThisAFellowTrekker()} tripId={tripId} />
+              </Card.Header>
+              <ul className="list-unstyled" style={{ padding: '0 2rem' }}>
+                {Object.entries(users).map(user => (
+                  <Media
+                    key={user[0]}
+                    as="li"
+                    style={{
+                      margin: '.5rem',
+                      alignItems: 'center',
+                      border: '1px dotted teal',
+                      padding: '0 1.5rem',
+                    }}
+                  >
+                    <img
+                      width={64}
+                      height={64}
+                      className="mr-3"
+                      src={user[1].userPicture}
+                      alt="Profile Pic"
+                    />
+                    <Media.Body>
+                      <h5 style={{ margin: '0' }}> {user[1].userName}</h5>
+                    </Media.Body>
+                    {isThisAFellowTrekker() && (
+                      <button
+                        onClick={() => handleDelete(user[0], tripId)}
+                        type="button"
+                        className="close"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    )}
+                  </Media>
+                ))}
+              </ul>
+              <Modal show={isShowing} onHide={handleClose}>
+                <Modal.Header closeButton>
+                  <Modal.Title>Who's trekking with?</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <AddTrekker
+                    userDoc={props}
+                    tripId={tripId}
+                    trip={trip.data()}
+                  />
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={handleClose}>
+                    Close
+                  </Button>
+                </Modal.Footer>
+              </Modal>
+            </Card>
+          {/* </CardColumns> */}
+          <TripAlbum fellowTrekker={isThisAFellowTrekker()} tripId={tripId} />
+        </div>
       </div>
     );
   }
