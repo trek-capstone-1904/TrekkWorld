@@ -35,7 +35,7 @@ export const TripAlbum = props => {
         )}
       </Card.Body>
       <Card.Footer>
-        <PhotoLoad from="trip" tripId={props.tripId} />
+        {props.fellowTrekker && <PhotoLoad from="trip" tripId={props.tripId} />}
       </Card.Footer>
     </Card>
   );

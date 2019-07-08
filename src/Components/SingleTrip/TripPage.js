@@ -207,7 +207,7 @@ export const TripPage = props => {
             </Modal.Footer>
           </Modal>
         </Card>
-        <TripAlbum tripId={tripId} />
+        <TripAlbum fellowTrekker={isThisAFellowTrekker()} tripId={tripId} />
       </div>
     );
   }

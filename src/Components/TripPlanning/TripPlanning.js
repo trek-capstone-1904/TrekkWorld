@@ -33,7 +33,9 @@ export const TripPlanning = props => {
   let countryQuery = query.substr(countryIdx, cityIdx - countryIdx - 6);
   let cityQuery = query.substr(cityIdx, codeIdx - cityIdx - 6);
   let codeQuery = query.substr(codeIdx, query.length);
-
+  if (cityQuery.includes(' ')) {
+    cityQuery = cityQuery.split('_').join(' ');
+  }
   console.log(countryQuery, ',', cityQuery, ',', codeQuery);
   // const [url, setUrl] = useState(props.location.search);
   const [city, setCity] = useState(cityQuery);
@@ -70,7 +72,10 @@ export const TripPlanning = props => {
     if (country === 'Select a Country...' || country === '') {
       alert('Please select a country');
     } else {
-      history.replace(`/plantrip?country=${country}&city=${city}&code=${code}`);
+      if (city.includes(' ')) {
+        cityQuery = city.split(' ').join('_');
+      }
+      history.replace(`/plantrip?country=${country}&city=${cityQuery}&code=${code}`);
       setSubmit('true');
     }
   };
@@ -139,7 +144,8 @@ export const TripPlanning = props => {
             </Tabs>
           </div>
           <div className={styles.BucketList}>
-            {snapshot && snapshot.data().Trips &&
+            {snapshot &&
+              snapshot.data().Trips &&
               Object.keys(snapshot.data().Trips).length !== 0 && (
                 <Form.Control
                   name="tripId"
