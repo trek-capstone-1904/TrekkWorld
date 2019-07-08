@@ -61,11 +61,14 @@ export const Journal = props => {
           <div>
             <Jumbotron>{tripInfo.tripName} Journal</Jumbotron>
             {days.map(date => (
-              <JournalDay
-                key={date}
-                date={date}
-                tripId={props.match.params.tripId}
-              />
+              <Jumbotron>
+
+                <JournalDay
+                  key={date}
+                  date={date}
+                  tripId={props.match.params.tripId}
+                />
+              </Jumbotron>
             ))}
           </div>
         </span>

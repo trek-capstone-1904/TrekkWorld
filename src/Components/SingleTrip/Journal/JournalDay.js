@@ -3,7 +3,7 @@ import { useDocument } from "react-firebase-hooks/firestore";
 import Selector from "./Selector";
 import Notes from "./Notes";
 import JournalCard from "./JournalCard";
-import { Form, CardDeck, Spinner } from "react-bootstrap";
+import { Form, CardDeck, Spinner, Badge } from "react-bootstrap";
 import db from "../../../firebase";
 
 const JournalDay = props => {
@@ -45,7 +45,12 @@ const JournalDay = props => {
             </CardDeck>
           )}
 
-          <Form.Label>Add a Location:</Form.Label>
+          <Form.Label>
+            <Badge pill variant="info" >
+
+            Add a Location:
+            </Badge>
+            </Form.Label>
           <Selector tripId={props.tripId} date={props.date} />
           <Notes tripId={props.tripId} date={props.date}/>
         </Form>

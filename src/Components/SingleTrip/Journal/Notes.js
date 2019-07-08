@@ -53,7 +53,7 @@ export const Notes = props => {
         Post
       </Button>
       <div>
-
+        All Notes
       </div>
     </>
   );
