@@ -12,7 +12,7 @@ export const TripResultPlaceCard = props => {
 
   console.log('tripId on TripResultPlaceCard', tripId);
   return (
-    <Card style={{ margin: '.5rem 1rem' }}>
+    <Card>
       <Card.Body>
         <Card.Title>{placeName}</Card.Title>
         <Card.Text className={styles.cardText}>{snippet}</Card.Text>

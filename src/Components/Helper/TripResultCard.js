@@ -43,7 +43,11 @@ export const TripResultCard = props => {
   }
   tripCompleted();
 
-  const scrollContainerStyle = { width: '66vw', maxHeight: '30vw' };
+  const scrollContainerStyle = {
+    maxWidth: '66vw',
+    maxHeight: '15rem',
+    border: '1px dotted lightgray',
+  };
   return (
     <Card border="info" style={{ margin: '.5rem' }}>
       {/* <Card.Img variant="top" src={`../${card.tripImageUrl}`} /> */}
@@ -67,7 +71,7 @@ export const TripResultCard = props => {
           {!tripCompleted() && <Badge variant="light"> Upcoming</Badge>}
           {tripCompleted() && (
             <Badge variant="success" display={tripCompleted()}>
-               {tripCompleted()}
+              {tripCompleted()}
             </Badge>
           )}
         </div>
@@ -78,7 +82,8 @@ export const TripResultCard = props => {
             style={scrollContainerStyle}
           >
             {value && (
-              <span>
+              <Card style={{ maxWidth:'40vw',margin: '.5rem 1rem' }}>
+                <Card.Header>Places</Card.Header>
                 {value.docs
                   .filter(doc => !doc.data().locations)
                   .map(doc => (
@@ -89,7 +94,7 @@ export const TripResultCard = props => {
                       tripId={tripId}
                     />
                   ))}
-              </span>
+              </Card>
             )}
           </div>
         </MDBContainer>
