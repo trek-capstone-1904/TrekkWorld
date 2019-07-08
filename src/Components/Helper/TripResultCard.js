@@ -64,12 +64,14 @@ export const TripResultCard = props => {
         {/* {Object.entries(card.tripTags).map(tag => ( */}
         <div>
           <Badge variant="light">{card.tripTags} Trip</Badge>
+          {!tripCompleted() && <Badge variant="light"> Upcoming</Badge>}
+          {tripCompleted() && (
+            <Badge variant="success" display={tripCompleted()}>
+               {tripCompleted()}
+            </Badge>
+          )}
         </div>
-        {tripCompleted() && (
-          <Badge variant="success" display={tripCompleted()}>
-            {tripCompleted()}
-          </Badge>
-        )}
+
         <MDBContainer>
           <div
             className="scrollbar scrollbar-primary  mt-5 mx-auto"
