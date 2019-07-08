@@ -1,4 +1,4 @@
-import React, { useState, useContext, useRef, useEffect, memo } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { Jumbotron, Form, Button, Tabs, Tab } from 'react-bootstrap';
 import styles from '../TripPlanning.module.css';
 import {
@@ -11,27 +11,50 @@ import {
 import 'firebase/auth';
 import userContext from '../../Contexts/userContext';
 
+
 import db from '../../firebase';
 import { useDocument } from 'react-firebase-hooks/firestore';
+import history from '../../history';
+
+export const TripPlanning = props => {
+  const query = props.location.search;
+  const countryIdx = 9;
+  const cityIdx = query.indexOf('&city=') + 6;
+  const codeIdx = query.indexOf('&code=') + 6;
+
+  let countryQuery = query.substr(countryIdx, cityIdx - countryIdx - 6);
+  let cityQuery = query.substr(cityIdx, codeIdx - cityIdx - 6);
+  let codeQuery = query.substr(codeIdx, query.length);
 
 // const TripSearch = memo();
 
 export const TripPlanning = () => {
-  const [city, setCity] = useState('');
-  const [country, setCountry] = useState('');
-  const [code, setCode] = useState('');
+  // const [city, setCity] = useState('');
+  // const [country, setCountry] = useState('');
+  // const [code, setCode] = useState('');
+  console.log(countryQuery, ',', cityQuery, ',', codeQuery);
+  // const [url, setUrl] = useState(props.location.search);
+  const [city, setCity] = useState(cityQuery);
+  const [country, setCountry] = useState(countryQuery);
+  const [code, setCode] = useState(codeQuery);
   const [submitted, setSubmit] = useState(false);
   const [tripId, setTripId] = useState('');
 
   const loggedInUser = useContext(userContext);
 
+  useEffect(() => {
+    console.log('useEffect', props.location);
+    // console.log(props.history);
+  }, [props.location]);
+
   const handleChange = (evt, type) => {
     setSubmit(false);
-    // console.log('event target value in handlechange', evt.target.selectedOptions[0].dataset.code);
-    // event.target.value - value of currently selected option
+
     if (evt.currentTarget.name === 'city') {
       setCity(evt.target.value);
     } else if (evt.currentTarget.name === 'country') {
+      // history.push('/plantrip')
+      setCity('');
       setCountry(evt.target.value);
       setCode(evt.target.selectedOptions[0].dataset.code);
     }
@@ -43,27 +66,14 @@ export const TripPlanning = () => {
     }
   };
 
-  // const prev = useRef(props);
-  // useEffect(() => {
-  //   const changedProps = Object.entries(props).reduce((ps, [k, v]) => {
-  //     if (prev.current[k] !== v) {
-  //       ps[k] = [prev.current[k], v];
-  //     }
-  //     return ps;
-  //   }, {});
-  //   if (Object.keys(changedProps).length > 0) {
-  //     console.log('Changed props:', changedProps);
-  //   }
-  //   prev.current = props;
-  // });
 
   const handleSubmit = evt => {
     evt.preventDefault();
-    // console.log()
+
     if (country === 'Select a Country...' || country === '') {
       alert('Please select a country');
     } else {
-      // alert(`Submitting city: ${city}, ${country}`);
+      history.replace(`/plantrip?country=${country}&city=${city}&code=${code}`);
       setSubmit('true');
     }
   };
@@ -77,6 +87,7 @@ export const TripPlanning = () => {
   );
 
   if (loggedInUser) {
+    console.log('render!');
     return (
       <div>
         <Jumbotron className={styles.tripPlanningJumbo}>
