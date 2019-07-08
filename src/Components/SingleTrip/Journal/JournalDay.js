@@ -32,6 +32,7 @@ const JournalDay = props => {
         <Form style={{ maxWidth: "40rem", margin: "auto" }}>
           <Form.Label>Places Visited</Form.Label>
           <Selector tripId={props.tripId} />
+          {/* query the journal date places map, put the results into an array, map over them, and render a journalCard for each place */}
 
           {/* replace selectedOption with the values you get back from querying the Journal Date Places map */}
           {placesArray && (
@@ -45,7 +46,6 @@ const JournalDay = props => {
           <Notes tripId={props.tripId} />
         </Form>
 
-        {/* query the journal date places map, put the results into an array, map over them, and render a journalCard for each place */}
       </div>
     );
   } else {
