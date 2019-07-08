@@ -12,6 +12,9 @@ export const SearchAPICard = props => {
   const { tripId } = props;
   const loggedInUser = useContext(userContext);
   console.log('tripId on searchAPIcard', tripId);
+
+  // const placeImage =
+
   return (
     <Card style={{ margin: '.5rem 1rem' }}>
       <Card.Body>
