@@ -23,6 +23,7 @@ export const Journal = props => {
 
   const tripInfoRef = db.collection("Trips").doc(props.match.params.tripId);
 
+  //get the document for the current trip
   const [value, loading, error] = useDocument(
     db.collection("Trips").doc(props.match.params.tripId)
   );
@@ -30,27 +31,32 @@ export const Journal = props => {
   if (error) throw error;
   if (loading) return <Spinner animation="grow" variant="info" />;
 
-    const tripInfo = value.data();
+  //get contents of the current trip document
+  const tripInfo = value.data();
 
-    const start = new Date(tripInfo.startDate);
-    const end = new Date(tripInfo.endDate);
+  //current trip start and end dates
+  const start = new Date(tripInfo.startDate);
+  const end = new Date(tripInfo.endDate);
 
-    const _MS_PER_DAY = 1000 * 60 * 60 * 24;
-    const totalDays = Math.floor((end - start) / _MS_PER_DAY);
+  const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+  const totalDays = Math.floor((end - start) / _MS_PER_DAY);
 
-    const days = calcDays(start, end);
+  const days = calcDays(start, end);
 
-    console.log("dates", days);
+  console.log("dates", days);
 
-    //push each day to an array
-    //const totalDayCount = Math.ceil()
-    //create when trip is created
-    //for each doc in journal, render a div
-    // console.log("doc id", trekkListRef)
-
+  //push each day to an array
+  //const totalDayCount = Math.ceil()
+  //create when trip is created
+  //for each doc in journal, render a div
+  // console.log("doc id", trekkListRef)
+  if (value) {
+    days.forEach(date => {
+      // create a doc for each date in the trip in Journal collection
+      tripInfoRef.collection("Journal").doc(date).set({}, {merge: true})
+    })
     return (
       <div>
-        {value && (
         <span>
           <div>
             <Jumbotron>{tripInfo.tripName} Journal</Jumbotron>
@@ -63,11 +69,9 @@ export const Journal = props => {
             ))}
           </div>
         </span>
-
-        )}
       </div>
     );
-
+  }
 };
 
 export default Journal;
