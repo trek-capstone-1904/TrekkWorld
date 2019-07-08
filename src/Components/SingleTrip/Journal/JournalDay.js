@@ -1,5 +1,5 @@
 import React from "react";
-import { useCollection } from "react-firebase-hooks/firestore";
+import { useDocument } from "react-firebase-hooks/firestore";
 import Selector from "./Selector";
 import Notes from "./Notes";
 import JournalCard from "./JournalCard";
@@ -8,23 +8,27 @@ import db from "../../../firebase";
 
 const JournalDay = props => {
   //get Trekk List collection for the current trip
-  const [value, loading, error] = useCollection(
+  console.log("props", props)
+  const [value, loading, error] = useDocument(
     db
       .collection("Trips")
       .doc(props.tripId)
-      .collection("TrekkList")
+      .collection("Journal").doc(props.date)
   );
 
   //create an array to store all of the places on the Trekk List to be used in the selector drop down options
-  let placesArray = [];
+  let placesArray;
 
   if (error) throw error;
   if (loading) return <Spinner animation="grow" variant="info" />;
   if (value) {
+    console.log("value", value)
     //push each doc ID (place) into the places array
-    value.forEach(function(doc) {
-      placesArray.push(doc.id);
-    });
+    // value.forEach(function(doc) {
+    //   placesArray.push(doc.id);
+    // });
+    placesArray = value.get('places')
+    console.log(placesArray)
 
     return (
       <div>
@@ -36,7 +40,7 @@ const JournalDay = props => {
           {placesArray && (
             <CardDeck>
               {placesArray.map(place => (
-                <JournalCard key={place} place={place} />
+                <JournalCard key={place.value} place={place.value} />
                 ))}
             </CardDeck>
           )}

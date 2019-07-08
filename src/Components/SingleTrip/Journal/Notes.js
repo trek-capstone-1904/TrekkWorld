@@ -18,14 +18,26 @@ export const Notes = props => {
 
   function handleClick(event) {
     event.preventDefault()
-    tripJournal
-      .set({
-        notes: {[loggedUser.uid]: notes}
-      }, {merge: true})
-      .then(function() {
-        alert("Journal Entry Added!");
+    if(tripJournal.notes){
+      tripJournal.notes
+        .set({
+           [loggedUser.uid]: notes
+        }, {merge: true})
+        .then(function() {
+          alert("Journal Entry Added!");
 
-      });
+        });
+
+    } else {
+      tripJournal.notes
+        .set({
+           notes: {[loggedUser.uid]: notes}
+        }, {merge: true})
+        .then(function() {
+          alert("Journal Entry Added!");
+
+        });
+    }
   }
 
   return (
