@@ -1,14 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
-import {
-  Jumbotron,
-  Form,
-  Button,
-  Tabs,
-  Tab,
-  DropdownButton,
-  Dropdown,
-} from 'react-bootstrap';
-import { RouterContext } from 'react-router';
+import { Jumbotron, Form, Button, Tabs, Tab } from 'react-bootstrap';
 import styles from '../TripPlanning.module.css';
 import {
   SearchAPI,
@@ -35,6 +26,12 @@ export const TripPlanning = props => {
   let cityQuery = query.substr(cityIdx, codeIdx - cityIdx - 6);
   let codeQuery = query.substr(codeIdx, query.length);
 
+// const TripSearch = memo();
+
+export const TripPlanning = () => {
+  // const [city, setCity] = useState('');
+  // const [country, setCountry] = useState('');
+  // const [code, setCode] = useState('');
   console.log(countryQuery, ',', cityQuery, ',', codeQuery);
   // const [url, setUrl] = useState(props.location.search);
   const [city, setCity] = useState(cityQuery);
@@ -60,10 +57,15 @@ export const TripPlanning = props => {
       setCity('');
       setCountry(evt.target.value);
       setCode(evt.target.selectedOptions[0].dataset.code);
-    } else if (evt.currentTarget.name === 'tripId') {
+    }
+  };
+
+  const changeTripId = (evt, type) => {
+    if (evt.currentTarget.name === 'tripId') {
       setTripId(evt.target.value);
     }
   };
+
 
   const handleSubmit = evt => {
     evt.preventDefault();
@@ -144,7 +146,7 @@ export const TripPlanning = props => {
               name="tripId"
               value={tripId}
               as="select"
-              onChange={handleChange}
+              onChange={changeTripId}
             >
               <option>select a trip to plan</option>
               {snapshot &&
