@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import moment from 'moment';
 import db from '../../firebase';
 import {
@@ -11,6 +11,7 @@ import {
   Badge,
   Row,
 } from 'react-bootstrap';
+import userContext from '../../Contexts/userContext';
 import { useDocument } from 'react-firebase-hooks/firestore';
 import { Link } from 'react-router-dom';
 import { AddTrekker, TripMap } from '../index';
@@ -20,12 +21,15 @@ import {
   BucketList,
   TrekkList,
   CountrySelect,
-  TripAlbum
+  TripAlbum,
 } from '../index.js';
 import firebase from 'firebase/app';
 import styles from '../TripPage.module.css';
 
 export const TripPage = props => {
+  const loggedInUser = useContext(userContext);
+  const userId = `${loggedInUser.uid}`;
+
   const [trip, loading, error] = useDocument(
     db.collection('Trips').doc(props.match.params.tripId),
     {
@@ -89,6 +93,18 @@ export const TripPage = props => {
     const totalDays = Math.floor((end - start) / _MS_PER_DAY);
     console.log('days left', daysRemaining);
 
+    function isThisAFellowTrekker() {
+      console.log('users on trip', users);
+      let trekkersIds = Object.keys(users);
+      if (trekkersIds.includes(userId)) {
+        console.log('GOING ON VACATION');
+        return true;
+      } else {
+        console.log('not my trip');
+        return false;
+      }
+    }
+
     return (
       <div>
         <Jumbotron className={styles.Jumbotron}>
@@ -132,14 +148,15 @@ export const TripPage = props => {
         <Card border="info" style={{ maxWidth: '25rem', margin: '.5rem' }}>
           <Card.Header>
             <h4>Fellow Trekkers</h4>
-            <Button
-              variant="info"
-              style={{ margin: '.5rem' }}
-              onClick={toggleForm}
-            >
-              {' '}
-              + New Trekker
-            </Button>
+            {isThisAFellowTrekker() && (
+              <Button
+                variant="info"
+                style={{ margin: '.5rem' }}
+                onClick={toggleForm}
+              >
+                + New Trekker
+              </Button>
+            )}
           </Card.Header>
           <ul className="list-unstyled" style={{ padding: '0 2rem' }}>
             {Object.entries(users).map(user => (
@@ -163,14 +180,16 @@ export const TripPage = props => {
                 <Media.Body>
                   <h5 style={{ margin: '0' }}> {user[1].userName}</h5>
                 </Media.Body>
-                <button
-                  onClick={() => handleDelete(user[0], tripId)}
-                  type="button"
-                  className="close"
-                  aria-label="Close"
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
+                {isThisAFellowTrekker() && (
+                  <button
+                    onClick={() => handleDelete(user[0], tripId)}
+                    type="button"
+                    className="close"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                )}
               </Media>
             ))}
           </ul>
