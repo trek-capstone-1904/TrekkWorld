@@ -1,7 +1,8 @@
 import React from 'react';
 import db from '../../firebase';
 import { useCollection } from 'react-firebase-hooks/firestore';
-
+// import 'react-image-gallery/styles/css/image-gallery.css';
+// import ImageGallery from 'react-image-gallery';
 import { Card, Image } from 'react-bootstrap';
 import { PhotoLoad } from '../index';
 
@@ -16,7 +17,16 @@ export const TripAlbum = props => {
     }
   );
   // console.log(value && value.docs());
+  function imageArr() {
+    return value.docs.map(image => ({
+      original: image.data().URL,
+      media: '(max-width:10px',
+    }));
+  }
+  console.log(value && imageArr());
+
   return (
+    // <div style={{maxWidth:'40rem', maxHeight:'30rem'}}>{value && <ImageGallery items={imageArr()} />}</div>
     <Card style={{ maxWidth: '33rem' }}>
       <Card.Header>Trip Album</Card.Header>
       <Card.Body>

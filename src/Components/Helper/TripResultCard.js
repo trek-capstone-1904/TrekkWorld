@@ -11,7 +11,7 @@ import './scrollbar.css';
 import TripResultPlaceCard from '../TripPlanning/TripResultPlaceCard';
 
 export const TripResultCard = props => {
-  console.log(props)
+  console.log('card:', props.card);
   const { card, tripId } = props;
 
   const [value, loading, error] = useCollection(
@@ -23,6 +23,25 @@ export const TripResultCard = props => {
       snapshotListenOptions: { includeMetadataChanges: true },
     }
   );
+
+  function tripCompleted() {
+    const today = new Date();
+    const start = new Date(card.startDate);
+    const end = new Date(card.endDate);
+
+    const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+    const daysUntilEnd = Math.floor((end - today) / _MS_PER_DAY);
+    const daysUntilStart = Math.floor((start - today) / _MS_PER_DAY);
+
+    if (daysUntilEnd > 0 && daysUntilStart < 0) {
+      return 'Trip In Progress';
+    } else if (daysUntilEnd < 0) {
+      return 'Trip Completed';
+    } else {
+      return false;
+    }
+  }
+  tripCompleted();
 
   const scrollContainerStyle = { width: '66vw', maxHeight: '30vw' };
   return (
@@ -41,6 +60,16 @@ export const TripResultCard = props => {
             {user[1].userName}
           </Badge>
         ))}
+
+        {/* {Object.entries(card.tripTags).map(tag => ( */}
+        <div>
+          <Badge variant="light">{card.tripTags} Trip</Badge>
+        </div>
+        {tripCompleted() && (
+          <Badge variant="success" display={tripCompleted()}>
+            {tripCompleted()}
+          </Badge>
+        )}
         <MDBContainer>
           <div
             className="scrollbar scrollbar-primary  mt-5 mx-auto"
