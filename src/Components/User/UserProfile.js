@@ -10,9 +10,26 @@ import {
   FormControl,
   CardGroup,
   Spinner,
+  Card,
 } from 'react-bootstrap';
 import userContext from '../../Contexts/userContext';
 import TrekkList from '../SingleTrip/TrekkList';
+
+const daysUntil = trips => {
+  let tripDates = Object.values(trips)
+    .map(trip => trip.startDate)
+    .sort();
+  const today = new Date();
+  for (let i = 0; i < tripDates.length; i++) {
+    const dateTrip = new Date(tripDates[i]);
+    if (dateTrip > today) {
+      const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+      const daysUntil = Math.floor((dateTrip - today) / _MS_PER_DAY);
+      return daysUntil;
+    }
+  }
+  return <div>No Trekks Planned.</div>;
+};
 
 export const UserProfile = props => {
   const loggedInUser = useContext(userContext);
@@ -29,21 +46,49 @@ export const UserProfile = props => {
     return (
       <div>
         <UserProfileHeader user={userInfo} />
-        <div className={styles.userProfileBody}>
-          {userInfo.Trips && <UserProfileTrips trips={userInfo.Trips} />}
-          {userInfo.countriesVisited && <WorldMap />}
-          {/* {userInfo.trekkList && <BorTList list={`trekkList`} />}
-           */}
-          <div className={styles.BucketList}>
-            <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-              <Tab eventKey="Bucket List" title="Trekk List">
-                {/* <BorTList list={'trekkList'} /> */}
-              </Tab>
-              <Tab eventKey="Trekk List" title="Bucket List">
-                {/* <BucketList /> */}
-                {/* <BorTList list={'bucketList'} /> */}
-              </Tab>
-            </Tabs>
+        <div style={{ display: 'flex' }}>
+          <div style={{ minWidth: '60vw' }} className={styles.userProfileBody}>
+            {userInfo.Trips && <UserProfileTrips trips={userInfo.Trips} />}
+          </div>
+          <div>
+            <Card border="info" style={{ margin: '.5rem' }}>
+              <Card.Header>Trekkers Stats</Card.Header>
+              <Card.Body style={{ display: 'flex' }}>
+                <Card>
+                  <Card.Header>Days Until Next Trekk</Card.Header>
+                  {userInfo.Trips && (
+                    <Card.Title>{daysUntil(userInfo.Trips)}</Card.Title>
+                  )}
+                </Card>
+                <Card>
+                  <Card.Header>Number Of Trekks</Card.Header>
+                  {userInfo.Trips && (
+                    <Card.Title>
+                      {Object.values(Object.values(userInfo.Trips)).length}
+                    </Card.Title>
+                  )}
+                </Card>
+                <Card>
+                  <Card.Header>% of Countries Visited</Card.Header>
+                  {userInfo.countriesVisited && (
+                    <Card.Title>
+                      {Math.ceil(
+                        (userInfo.countriesVisited.length / 193) * 100
+                      )}
+                      %
+                    </Card.Title>
+                  )}
+                </Card>
+              </Card.Body>
+            </Card>
+            {userInfo.countriesVisited && (
+              <Card border="info" style={{ margin: '.5rem' }}>
+                <Card.Header>
+                  Countries Visited ({userInfo.countriesVisited.length})
+                </Card.Header>
+                <WorldMap />
+              </Card>
+            )}
           </div>
         </div>
       </div>
@@ -52,3 +97,12 @@ export const UserProfile = props => {
 };
 
 export default UserProfile;
+
+{
+  /* <div className={styles.BucketList}>
+            <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+              <Tab eventKey="Bucket List" title="Trekk List" />
+              <Tab eventKey="Trekk List" title="Bucket List" />
+            </Tabs>
+          </div> */
+}

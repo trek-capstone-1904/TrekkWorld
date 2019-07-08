@@ -1,0 +1,102 @@
+{
+  "Trips": {
+    "bN5MdYLJSHxrgGO53ErO": {
+      "startDate": "2020-05-30",
+      "endDate": "2020-06-27",
+      "tripName": "Asia Travels after Graduation",
+      "locations": ["Japan", "Thailand", "Malaysia"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Friends",
+      "users": {
+        "BYRXFO8YS5cd6NXgwAepi1GbJRm2": {
+          "userName": "Cierra Wyman",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FCierraWyman.jpg?alt=media&token=5e035838-f8d1-4866-aff4-6a9535d507de"
+        },
+        "5d95HrhWm6SNQiOBLp9Gyj8JhPn2": {
+          "userName": "Chad Anderson",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FChadAnderson.jpg?alt=media&token=68d57044-7c17-4773-abfc-51b256227d67"
+        }
+      }
+    },
+    "tBkYz0OAVaTPugTu5qtA": {
+      "startDate": "2019-08-10",
+      "endDate": "2019-09-01",
+      "tripName": "Visiting Family in Poland",
+      "locations": ["Poland"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Family",
+      "users": {
+        "10d1o59g4Ngwlqx9csSPn4pCOPC2": {
+          "userName": "Krystal Daughtery",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FKrystalDaughtery.jpg?alt=media&token=53280b8e-1fb4-485d-881a-fb5ac3295115"
+        }
+      }
+    }
+  },
+  "Users": {
+    "10d1o59g4Ngwlqx9csSPn4pCOPC2": {
+      "userName": "Krystal Daughtery",
+      "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FKrystalDaughtery.jpg?alt=media&token=53280b8e-1fb4-485d-881a-fb5ac3295115",
+      "email": "krystal@email.com",
+      "bio": "I have 2 young boys so not traveling as much as I'd like. These days the only travel we get is visiting my husband's family in Poland",
+      "countriesVisited": [
+        "Poland",
+        "Czech Republic",
+        "Italy",
+        "United States",
+        "Mexico"
+      ],
+      "Trips": {
+        "tBkYz0OAVaTPugTu5qtA": {
+          "endDate": "2019-09-01",
+          "startDate": "2019-08-10",
+          "tripName": "Visiting Family in Poland"
+        }
+      }
+    },
+    "5d95HrhWm6SNQiOBLp9Gyj8JhPn2": {
+      "email": "chadanderson@email.com",
+      "userName": "Chad Anderson",
+      "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FChadAnderson.jpg?alt=media&token=68d57044-7c17-4773-abfc-51b256227d67",
+      "bio": "Graduating in May from Michigan State and planning to see some of the world before starting my corporate job in July!",
+      "countriesVisited": [
+        "Mexico",
+        "Canada",
+        "United States",
+        "France",
+        "Spain"
+      ],
+      "Trips": {
+        "bN5MdYLJSHxrgGO53ErO": {
+          "startDate": "2020-05-30",
+          "endDate": "2020-06-27",
+          "tripName": "Asia Travels after Graduation"
+        }
+      }
+    },
+    "BYRXFO8YS5cd6NXgwAepi1GbJRm2": {
+      "email": "cierra@email.com",
+      "userName": "Cierra Wyman",
+      "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FCierraWyman.jpg?alt=media&token=5e035838-f8d1-4866-aff4-6a9535d507de",
+      "bio": "Graduating next summer!! My dream is to travel more.  After studying abroad while in school I fell in love with travel. Cheers to many future trekks!",
+      "countriesVisited": [
+        "France",
+        "Italy",
+        "Canada",
+        "United States",
+        "China",
+        "Germany",
+        "United Kingdom"
+      ],
+      "Trips": {
+        "bN5MdYLJSHxrgGO53ErO": {
+          "endDate": "2020-05-30",
+          "startDate": "2020-06-27",
+          "tripName": "Asia Travels after Graduation"
+        }
+      }
+    }
+  }
+}

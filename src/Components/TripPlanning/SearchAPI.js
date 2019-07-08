@@ -28,19 +28,10 @@ function fakeData(type) {
 
 function useFetchSights(city, country, code) {
   city = city.slice(0, 1).toUpperCase() + city.slice(1);
-  console.log(city);
-  const initials = {
-    Colombia: 'CO',
-    France: 'FR',
-    Peru: 'PE',
-    Chile: 'CL',
-    Australia: 'AU',
-    Korea: 'KR',
-    Egypt: 'EG',
-    Spain: 'ES',
-  };
-  console.log(country)
-  console.log(code)
+  if (city.includes(' ')) {
+    city = city.split(' ').join('_');
+  }
+
   const query = `https://www.triposo.com/api/20181213/poi.json?tag_labels=eatingout|sightseeing&location_id=${city}&countrycode=${code}&order_by=-score&count=10&fields=snippet,id,name,location_id,score,tag_labels,coordinates&account=${
     secret.triposoAccount
   }&token=${secret.triposoToken}`;
@@ -53,16 +44,6 @@ function useFetchSights(city, country, code) {
 }
 
 function useFetchCities(country, code) {
-  const initials = {
-    Colombia: 'CO',
-    France: 'FR',
-    Peru: 'PE',
-    Chile: 'CL',
-    Australia: 'AU',
-    Korea: 'KR',
-    Egypt: 'EG',
-  };
-
   const query = `https://www.triposo.com/api/20181213/location.json?tag_labels=city&countrycode=${code}&order_by=-score&count=7&&fields=name,id,snippet,intro,score&account=${
     secret.triposoAccount
   }&token=${secret.triposoToken}`;
@@ -78,18 +59,17 @@ function useFetchCities(country, code) {
 export const SearchAPI = props => {
   const { tripId } = props;
   const { code, city, country } = props;
-  const [hasError, setErrors] = useState({});
+  // const [hasError, setErrors] = useState({});
   // const [location, setLocation] = useState("Paris,FR");
   // const [searchCity, setSearchCity] = useState(city);
   // const [popularCities, setPopularCities] = useState(country);
   // const [sights, setSights] = useState({});
   const sightsToSee = useFetchSights(city, country, code);
   const popularCities = useFetchCities(country, code);
+
   return (
     <div>
       <h4>Sightseeing Spots</h4>
-      {/* {sightsToSee.results &&
-        sightsToSee.results.map(sight => <p key={sight.id}>{sight.name}</p>)} */}
       {sightsToSee.results &&
         sightsToSee.results.map(sight => (
           <SearchAPICard
@@ -102,8 +82,6 @@ export const SearchAPI = props => {
           />
         ))}
       <h4>Popular Cities</h4>
-      {/* {popularCities.results &&
-        popularCities.results.map(sight => <p key={sight.id}>{sight.name}</p>)} */}
       {popularCities.results &&
         popularCities.results.map(sight => (
           <SearchAPICard

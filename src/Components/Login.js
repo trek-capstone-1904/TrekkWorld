@@ -31,6 +31,7 @@ const SignInScreen = props => {
               userPicture:
                 user.providerData[0].photoURL ||
                 `https://robohash.org/${user.displayName}`,
+              Trips:{}
             })
             .then(function() {
               props.history.push("/user");

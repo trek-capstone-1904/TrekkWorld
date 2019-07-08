@@ -16,7 +16,9 @@ import TripPage from './SingleTrip/TripPage';
 import Journal from './SingleTrip/Journal/Journal';
 import AddTrekker from './SingleTrip/AddTrekker';
 import TripMap from './SingleTrip/TripMap';
+import TripAlbum from './SingleTrip/TripAlbum';
 import CountrySelect from './Helper/CountrySelect';
+import PhotoLoad from './Helper/PhotoLoad';
 
 export { default as TripSingle } from './SingleTrip/TripSingle';
 export { default as UserProfile } from './User/UserProfile';
@@ -35,4 +37,6 @@ export { default as TripPage } from './SingleTrip/TripPage';
 export { default as Journal } from './SingleTrip/Journal/Journal';
 export { default as AddTrekker } from './SingleTrip/AddTrekker';
 export { default as TripMap } from './SingleTrip/TripMap';
+export { default as TripAlbum } from './SingleTrip/TripAlbum';
 export { default as CountrySelect } from './Helper/CountrySelect';
+export { default as PhotoLoad } from './Helper/PhotoLoad';

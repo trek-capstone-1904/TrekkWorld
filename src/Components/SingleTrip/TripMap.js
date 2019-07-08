@@ -32,7 +32,7 @@ export const TripMap = props => {
     Oceania: '009',
     'South America': '005',
     'Central America': '013',
-    'North America': '021'
+    'North America': '021',
   };
   // const countries = value && value.data().countriesVisited;
   const dataCountries = props.countries.map(country => [country]);
@@ -43,13 +43,19 @@ export const TripMap = props => {
     console.log(value.data());
     const regionCode = regions[value.data().region];
     console.log(regionCode);
+    console.log(window.innerWidth)
+    let widthMap;
+    if(window.innerWidth<800){
+      widthMap=`${window.innerWidth-50}px`;
+    }else{
+      widthMap='30rem';
+    }
     return (
-      // <div>hi</div>
       <div styles={{ maxWidth: '30rem' }}>
-        <span>
+        <span style={{ display: 'flex', maxWidth:'100vw' }}>
           <Chart
             chartType="GeoChart"
-            width="30rem"
+            width={widthMap}
             data={dataCountries}
             options={{
               region: regionCode,
@@ -58,18 +64,19 @@ export const TripMap = props => {
               defaultColor: '#17a2b8',
             }}
           />
-
-          <button onClick={toggle} style={{ border: '0', outline: 'none' }}>
+          <button
+            onClick={toggle}
+            style={{
+              border: '0',
+              outline: 'none',
+              backgroundColor: 'transparent',
+              maxHeight: '2rem',
+            }}
+          >
             <img style={{ width: '1rem' }} src={zoom} alt="zoom" />
           </button>
         </span>
-        <Modal
-          // dialogClassName="modal-90w"
-          // className={styles.Map}
-          size="lg"
-          show={isZoom}
-          onHide={handleClose}
-        >
+        <Modal size="lg" show={isZoom} onHide={handleClose}>
           <Modal.Header>
             <Modal.Title>
               Countries Visited (Total: {dataCountries.length - 1})
@@ -80,7 +87,6 @@ export const TripMap = props => {
               chartType="GeoChart"
               data={dataCountries}
               options={{
-                // colorAxis: { colors: 'blue' },
                 backgroundColor: 'none',
                 datalessRegionColor: 'lightgray',
                 defaultColor: '#17a2b8',

@@ -1,14 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
-import {
-  Jumbotron,
-  Form,
-  Button,
-  Tabs,
-  Tab,
-  DropdownButton,
-  Dropdown,
-} from 'react-bootstrap';
-import { RouterContext } from 'react-router';
+import { Jumbotron, Form, Button, Tabs, Tab } from 'react-bootstrap';
 import styles from '../TripPlanning.module.css';
 import {
   SearchAPI,
@@ -19,7 +10,6 @@ import {
 } from '../index.js';
 import 'firebase/auth';
 import userContext from '../../Contexts/userContext';
-
 
 import db from '../../firebase';
 import { useDocument } from 'react-firebase-hooks/firestore';
@@ -34,7 +24,13 @@ export const TripPlanning = props => {
   let countryQuery = query.substr(countryIdx, cityIdx - countryIdx - 6);
   let cityQuery = query.substr(cityIdx, codeIdx - cityIdx - 6);
   let codeQuery = query.substr(codeIdx, query.length);
+  if (cityQuery.includes(' ')) {
+    cityQuery = cityQuery.split('_').join(' ');
+  }
 
+  // const [city, setCity] = useState('');
+  // const [country, setCountry] = useState('');
+  // const [code, setCode] = useState('');
   console.log(countryQuery, ',', cityQuery, ',', codeQuery);
   // const [url, setUrl] = useState(props.location.search);
   const [city, setCity] = useState(cityQuery);
@@ -60,7 +56,11 @@ export const TripPlanning = props => {
       setCity('');
       setCountry(evt.target.value);
       setCode(evt.target.selectedOptions[0].dataset.code);
-    } else if (evt.currentTarget.name === 'tripId') {
+    }
+  };
+
+  const changeTripId = (evt, type) => {
+    if (evt.currentTarget.name === 'tripId') {
       setTripId(evt.target.value);
     }
   };
@@ -71,7 +71,12 @@ export const TripPlanning = props => {
     if (country === 'Select a Country...' || country === '') {
       alert('Please select a country');
     } else {
-      history.replace(`/plantrip?country=${country}&city=${city}&code=${code}`);
+      if (city.includes(' ')) {
+        cityQuery = city.split(' ').join('_');
+      }
+      history.replace(
+        `/plantrip?country=${country}&city=${cityQuery}&code=${code}`
+      );
       setSubmit('true');
     }
   };
@@ -140,20 +145,23 @@ export const TripPlanning = props => {
             </Tabs>
           </div>
           <div className={styles.BucketList}>
-            <Form.Control
-              name="tripId"
-              value={tripId}
-              as="select"
-              onChange={handleChange}
-            >
-              <option>select a trip to plan</option>
-              {snapshot &&
-                Object.entries(snapshot.data().Trips).map(trip => (
-                  <option key={trip[0]} value={trip[0]}>
-                    {trip[1].tripName}
-                  </option>
-                ))}
-            </Form.Control>
+            {snapshot &&
+              snapshot.data().Trips &&
+              Object.keys(snapshot.data().Trips).length !== 0 && (
+                <Form.Control
+                  name="tripId"
+                  value={tripId}
+                  as="select"
+                  onChange={handleChange}
+                >
+                  <option>select a trip to plan</option>
+                  {Object.entries(snapshot.data().Trips).map(trip => (
+                    <option key={trip[0]} value={trip[0]}>
+                      {trip[1].tripName}
+                    </option>
+                  ))}
+                </Form.Control>
+              )}
             <Tabs defaultActiveKey="Bucket List" id="Trekk-Bucket-List">
               <Tab eventKey="Bucket List" title="Bucket List">
                 <BucketList tripId={tripId} />
