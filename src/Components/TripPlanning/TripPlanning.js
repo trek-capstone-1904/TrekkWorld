@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef, useEffect, memo } from 'react';
 import { Jumbotron, Form, Button, Tabs, Tab } from 'react-bootstrap';
 import styles from '../TripPlanning.module.css';
 import {
@@ -13,6 +13,8 @@ import userContext from '../../Contexts/userContext';
 
 import db from '../../firebase';
 import { useDocument } from 'react-firebase-hooks/firestore';
+
+// const TripSearch = memo();
 
 export const TripPlanning = () => {
   const [city, setCity] = useState('');
@@ -32,10 +34,28 @@ export const TripPlanning = () => {
     } else if (evt.currentTarget.name === 'country') {
       setCountry(evt.target.value);
       setCode(evt.target.selectedOptions[0].dataset.code);
-    } else if (evt.currentTarget.name === 'tripId') {
+    }
+  };
+
+  const changeTripId = (evt, type) => {
+    if (evt.currentTarget.name === 'tripId') {
       setTripId(evt.target.value);
     }
   };
+
+  // const prev = useRef(props);
+  // useEffect(() => {
+  //   const changedProps = Object.entries(props).reduce((ps, [k, v]) => {
+  //     if (prev.current[k] !== v) {
+  //       ps[k] = [prev.current[k], v];
+  //     }
+  //     return ps;
+  //   }, {});
+  //   if (Object.keys(changedProps).length > 0) {
+  //     console.log('Changed props:', changedProps);
+  //   }
+  //   prev.current = props;
+  // });
 
   const handleSubmit = evt => {
     evt.preventDefault();
@@ -115,7 +135,7 @@ export const TripPlanning = () => {
               name="tripId"
               value={tripId}
               as="select"
-              onChange={handleChange}
+              onChange={changeTripId}
             >
               <option>select a trip to plan</option>
               {snapshot &&

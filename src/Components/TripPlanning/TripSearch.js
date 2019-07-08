@@ -6,9 +6,11 @@ import TripResultCard from '../Helper/TripResultCard';
 import userContext from '../../Contexts/userContext';
 
 export const TripSearch = props => {
+  console.log('props in tripsearch', props);
   const loggedInUser = useContext(userContext);
   const { uid } = loggedInUser;
   const { city, country } = props;
+
   const [snapshot, loading, error] = useCollectionOnce(
     db.collection('Trips').where('locations', 'array-contains', country),
     {
@@ -32,8 +34,10 @@ export const TripSearch = props => {
   //         <TripResultCard key={doc.id} tripId={doc.id} card={doc.data()} />
   //       ))
   // );
+
   // .filter(doc => (!doc.data().users.uid) )
   // .filter(doc => Object.keys(doc.data().users).reduce((accum, elem) => {if(elem === uid){ accum = true} return accum},false )) )
+
   return (
     <div>
       {error && <strong>Error: {error}</strong>}
