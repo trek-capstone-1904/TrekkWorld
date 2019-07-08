@@ -50,9 +50,12 @@ const JournalDay = props => {
             </Badge>
             </Form.Label>
           <Selector tripId={props.tripId} date={props.date} />
+          <div style={{border: "1px solid black"}}>
           <Form.Label>Notes for Today</Form.Label>
           <AllNotes tripId={props.tripId} date={props.date}/>
           <Notes tripId={props.tripId} date={props.date}/>
+
+          </div>
 
         </Form>
 

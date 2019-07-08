@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext} from "react";
 import { Form, Button } from "react-bootstrap";
 import db, { loggedUser } from "../../../firebase";
 import { useDocument } from "react-firebase-hooks/firestore";
+import userContext from "../../../Contexts/userContext";
 
 export const Notes = props => {
+  const loggedInUser = useContext(userContext)
+
   const [notes, setNotes] = useState("");
   function handleChangeNotes(e) {
     e.preventDefault()
@@ -18,10 +21,20 @@ export const Notes = props => {
 
   function handleClick(event) {
     event.preventDefault()
-    if(tripJournal.notes){
+    if(tripJournal.notes && tripJournal.notes[loggedInUser.uid]){
+      tripJournal.notes[loggedInUser.uid]
+        .set({
+          [loggedInUser.uid]: notes
+        }, {mergeFields: true})
+        .then(function() {
+          alert("Journal Entry Added!");
+
+        });
+
+       } else if(tripJournal.notes){
       tripJournal.notes
         .set({
-           [loggedUser.uid]: notes
+           [loggedInUser.uid]: notes
         }, {merge: true})
         .then(function() {
           alert("Journal Entry Added!");
@@ -31,7 +44,7 @@ export const Notes = props => {
     } else {
       tripJournal
         .set({
-           notes: {[loggedUser.uid]: notes}
+           notes: {[loggedInUser.uid]: notes}
         }, {merge: true})
         .then(function() {
           alert("Journal Entry Added!");
@@ -58,5 +71,6 @@ export const Notes = props => {
     </>
   );
 };
+
 
 export default Notes;
