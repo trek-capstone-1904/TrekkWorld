@@ -53,7 +53,7 @@ export const Journal = props => {
   if (value) {
     days.forEach(date => {
       // create a doc for each date in the trip in Journal collection
-      tripInfoRef.collection("Journal").doc(date).set({})
+      tripInfoRef.collection("Journal").doc(date).set({}, {merge: true})
     })
     return (
       <div>

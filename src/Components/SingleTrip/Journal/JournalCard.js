@@ -21,11 +21,11 @@ export const JournalCard = props => {
   if (error) throw error;
   if (loading) return <Spinner animation="grow" variant="info" />;
   if(value){
-    console.log("props", props.place);
+    // console.log("props", props.place);
 
-  console.log("place doc", value)
+  // console.log("place doc", value)
     const placeInfo = value.data()
-    console.log("data in place doc", placeInfo)
+    // console.log("data in place doc", placeInfo)
   return (
     <div>
       <Card border="success"
