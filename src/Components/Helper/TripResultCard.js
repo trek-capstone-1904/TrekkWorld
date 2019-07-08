@@ -11,6 +11,7 @@ import './scrollbar.css';
 import TripResultPlaceCard from '../TripPlanning/TripResultPlaceCard';
 
 export const TripResultCard = props => {
+  console.log(props)
   const { card, tripId } = props;
 
   const [value, loading, error] = useCollection(

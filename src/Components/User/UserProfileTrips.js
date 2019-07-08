@@ -3,6 +3,7 @@ import TripListItem from './TripListItem';
 
 
 export const UserProfileTrips = props => {
+  console.log('props in userprofile trips', props)
   return (
     <div style={{maxWidth:'50rem'}}>
       <h1>My Trekks</h1>

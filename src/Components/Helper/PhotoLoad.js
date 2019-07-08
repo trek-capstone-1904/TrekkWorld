@@ -1,30 +1,39 @@
-import React, { useState, useContext} from 'react';
+import React, { useState, useContext } from 'react';
 import firebase from 'firebase/app';
 import 'firebase/storage';
+import userContext from '../../Contexts/userContext';
 import UserProfileHeader from '../User/UserProfileHeader';
 import bucket from '../../firebase';
 import { Modal, Button } from 'react-bootstrap';
-import userContext from '../../Contexts/userContext';
+import db from '../../firebase';
 
-export const PhotoLoad = () => {
+export const PhotoLoad = props => {
   const loggedInUser = useContext(userContext);
+  const userName = `${loggedInUser.displayName}`;
+  const userId = `${loggedInUser.uid}`;
+  console.log(loggedInUser);
   const [progressValue, setProgressValue] = useState(0);
   const [loaded, setLoaded] = useState(false);
-  const [imageUrl, setImageUrl]=useState('')
+  const [imageUrl, setImageUrl] = useState('');
+
   function handleClose() {
     setLoaded(false);
   }
+
   function handleChange(evt) {
     const file = evt.target.files[0];
-
+    const fileRouteName = file.name.substr(0, file.name.indexOf('.'));
+    let refPath;
     //TODO change tripID in Photoloader
-    const tripId = 'qbzVqq6smFB5avawpsRX';
+    // const tripId = 'qbzVqq6smFB5avawpsRX';
+    if (props.from === 'trip') {
+      refPath = `tripImages/${props.tripId}`;
+    } else if (props.from === 'userProfile') {
+      refPath = `userProfilePics/${userId}`;
+    }
 
     //Create a storage ref
-    const storageRef = firebase
-      .storage()
-      // .ref(`tripImages/${tripId}/${file.name}`);
-      .ref(`userProfilePics/${loggedInUser.uid}/${file.name}`);
+    const storageRef = firebase.storage().ref(`${refPath}/${file.name}`);
 
     // //Upload File
     let uploadFile = storageRef.put(file);
@@ -35,26 +44,51 @@ export const PhotoLoad = () => {
       function progress(snapshot) {
         const percentage =
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        console.log(percentage);
-        console.log(snapshot);
         setProgressValue(percentage);
       },
       function error(err) {
         console.log(err);
       },
       function complete() {
-        console.log(uploadFile)
         uploadFile.snapshot.ref.getDownloadURL().then(function(downloadURL) {
-          console.log('File available at', downloadURL);
-          setImageUrl(downloadURL)
+          setImageUrl(downloadURL);
+          //If want to convert to a map
+          // db.doc(`Trips/${props.tripId}`)
+          //   .update({
+          //     [`images.${fileRouteName}`]: {
+          //       URL: downloadURL,
+          //       addedBy: userName,
+          //     },
+          //   })
+          //   .then(setLoaded(true));
+          //Add image to Trip Image SubCollection
+          if (props.from === 'trip') {
+            db.collection(`Trips/${props.tripId}/Images`)
+              .add({
+                fileName: file.name,
+                URL: downloadURL,
+                addedBy: userName,
+              })
+              .then(
+                //Add Image to user Image Subcollection
+                db.collection(`Users/${userId}/Images`).add({
+                  tripId: props.tripId,
+                  fileName: file.name,
+                  URL: downloadURL,
+                })
+              )
+              .then(setLoaded(true));
+          } else {
+            setLoaded(true);
+          }
         });
-        setLoaded(true);
       }
     );
+    evt.target.value = null;
   }
   return (
     <div>
-      <h2>Add Image</h2>
+      <h5>Add Image</h5>
       <progress value={progressValue} max="100" id="uploader">
         0%
       </progress>
@@ -62,7 +96,7 @@ export const PhotoLoad = () => {
       <input type="file" id="fileButton" onChange={handleChange} />
       <Modal show={loaded} onHide={handleClose}>
         <Modal.Body>
-          <h1 style={{textAlign:'center'}}>Loaded Successfully!</h1>
+          <h1 style={{ textAlign: 'center' }}>Loaded Successfully!</h1>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="info" onClick={handleClose}>

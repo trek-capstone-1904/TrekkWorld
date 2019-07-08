@@ -20,6 +20,7 @@ import {
   BucketList,
   TrekkList,
   CountrySelect,
+  TripAlbum
 } from '../index.js';
 import firebase from 'firebase/app';
 import styles from '../TripPage.module.css';
@@ -128,13 +129,6 @@ export const TripPage = props => {
             </Card.Body>
           </Card>
         </Jumbotron>
-        {/* <div
-          style={{
-            width: '33vw',
-            border: '1.5px solid #17a2b8',
-            padding: '1rem',
-          }}
-        > */}
         <Card border="info" style={{ maxWidth: '25rem', margin: '.5rem' }}>
           <Card.Header>
             <h4>Fellow Trekkers</h4>
@@ -194,6 +188,7 @@ export const TripPage = props => {
             </Modal.Footer>
           </Modal>
         </Card>
+        <TripAlbum tripId={tripId} />
       </div>
     );
   }

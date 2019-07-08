@@ -32,7 +32,7 @@ export const TripMap = props => {
     Oceania: '009',
     'South America': '005',
     'Central America': '013',
-    'North America': '021'
+    'North America': '021',
   };
   // const countries = value && value.data().countriesVisited;
   const dataCountries = props.countries.map(country => [country]);
@@ -46,7 +46,7 @@ export const TripMap = props => {
     return (
       // <div>hi</div>
       <div styles={{ maxWidth: '30rem' }}>
-        <span>
+        <span style={{display:"flex"}}>
           <Chart
             chartType="GeoChart"
             width="30rem"
@@ -58,10 +58,9 @@ export const TripMap = props => {
               defaultColor: '#17a2b8',
             }}
           />
-
-          <button onClick={toggle} style={{ border: '0', outline: 'none' }}>
-            <img style={{ width: '1rem' }} src={zoom} alt="zoom" />
-          </button>
+            <button onClick={toggle} style={{ border: '0', outline: 'none', backgroundColor:'transparent', maxHeight:'2rem' }}>
+              <img style={{ width: '1rem' }} src={zoom} alt="zoom" />
+            </button>
         </span>
         <Modal
           // dialogClassName="modal-90w"
