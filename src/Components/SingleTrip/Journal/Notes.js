@@ -29,7 +29,7 @@ export const Notes = props => {
         });
 
     } else {
-      tripJournal.notes
+      tripJournal
         .set({
            notes: {[loggedUser.uid]: notes}
         }, {merge: true})
@@ -42,7 +42,7 @@ export const Notes = props => {
 
   return (
     <>
-      <Form.Label>Notes for Today</Form.Label>
+
       <Form.Control
         as="input"
         rows="6"

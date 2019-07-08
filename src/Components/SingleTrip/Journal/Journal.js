@@ -12,13 +12,12 @@ function calcDays(start, end) {
     start = moment(start).add(1, "days");
     let formattedStart = start.format("MMM D, YYYY");
     tripDays.push(formattedStart);
-    //console.log(start)
   }
   return tripDays;
 }
 
 export const Journal = props => {
-  //console.log(props)
+
   const loggedInUser = useContext(userContext);
 
   const tripInfoRef = db.collection("Trips").doc(props.match.params.tripId);
@@ -38,31 +37,24 @@ export const Journal = props => {
   const start = new Date(tripInfo.startDate);
   const end = new Date(tripInfo.endDate);
 
-  const _MS_PER_DAY = 1000 * 60 * 60 * 24;
-  const totalDays = Math.floor((end - start) / _MS_PER_DAY);
 
   const days = calcDays(start, end);
 
-  console.log("dates", days);
-
-  //push each day to an array
-  //const totalDayCount = Math.ceil()
-  //create when trip is created
-  //for each doc in journal, render a div
-  // console.log("doc id", trekkListRef)
   if (value) {
     days.forEach(date => {
       // create a doc for each date in the trip in Journal collection
-      tripInfoRef.collection("Journal").doc(date).set({}, {merge: true})
-    })
+      tripInfoRef
+        .collection("Journal")
+        .doc(date)
+        .set({}, { merge: true });
+    });
     return (
       <div>
         <span>
           <div>
             <Jumbotron>{tripInfo.tripName} Journal</Jumbotron>
             {days.map(date => (
-              <Jumbotron>
-
+              <Jumbotron key={date}>
                 <JournalDay
                   key={date}
                   date={date}

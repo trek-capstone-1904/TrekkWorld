@@ -2,13 +2,14 @@ import React from "react";
 import { useDocument } from "react-firebase-hooks/firestore";
 import Selector from "./Selector";
 import Notes from "./Notes";
+import AllNotes from './AllNotes'
 import JournalCard from "./JournalCard";
 import { Form, CardDeck, Spinner, Badge } from "react-bootstrap";
 import db from "../../../firebase";
 
 const JournalDay = props => {
   //get Trekk List collection for the current trip
-  console.log("props", props)
+
   const [value, loading, error] = useDocument(
     db
       .collection("Trips")
@@ -22,13 +23,10 @@ const JournalDay = props => {
   if (error) throw error;
   if (loading) return <Spinner animation="grow" variant="info" />;
   if (value) {
-    console.log("value", value)
-    //push each doc ID (place) into the places array
-    // value.forEach(function(doc) {
-    //   placesArray.push(doc.id);
-    // });
+
+
     placesArray = value.get('places')
-    console.log(placesArray)
+
 
     return (
       <div>
@@ -52,7 +50,10 @@ const JournalDay = props => {
             </Badge>
             </Form.Label>
           <Selector tripId={props.tripId} date={props.date} />
+          <Form.Label>Notes for Today</Form.Label>
+          <AllNotes tripId={props.tripId} date={props.date}/>
           <Notes tripId={props.tripId} date={props.date}/>
+
         </Form>
 
       </div>
