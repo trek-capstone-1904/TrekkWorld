@@ -1,30 +1,32 @@
 import React from "react";
-import { useCollection } from "react-firebase-hooks/firestore";
+import { useDocument } from "react-firebase-hooks/firestore";
 import Selector from "./Selector";
 import Notes from "./Notes";
+import AllNotes from './AllNotes'
 import JournalCard from "./JournalCard";
-import { Form, CardDeck, Spinner } from "react-bootstrap";
+import { Form, CardDeck, Spinner, Badge } from "react-bootstrap";
 import db from "../../../firebase";
 
 const JournalDay = props => {
   //get Trekk List collection for the current trip
-  const [value, loading, error] = useCollection(
+
+  const [value, loading, error] = useDocument(
     db
       .collection("Trips")
       .doc(props.tripId)
-      .collection("TrekkList")
+      .collection("Journal").doc(props.date)
   );
 
   //create an array to store all of the places on the Trekk List to be used in the selector drop down options
-  let placesArray = [];
+  let placesArray;
 
   if (error) throw error;
   if (loading) return <Spinner animation="grow" variant="info" />;
   if (value) {
-    //push each doc ID (place) into the places array
-    value.forEach(function(doc) {
-      placesArray.push(doc.id);
-    });
+
+
+    placesArray = value.get('places')
+
 
     return (
       <div>
@@ -36,14 +38,22 @@ const JournalDay = props => {
           {placesArray && (
             <CardDeck>
               {placesArray.map(place => (
-                <JournalCard key={place} place={place} />
+                <JournalCard key={place.value} place={place.value} />
                 ))}
             </CardDeck>
           )}
 
-          <Form.Label>Add a Location:</Form.Label>
+          <Form.Label>
+            <Badge pill variant="info" >
+
+            Add a Location:
+            </Badge>
+            </Form.Label>
           <Selector tripId={props.tripId} date={props.date} />
+          <Form.Label>Notes for Today</Form.Label>
+          <AllNotes tripId={props.tripId} date={props.date}/>
           <Notes tripId={props.tripId} date={props.date}/>
+
         </Form>
 
       </div>

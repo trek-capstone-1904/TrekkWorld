@@ -16,24 +16,24 @@ export const Selector = props => {
       .collection("TrekkList")
   );
 
-  const [optionValue, optionLoading, optionErrror] = useDocument(db.collection("Trips").doc(props.tripId).collection("Journal").doc(props.date))
-
+  const [optionValue, optionLoading, optionErrror] = useDocument(
+    db
+      .collection("Trips")
+      .doc(props.tripId)
+      .collection("Journal")
+      .doc(props.date)
+  );
 
   let datePlaces;
-  if(optionValue){
-
-    datePlaces = optionValue.data().option ? optionValue.data().option : []
+  if (optionValue) {
+    datePlaces = optionValue.data().places ? optionValue.data().places : [];
   }
-
-  //initialize useState to places already on the journal date places map
-  // const [selectedOption, setSelectedOptions] = useState([]);
-  // useEffect(() => console.log("option state", [selectedOption]));
 
   if (error) throw error;
   if (loading) return <Spinner animation="grow" variant="info" />;
   if (value) {
     const trekkInfo = value;
-    // console.log(trekkInfo);
+
 
     //map place document into the options array to display in selector drop down
     const options = trekkInfo.docs.map(function(doc) {
@@ -41,42 +41,19 @@ export const Selector = props => {
     });
 
     function onChange(option) {
-      console.log("option", option);
-      // setSelectedOptions(option);
-      // console.log("selected options", selectedOption);
-      //need to write the added place to the journal day places map in firestore
       db.collection("Trips")
         .doc(props.tripId)
         .collection("Journal")
         .doc(props.date)
         .set(
           {
-            // places: {
-            //   [option[option.length - 1].value]: {
-            //     name: option[option.length - 1].label,
-            //     user: loggedInUser.uid
-            //   }
-            // }
-            option
+            places: option
           },
           { merge: true }
         );
-
-      //   let {value} = option[option.length - 1]
-      //   let {label} = option[option.length - 1]
-      //   console.log(value, label)
-
-      // db.collection("Trips")
-      //   .doc(props.tripId)
-      //   .collection("Journal")
-      //   .doc(props.date)
-      //   .set(
-      //     { places: { [value]: {name: label, user: loggedInUser.uid}} },
-      //     { merge: true }
-      //   );
     }
 
-    if(datePlaces && datePlaces.length > 0){
+    if (datePlaces && datePlaces.length > 0) {
       return (
         <div>
           <Select
@@ -88,17 +65,10 @@ export const Selector = props => {
           />
         </div>
       );
-
     } else {
       return (
         <div>
-          <Select
-            isMulti
-            name="places"
-            options={options}
-
-            onChange={onChange}
-          />
+          <Select isMulti name="places" options={options} onChange={onChange} />
         </div>
       );
     }
