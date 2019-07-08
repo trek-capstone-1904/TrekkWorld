@@ -22,7 +22,7 @@ export const Selector = props => {
   let datePlaces;
   if(optionValue){
 
-    datePlaces = optionValue.data().option ? optionValue.data().option : []
+    datePlaces = optionValue.data().places ? optionValue.data().places : []
   }
 
   //initialize useState to places already on the journal date places map
@@ -45,35 +45,39 @@ export const Selector = props => {
       // setSelectedOptions(option);
       // console.log("selected options", selectedOption);
       //need to write the added place to the journal day places map in firestore
-      db.collection("Trips")
+      if(option){
+        db.collection("Trips")
+          .doc(props.tripId)
+          .collection("Journal")
+          .doc(props.date)
+          .set(
+            {
+              places: {
+                [option[option.length - 1].value]: {
+                  name: option[option.length - 1].label,
+                  user: loggedInUser.uid
+                }
+              }
+              // option
+            },
+            { merge: true }
+          );
+
+      } else {
+        db.collection("Trips")
         .doc(props.tripId)
         .collection("Journal")
         .doc(props.date)
         .set(
           {
-            // places: {
-            //   [option[option.length - 1].value]: {
-            //     name: option[option.length - 1].label,
-            //     user: loggedInUser.uid
-            //   }
-            // }
-            option
+            places: {
+
+            }
+            // option
           },
           { merge: true }
         );
-
-      //   let {value} = option[option.length - 1]
-      //   let {label} = option[option.length - 1]
-      //   console.log(value, label)
-
-      // db.collection("Trips")
-      //   .doc(props.tripId)
-      //   .collection("Journal")
-      //   .doc(props.date)
-      //   .set(
-      //     { places: { [value]: {name: label, user: loggedInUser.uid}} },
-      //     { merge: true }
-      //   );
+      }
     }
 
     if(datePlaces && datePlaces.length > 0){
