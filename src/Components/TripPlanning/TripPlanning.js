@@ -11,7 +11,6 @@ import {
 import 'firebase/auth';
 import userContext from '../../Contexts/userContext';
 
-
 import db from '../../firebase';
 import { useDocument } from 'react-firebase-hooks/firestore';
 import history from '../../history';
@@ -25,10 +24,10 @@ export const TripPlanning = props => {
   let countryQuery = query.substr(countryIdx, cityIdx - countryIdx - 6);
   let cityQuery = query.substr(cityIdx, codeIdx - cityIdx - 6);
   let codeQuery = query.substr(codeIdx, query.length);
+  if (cityQuery.includes(' ')) {
+    cityQuery = cityQuery.split('_').join(' ');
+  }
 
-// const TripSearch = memo();
-
-export const TripPlanning = () => {
   // const [city, setCity] = useState('');
   // const [country, setCountry] = useState('');
   // const [code, setCode] = useState('');
@@ -66,14 +65,18 @@ export const TripPlanning = () => {
     }
   };
 
-
   const handleSubmit = evt => {
     evt.preventDefault();
 
     if (country === 'Select a Country...' || country === '') {
       alert('Please select a country');
     } else {
-      history.replace(`/plantrip?country=${country}&city=${city}&code=${code}`);
+      if (city.includes(' ')) {
+        cityQuery = city.split(' ').join('_');
+      }
+      history.replace(
+        `/plantrip?country=${country}&city=${cityQuery}&code=${code}`
+      );
       setSubmit('true');
     }
   };
@@ -142,20 +145,23 @@ export const TripPlanning = () => {
             </Tabs>
           </div>
           <div className={styles.BucketList}>
-            <Form.Control
-              name="tripId"
-              value={tripId}
-              as="select"
-              onChange={changeTripId}
-            >
-              <option>select a trip to plan</option>
-              {snapshot &&
-                Object.entries(snapshot.data().Trips).map(trip => (
-                  <option key={trip[0]} value={trip[0]}>
-                    {trip[1].tripName}
-                  </option>
-                ))}
-            </Form.Control>
+            {snapshot &&
+              snapshot.data().Trips &&
+              Object.keys(snapshot.data().Trips).length !== 0 && (
+                <Form.Control
+                  name="tripId"
+                  value={tripId}
+                  as="select"
+                  onChange={handleChange}
+                >
+                  <option>select a trip to plan</option>
+                  {Object.entries(snapshot.data().Trips).map(trip => (
+                    <option key={trip[0]} value={trip[0]}>
+                      {trip[1].tripName}
+                    </option>
+                  ))}
+                </Form.Control>
+              )}
             <Tabs defaultActiveKey="Bucket List" id="Trekk-Bucket-List">
               <Tab eventKey="Bucket List" title="Bucket List">
                 <BucketList tripId={tripId} />

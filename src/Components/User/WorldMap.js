@@ -32,26 +32,25 @@ export const WorldMap = () => {
     const dataCountries = value && countries.map(country => [country]);
     dataCountries.unshift(['Countries']);
     return (
-      <div styles={{maxWidth:'100vw'}}>
-        <h1>Countries Visited</h1>
-        <h3>{dataCountries.length - 1}</h3>
-
-        <Chart
-          chartType="GeoChart"
-          width="30rem"
-          data={dataCountries}
-          options={{
-            // colorAxis: { colors: 'blue' },
-            backgroundColor: 'none',
-            datalessRegionColor: 'lightgray',
-            defaultColor: '#17a2b8',
-          }}
-        />
-        <span>
-          <button onClick={toggle} style={{ border: '0', outline: 'none' }}>
-            <img style={{ width: '1rem' }} src={zoom} alt="zoom" />
-          </button>
-        </span>
+      <div styles={{ maxWidth: '100vw' }}>
+        <div style={{ position: 'relative' }}>
+          <Chart
+            chartType="GeoChart"
+            width="30rem"
+            data={dataCountries}
+            options={{
+              // colorAxis: { colors: 'blue' },
+              backgroundColor: 'none',
+              datalessRegionColor: 'lightgray',
+              defaultColor: '#17a2b8',
+            }}
+          />
+          <span style={{ position: 'absolute', top: '0%', left: '0%' }}>
+            <button onClick={toggle} style={{ border: '0', outline: 'none' }}>
+              <img style={{ width: '1.25rem' }} src={zoom} alt="zoom" />
+            </button>
+          </span>
+        </div>
         <Modal
           // dialogClassName="modal-90w"
           // className={styles.Map}
