@@ -31,7 +31,7 @@ const JournalDay = props => {
         <h3>{props.date}</h3>
         <Form style={{ maxWidth: "40rem", margin: "auto" }}>
           <Form.Label>Places Visited</Form.Label>
-          <Selector tripId={props.tripId} />
+          <Selector tripId={props.tripId} date={props.date} />
           {/* query the journal date places map, put the results into an array, map over them, and render a journalCard for each place */}
 
           {/* replace selectedOption with the values you get back from querying the Journal Date Places map */}
