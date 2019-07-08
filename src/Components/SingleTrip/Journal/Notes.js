@@ -18,19 +18,31 @@ export const Notes = props => {
 
   function handleClick(event) {
     event.preventDefault()
-    tripJournal
-      .set({
-        notes: {[loggedUser.uid]: notes}
-      }, {merge: true})
-      .then(function() {
-        alert("Journal Entry Added!");
+    if(tripJournal.notes){
+      tripJournal.notes
+        .set({
+           [loggedUser.uid]: notes
+        }, {merge: true})
+        .then(function() {
+          alert("Journal Entry Added!");
 
-      });
+        });
+
+    } else {
+      tripJournal
+        .set({
+           notes: {[loggedUser.uid]: notes}
+        }, {merge: true})
+        .then(function() {
+          alert("Journal Entry Added!");
+
+        });
+    }
   }
 
   return (
     <>
-      <Form.Label>Notes for Today</Form.Label>
+
       <Form.Control
         as="input"
         rows="6"
@@ -41,7 +53,7 @@ export const Notes = props => {
         Post
       </Button>
       <div>
-
+        All Notes
       </div>
     </>
   );
