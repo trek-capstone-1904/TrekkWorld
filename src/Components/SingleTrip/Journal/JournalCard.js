@@ -12,16 +12,17 @@ import { useDocument } from "react-firebase-hooks/firestore";
 import db from "../../../firebase";
 
 export const JournalCard = props => {
- console.log("props", props.place);
 
+  //take the place ID passed down, and query the places collection to get the data that should go on the card
   const [value, loading, error] = useDocument(db.collection("Places").doc(props.place))
 
 
 
-  //take the place ID passed down, and query the places collection to get the data that should go on the card
   if (error) throw error;
   if (loading) return <Spinner animation="grow" variant="info" />;
   if(value){
+    console.log("props", props.place);
+
   console.log("place doc", value)
     const placeInfo = value.data()
     console.log("data in place doc", placeInfo)
