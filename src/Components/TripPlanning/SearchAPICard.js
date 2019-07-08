@@ -5,6 +5,11 @@ import db from '../../firebase';
 import userContext from '../../Contexts/userContext';
 import firebase from 'firebase/app';
 
+function useGoogle(sight) {
+  // const sightName=
+  console.log(sight)
+}
+
 export const SearchAPICard = props => {
   //type = city if from query for top cities OR type= sights if for top sights in a city
   const { country } = props;
@@ -13,7 +18,7 @@ export const SearchAPICard = props => {
   const loggedInUser = useContext(userContext);
   console.log('tripId on searchAPIcard', tripId);
 
-  // const placeImage =
+  const placeImage = useGoogle(props.sight);
 
   return (
     <Card style={{ margin: '.5rem 1rem' }}>
