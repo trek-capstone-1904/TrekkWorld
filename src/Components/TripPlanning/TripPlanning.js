@@ -1,14 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
-import {
-  Jumbotron,
-  Form,
-  Button,
-  Tabs,
-  Tab,
-  DropdownButton,
-  Dropdown,
-} from 'react-bootstrap';
-import { RouterContext } from 'react-router';
+import { Jumbotron, Form, Button, Tabs, Tab } from 'react-bootstrap';
 import styles from '../TripPlanning.module.css';
 import {
   SearchAPI,
@@ -36,6 +27,10 @@ export const TripPlanning = props => {
   if (cityQuery.includes(' ')) {
     cityQuery = cityQuery.split('_').join(' ');
   }
+
+  // const [city, setCity] = useState('');
+  // const [country, setCountry] = useState('');
+  // const [code, setCode] = useState('');
   console.log(countryQuery, ',', cityQuery, ',', codeQuery);
   // const [url, setUrl] = useState(props.location.search);
   const [city, setCity] = useState(cityQuery);
@@ -61,7 +56,11 @@ export const TripPlanning = props => {
       setCity('');
       setCountry(evt.target.value);
       setCode(evt.target.selectedOptions[0].dataset.code);
-    } else if (evt.currentTarget.name === 'tripId') {
+    }
+  };
+
+  const changeTripId = (evt, type) => {
+    if (evt.currentTarget.name === 'tripId') {
       setTripId(evt.target.value);
     }
   };
@@ -75,7 +74,9 @@ export const TripPlanning = props => {
       if (city.includes(' ')) {
         cityQuery = city.split(' ').join('_');
       }
-      history.replace(`/plantrip?country=${country}&city=${cityQuery}&code=${code}`);
+      history.replace(
+        `/plantrip?country=${country}&city=${cityQuery}&code=${code}`
+      );
       setSubmit('true');
     }
   };
