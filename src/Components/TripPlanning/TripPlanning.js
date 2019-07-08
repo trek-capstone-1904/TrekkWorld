@@ -7,7 +7,6 @@ import {
   BucketList,
   TrekkList,
   CountrySelect,
-  TripSelect,
 } from '../index.js';
 import 'firebase/auth';
 import userContext from '../../Contexts/userContext';
@@ -25,10 +24,10 @@ export const TripPlanning = props => {
   // let countryQuery = query.substr(countryIdx, cityIdx - countryIdx - 6);
   // let cityQuery = query.substr(cityIdx, codeIdx - cityIdx - 6);
   // let codeQuery = query.substr(codeIdx, query.length);
-  // if (cityQuery.includes(' ')) {
-  //   cityQuery = cityQuery.split('_').join(' ');
-  // }
 
+  // const TripSearch = memo();
+
+  // export const TripPlanning = () => {
   const [city, setCity] = useState('');
   const [country, setCountry] = useState('');
   const [code, setCode] = useState('');
@@ -38,6 +37,7 @@ export const TripPlanning = props => {
   // const [country, setCountry] = useState(countryQuery);
   // const [code, setCode] = useState(codeQuery);
   const [submitted, setSubmit] = useState(false);
+  const [tripId, setTripId] = useState('');
 
   const loggedInUser = useContext(userContext);
 
@@ -59,23 +59,30 @@ export const TripPlanning = props => {
     }
   };
 
+  const changeTripId = (evt, type) => {
+    if (evt.currentTarget.name === 'tripId') {
+      setTripId(evt.target.value);
+    }
+  };
+
   const handleSubmit = evt => {
     evt.preventDefault();
 
     if (country === 'Select a Country...' || country === '') {
       alert('Please select a country');
     } else {
-      // if (city.includes(' ')) {
-      //   cityQuery = city.split(' ').join('_');
-      // }
-      // history.replace(
-      //   `/plantrip?country=${country}&city=${cityQuery}&code=${code}`
-      // );
+      history.replace(`/plantrip?country=${country}&city=${city}&code=${code}`);
       setSubmit('true');
     }
   };
 
   //create route for trips associated with loggedInUser
+  const [snapshot, loading, error] = useDocument(
+    db.collection('Users').doc(`${loggedInUser.uid}`),
+    {
+      snapshotListenOptions: { includeMetadataChanges: false },
+    }
+  );
 
   if (loggedInUser) {
     console.log('render!');
@@ -132,7 +139,30 @@ export const TripPlanning = props => {
               </Tab>
             </Tabs>
           </div>
-          <TripSelect />
+          <div className={styles.BucketList}>
+            <Form.Control
+              name="tripId"
+              value={tripId}
+              as="select"
+              onChange={changeTripId}
+            >
+              <option>select a trip to plan</option>
+              {snapshot &&
+                Object.entries(snapshot.data().Trips).map(trip => (
+                  <option key={trip[0]} value={trip[0]}>
+                    {trip[1].tripName}
+                  </option>
+                ))}
+            </Form.Control>
+            <Tabs defaultActiveKey="Bucket List" id="Trekk-Bucket-List">
+              <Tab eventKey="Bucket List" title="Bucket List">
+                <BucketList tripId={tripId} />
+              </Tab>
+              <Tab eventKey="Trekk List" title="Trekk List">
+                {tripId && <TrekkList list={'trekkList'} tripId={tripId} />}
+              </Tab>
+            </Tabs>
+          </div>
         </div>
       </div>
     );
