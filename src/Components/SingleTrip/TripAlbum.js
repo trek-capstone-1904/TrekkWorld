@@ -1,8 +1,8 @@
 import React from 'react';
 import db from '../../firebase';
 import { useCollection } from 'react-firebase-hooks/firestore';
-// import 'react-image-gallery/styles/css/image-gallery.css';
-// import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
+import ImageGallery from 'react-image-gallery';
 import { Card, Image } from 'react-bootstrap';
 import { PhotoLoad } from '../index';
 
@@ -26,28 +26,28 @@ export const TripAlbum = props => {
   console.log(value && imageArr());
 
   return (
-    // <div style={{maxWidth:'40rem', maxHeight:'30rem'}}>{value && <ImageGallery items={imageArr()} />}</div>
-    <Card style={{ maxWidth: '33rem' }}>
-      <Card.Header>Trip Album</Card.Header>
-      <Card.Body>
-        {value && (
-          <span>
-            {value.docs.map(doc => (
-              // console.log(doc.data().URL)
-              <Image
-                style={{ maxHeight: '7rem', margin:'.2rem' }}
-                key={doc.id}
-                src={doc.data().URL}
-                thumbnail
-              />
-            ))}
-          </span>
-        )}
-      </Card.Body>
-      <Card.Footer>
-        {props.fellowTrekker && <PhotoLoad from="trip" tripId={props.tripId} />}
-      </Card.Footer>
-    </Card>
+    <div style={{maxWidth:'40rem', maxHeight:'30rem'}}>{value && <ImageGallery items={imageArr()} />}</div>
+    // <Card style={{ maxWidth: '33rem' }}>
+    //   <Card.Header>Trip Album</Card.Header>
+    //   <Card.Body>
+    //     {value && (
+    //       <span>
+    //         {value.docs.map(doc => (
+    //           // console.log(doc.data().URL)
+    //           <Image
+    //             style={{ maxHeight: '7rem', margin:'.2rem' }}
+    //             key={doc.id}
+    //             src={doc.data().URL}
+    //             thumbnail
+    //           />
+    //         ))}
+    //       </span>
+    //     )}
+    //   </Card.Body>
+    //   <Card.Footer>
+    //     {props.fellowTrekker && <PhotoLoad from="trip" tripId={props.tripId} />}
+    //   </Card.Footer>
+    // </Card>
   );
 };
 
