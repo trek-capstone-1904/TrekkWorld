@@ -29,6 +29,8 @@ export const TripPlanning = props => {
   const [city, setCity] = useState('');
   const [country, setCountry] = useState('');
   const [code, setCode] = useState('');
+  const [tripId, setTripId] = useState('');
+
   // console.log(countryQuery, ',', cityQuery, ',', codeQuery);
   // const [url, setUrl] = useState(props.location.search);
   // const [city, setCity] = useState(cityQuery);
@@ -37,6 +39,13 @@ export const TripPlanning = props => {
   const [submitted, setSubmit] = useState(false);
 
   const loggedInUser = useContext(userContext);
+
+  const [snapshot, loading, error] = useDocument(
+    db.collection('Users').doc(`${loggedInUser.uid}`),
+    {
+      snapshotListenOptions: { includeMetadataChanges: false },
+    }
+  );
 
   useEffect(() => {
     console.log('useEffect', props.location);
@@ -52,6 +61,12 @@ export const TripPlanning = props => {
       setCity('');
       setCountry(evt.target.value);
       setCode(evt.target.selectedOptions[0].dataset.code);
+    }
+  };
+
+  const changeTripId = (evt, type) => {
+    if (evt.currentTarget.name === 'tripId') {
+      setTripId(evt.target.value);
     }
   };
 
@@ -128,7 +143,21 @@ export const TripPlanning = props => {
                 <BucketList tripId={'d26eX8KPoeNu1WtKhVfF'} />
               </Tab> */}
               <Tab eventKey="Trekk List" title="Trekk List">
-                <TrekkList list={'trekkList'} tripId={'d26eX8KPoeNu1WtKhVfF'} />
+                <Form.Control
+                  name="tripId"
+                  value={tripId}
+                  as="select"
+                  onChange={changeTripId}
+                >
+                  <option>select a trip to plan</option>
+                  {snapshot &&
+                    Object.entries(snapshot.data().Trips).map(trip => (
+                      <option key={trip[0]} value={trip[0]}>
+                        {trip[1].tripName}
+                      </option>
+                    ))}
+                </Form.Control>
+                {tripId && <TrekkList list={'trekkList'} tripId={tripId} />}
               </Tab>
             </Tabs>
           </div>
