@@ -218,6 +218,7 @@ export const TripPage = props => {
               </Modal>
             </Card>
           {/* </CardColumns> */}
+          <TrekkList tripId={tripId}/>
           <TripAlbum fellowTrekker={isThisAFellowTrekker()} tripId={tripId} />
         </div>
       </div>

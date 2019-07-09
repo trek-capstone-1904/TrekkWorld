@@ -14,8 +14,15 @@ export const PhotoLoad = props => {
   console.log(loggedInUser);
   const [progressValue, setProgressValue] = useState(0);
   const [loaded, setLoaded] = useState(false);
+  const [addImage, setAddImage] = useState(false);
   const [imageUrl, setImageUrl] = useState('');
 
+  function handleInput() {
+    setAddImage(false)
+  }
+  function handleClickAdd() {
+    setAddImage(true);
+  }
   function handleClose() {
     setLoaded(false);
   }
@@ -88,12 +95,15 @@ export const PhotoLoad = props => {
   }
   return (
     <div>
-      <h5>Add Image</h5>
-      <progress value={progressValue} max="100" id="uploader">
-        0%
-      </progress>
-      <br />
-      <input type="file" id="fileButton" onChange={handleChange} />
+      <Button onClick={handleClickAdd}>+ Add Image</Button>
+      <Modal  style={{ padding: '2rem' }} show={addImage} onHide={handleInput}>
+        <Modal.Header>Add Image From Files</Modal.Header>
+        <progress value={progressValue} max="100" id="uploader">
+          0%
+        </progress>
+        <br />
+        <input type="file" id="fileButton" onChange={handleChange} />
+      </Modal>
       <Modal show={loaded} onHide={handleClose}>
         <Modal.Body>
           <h1 style={{ textAlign: 'center' }}>Loaded Successfully!</h1>
