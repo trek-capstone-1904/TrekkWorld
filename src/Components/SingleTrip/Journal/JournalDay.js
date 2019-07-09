@@ -46,11 +46,11 @@ const JournalDay = props => {
               Add a Location:
             </Badge> */}
           </Form.Label>
-          <Selector tripId={props.tripId} date={props.date} />
-          <div style={{ border: "1px solid black" }}>
+          <div >
             <div>All Notes</div>
             <AllNotes tripId={props.tripId} date={props.date} />
             <Notes tripId={props.tripId} date={props.date} />
+          <Selector tripId={props.tripId} date={props.date} />
           </div>
         </Form>
       </div>

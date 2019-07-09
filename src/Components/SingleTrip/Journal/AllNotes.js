@@ -2,6 +2,7 @@ import React from "react";
 import { useDocument, useCollectionData } from "react-firebase-hooks/firestore";
 import db, { loggedUser } from "../../../firebase";
 import { Spinner } from "react-bootstrap";
+import AllNotesCard from './AllNotesCard'
 
 export const AllNotes = props => {
   const [value, loading, error] = useCollectionData(
@@ -23,7 +24,9 @@ export const AllNotes = props => {
     // })
     return <div>{value.map(note =>(
       <div key={note.time}>
-        {note.userName}: {note.note}
+
+        <AllNotesCard  note={note}/>
+
       </div>
     ))}</div>;
   } else {
