@@ -16,6 +16,29 @@
         "5d95HrhWm6SNQiOBLp9Gyj8JhPn2": {
           "userName": "Chad Anderson",
           "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FChadAnderson.jpg?alt=media&token=68d57044-7c17-4773-abfc-51b256227d67"
+        },
+        "mywzGvLbzXVIRedM42C51nTDK1h1": {
+          "userName": "Tony Adams",
+          "userPicture": "https://robohash.org/TonyAdams"
+        },
+        "iXyfgQbWhoM8CCQw6DKG0dogBPh1": {
+          "userName": "Kari Moore",
+          "userPicture": "https://robohash.org/KariMoore"
+        }
+      }
+    },
+    "cmD9qd2YQUVLGouWyMQU": {
+      "startDate": "2019-07-10",
+      "endDate": "2019-12-20",
+      "tripName": "Volunteer Tour throughout South America",
+      "locations": ["Argentina, Peru, Chile, Bolivia, Colombia "],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Solo",
+      "users": {
+        "rStqfW1Ip3RsN0Slv5QK8HbBy203": {
+          "userName": "Trent Schmidt",
+          "userPicture": "https://robohash.org/Trent Schmidt"
         }
       }
     },
@@ -31,6 +54,101 @@
         "10d1o59g4Ngwlqx9csSPn4pCOPC2": {
           "userName": "Krystal Daughtery",
           "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FKrystalDaughtery.jpg?alt=media&token=53280b8e-1fb4-485d-881a-fb5ac3295115"
+        }
+      }
+    },
+    "UMCZYFBhKU4YZx5waiur": {
+      "startDate": "2018-12-20",
+      "endDate": "2019-01-02",
+      "tripName": "Christmas Family Trip to Toronto",
+      "locations": ["Canada"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Family",
+      "users": {
+        "10d1o59g4Ngwlqx9csSPn4pCOPC2": {
+          "userName": "Krystal Daughtery",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FKrystalDaughtery.jpg?alt=media&token=53280b8e-1fb4-485d-881a-fb5ac3295115"
+        }
+      }
+    },
+    "lukgWDU0BOy0LA1kDIpO": {
+      "startDate": "2019-11-10",
+      "endDate": "2019-11-20",
+      "tripName": "Turning 30 Girls Trip Cancun",
+      "locations": ["Mexico"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Friends",
+      "users": {
+        "10d1o59g4Ngwlqx9csSPn4pCOPC2": {
+          "userName": "Krystal Daughtery",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FKrystalDaughtery.jpg?alt=media&token=53280b8e-1fb4-485d-881a-fb5ac3295115"
+        },
+        "c1wXU5FIshdOQ5VzhQiLVjAtpaH2": {
+          "userName": "Nikki Binns",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FFemaleTraveler.jpg?alt=media&token=d4fd6c21-3ac3-4d56-ab82-916b794d24bf"
+        },
+        "iM66QC5IIwN39ovPoE819aoVtl83": {
+          "userName": "Kaycee Rempel",
+          "userPicture": "https://robohash.org/Kaycee Rempel"
+        },
+        "jKj1mv0VuJc0UauBQ6ozTuNbdSM2": {
+          "userName": "Adella Green",
+          "userPicture": "https://robohash.org/AdellaGreen"
+        }
+      }
+    },
+    "jM9YfgIuMZttRsBGnDRr": {
+      "startDate": "2019-03-10",
+      "endDate": "2019-03-19",
+      "tripName": "Spring Break to Santa Marta Colombia",
+      "locations": ["Colombia"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Friends",
+      "users": {
+        "iXyfgQbWhoM8CCQw6DKG0dogBPh1": {
+          "userName": "Kari Moore",
+          "userPicture": "https://robohash.org/KariMoore"
+        }
+      }
+    },
+    "JQ5J8isXNuxVVaY7ONGL": {
+      "startDate": "2018-09-01",
+      "endDate": "2018-10-02",
+      "tripName": "Aussie Adventures",
+      "locations": ["Australia"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Couples",
+      "users": {
+        "G9O6nXD45DgECe6Q1kXQYzAPLm12": {
+          "userName": "Michael de Boer",
+          "userPicture": "https://robohash.org/MichaeldeBoer"
+        },
+        "5VIhJcZytBbwYLGqHIW8TkWGYpM2": {
+          "userName": "Amanda Fox",
+          "userPicture": "https://robohash.org/AmandaFox"
+        }
+      }
+    },
+    "QLgCsIFQbq0g2ljFSn8F": {
+      "startDate": "2019-09-01",
+      "endDate": "2019-09-17",
+      "tripName": "Cruise in Eastern Europe with Family",
+      "locations": ["Germany", "Czech Republic", "Hungary", "Austria"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Family",
+      "users": {
+        "G9O6nXD45DgECe6Q1kXQYzAPLm12": {
+          "userName": "Michael de Boer",
+          "userPicture": "https://robohash.org/MichaeldeBoer"
+        },
+        "5VIhJcZytBbwYLGqHIW8TkWGYpM2": {
+          "userName": "Amanda Fox",
+          "userPicture": "https://robohash.org/AmandaFox"
         }
       }
     }
@@ -92,9 +210,156 @@
       ],
       "Trips": {
         "bN5MdYLJSHxrgGO53ErO": {
-          "endDate": "2020-05-30",
-          "startDate": "2020-06-27",
+          "startDate": "2020-05-30",
+          "endDate": "2020-06-27",
           "tripName": "Asia Travels after Graduation"
+        }
+      }
+    },
+    "c1wXU5FIshdOQ5VzhQiLVjAtpaH2": {
+      "userName": "Nikki Binns",
+      "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FFemaleTraveler.jpg?alt=media&token=d4fd6c21-3ac3-4d56-ab82-916b794d24bf",
+      "email": "nikki@email.com",
+      "bio": "Live in Seattle. Currently training for a marathon to run before I turn 30. Girl who loves her food!",
+      "countriesVisited": ["Thailand", "Canada", "United States", "Spain"],
+      "Trips": {
+        "lukgWDU0BOy0LA1kDIpO": {
+          "startDate": "2019-11-10",
+          "endDate": "2019-11-20",
+          "tripName": "Turning 30 Girls Trip Cancun"
+        }
+      }
+    },
+    "rStqfW1Ip3RsN0Slv5QK8HbBy203": {
+      "userName": "Trent Schmidt",
+      "userPicture": "https://robohash.org/Trent Schmidt",
+      "email": "trent@email.com",
+      "bio": "Graduating next summer!! Then doing a year worth of travel before joining the family business. But who knows, maybe I'll make it big as a travel vlogger!",
+      "countriesVisited": [
+        "Canada",
+        "United States",
+        "Greenland",
+        "Ireland",
+        "United Kingdom",
+        "Belgium",
+        "Norway"
+      ],
+      "Trips": {
+        "cmD9qd2YQUVLGouWyMQU": {
+          "startDate": "2019-07-10",
+          "endDate": "2019-12-20",
+          "tripName": "Volunteer Tour throughout South America"
+        }
+      }
+    },
+    "mywzGvLbzXVIRedM42C51nTDK1h1": {
+      "userName": "Tony Adams",
+      "userPicture": "https://robohash.org/TonyAdams",
+      "email": "tonyadams@email.com",
+      "bio": "Working on getting my Bachelors in Engineering. Can't wait to get out. Never been outside the US but can't wait for Asia after graduation!",
+      "countriesVisited": ["United States"],
+      "Trips": {
+        "bN5MdYLJSHxrgGO53ErO": {
+          "startDate": "2020-05-30",
+          "endDate": "2020-06-27",
+          "tripName": "Asia Travels after Graduation"
+        }
+      }
+    },
+    "iXyfgQbWhoM8CCQw6DKG0dogBPh1": {
+      "userName": "Kari Moore",
+      "userPicture": "https://robohash.org/KariMoore",
+      "email": "kari@email.com",
+      "bio": "Going to get my masters in the fall. So after graduating, enjoying a trip with the friends before reality hits again",
+      "countriesVisited": [
+        "Colombia",
+        "Panama",
+        "Bahamas",
+        "United States",
+        "Costa Rica",
+        "Ireland",
+        "United Kingdom",
+        "Belgium"
+      ],
+      "Trips": {
+        "bN5MdYLJSHxrgGO53ErO": {
+          "startDate": "2020-05-30",
+          "endDate": "2020-06-27",
+          "tripName": "Asia Travels after Graduation"
+        },
+        "jM9YfgIuMZttRsBGnDRr": {
+          "startDate": "2019-03-10",
+          "endDate": "2019-03-17",
+          "tripName": "Spring Break to Santa Marta Colombia"
+        }
+      }
+    },
+    "5VIhJcZytBbwYLGqHIW8TkWGYpM2": {
+      "email": "amanda@email.com",
+      "userName": "Amanda Fox",
+      "userPicture": "https://robohash.org/AmandaFox",
+      "bio": "Currently living in North Carolina. Dream is to visit all countries in the world!",
+      "countriesVisited": [
+        "Spain",
+        "Portugal",
+        "United States",
+        "Japan",
+        "New Zealand",
+        "Canada",
+        "Netherlands",
+        "Australia",
+        "Germany"
+      ],
+      "Trips": {
+        "JQ5J8isXNuxVVaY7ONGL": {
+          "startDate": "2018-09-01",
+          "endDate": "2018-10-02",
+          "tripName": "Aussie Adventures"
+        },
+        "QLgCsIFQbq0g2ljFSn8F": {
+          "startDate": "2019-09-01",
+          "endDate": "2019-09-17",
+          "tripName": "Cruise in Eastern Europe with Family"
+        }
+      }
+    },
+    "G9O6nXD45DgECe6Q1kXQYzAPLm12": {
+      "email": "michael@email.com",
+      "userName": "Michael de Boer",
+      "userPicture": "https://robohash.org/MichaeldeBoer",
+      "bio": "Living in North Carolina with my wife. Hoping to move to Netherlands, but first, travel the world.",
+      "countriesVisited": [
+        "Spain",
+        "Portugal",
+        "United States",
+        "Japan",
+        "New Zealand",
+        "Canada",
+        "Netherlands",
+        "Australia",
+        "Germany",
+        "Belgium",
+        "South Africa",
+        "Colombia",
+        "Chile",
+        "Argentina",
+        "China",
+        "Iceland",
+        "United Kingdom",
+        "Ireland",
+        "Croatia",
+        "Russia"
+      ],
+      "Trips": {
+        "JQ5J8isXNuxVVaY7ONGL": {
+          "startDate": "2018-09-01",
+          "endDate": "2018-10-02",
+          "tripName": "Aussie Adventures"
+        },
+        "QLgCsIFQbq0g2ljFSn8F": {
+          "startDate": "2019-09-01",
+          "endDate": "2019-09-17",
+          "tripName": "Cruise in Eastern Europe with Family"
         }
       }
     }
