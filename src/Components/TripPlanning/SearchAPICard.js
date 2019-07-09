@@ -7,49 +7,16 @@ import firebase from 'firebase/app';
 import * as secret from '../../secrets';
 import Axios from 'axios';
 
-// let resp;
-// function useGoogle(sight, country) {
-//   let searchPlace;
-//   if (sight.coordinates) {
-//     searchPlace = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${
-//       sight.name
-//     }&inputtype=textquery&fields=photos,place_id,formatted_address,name,opening_hours,rating&locationbias=circle:2000@${
-//       sight.coordinates.latitude
-//     },${sight.coordinates.longitude}&key=${secret.places}`;
-//   } else {
-//     searchPlace = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${
-//       sight.name
-//     }${country}&inputtype=textquery&fields=photos,place_id,formatted_address,name,opening_hours,rating&
-//     &key=${secret.places}`;
-//   }
-
-//   const proxyurl = 'https://cors-anywhere.herokuapp.com/';
-
-//   const response = fetch(proxyurl + searchPlace)
-//     .then(response => response.json())
-//     .then(content => {
-//       let photoRef = content.candidates[0].photos[0].photo_reference;
-//       let resp = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=${photoRef}&key=${
-//         secret.places
-//       }`;
-//       console.log('resp', resp);
-//       setImage(resp);
-//       return resp;
-//     })
-//     .catch(() => console.log('HELP'));
-// }
-
 export const SearchAPICard = props => {
   //type = city if from query for top cities OR type= sights if for top sights in a city
-  console.log('props in searchAPI card', props);
+
   const { country } = props;
   const { name, snippet } = props.sight;
   const { tripId } = props;
   const [image, setImage] = useState('');
   const loggedInUser = useContext(userContext);
-  console.log('tripId on searchAPIcard', tripId);
-  const placeImage = useGoogle(props.sight, country);
-  // const [placeImage, loading, error] = useGoogle(props.sight);
+
+  useGoogle(props.sight, country);
   function useGoogle(sight, country) {
     let searchPlace;
     if (sight.coordinates) {
@@ -71,7 +38,7 @@ export const SearchAPICard = props => {
       .then(response => response.json())
       .then(content => {
         let photoRef = content.candidates[0].photos[0].photo_reference;
-        let resp = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=${photoRef}&key=${
+        let resp = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&maxheight=250&photoreference=${photoRef}&key=${
           secret.places
         }`;
         console.log('resp', resp);
@@ -86,6 +53,7 @@ export const SearchAPICard = props => {
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">{country}</Card.Subtitle>
+        {image && <img src={image} alt="sight" />}
         <Card.Text className={styles.cardText}>{snippet}</Card.Text>
         <Button
           style={{ margin: '0 1rem' }}
@@ -94,12 +62,7 @@ export const SearchAPICard = props => {
         >
           + Bucket
         </Button>
-        {image && (
-          <img
-            src={image}
-            alt="sight"
-          />
-        )}
+
         <Button
           style={{ margin: '0 1rem' }}
           variant="info"
