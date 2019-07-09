@@ -1,7 +1,7 @@
-import React from "react";
-import { Card } from "react-bootstrap";
-import timeago from "epoch-timeago";
-import styles from './journal.module.css'
+import React from 'react';
+import { Card } from 'react-bootstrap';
+import timeago from 'epoch-timeago';
+import styles from './journal.module.css';
 
 export const AllNotesCard = props => {
   return (

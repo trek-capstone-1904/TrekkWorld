@@ -2,8 +2,6 @@ import React, { useContext } from 'react';
 import {
   Card,
   Badge,
-  Accordion,
-  ListGroup,
   ButtonGroup,
   DropdownButton,
   Dropdown,
@@ -14,7 +12,6 @@ import SearchAPICard from '../TripPlanning/SearchAPICard';
 import db from '../../firebase';
 import userContext from '../../Contexts/userContext';
 import { useCollection } from 'react-firebase-hooks/firestore';
-import { MDBContainer, MDBScrollbar } from 'mdbreact';
 import './scrollbar.css';
 import TripResultPlaceCard from '../TripPlanning/TripResultPlaceCard';
 
@@ -52,11 +49,6 @@ export const TripResultCard = props => {
   }
   tripCompleted();
 
-  const scrollContainerStyle = {
-    maxWidth: '66vw',
-    maxHeight: '15rem',
-    border: '1px dotted lightgray',
-  };
   return (
     <Card border="info" style={{ margin: '.5rem' }}>
       {/* <Card.Img variant="top" src={`../${card.tripImageUrl}`} /> */}

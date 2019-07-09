@@ -9,12 +9,13 @@ export const BucketListCard = props => {
   const loggedInUser = useContext(userContext);
   const uid = loggedInUser.uid;
   const { tripId } = props;
-  const { placeName, snippet } = props.card;
+  const { placeName, snippet, placeImage } = props.card;
   const placeId = props.placeId;
   return (
     <Card style={{ margin: '.5rem 1rem' }}>
       <Card.Body>
         <Card.Title>{placeName}</Card.Title>
+        {placeImage && <img src={placeImage} alt="sight" />}
         <Card.Text className={styles.cardText}>{snippet}</Card.Text>
         <Button
           style={{ margin: '0 1rem' }}

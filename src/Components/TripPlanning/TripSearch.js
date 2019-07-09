@@ -35,9 +35,6 @@ export const TripSearch = props => {
   //       ))
   // );
 
-  // .filter(doc => (!doc.data().users.uid) )
-  // .filter(doc => Object.keys(doc.data().users).reduce((accum, elem) => {if(elem === uid){ accum = true} return accum},false )) )
-
   return (
     <div>
       {error && <strong>Error: {error}</strong>}

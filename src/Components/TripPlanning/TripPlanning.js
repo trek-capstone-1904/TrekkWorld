@@ -10,7 +10,6 @@ import {
 } from '../index.js';
 import 'firebase/auth';
 import userContext from '../../Contexts/userContext';
-
 import db from '../../firebase';
 import { useDocument } from 'react-firebase-hooks/firestore';
 import history from '../../history';
@@ -20,7 +19,6 @@ export const TripPlanning = props => {
   const countryIdx = 9;
   const cityIdx = query.indexOf('&city=') + 6;
   const codeIdx = query.indexOf('&code=') + 6;
-
   // let countryQuery = query.substr(countryIdx, cityIdx - countryIdx - 6);
   // let cityQuery = query.substr(cityIdx, codeIdx - cityIdx - 6);
   // let codeQuery = query.substr(codeIdx, query.length);
@@ -31,15 +29,23 @@ export const TripPlanning = props => {
   const [city, setCity] = useState('');
   const [country, setCountry] = useState('');
   const [code, setCode] = useState('');
+  const [tripId, setTripId] = useState('');
+
   // console.log(countryQuery, ',', cityQuery, ',', codeQuery);
   // const [url, setUrl] = useState(props.location.search);
   // const [city, setCity] = useState(cityQuery);
   // const [country, setCountry] = useState(countryQuery);
   // const [code, setCode] = useState(codeQuery);
   const [submitted, setSubmit] = useState(false);
-  const [tripId, setTripId] = useState('');
 
   const loggedInUser = useContext(userContext);
+
+  const [snapshot, loading, error] = useDocument(
+    db.collection('Users').doc(`${loggedInUser.uid}`),
+    {
+      snapshotListenOptions: { includeMetadataChanges: false },
+    }
+  );
 
   useEffect(() => {
     console.log('useEffect', props.location);
@@ -48,7 +54,6 @@ export const TripPlanning = props => {
 
   const handleChange = (evt, type) => {
     setSubmit(false);
-
     if (evt.currentTarget.name === 'city') {
       setCity(evt.target.value);
     } else if (evt.currentTarget.name === 'country') {
@@ -67,7 +72,6 @@ export const TripPlanning = props => {
 
   const handleSubmit = evt => {
     evt.preventDefault();
-
     if (country === 'Select a Country...' || country === '') {
       alert('Please select a country');
     } else {
@@ -77,12 +81,6 @@ export const TripPlanning = props => {
   };
 
   //create route for trips associated with loggedInUser
-  const [snapshot, loading, error] = useDocument(
-    db.collection('Users').doc(`${loggedInUser.uid}`),
-    {
-      snapshotListenOptions: { includeMetadataChanges: false },
-    }
-  );
 
   if (loggedInUser) {
     console.log('render!');
@@ -129,7 +127,7 @@ export const TripPlanning = props => {
                   <SearchAPI
                     city={city}
                     country={country}
-                    tripId={tripId}
+                    // tripId={tripId}
                     code={code}
                   />
                 )}
@@ -140,25 +138,25 @@ export const TripPlanning = props => {
             </Tabs>
           </div>
           <div className={styles.BucketList}>
-            <Form.Control
-              name="tripId"
-              value={tripId}
-              as="select"
-              onChange={changeTripId}
-            >
-              <option>select a trip to plan</option>
-              {snapshot &&
-                Object.entries(snapshot.data().Trips).map(trip => (
-                  <option key={trip[0]} value={trip[0]}>
-                    {trip[1].tripName}
-                  </option>
-                ))}
-            </Form.Control>
-            <Tabs defaultActiveKey="Bucket List" id="Trekk-Bucket-List">
-              <Tab eventKey="Bucket List" title="Bucket List">
-                <BucketList tripId={tripId} />
-              </Tab>
+            <Tabs defaultActiveKey="Trekk List" id="Trekk-Bucket-List">
+              {/* <Tab eventKey="Bucket List" title="Bucket List">
+                <BucketList tripId={'d26eX8KPoeNu1WtKhVfF'} />
+              </Tab> */}
               <Tab eventKey="Trekk List" title="Trekk List">
+                <Form.Control
+                  name="tripId"
+                  value={tripId}
+                  as="select"
+                  onChange={changeTripId}
+                >
+                  <option>select a trip to plan</option>
+                  {snapshot &&
+                    Object.entries(snapshot.data().Trips).map(trip => (
+                      <option key={trip[0]} value={trip[0]}>
+                        {trip[1].tripName}
+                      </option>
+                    ))}
+                </Form.Control>
                 {tripId && <TrekkList list={'trekkList'} tripId={tripId} />}
               </Tab>
             </Tabs>
