@@ -4,6 +4,7 @@ import Rating from "react-rating";
 import { useDocument } from "react-firebase-hooks/firestore";
 import db from "../../../firebase";
 import style from './journal.module.css'
+import * as secret from '../../../secrets'
 
 export const JournalCard = props => {
   //take the place ID passed down, and query the places collection to get the data that should go on the card
@@ -18,11 +19,17 @@ export const JournalCard = props => {
 
     // console.log("place doc", value)
     const placeInfo = value.data();
-    // console.log("data in place doc", placeInfo)
+    console.log("data in place doc", placeInfo)
     return (
       <div>
         <Card className={style.card}>
-          <Card.Body>{placeInfo.sight.name}</Card.Body>
+        <Card.Img src={`${placeInfo.sight.placeImage}&key=${secret.places}`} />
+
+          <Card.Body>{placeInfo.sight.name}
+          {/* <Rating /> */}
+          </Card.Body>
+
+
 
           {/* <Button >+Review</Button> */}
 
