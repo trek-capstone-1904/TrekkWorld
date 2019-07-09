@@ -25,10 +25,11 @@ export const TripAlbum = props => {
   }
   console.log(value && imageArr());
 
-  if(value && imageArr){
+  if(value && imageArr.length > 0){
     return (
+
       <div style={{maxWidth:'40rem', maxHeight:'30rem'}}>{value && <ImageGallery items={imageArr()} />}</div>
-      // <Card style={{ maxWidth: '33rem' }}>
+    /* // <Card style={{ maxWidth: '33rem' }}>
       //   <Card.Header>Trip Album</Card.Header>
       //   <Card.Body>
       //     {value && (
@@ -44,11 +45,15 @@ export const TripAlbum = props => {
       //         ))}
       //       </span>
       //     )}
-      //   </Card.Body>
+            </Card.Body>
       //   <Card.Footer>
+      <div>
+       {props.fellowTrekker && <PhotoLoad from="trip" tripId={props.tripId} />}
+      </div>
+      </>
       //     {props.fellowTrekker && <PhotoLoad from="trip" tripId={props.tripId} />}
       //   </Card.Footer>
-      // </Card>
+      // </Card> */
     );
 
   } else {
