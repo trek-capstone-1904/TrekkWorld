@@ -2,7 +2,7 @@ import React from "react";
 import { useDocument } from "react-firebase-hooks/firestore";
 import Selector from "./Selector";
 import Notes from "./Notes";
-import AllNotes from './AllNotes'
+import AllNotes from "./AllNotes";
 import JournalCard from "./JournalCard";
 import { Form, CardDeck, Spinner, Badge } from "react-bootstrap";
 import db from "../../../firebase";
@@ -14,7 +14,8 @@ const JournalDay = props => {
     db
       .collection("Trips")
       .doc(props.tripId)
-      .collection("Journal").doc(props.date)
+      .collection("Journal")
+      .doc(props.date)
   );
 
   //create an array to store all of the places on the Trekk List to be used in the selector drop down options
@@ -23,10 +24,7 @@ const JournalDay = props => {
   if (error) throw error;
   if (loading) return <Spinner animation="grow" variant="info" />;
   if (value) {
-
-
-    placesArray = value.get('places')
-
+    placesArray = value.get("places");
 
     return (
       <div>
@@ -39,23 +37,22 @@ const JournalDay = props => {
             <CardDeck>
               {placesArray.map(place => (
                 <JournalCard key={place.value} place={place.value} />
-                ))}
+              ))}
             </CardDeck>
           )}
 
           <Form.Label>
-            <Badge pill variant="info" >
-
-            Add a Location:
-            </Badge>
-            </Form.Label>
+            {/* <Badge pill variant="info">
+              Add a Location:
+            </Badge> */}
+          </Form.Label>
+          <div >
+            <div>All Notes</div>
+            <AllNotes tripId={props.tripId} date={props.date} />
+            <Notes tripId={props.tripId} date={props.date} />
           <Selector tripId={props.tripId} date={props.date} />
-          <Form.Label>Notes for Today</Form.Label>
-          <AllNotes tripId={props.tripId} date={props.date}/>
-          <Notes tripId={props.tripId} date={props.date}/>
-
+          </div>
         </Form>
-
       </div>
     );
   } else {

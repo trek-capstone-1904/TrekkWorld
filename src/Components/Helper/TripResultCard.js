@@ -20,6 +20,7 @@ import TripResultPlaceCard from '../TripPlanning/TripResultPlaceCard';
 
 export const TripResultCard = props => {
   console.log('card:', props.card);
+
   const { card, tripId } = props;
 
   const [value, loading, error] = useCollection(

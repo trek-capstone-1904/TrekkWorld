@@ -3,7 +3,8 @@ import userContext from "../../../Contexts/userContext";
 import Select from "react-select";
 import { useDocument, useCollection } from "react-firebase-hooks/firestore";
 import db from "../../../firebase";
-import { Spinner } from "react-bootstrap";
+import { Spinner, Modal, Button } from "react-bootstrap";
+
 
 export const Selector = props => {
   const loggedInUser = useContext(userContext);
@@ -23,6 +24,16 @@ export const Selector = props => {
       .collection("Journal")
       .doc(props.date)
   );
+
+  const [isShowing, setIsShowing] = useState(false);
+
+  function toggle() {
+    setIsShowing(!isShowing);
+  }
+
+  function handleClose(){
+    setIsShowing(false);
+  }
 
   let datePlaces;
   if (optionValue) {
@@ -55,7 +66,12 @@ export const Selector = props => {
 
     if (datePlaces && datePlaces.length > 0) {
       return (
-        <div>
+        <>
+        <Button type="button" onClick={toggle}>Add a Location</Button>
+        <Modal show={isShowing} onHide={toggle} size="lg" centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Add Locations</Modal.Title>
+        </Modal.Header>
           <Select
             isMulti
             name="places"
@@ -63,13 +79,23 @@ export const Selector = props => {
             value={datePlaces}
             onChange={onChange}
           />
-        </div>
+          <Button
+          style={{ width: "5rem", align: "centered" }}
+          type="button"
+          onClick={handleClose}
+        >
+          Done
+        </Button>
+        </Modal>
+        </>
       );
     } else {
       return (
-        <div>
+        <>
+        <Modal>
           <Select isMulti name="places" options={options} onChange={onChange} />
-        </div>
+        </Modal>
+        </>
       );
     }
   }
