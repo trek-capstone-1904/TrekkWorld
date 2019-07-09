@@ -14,6 +14,7 @@ import userContext from '../../Contexts/userContext';
 import firebase from 'firebase/app';
 import * as secret from '../../secrets';
 import Axios from 'axios';
+import TripSelectButton from './TripSelectButton';
 
 export const SearchAPICard = props => {
   //type = city if from query for top cities OR type= sights if for top sights in a city
@@ -22,23 +23,22 @@ export const SearchAPICard = props => {
   const { name, snippet } = props.sight;
   // const { tripId } = props;
   const [image, setImage] = useState('');
-  const [tripId, setTripId] = useState('');
+  // const [tripId, setTripId] = useState('');
 
   const loggedInUser = useContext(userContext);
 
-  const [snapshot, loading, error] = useDocument(
-    db.collection('Users').doc(`${loggedInUser.uid}`),
-    {
-      snapshotListenOptions: { includeMetadataChanges: false },
-    }
-  );
+  // const [snapshot, loading, error] = useDocument(
+  //   db.collection('Users').doc(`${loggedInUser.uid}`),
+  //   {
+  //     snapshotListenOptions: { includeMetadataChanges: false },
+  //   }
+  // );
 
-  const changeTripId = (evt, type) => {
-    if (evt.currentTarget.name === 'tripId') {
-      setTripId(evt.target.value);
-    }
-  };
-  console.log('tripId', tripId);
+  // const changeTripId = (evt, type) => {
+  //   if (evt.currentTarget.name === 'tripId') {
+  //     setTripId(evt.target.value);
+  //   }
+  // };
 
   useGoogle(props.sight, country);
   function useGoogle(sight, country) {
@@ -65,7 +65,7 @@ export const SearchAPICard = props => {
         let resp = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&maxheight=250&photoreference=${photoRef}&key=${
           secret.places
         }`;
-        console.log('resp', resp);
+        // console.log('resp', resp);
         setImage(resp);
         return resp;
       })
@@ -88,32 +88,7 @@ export const SearchAPICard = props => {
         >
           + Bucket
         </Button>
-        <ButtonGroup
-          name="tripId"
-          value={tripId}
-          // as="select"
-          onChange={changeTripId}
-        >
-          <DropdownButton
-            as={ButtonGroup}
-            name={tripId}
-            title="Add to Trip"
-            id="bg-nested-dropdown"
-          >
-            {snapshot &&
-              Object.entries(snapshot.data().Trips).map(trip => (
-                <Dropdown.Item
-                  eventKey={trip[0]}
-                  value={trip[0]}
-                  onClick={() =>
-                    handleClick(slicedImage, props, loggedInUser.uid, tripId)
-                  }
-                >
-                  {trip[1].tripName}
-                </Dropdown.Item>
-              ))}
-          </DropdownButton>
-        </ButtonGroup>
+        <TripSelectButton slicedImage={slicedImage} button={props} />
       </Card.Body>
     </Card>
   );
