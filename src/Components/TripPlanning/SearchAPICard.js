@@ -45,10 +45,25 @@ async function useGoogle(sight) {
     //   },${sight.coordinates.longitude}&key=${secret.places}`,
     //   { mode: 'no-cors' }
     // );
-    const resp = await fetch(proxyurl + searchPlace)
-      .then(response => response.text())
-      .then(content => console.log(content))
-      .catch(() => console.log(searchPlace));
+    const resp = fetch(proxyurl + searchPlace)
+      .then(response => response.json())
+      .then(content => {
+        console.log(content);
+        // console.log(content.candidates[0].photos[0].photo_reference)
+        let photoRef = content.candidates[0].photos[0].photo_reference;
+        let resp = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=${photoRef}&key=${
+          secret.places
+        }`;
+        console.log(resp);
+        return resp;
+      })
+      // .then(img => fetch(proxyurl + img))
+      // .then(img => <img src={resp} alt="sight" />)
+      // .then(resp => console.log('respon', resp))
+      // .then(cont => {
+      //   console.log('LOOK AT ME', cont);
+      // })
+      .catch(() => console.log('HELP'));
     //   const json = await resp.json();
     //   // const json = await resp.json();
     //   resp.setHeader('Access-Control-Allow-Origin', '*');
@@ -68,7 +83,7 @@ export const SearchAPICard = props => {
   const loggedInUser = useContext(userContext);
   console.log('tripId on searchAPIcard', tripId);
 
-  const placeImage = useGoogle(props.sight);
+  // const placeImage = useGoogle(props.sight);
 
   return (
     <Card style={{ margin: '.5rem 1rem' }}>
@@ -83,6 +98,12 @@ export const SearchAPICard = props => {
         >
           + Bucket
         </Button>
+        <img
+          src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=CmRaAAAAu_oFpwCz-wEMH0Ruhoe34s0OGtcGTSDykJSbEaXeYZIK-DU78I-gIN6SZz1U-3CvMGRnQ6bz8xHaVOZfLYHRT4m2WfltWPhsaP6O1SgOTM0vF9tmnEPUWQB4PBWzTEfnEhBYkZaqm8KK3bGzcofN0oC9GhT5s8nmO5bmEk_rNwS8AnEKSPRJiw&key=${
+            secret.places
+          }`}
+          alt="sight"
+        />
         <Button
           style={{ margin: '0 1rem' }}
           variant="info"
