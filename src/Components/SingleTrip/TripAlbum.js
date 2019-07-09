@@ -3,7 +3,7 @@ import db from '../../firebase';
 import { useCollection } from 'react-firebase-hooks/firestore';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGallery from 'react-image-gallery';
-import { Card, Image } from 'react-bootstrap';
+import { Card, Image, Spinner } from 'react-bootstrap';
 import { PhotoLoad } from '../index';
 
 export const TripAlbum = props => {
@@ -24,31 +24,38 @@ export const TripAlbum = props => {
     }));
   }
   console.log(value && imageArr());
-
-  return (
-    <div style={{maxWidth:'40rem', maxHeight:'30rem'}}>{value && <ImageGallery items={imageArr()} />}</div>
-    // <Card style={{ maxWidth: '33rem' }}>
-    //   <Card.Header>Trip Album</Card.Header>
-    //   <Card.Body>
-    //     {value && (
-    //       <span>
-    //         {value.docs.map(doc => (
-    //           // console.log(doc.data().URL)
-    //           <Image
-    //             style={{ maxHeight: '7rem', margin:'.2rem' }}
-    //             key={doc.id}
-    //             src={doc.data().URL}
-    //             thumbnail
-    //           />
-    //         ))}
-    //       </span>
-    //     )}
-    //   </Card.Body>
-    //   <Card.Footer>
-    //     {props.fellowTrekker && <PhotoLoad from="trip" tripId={props.tripId} />}
-    //   </Card.Footer>
-    // </Card>
-  );
+  if (error) throw error;
+  if (loading) return <Spinner animation="grow" variant="info" />;
+  if (value) {
+    return (
+      <div style={{ maxWidth: '30vw', maxHeight: '40vh' }}>
+        {imageArr().length > 0 && <ImageGallery width="10rem"items={imageArr()} />}
+        {imageArr().length === 0 && <div>Add Images to your trip!</div>}
+        {props.fellowTrekker && <PhotoLoad from="trip" tripId={props.tripId} />}
+      </div>
+      // <Card style={{ maxWidth: '33rem' }}>
+      //   <Card.Header>Trip Album</Card.Header>
+      //   <Card.Body>
+      //     {value && (
+      //       <span>
+      //         {value.docs.map(doc => (
+      //           // console.log(doc.data().URL)
+      //           <Image
+      //             style={{ maxHeight: '7rem', margin:'.2rem' }}
+      //             key={doc.id}
+      //             src={doc.data().URL}
+      //             thumbnail
+      //           />
+      //         ))}
+      //       </span>
+      //     )}
+      //   </Card.Body>
+      //   <Card.Footer>
+      //     {props.fellowTrekker && <PhotoLoad from="trip" tripId={props.tripId} />}
+      //   </Card.Footer>
+      // </Card>
+    );
+  }
 };
 
 export default TripAlbum;
