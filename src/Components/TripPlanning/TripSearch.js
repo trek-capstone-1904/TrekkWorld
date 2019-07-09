@@ -35,12 +35,9 @@ export const TripSearch = props => {
   //       ))
   // );
 
-  // .filter(doc => (!doc.data().users.uid) )
-  // .filter(doc => Object.keys(doc.data().users).reduce((accum, elem) => {if(elem === uid){ accum = true} return accum},false )) )
-
   return (
     <div>
-      {/* {error && <strong>Error: {error}</strong>}
+      {error && <strong>Error: {error}</strong>}
       {loading && <Spinner animation="grow" variant="info" />}
       {snapshot &&
         snapshot.docs
@@ -54,7 +51,7 @@ export const TripSearch = props => {
           )
           .map(doc => (
             <TripResultCard key={doc.id} tripId={doc.id} card={doc.data()} />
-          ))} */}
+          ))}
     </div>
   );
 };

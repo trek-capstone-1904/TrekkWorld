@@ -3,6 +3,7 @@ import { Card, Button } from 'react-bootstrap';
 import styles from '../SearchAPICard.module.css';
 import db from '../../firebase';
 import userContext from '../../Contexts/userContext';
+import { TripSelectButton } from '../index';
 
 export const TripResultPlaceCard = props => {
   const { placeName, snippet, placeImage } = props.card;
@@ -25,13 +26,14 @@ export const TripResultPlaceCard = props => {
         >
           + Bucket
         </Button>
-        <Button
+        {/* <Button
           style={{ margin: '0 1rem' }}
           variant="info"
           onClick={() => addToTrekk(uid, placeId, placeName, snippet, tripId)}
         >
           + Trekk List
-        </Button>
+        </Button> */}
+        <TripSelectButton slicedImage={placeImage} card={props} />
       </Card.Body>
     </Card>
   );
@@ -46,18 +48,18 @@ const addToBucketList = (uid, placeId, placeName, snippet) => {
   });
 };
 
-const addToTrekk = (uid, placeId, placeName, snippet, tripId) => {
-  db.collection('Trips')
-    .doc(`${tripId}`)
-    .collection('TrekkList')
-    .doc(`${placeId}`)
-    .set(
-      {
-        placeName: placeName,
-        snippet: snippet,
-      },
-      { merge: true }
-    );
-};
+// const addToTrekk = (uid, placeId, placeName, snippet, tripId) => {
+//   db.collection('Trips')
+//     .doc(`${tripId}`)
+//     .collection('TrekkList')
+//     .doc(`${placeId}`)
+//     .set(
+//       {
+//         placeName: placeName,
+//         snippet: snippet,
+//       },
+//       { merge: true }
+//     );
+// };
 
 export default TripResultPlaceCard;

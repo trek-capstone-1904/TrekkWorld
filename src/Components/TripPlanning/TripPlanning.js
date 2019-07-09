@@ -132,9 +132,9 @@ export const TripPlanning = props => {
                   />
                 )}
               </Tab>
-              {/* <Tab eventKey="Trip-Search" title="Trip Search"> */}
-              {/* {submitted && <TripSearch city={city} country={country} />}
-              </Tab> */}
+              <Tab eventKey="Trip-Search" title="Trip Search">
+                {submitted && <TripSearch city={city} country={country} />}
+              </Tab>
             </Tabs>
           </div>
           <div className={styles.BucketList}>

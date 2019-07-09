@@ -49,11 +49,6 @@ export const TripResultCard = props => {
   }
   tripCompleted();
 
-  const scrollContainerStyle = {
-    maxWidth: '66vw',
-    maxHeight: '15rem',
-    border: '1px dotted lightgray',
-  };
   return (
     <Card border="info" style={{ margin: '.5rem' }}>
       {/* <Card.Img variant="top" src={`../${card.tripImageUrl}`} /> */}
