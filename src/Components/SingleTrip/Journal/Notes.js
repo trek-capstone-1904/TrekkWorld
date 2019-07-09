@@ -1,92 +1,86 @@
-import React, { useState, useContext} from "react";
-import { Form, Button } from "react-bootstrap";
+import React, { useState, useContext } from "react";
+import { Form, Button, Modal } from "react-bootstrap";
 import db, { loggedUser } from "../../../firebase";
 import { useDocument } from "react-firebase-hooks/firestore";
 import userContext from "../../../Contexts/userContext";
 import firebase from "firebase/app";
 
 export const Notes = props => {
-  const loggedInUser = useContext(userContext)
+  const loggedInUser = useContext(userContext);
 
   const [notes, setNotes] = useState("");
+  const [isShowing, setIsShowing] = useState(false);
+
+  function toggle() {
+    setIsShowing(!isShowing);
+  }
+
+  function handleClose() {
+    setIsShowing(false);
+    tripJournal
+      .collection("Notes")
+      .add({
+        time: firebase.firestore.FieldValue.serverTimestamp(),
+        user: loggedInUser.uid,
+        userName: loggedInUser.displayName,
+        note: notes
+      })
+      .then(function() {
+        alert("Journal entry added!");
+      });
+  }
   function handleChangeNotes(e) {
-    e.preventDefault()
+    e.preventDefault();
     setNotes(e.target.value);
   }
   const tripJournal = db
     .collection("Trips")
     .doc(props.tripId)
-    .collection("Journal").doc(props.date);
-
-    const [value, loading, error] = useDocument(tripJournal)
+    .collection("Journal")
+    .doc(props.date);
 
   function handleClick(event) {
-    event.preventDefault()
-    // if(tripJournal.notes && tripJournal.notes[loggedInUser.uid]){
-    //   tripJournal.notes[loggedInUser.uid]
-    //     .set({
-    //       [loggedInUser.uid]: notes
-    //     }, {mergeFields: true})
-    //     .then(function() {
-    //       alert("Journal Entry Added!");
+    event.preventDefault();
 
-    //     });
-
-    //    } else if(tripJournal.notes){
-    //   tripJournal.notes
-    //     .set({
-    //        [loggedInUser.uid]: notes
-    //     }, {merge: true})
-    //     .then(function() {
-    //       alert("Journal Entry Added!");
-
-    //     });
-
-    // } else {
-    //   tripJournal
-    //     .set({
-    //        notes: {[loggedInUser.uid]: notes}
-    //     }, {merge: true})
-    //     .then(function() {
-    //       alert("Journal Entry Added!");
-
-    //     });
-    // }
-
-  //   tripJournal.collection("Notes").add({
-  //     [loggedInUser.uid]: notes
-  //   }).then(function() {
-  //       alert("Journal Entry Added!");
-
-  // })
-  tripJournal.collection("Notes").add({
-    time: firebase.firestore.FieldValue.serverTimestamp(),
-    user: loggedInUser.uid,
-    userName: loggedInUser.displayName,
-    note: notes
-  }).then(function(){
-    alert("Journal entry added!")
-  })
-}
+    tripJournal
+      .collection("Notes")
+      .add({
+        time: firebase.firestore.FieldValue.serverTimestamp(),
+        user: loggedInUser.uid,
+        userName: loggedInUser.displayName,
+        note: notes
+      })
+      .then(function() {
+        alert("Journal entry added!");
+      });
+  }
 
   return (
-    <>
-
-      <Form.Control
-        as="input"
-        rows="6"
-        onChange={handleChangeNotes}
-        value={notes}
-      />
-      <Button type="button" onClick={handleClick}>
-        Post
+    <div>
+      <Button type="button" onClick={toggle}>
+        Add a Note
       </Button>
-      <div>
-        All Notes
-      </div>
-    </>
+      <Modal show={isShowing} size="lg" centered>
+        <Modal.Header>
+          <Modal.Title>Add a Note</Modal.Title>
+        </Modal.Header>
+        <Form.Control
+          as="input"
+          rows="6"
+          onChange={handleChangeNotes}
+          value={notes}
+          placeholder={"Start typing to add a note..."}
+        />
+        <Button
+          style={{ width: "5rem", align: "centered" }}
+          type="button"
+          onClick={handleClose}
+        >
+          Post
+        </Button>
+      </Modal>
+    </div>
   );
 };
-
 
 export default Notes;
