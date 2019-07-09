@@ -1,31 +1,34 @@
-import React from 'react'
-import { useDocument } from 'react-firebase-hooks/firestore';
+import React from "react";
+import { useDocument, useCollectionData } from "react-firebase-hooks/firestore";
 import db, { loggedUser } from "../../../firebase";
-import { Spinner} from "react-bootstrap";
+import { Spinner } from "react-bootstrap";
 
-
-export const AllNotes = (props) => {
-  const [value, loading, error] = useDocument(db.collection("Trips").doc(props.tripId).collection("Journal").doc(props.date))
+export const AllNotes = props => {
+  const [value, loading, error] = useCollectionData(
+    db
+      .collection("Trips")
+      .doc(props.tripId)
+      .collection("Journal")
+      .doc(props.date)
+      .collection("Notes")
+      .orderBy("time")
+  );
 
   if (error) throw error;
   if (loading) return <Spinner animation="grow" variant="info" />;
-  if (value && value.data().notes){
-    let notes = value.data().notes
-    console.log(notes)
-    return (
-      <div>
-        {notes[loggedUser.uid]}
+  if (value) {
+    console.log(value);
+    // value.forEach(function(doc){
+    //   console.log(doc.data())
+    // })
+    return <div>{value.map(note =>(
+      <div key={note.time}>
+        {note.userName}: {note.note}
       </div>
-    )
-
+    ))}</div>;
   } else {
-    return(
-      <div>
-        Add a note to get started!
-      </div>
-    )
+    return <div>Add a note to get started!</div>;
   }
+};
 
-}
-
-export default AllNotes
+export default AllNotes;
