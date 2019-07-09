@@ -4,14 +4,64 @@ import styles from '../SearchAPICard.module.css';
 import db from '../../firebase';
 import userContext from '../../Contexts/userContext';
 import firebase from 'firebase/app';
+import * as secret from '../../secrets';
+import Axios from 'axios';
 
-function useGoogle(sight) {
+async function useGoogle(sight) {
   // const sightName=
-  console.log(sight)
+  console.log('sightname', sight);
+  // let loadPosts = function() {
+  //   let xhr = new XMLHttpRequest();
+  //   xhr.onreadystatechange = function() {
+  //     if (this.readyState === 4 && this.status === 200) {
+  //       let response = JSON.parse(this.responseText);
+  //       renderPosts(response);
+  //     }
+  //   };
+  //   xhr.open(
+  //     'GET',
+  //     `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${
+  //       sight.name
+  //     }&inputtype=textquery&fields=photos,place_id,formatted_address,name,opening_hours,rating&locationbias=circle:2000@${
+  //       sight.coordinates.latitude
+  //     },${sight.coordinates.longitude}&key=${secret.places}`
+  //   );
+  //   xhr.setRequestHeader('Accept', 'application/json');
+  //   xhr.send();
+  // };
+  if (sight.coordinates) {
+    let searchPlace = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${
+      sight.name
+    }&inputtype=textquery&fields=photos,place_id,formatted_address,name,opening_hours,rating&locationbias=circle:2000@${
+      sight.coordinates.latitude
+    },${sight.coordinates.longitude}&key=${secret.places}`;
+    const proxyurl = 'https://cors-anywhere.herokuapp.com/';
+    // try {
+    // const resp = await fetch(
+    //   `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${
+    //     sight.name
+    //   }&inputtype=textquery&fields=photos,place_id,formatted_address,name,opening_hours,rating&locationbias=circle:2000@${
+    //     sight.coordinates.latitude
+    //   },${sight.coordinates.longitude}&key=${secret.places}`,
+    //   { mode: 'no-cors' }
+    // );
+    const resp = await fetch(proxyurl + searchPlace)
+      .then(response => response.text())
+      .then(content => console.log(content))
+      .catch(() => console.log(searchPlace));
+    //   const json = await resp.json();
+    //   // const json = await resp.json();
+    //   resp.setHeader('Access-Control-Allow-Origin', '*');
+    //   console.log('resp', json);
+    // } catch (err) {
+    //   console.log(err);
+    // }
+  }
 }
 
 export const SearchAPICard = props => {
   //type = city if from query for top cities OR type= sights if for top sights in a city
+  console.log('props in searchAPI card', props);
   const { country } = props;
   const { name, snippet } = props.sight;
   const { tripId } = props;
