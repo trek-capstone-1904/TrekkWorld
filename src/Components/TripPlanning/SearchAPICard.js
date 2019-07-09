@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import styles from '../SearchAPICard.module.css';
 import db from '../../firebase';
@@ -7,60 +7,37 @@ import firebase from 'firebase/app';
 import * as secret from '../../secrets';
 import Axios from 'axios';
 
-async function useGoogle(sight) {
-  // const sightName=
-  console.log('sightname', sight);
-  // let loadPosts = function() {
-  //   let xhr = new XMLHttpRequest();
-  //   xhr.onreadystatechange = function() {
-  //     if (this.readyState === 4 && this.status === 200) {
-  //       let response = JSON.parse(this.responseText);
-  //       renderPosts(response);
-  //     }
-  //   };
-  //   xhr.open(
-  //     'GET',
-  //     `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${
-  //       sight.name
-  //     }&inputtype=textquery&fields=photos,place_id,formatted_address,name,opening_hours,rating&locationbias=circle:2000@${
-  //       sight.coordinates.latitude
-  //     },${sight.coordinates.longitude}&key=${secret.places}`
-  //   );
-  //   xhr.setRequestHeader('Accept', 'application/json');
-  //   xhr.send();
-  // };
-  if (sight.coordinates) {
-    let searchPlace = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${
-      sight.name
-    }&inputtype=textquery&fields=photos,place_id,formatted_address,name,opening_hours,rating&locationbias=circle:2000@${
-      sight.coordinates.latitude
-    },${sight.coordinates.longitude}&key=${secret.places}`;
-    const proxyurl = 'https://cors-anywhere.herokuapp.com/';
-    // try {
-    // const resp = await fetch(
-    //   `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${
-    //     sight.name
-    //   }&inputtype=textquery&fields=photos,place_id,formatted_address,name,opening_hours,rating&locationbias=circle:2000@${
-    //     sight.coordinates.latitude
-    //   },${sight.coordinates.longitude}&key=${secret.places}`,
-    //   { mode: 'no-cors' }
-    // );
-    const resp = fetch(proxyurl + searchPlace)
-      .then(response => response.json())
-      .then(content => {
-        console.log(content);
-        // console.log(content.candidates[0].photos[0].photo_reference)
-        let photoRef = content.candidates[0].photos[0].photo_reference;
-        let resp = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=${photoRef}&key=${
-          secret.places
-        }`;
-        console.log(resp);
-        return resp;
-      })
+// let resp;
+// function useGoogle(sight, country) {
+//   let searchPlace;
+//   if (sight.coordinates) {
+//     searchPlace = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${
+//       sight.name
+//     }&inputtype=textquery&fields=photos,place_id,formatted_address,name,opening_hours,rating&locationbias=circle:2000@${
+//       sight.coordinates.latitude
+//     },${sight.coordinates.longitude}&key=${secret.places}`;
+//   } else {
+//     searchPlace = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${
+//       sight.name
+//     }${country}&inputtype=textquery&fields=photos,place_id,formatted_address,name,opening_hours,rating&
+//     &key=${secret.places}`;
+//   }
 
-      .catch(() => console.log('HELP'));
-  }
-}
+//   const proxyurl = 'https://cors-anywhere.herokuapp.com/';
+
+//   const response = fetch(proxyurl + searchPlace)
+//     .then(response => response.json())
+//     .then(content => {
+//       let photoRef = content.candidates[0].photos[0].photo_reference;
+//       let resp = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=${photoRef}&key=${
+//         secret.places
+//       }`;
+//       console.log('resp', resp);
+//       setImage(resp);
+//       return resp;
+//     })
+//     .catch(() => console.log('HELP'));
+// }
 
 export const SearchAPICard = props => {
   //type = city if from query for top cities OR type= sights if for top sights in a city
@@ -68,11 +45,42 @@ export const SearchAPICard = props => {
   const { country } = props;
   const { name, snippet } = props.sight;
   const { tripId } = props;
+  const [image, setImage] = useState('');
   const loggedInUser = useContext(userContext);
   console.log('tripId on searchAPIcard', tripId);
+  const placeImage = useGoogle(props.sight, country);
+  // const [placeImage, loading, error] = useGoogle(props.sight);
+  function useGoogle(sight, country) {
+    let searchPlace;
+    if (sight.coordinates) {
+      searchPlace = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${
+        sight.name
+      }&inputtype=textquery&fields=photos,place_id,formatted_address,name,opening_hours,rating&locationbias=circle:2000@${
+        sight.coordinates.latitude
+      },${sight.coordinates.longitude}&key=${secret.places}`;
+    } else {
+      searchPlace = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${
+        sight.name
+      }${country}&inputtype=textquery&fields=photos,place_id,formatted_address,name,opening_hours,rating&
+      &key=${secret.places}`;
+    }
 
-  // const placeImage = useGoogle(props.sight);
+    const proxyurl = 'https://cors-anywhere.herokuapp.com/';
 
+    const response = fetch(proxyurl + searchPlace)
+      .then(response => response.json())
+      .then(content => {
+        let photoRef = content.candidates[0].photos[0].photo_reference;
+        let resp = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=${photoRef}&key=${
+          secret.places
+        }`;
+        console.log('resp', resp);
+        setImage(resp);
+        return resp;
+      })
+      .catch(() => console.log('HELP'));
+  }
+  console.log('placeImage:', image && image);
   return (
     <Card style={{ margin: '.5rem 1rem' }}>
       <Card.Body>
@@ -86,12 +94,12 @@ export const SearchAPICard = props => {
         >
           + Bucket
         </Button>
-        <img
-          src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=CmRaAAAAu_oFpwCz-wEMH0Ruhoe34s0OGtcGTSDykJSbEaXeYZIK-DU78I-gIN6SZz1U-3CvMGRnQ6bz8xHaVOZfLYHRT4m2WfltWPhsaP6O1SgOTM0vF9tmnEPUWQB4PBWzTEfnEhBYkZaqm8KK3bGzcofN0oC9GhT5s8nmO5bmEk_rNwS8AnEKSPRJiw&key=${
-            secret.places
-          }`}
-          alt="sight"
-        />
+        {image && (
+          <img
+            src={image}
+            alt="sight"
+          />
+        )}
         <Button
           style={{ margin: '0 1rem' }}
           variant="info"
