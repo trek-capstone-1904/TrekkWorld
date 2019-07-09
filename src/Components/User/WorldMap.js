@@ -1,12 +1,12 @@
-import React, { useContext, useState } from 'react';
-import Chart from 'react-google-charts';
-import { useDocument } from 'react-firebase-hooks/firestore';
-import db from '../../firebase';
-import userContext from '../../Contexts/userContext';
-import { Spinner, Button } from 'react-bootstrap';
-import zoom from '../../images/baseline_zoom_out_map_black_18dp.png';
-import styles from '../UserProfile.module.css';
-import Modal from 'react-bootstrap/Modal';
+import React, { useContext, useState } from "react";
+import Chart from "react-google-charts";
+import { useDocument } from "react-firebase-hooks/firestore";
+import db from "../../firebase";
+import userContext from "../../Contexts/userContext";
+import { Spinner, Button } from "react-bootstrap";
+import zoom from "../../images/baseline_zoom_out_map_black_18dp.png";
+import styles from "../UserProfile.module.css";
+import Modal from "react-bootstrap/Modal";
 
 export const WorldMap = () => {
   const loggedInUser = useContext(userContext);
@@ -15,7 +15,7 @@ export const WorldMap = () => {
   const [value, loading, error] = useDocument(
     db.doc(`Users/${loggedInUser.uid}`),
     {
-      valueListenOptions: { includeMetadataChanges: true },
+      valueListenOptions: { includeMetadataChanges: true }
     }
   );
 
@@ -30,24 +30,24 @@ export const WorldMap = () => {
   if (value) {
     const countries = value && value.data().countriesVisited;
     const dataCountries = value && countries.map(country => [country]);
-    dataCountries.unshift(['Countries']);
+    dataCountries.unshift(["Countries"]);
     return (
-      <div styles={{ maxWidth: '100vw' }}>
-        <div style={{ position: 'relative' }}>
+      <div >
+        <div >
           <Chart
             chartType="GeoChart"
-            width="30rem"
+            width="100%"
             data={dataCountries}
             options={{
               // colorAxis: { colors: 'blue' },
-              backgroundColor: 'none',
-              datalessRegionColor: 'lightgray',
-              defaultColor: '#17a2b8',
+              backgroundColor: "none",
+              datalessRegionColor: "lightgray",
+              defaultColor: "#17a2b8"
             }}
           />
-          <span style={{ position: 'absolute', top: '0%', left: '0%' }}>
-            <button onClick={toggle} style={{ border: '0', outline: 'none' }}>
-              <img style={{ width: '1.25rem' }} src={zoom} alt="zoom" />
+          <span style={{ position: "absolute", top: "0%", left: "0%" }}>
+            <button onClick={toggle} style={{ border: "0", outline: "none" }}>
+              <img style={{ width: "1.25rem" }} src={zoom} alt="zoom" />
             </button>
           </span>
         </div>
@@ -69,9 +69,9 @@ export const WorldMap = () => {
               data={dataCountries}
               options={{
                 // colorAxis: { colors: 'blue' },
-                backgroundColor: 'none',
-                datalessRegionColor: 'lightgray',
-                defaultColor: '#17a2b8',
+                backgroundColor: "none",
+                datalessRegionColor: "lightgray",
+                defaultColor: "#17a2b8"
               }}
             />
           </Modal.Body>
