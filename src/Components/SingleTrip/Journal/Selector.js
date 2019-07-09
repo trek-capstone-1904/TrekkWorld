@@ -5,6 +5,7 @@ import { useDocument, useCollection } from "react-firebase-hooks/firestore";
 import db from "../../../firebase";
 import { Spinner, Modal, Button } from "react-bootstrap";
 
+
 export const Selector = props => {
   const loggedInUser = useContext(userContext);
 
