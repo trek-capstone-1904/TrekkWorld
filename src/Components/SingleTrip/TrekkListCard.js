@@ -4,6 +4,7 @@ import styles from '../SearchAPICard.module.css';
 import userContext from '../../Contexts/userContext';
 import db from '../../firebase';
 import firebase from 'firebase/app';
+import * as secret from '../../secrets';
 
 export const TrekkListCard = props => {
   const loggedInUser = useContext(userContext);
@@ -14,7 +15,9 @@ export const TrekkListCard = props => {
     <Card style={{ margin: '.5rem 1rem' }}>
       <Card.Body>
         <Card.Title>{placeName}</Card.Title>
-        {placeImage && <img src={placeImage} alt="sight" />}
+        {placeImage && (
+          <img src={`${placeImage}&key=${secret.places}`} alt="sight" />
+        )}
 
         <Card.Text className={styles.cardText}>{snippet}</Card.Text>
         <Button

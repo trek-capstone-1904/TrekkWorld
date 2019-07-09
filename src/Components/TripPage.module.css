@@ -1,6 +1,7 @@
 .Jumbotron {
   display: flex;
   justify-content: space-around;
+  padding: 1rem;
 }
 
 .tripHeader{
