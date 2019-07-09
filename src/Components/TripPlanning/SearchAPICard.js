@@ -57,20 +57,8 @@ async function useGoogle(sight) {
         console.log(resp);
         return resp;
       })
-      // .then(img => fetch(proxyurl + img))
-      // .then(img => <img src={resp} alt="sight" />)
-      // .then(resp => console.log('respon', resp))
-      // .then(cont => {
-      //   console.log('LOOK AT ME', cont);
-      // })
+
       .catch(() => console.log('HELP'));
-    //   const json = await resp.json();
-    //   // const json = await resp.json();
-    //   resp.setHeader('Access-Control-Allow-Origin', '*');
-    //   console.log('resp', json);
-    // } catch (err) {
-    //   console.log(err);
-    // }
   }
 }
 
