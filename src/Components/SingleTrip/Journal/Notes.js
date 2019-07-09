@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Form, Button, Modal } from "react-bootstrap";
-import db, { loggedUser } from "../../../firebase";
-import { useDocument } from "react-firebase-hooks/firestore";
+import db from "../../../firebase";
 import userContext from "../../../Contexts/userContext";
 import firebase from "firebase/app";
 
@@ -39,29 +38,13 @@ export const Notes = props => {
     .collection("Journal")
     .doc(props.date);
 
-  function handleClick(event) {
-    event.preventDefault();
-
-    tripJournal
-      .collection("Notes")
-      .add({
-        time: firebase.firestore.FieldValue.serverTimestamp(),
-        user: loggedInUser.uid,
-        userName: loggedInUser.displayName,
-        note: notes
-      })
-      .then(function() {
-        alert("Journal entry added!");
-      });
-  }
-
   return (
     <div>
       <Button type="button" onClick={toggle}>
         Add a Note
       </Button>
-      <Modal show={isShowing} size="lg" centered>
-        <Modal.Header>
+      <Modal show={isShowing} onHide={toggle} size="lg" centered>
+        <Modal.Header closeButton>
           <Modal.Title>Add a Note</Modal.Title>
         </Modal.Header>
         <Form.Control
@@ -69,7 +52,7 @@ export const Notes = props => {
           rows="6"
           onChange={handleChangeNotes}
           value={notes}
-          placeholder={"Start typing to add a note..."}
+          placeholder={"Start typing..."}
         />
         <Button
           style={{ width: "5rem", align: "centered" }}

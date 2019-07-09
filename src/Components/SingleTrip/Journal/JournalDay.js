@@ -42,9 +42,9 @@ const JournalDay = props => {
           )}
 
           <Form.Label>
-            <Badge pill variant="info">
+            {/* <Badge pill variant="info">
               Add a Location:
-            </Badge>
+            </Badge> */}
           </Form.Label>
           <Selector tripId={props.tripId} date={props.date} />
           <div style={{ border: "1px solid black" }}>
