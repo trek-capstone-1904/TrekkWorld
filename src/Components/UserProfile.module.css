@@ -22,6 +22,25 @@
     max-width:40rem;
   }
 }
+
+.userBody {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+
+
+}
+
+.userStats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse
+}
+
+.userCountries {
+
+}
 /* @media (min-width: 992px) .modal-lg, .modal-xl {
   max-width: 975px;
 } */

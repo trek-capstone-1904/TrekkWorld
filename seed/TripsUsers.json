@@ -1,5 +1,43 @@
 {
   "Trips": {
+    "1IVF2G50QQdhfTe2VcuZ": {
+      "startDate": "2018-12-20",
+      "endDate": "2019-01-02",
+      "tripName": "Visiting Dad for Christmas",
+      "locations": ["Netherlands", "Germany"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Family",
+      "users": {
+        "G9O6nXD45DgECe6Q1kXQYzAPLm12": {
+          "userName": "Michael de Boer",
+          "userPicture": "https://robohash.org/MichaeldeBoer"
+        },
+        "5VIhJcZytBbwYLGqHIW8TkWGYpM2": {
+          "userName": "Amanda Fox",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FAmanda.jpg?alt=media&token=aed46c9e-6f1b-4c47-811e-7db9eb90bf9c"
+        }
+      }
+    },
+    "PF2BmrQ5ZCFWjnGTRvp6": {
+      "startDate": "2018-11-20",
+      "endDate": "2018-11-27",
+      "tripName": "Bro Trip to Europe",
+      "locations": ["Netherlands", "Belgium", "France"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Friends",
+      "users": {
+        "5d95HrhWm6SNQiOBLp9Gyj8JhPn2": {
+          "userName": "Chad Anderson",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FChadAnderson.jpg?alt=media&token=68d57044-7c17-4773-abfc-51b256227d67"
+        },
+        "mywzGvLbzXVIRedM42C51nTDK1h1": {
+          "userName": "Tony Adams",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FTony.jpg?alt=media&token=9dde4776-728b-4d04-bf56-367dd0e366f3"
+        }
+      }
+    },
     "bN5MdYLJSHxrgGO53ErO": {
       "startDate": "2020-05-30",
       "endDate": "2020-06-27",
@@ -19,11 +57,83 @@
         },
         "mywzGvLbzXVIRedM42C51nTDK1h1": {
           "userName": "Tony Adams",
-          "userPicture": "https://robohash.org/TonyAdams"
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FTony.jpg?alt=media&token=9dde4776-728b-4d04-bf56-367dd0e366f3"
         },
         "iXyfgQbWhoM8CCQw6DKG0dogBPh1": {
           "userName": "Kari Moore",
-          "userPicture": "https://robohash.org/KariMoore"
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FKari.jpg?alt=media&token=192910f4-3813-4299-acb5-722e27b8ce6e"
+        }
+      }
+    },
+    "qCwwwZ0Pc3AOSNmW0mrx": {
+      "startDate": "2019-12-15",
+      "endDate": "2019-12-27",
+      "tripName": "Christmas Trip to Paris, Nice and Brussels",
+      "locations": ["France", "Belgium"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Family",
+      "users": {
+        "BYRXFO8YS5cd6NXgwAepi1GbJRm2": {
+          "userName": "Cierra Wyman",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FCierraWyman.jpg?alt=media&token=5e035838-f8d1-4866-aff4-6a9535d507de"
+        },
+        "y4VsX9HRQTblv9S5PCCG6pGvIDx1": {
+          "userName": "Justin Wyman",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FJustin.jpg?alt=media&token=3ec18d06-0595-4855-8d62-e2b60a5d825d"
+        }
+      }
+    },
+    "N8Fn2D2Ki9M4KI6SRHSf": {
+      "startDate": "2018-08-10",
+      "endDate": "2018-12-20",
+      "tripName": "Study Abroad in Argentina",
+      "locations": ["Argentina"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Solo",
+      "users": {
+        "y4VsX9HRQTblv9S5PCCG6pGvIDx1": {
+          "userName": "Justin Wyman",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FJustin.jpg?alt=media&token=3ec18d06-0595-4855-8d62-e2b60a5d825d"
+        }
+      }
+    },
+    "G6RlGWPlpS8c9PujQOg2": {
+      "startDate": "2018-10-10",
+      "endDate": "2018-10-20",
+      "tripName": "Trip to visit Machu Picchu",
+      "locations": ["Peru"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Friends",
+      "users": {
+        "y4VsX9HRQTblv9S5PCCG6pGvIDx1": {
+          "userName": "Justin Wyman",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FJustin.jpg?alt=media&token=3ec18d06-0595-4855-8d62-e2b60a5d825d"
+        },
+        "I74vJTHti9XIQKSojug0TQLBRbC3": {
+          "userName": "Fabian Wiza",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FFabian.jpg?alt=media&token=dc33c65c-ec46-4d7f-8344-0fd73e63ba42"
+        }
+      }
+    },
+    "sOsVmVuPZqhquoqe6xe2": {
+      "startDate": "2019-11-22",
+      "endDate": "2019-12-29",
+      "tripName": "Africa Safari Dream Trip",
+      "locations": ["South Africa"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Couples",
+      "users": {
+        "jKj1mv0VuJc0UauBQ6ozTuNbdSM2": {
+          "userName": "Adella Green",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FAdella.jpg?alt=media&token=9bac041e-f683-4fdd-af31-5f8f80b8c3be"
+        },
+        "I74vJTHti9XIQKSojug0TQLBRbC3": {
+          "userName": "Fabian Wiza",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FFabian.jpg?alt=media&token=dc33c65c-ec46-4d7f-8344-0fd73e63ba42"
         }
       }
     },
@@ -38,7 +148,7 @@
       "users": {
         "rStqfW1Ip3RsN0Slv5QK8HbBy203": {
           "userName": "Trent Schmidt",
-          "userPicture": "https://robohash.org/Trent Schmidt"
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FTrent.jpg?alt=media&token=9840bec7-c5c7-4d0b-93ca-10f5f83e319d"
         }
       }
     },
@@ -54,17 +164,59 @@
         "10d1o59g4Ngwlqx9csSPn4pCOPC2": {
           "userName": "Krystal Daughtery",
           "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FKrystalDaughtery.jpg?alt=media&token=53280b8e-1fb4-485d-881a-fb5ac3295115"
+        },
+        "uUUpT5ppOngv0GTjRKIhjPIV5sF3": {
+          "userName": "Marty Daughtery",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FMarty.jpg?alt=media&token=c0fcb051-c06a-4922-a6cf-0d5eb0abbb88"
+        }
+      }
+    },
+    "Yb41yt5CboKbErSGkilV": {
+      "startDate": "2020-04-20",
+      "endDate": "2020-04-29",
+      "tripName": "Bachelor Party in Amsterdam",
+      "locations": ["Netherlands"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Friends",
+      "users": {
+        "bvkXPsLhA8dp4gDU7lqjZOUMYBF3": {
+          "userName": "Brett Rempel",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FBrettRempel.jpg?alt=media&token=63d42b07-9ab3-414c-9714-4ad03a11e726"
+        },
+        "uUUpT5ppOngv0GTjRKIhjPIV5sF3": {
+          "userName": "Marty Daughtery",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FMarty.jpg?alt=media&token=c0fcb051-c06a-4922-a6cf-0d5eb0abbb88"
+        }
+      }
+    },
+    "vuPapBdMIdzXzooqkypf": {
+      "startDate": "2020-05-20",
+      "endDate": "2020-06-03",
+      "tripName": "Honeymoon Aussie Style",
+      "locations": ["Australia", "New Zealand"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Couples",
+      "users": {
+        "bvkXPsLhA8dp4gDU7lqjZOUMYBF3": {
+          "userName": "Brett Rempel",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FBrettRempel.jpg?alt=media&token=63d42b07-9ab3-414c-9714-4ad03a11e726"
+        },
+        "c1wXU5FIshdOQ5VzhQiLVjAtpaH2": {
+          "userName": "Nikki Binns",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FFemaleTraveler.jpg?alt=media&token=d4fd6c21-3ac3-4d56-ab82-916b794d24bf"
         }
       }
     },
     "UMCZYFBhKU4YZx5waiur": {
-      "startDate": "2018-12-20",
-      "endDate": "2019-01-02",
-      "tripName": "Christmas Family Trip to Toronto",
+      "startDate": "2018-11-07",
+      "endDate": "2018-11-12",
+      "tripName": "Work Trip to Toronto",
       "locations": ["Canada"],
       "tripImageUrl": "",
       "origin": "seed",
-      "tripTags": "Family",
+      "tripTags": "Work",
       "users": {
         "10d1o59g4Ngwlqx9csSPn4pCOPC2": {
           "userName": "Krystal Daughtery",
@@ -91,11 +243,11 @@
         },
         "iM66QC5IIwN39ovPoE819aoVtl83": {
           "userName": "Kaycee Rempel",
-          "userPicture": "https://robohash.org/Kaycee Rempel"
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FKaycee.jpg?alt=media&token=e75c95c6-ea61-402a-9df2-8b88bf7ac584"
         },
         "jKj1mv0VuJc0UauBQ6ozTuNbdSM2": {
           "userName": "Adella Green",
-          "userPicture": "https://robohash.org/AdellaGreen"
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FAdella.jpg?alt=media&token=9bac041e-f683-4fdd-af31-5f8f80b8c3be"
         }
       }
     },
@@ -110,13 +262,13 @@
       "users": {
         "iXyfgQbWhoM8CCQw6DKG0dogBPh1": {
           "userName": "Kari Moore",
-          "userPicture": "https://robohash.org/KariMoore"
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FKari.jpg?alt=media&token=192910f4-3813-4299-acb5-722e27b8ce6e"
         }
       }
     },
     "JQ5J8isXNuxVVaY7ONGL": {
       "startDate": "2018-09-01",
-      "endDate": "2018-10-02",
+      "endDate": "2018-09-10",
       "tripName": "Aussie Adventures",
       "locations": ["Australia"],
       "tripImageUrl": "",
@@ -129,7 +281,7 @@
         },
         "5VIhJcZytBbwYLGqHIW8TkWGYpM2": {
           "userName": "Amanda Fox",
-          "userPicture": "https://robohash.org/AmandaFox"
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FAmanda.jpg?alt=media&token=aed46c9e-6f1b-4c47-811e-7db9eb90bf9c"
         }
       }
     },
@@ -148,7 +300,7 @@
         },
         "5VIhJcZytBbwYLGqHIW8TkWGYpM2": {
           "userName": "Amanda Fox",
-          "userPicture": "https://robohash.org/AmandaFox"
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FAmanda.jpg?alt=media&token=aed46c9e-6f1b-4c47-811e-7db9eb90bf9c"
         }
       }
     }
@@ -164,40 +316,111 @@
         "Czech Republic",
         "Italy",
         "United States",
-        "Mexico"
+        "Mexico",
+        "Canada"
       ],
       "Trips": {
         "tBkYz0OAVaTPugTu5qtA": {
           "endDate": "2019-09-01",
           "startDate": "2019-08-10",
           "tripName": "Visiting Family in Poland"
+        },
+        "lukgWDU0BOy0LA1kDIpO": {
+          "startDate": "2019-11-10",
+          "endDate": "2019-11-20",
+          "tripName": "Turning 30 Girls Trip Cancun"
+        },
+        "UMCZYFBhKU4YZx5waiur": {
+          "startDate": "2018-11-07",
+          "endDate": "2018-11-12",
+          "tripName": "Work Trip to Toronto"
+        }
+      }
+    },
+    "uUUpT5ppOngv0GTjRKIhjPIV5sF3": {
+      "userName": "Marty Daughtery",
+      "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FMarty.jpg?alt=media&token=c0fcb051-c06a-4922-a6cf-0d5eb0abbb88",
+      "email": "marty@email.com",
+      "bio": "Born and raised in Poland. Now live in the suburbs of Chicago with my wife and 2 kids. Try to make yearly trips back home. Also planning my friends bachelor party.",
+      "countriesVisited": [
+        "Poland",
+        "Czech Republic",
+        "Italy",
+        "United States",
+        "Mexico",
+        "Canada",
+        "Slovakia",
+        "Netherlands"
+      ],
+      "Trips": {
+        "tBkYz0OAVaTPugTu5qtA": {
+          "endDate": "2019-09-01",
+          "startDate": "2019-08-10",
+          "tripName": "Visiting Family in Poland"
+        },
+        "Yb41yt5CboKbErSGkilV": {
+          "startDate": "2020-04-20",
+          "endDate": "2020-04-29",
+          "tripName": "Bachelor Party in Amsterdam"
+        }
+      }
+    },
+    "bvkXPsLhA8dp4gDU7lqjZOUMYBF3": {
+      "userName": "Brett Rempel",
+      "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FBrettRempel.jpg?alt=media&token=63d42b07-9ab3-414c-9714-4ad03a11e726",
+      "email": "brettrempel@email.com",
+      "bio": "Just bought a rental property in Chicago to help pay for all my travels. Passive Income for the Win! Getting married next year. Can't wait!",
+      "countriesVisited": [
+        "Poland",
+        "Canada",
+        "Mexico",
+        "Dominican Republic",
+        "United Kingdom"
+      ],
+      "Trips": {
+        "Yb41yt5CboKbErSGkilV": {
+          "startDate": "2020-04-20",
+          "endDate": "2020-04-29",
+          "tripName": "Bachelor Party in Amsterdam"
+        },
+        "vuPapBdMIdzXzooqkypf": {
+          "startDate": "2020-05-20",
+          "endDate": "2020-06-03",
+          "tripName": "Honeymoon Aussie Style"
         }
       }
     },
     "5d95HrhWm6SNQiOBLp9Gyj8JhPn2": {
-      "email": "chadanderson@email.com",
       "userName": "Chad Anderson",
       "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FChadAnderson.jpg?alt=media&token=68d57044-7c17-4773-abfc-51b256227d67",
+      "email": "chadanderson@email.com",
       "bio": "Graduating in May from Michigan State and planning to see some of the world before starting my corporate job in July!",
       "countriesVisited": [
         "Mexico",
         "Canada",
         "United States",
         "France",
-        "Spain"
+        "Spain",
+        "Netherlands",
+        "Belgium"
       ],
       "Trips": {
         "bN5MdYLJSHxrgGO53ErO": {
           "startDate": "2020-05-30",
           "endDate": "2020-06-27",
           "tripName": "Asia Travels after Graduation"
+        },
+        "PF2BmrQ5ZCFWjnGTRvp6": {
+          "startDate": "2018-11-20",
+          "endDate": "2018-11-27",
+          "tripName": "Bro Trip to Europe"
         }
       }
     },
     "BYRXFO8YS5cd6NXgwAepi1GbJRm2": {
-      "email": "cierra@email.com",
       "userName": "Cierra Wyman",
       "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FCierraWyman.jpg?alt=media&token=5e035838-f8d1-4866-aff4-6a9535d507de",
+      "email": "cierra@email.com",
       "bio": "Graduating next summer!! My dream is to travel more.  After studying abroad while in school I fell in love with travel. Cheers to many future trekks!",
       "countriesVisited": [
         "France",
@@ -213,6 +436,93 @@
           "startDate": "2020-05-30",
           "endDate": "2020-06-27",
           "tripName": "Asia Travels after Graduation"
+        },
+        "qCwwwZ0Pc3AOSNmW0mrx": {
+          "startDate": "2019-12-15",
+          "endDate": "2019-12-27",
+          "tripName": "Christmas Trip to Paris, Nice and Brussels"
+        }
+      }
+    },
+    "y4VsX9HRQTblv9S5PCCG6pGvIDx1": {
+      "userName": "Justin Wyman",
+      "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FJustin.jpg?alt=media&token=3ec18d06-0595-4855-8d62-e2b60a5d825d",
+      "email": "justin@email.com",
+      "bio": "Living in Chicago and enjoying life. Working as a Software Developer. My job let's me work remote so trying to travel while working. Spent lots of time in college in South America working on my Spanish",
+      "countriesVisited": [
+        "Colombia",
+        "Panama",
+        "Canada",
+        "United States",
+        "Peru",
+        "Bolivia",
+        "Argentina",
+        "Ireland"
+      ],
+      "Trips": {
+        "qCwwwZ0Pc3AOSNmW0mrx": {
+          "startDate": "2019-12-15",
+          "endDate": "2019-12-27",
+          "tripName": "Christmas Trip to Paris, Nice and Brussels"
+        },
+        "N8Fn2D2Ki9M4KI6SRHSf": {
+          "startDate": "2018-08-10",
+          "endDate": "2018-12-20",
+          "tripName": "Study Abroad in Argentina"
+        },
+        "G6RlGWPlpS8c9PujQOg2": {
+          "startDate": "2018-10-10",
+          "endDate": "2018-10-20",
+          "tripName": "Trip to visit Machu Picchu"
+        }
+      }
+    },
+    "I74vJTHti9XIQKSojug0TQLBRbC3": {
+      "userName": "Fabian Wiza",
+      "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FFabian.jpg?alt=media&token=dc33c65c-ec46-4d7f-8344-0fd73e63ba42",
+      "email": "Fabian@email.com",
+      "bio": "Living in Chicago with my best friend working in the city as a UI designer. Reminiscing over my days traveling in South America and currently, saving up for my trip to Africa!",
+      "countriesVisited": [
+        "Peru",
+        "Panama",
+        "Guatemala",
+        "United States",
+        "Belize",
+        "Costa Rica",
+        "Argentina"
+      ],
+      "Trips": {
+        "G6RlGWPlpS8c9PujQOg2": {
+          "startDate": "2018-10-10",
+          "endDate": "2018-10-20",
+          "tripName": "Trip to visit Machu Picchu"
+        },
+        "sOsVmVuPZqhquoqe6xe2": {
+          "startDate": "2019-11-22",
+          "endDate": "2019-12-29",
+          "tripName": "Africa Safari Dream Trip"
+        }
+      }
+    },
+    "jKj1mv0VuJc0UauBQ6ozTuNbdSM2": {
+      "userName": "Adella Green",
+      "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FAdella.jpg?alt=media&token=9bac041e-f683-4fdd-af31-5f8f80b8c3be",
+      "email": "adella@email.com",
+      "bio": "Living in Chicago. Moved from Florida. Loving the cold actually although people think I'm crazy. Excited to go to Africa this year!",
+      "countriesVisited": [
+        "Peru",
+        "Panama",
+        "Guatemala",
+        "United States",
+        "Belize",
+        "Costa Rica",
+        "Argentina"
+      ],
+      "Trips": {
+        "sOsVmVuPZqhquoqe6xe2": {
+          "startDate": "2019-11-22",
+          "endDate": "2019-12-29",
+          "tripName": "Africa Safari Dream Trip"
         }
       }
     },
@@ -227,12 +537,17 @@
           "startDate": "2019-11-10",
           "endDate": "2019-11-20",
           "tripName": "Turning 30 Girls Trip Cancun"
+        },
+        "vuPapBdMIdzXzooqkypf": {
+          "startDate": "2020-05-20",
+          "endDate": "2020-06-03",
+          "tripName": "Honeymoon Aussie Style"
         }
       }
     },
     "rStqfW1Ip3RsN0Slv5QK8HbBy203": {
       "userName": "Trent Schmidt",
-      "userPicture": "https://robohash.org/Trent Schmidt",
+      "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FTrent.jpg?alt=media&token=9840bec7-c5c7-4d0b-93ca-10f5f83e319d",
       "email": "trent@email.com",
       "bio": "Graduating next summer!! Then doing a year worth of travel before joining the family business. But who knows, maybe I'll make it big as a travel vlogger!",
       "countriesVisited": [
@@ -254,7 +569,7 @@
     },
     "mywzGvLbzXVIRedM42C51nTDK1h1": {
       "userName": "Tony Adams",
-      "userPicture": "https://robohash.org/TonyAdams",
+      "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FTony.jpg?alt=media&token=9dde4776-728b-4d04-bf56-367dd0e366f3",
       "email": "tonyadams@email.com",
       "bio": "Working on getting my Bachelors in Engineering. Can't wait to get out. Never been outside the US but can't wait for Asia after graduation!",
       "countriesVisited": ["United States"],
@@ -263,12 +578,31 @@
           "startDate": "2020-05-30",
           "endDate": "2020-06-27",
           "tripName": "Asia Travels after Graduation"
+        },
+        "PF2BmrQ5ZCFWjnGTRvp6": {
+          "startDate": "2018-11-20",
+          "endDate": "2018-11-27",
+          "tripName": "Bro Trip to Europe"
+        }
+      }
+    },
+    "iM66QC5IIwN39ovPoE819aoVtl83": {
+      "userName": "Kaycee Rempel",
+      "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FKaycee.jpg?alt=media&token=e75c95c6-ea61-402a-9df2-8b88bf7ac584",
+      "email": "kaycee@email.com",
+      "bio": "Living in the suburbs of Chicago and enjoying the simple life, saving up money to travel!",
+      "countriesVisited": ["United States", "Canada", "France"],
+      "Trips": {
+        "lukgWDU0BOy0LA1kDIpO": {
+          "startDate": "2019-11-10",
+          "endDate": "2019-11-20",
+          "tripName": "Turning 30 Girls Trip Cancun"
         }
       }
     },
     "iXyfgQbWhoM8CCQw6DKG0dogBPh1": {
       "userName": "Kari Moore",
-      "userPicture": "https://robohash.org/KariMoore",
+      "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FKari.jpg?alt=media&token=192910f4-3813-4299-acb5-722e27b8ce6e",
       "email": "kari@email.com",
       "bio": "Going to get my masters in the fall. So after graduating, enjoying a trip with the friends before reality hits again",
       "countriesVisited": [
@@ -297,7 +631,7 @@
     "5VIhJcZytBbwYLGqHIW8TkWGYpM2": {
       "email": "amanda@email.com",
       "userName": "Amanda Fox",
-      "userPicture": "https://robohash.org/AmandaFox",
+      "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FAmanda.jpg?alt=media&token=aed46c9e-6f1b-4c47-811e-7db9eb90bf9c",
       "bio": "Currently living in North Carolina. Dream is to visit all countries in the world!",
       "countriesVisited": [
         "Spain",
@@ -313,20 +647,25 @@
       "Trips": {
         "JQ5J8isXNuxVVaY7ONGL": {
           "startDate": "2018-09-01",
-          "endDate": "2018-10-02",
+          "endDate": "2018-09-10",
           "tripName": "Aussie Adventures"
         },
         "QLgCsIFQbq0g2ljFSn8F": {
           "startDate": "2019-09-01",
           "endDate": "2019-09-17",
           "tripName": "Cruise in Eastern Europe with Family"
+        },
+        "1IVF2G50QQdhfTe2VcuZ": {
+          "startDate": "2018-12-20",
+          "endDate": "2019-01-02",
+          "tripName": "Visiting Dad for Christmas"
         }
       }
     },
     "G9O6nXD45DgECe6Q1kXQYzAPLm12": {
       "email": "michael@email.com",
       "userName": "Michael de Boer",
-      "userPicture": "https://robohash.org/MichaeldeBoer",
+      "userPicture": "https://robohash.org/Michael",
       "bio": "Living in North Carolina with my wife. Hoping to move to Netherlands, but first, travel the world.",
       "countriesVisited": [
         "Spain",
@@ -353,13 +692,18 @@
       "Trips": {
         "JQ5J8isXNuxVVaY7ONGL": {
           "startDate": "2018-09-01",
-          "endDate": "2018-10-02",
+          "endDate": "2018-09-10",
           "tripName": "Aussie Adventures"
         },
         "QLgCsIFQbq0g2ljFSn8F": {
           "startDate": "2019-09-01",
           "endDate": "2019-09-17",
           "tripName": "Cruise in Eastern Europe with Family"
+        },
+        "1IVF2G50QQdhfTe2VcuZ": {
+          "startDate": "2018-12-20",
+          "endDate": "2019-01-02",
+          "tripName": "Visiting Dad for Christmas"
         }
       }
     }
