@@ -27,6 +27,55 @@
         }
       }
     },
+    "qCwwwZ0Pc3AOSNmW0mrx": {
+      "startDate": "2019-12-15",
+      "endDate": "2019-12-27",
+      "tripName": "Christmas Trip to Paris, Nice and Brussels",
+      "locations": ["France", "Belgium"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Family",
+      "users": {
+        "BYRXFO8YS5cd6NXgwAepi1GbJRm2": {
+          "userName": "Cierra Wyman",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FCierraWyman.jpg?alt=media&token=5e035838-f8d1-4866-aff4-6a9535d507de"
+        },
+        "y4VsX9HRQTblv9S5PCCG6pGvIDx1": {
+          "userName": "Justin Wyman",
+          "userPicture": "https://robohash.org/Justin Wyman"
+        }
+      }
+    },
+    "N8Fn2D2Ki9M4KI6SRHSf": {
+      "startDate": "2018-08-10",
+      "endDate": "2018-12-20",
+      "tripName": "Study Abroad in Argentina",
+      "locations": ["Argentina"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Solo",
+      "users": {
+        "y4VsX9HRQTblv9S5PCCG6pGvIDx1": {
+          "userName": "Justin Wyman",
+          "userPicture": "https://robohash.org/Justin Wyman"
+        }
+      }
+    },
+    "G6RlGWPlpS8c9PujQOg2": {
+      "startDate": "2018-10-10",
+      "endDate": "2018-10-20",
+      "tripName": "Trip to visit Machu Picchu",
+      "locations": ["Peru"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Friends",
+      "users": {
+        "y4VsX9HRQTblv9S5PCCG6pGvIDx1": {
+          "userName": "Justin Wyman",
+          "userPicture": "https://robohash.org/Justin Wyman"
+        }
+      }
+    },
     "cmD9qd2YQUVLGouWyMQU": {
       "startDate": "2019-07-10",
       "endDate": "2019-12-20",
@@ -58,13 +107,13 @@
       }
     },
     "UMCZYFBhKU4YZx5waiur": {
-      "startDate": "2018-12-20",
-      "endDate": "2019-01-02",
-      "tripName": "Christmas Family Trip to Toronto",
+      "startDate": "2018-11-07",
+      "endDate": "2018-11-12",
+      "tripName": "Work Trip to Toronto",
       "locations": ["Canada"],
       "tripImageUrl": "",
       "origin": "seed",
-      "tripTags": "Family",
+      "tripTags": "Work",
       "users": {
         "10d1o59g4Ngwlqx9csSPn4pCOPC2": {
           "userName": "Krystal Daughtery",
@@ -171,6 +220,16 @@
           "endDate": "2019-09-01",
           "startDate": "2019-08-10",
           "tripName": "Visiting Family in Poland"
+        },
+        "lukgWDU0BOy0LA1kDIpO": {
+          "startDate": "2019-11-10",
+          "endDate": "2019-11-20",
+          "tripName": "Turning 30 Girls Trip Cancun"
+        },
+        "UMCZYFBhKU4YZx5waiur": {
+          "startDate": "2018-11-07",
+          "endDate": "2018-11-12",
+          "tripName": "Work Trip to Toronto"
         }
       }
     },
@@ -195,9 +254,9 @@
       }
     },
     "BYRXFO8YS5cd6NXgwAepi1GbJRm2": {
-      "email": "cierra@email.com",
       "userName": "Cierra Wyman",
       "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FCierraWyman.jpg?alt=media&token=5e035838-f8d1-4866-aff4-6a9535d507de",
+      "email": "cierra@email.com",
       "bio": "Graduating next summer!! My dream is to travel more.  After studying abroad while in school I fell in love with travel. Cheers to many future trekks!",
       "countriesVisited": [
         "France",
@@ -213,6 +272,44 @@
           "startDate": "2020-05-30",
           "endDate": "2020-06-27",
           "tripName": "Asia Travels after Graduation"
+        },
+        "qCwwwZ0Pc3AOSNmW0mrx": {
+          "startDate": "2019-12-15",
+          "endDate": "2019-12-27",
+          "tripName": "Christmas Trip to Paris, Nice and Brussels"
+        }
+      }
+    },
+    "y4VsX9HRQTblv9S5PCCG6pGvIDx1": {
+      "userName": "Justin Wyman",
+      "userPicture": "https://robohash.org/Justin Wyman",
+      "email": "justin@email.com",
+      "bio": "Living in Chicago and enjoying life. Working as a Software Developer. My job let's me work remote so trying to travel while working. Spent lots of time in college in South America working on my Spanish",
+      "countriesVisited": [
+        "Colombia",
+        "Panama",
+        "Canada",
+        "United States",
+        "Peru",
+        "Bolivia",
+        "Argentina",
+        "Ireland"
+      ],
+      "Trips": {
+        "qCwwwZ0Pc3AOSNmW0mrx": {
+          "startDate": "2019-12-15",
+          "endDate": "2019-12-27",
+          "tripName": "Christmas Trip to Paris, Nice and Brussels"
+        },
+        "N8Fn2D2Ki9M4KI6SRHSf": {
+          "startDate": "2018-08-10",
+          "endDate": "2018-12-20",
+          "tripName": "Study Abroad in Argentina"
+        },
+        "G6RlGWPlpS8c9PujQOg2": {
+          "startDate": "2018-10-10",
+          "endDate": "2018-10-20",
+          "tripName": "Trip to visit Machu Picchu"
         }
       }
     },
