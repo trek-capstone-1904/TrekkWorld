@@ -63,6 +63,12 @@ const handleClick = (slicedImage, props, uid, evt) => {
   const placeRef = db.collection('Places').doc(props.sight.id);
 
   const { name, snippet } = props.sight;
+  console.log('props.sight.id', props.sight.id);
+  console.log('props', props);
+  let { sight, country, type } = props;
+  sight.placeImage = slicedImage;
+  const placeObj = { sight, country, type };
+
   // debugger;
   placeRef
     .get()
@@ -72,21 +78,15 @@ const handleClick = (slicedImage, props, uid, evt) => {
         console.log('Document data:', doc.data());
         if (tripId) {
           addToTrekk(slicedImage, uid, props.sight.id, name, snippet, tripId);
-        } else {
-          // addToBucketList(slicedImage, uid, props.sight.id, name, snippet);
         }
       } else {
         // doc is created in 'Places' collection
         console.log('Place document did not exist');
+        console.log(props);
         db.collection('Places')
           .doc(props.sight.id)
-          .set(props)
+          .set(placeObj)
           .then(function() {
-            db.collection('Places')
-              .doc(props.sight.id)
-              .update({
-                placeImage: slicedImage,
-              });
             console.log('Document successfully written!');
           })
           .catch(function(error) {
@@ -94,8 +94,6 @@ const handleClick = (slicedImage, props, uid, evt) => {
           });
         if (tripId) {
           addToTrekk(slicedImage, uid, props.sight.id, name, snippet, tripId);
-        } else {
-          // addToBucketList(slicedImage, uid, props.sight.id, name, snippet);
         }
       }
     })
