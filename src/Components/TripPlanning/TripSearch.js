@@ -40,7 +40,7 @@ export const TripSearch = props => {
 
   return (
     <div>
-      {error && <strong>Error: {error}</strong>}
+      {/* {error && <strong>Error: {error}</strong>}
       {loading && <Spinner animation="grow" variant="info" />}
       {snapshot &&
         snapshot.docs
@@ -54,7 +54,7 @@ export const TripSearch = props => {
           )
           .map(doc => (
             <TripResultCard key={doc.id} tripId={doc.id} card={doc.data()} />
-          ))}
+          ))} */}
     </div>
   );
 };

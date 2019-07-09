@@ -1,5 +1,13 @@
 import React, { useContext, useState } from 'react';
-import { Card, Button } from 'react-bootstrap';
+import {
+  Card,
+  Button,
+  ButtonGroup,
+  DropdownButton,
+  Dropdown,
+  Form,
+} from 'react-bootstrap';
+import { useDocument } from 'react-firebase-hooks/firestore';
 import styles from '../SearchAPICard.module.css';
 import db from '../../firebase';
 import userContext from '../../Contexts/userContext';
@@ -12,9 +20,25 @@ export const SearchAPICard = props => {
 
   const { country } = props;
   const { name, snippet } = props.sight;
-  const { tripId } = props;
+  // const { tripId } = props;
   const [image, setImage] = useState('');
+  const [tripId, setTripId] = useState('');
+
   const loggedInUser = useContext(userContext);
+
+  const [snapshot, loading, error] = useDocument(
+    db.collection('Users').doc(`${loggedInUser.uid}`),
+    {
+      snapshotListenOptions: { includeMetadataChanges: false },
+    }
+  );
+
+  const changeTripId = (evt, type) => {
+    if (evt.currentTarget.name === 'tripId') {
+      setTripId(evt.target.value);
+    }
+  };
+  console.log('tripId', tripId);
 
   useGoogle(props.sight, country);
   function useGoogle(sight, country) {
@@ -49,8 +73,7 @@ export const SearchAPICard = props => {
   }
 
   const slicedImage = image.slice(0, image.indexOf('&key'));
-
-  console.log('placeImage:', image && image);
+  // console.log('placeImage:', image && image);
   return (
     <Card style={{ margin: '.5rem 1rem' }}>
       <Card.Body>
@@ -65,16 +88,32 @@ export const SearchAPICard = props => {
         >
           + Bucket
         </Button>
-
-        <Button
-          style={{ margin: '0 1rem' }}
-          variant="info"
-          onClick={() =>
-            handleClick(slicedImage, props, loggedInUser.uid, tripId)
-          }
+        <ButtonGroup
+          name="tripId"
+          value={tripId}
+          // as="select"
+          onChange={changeTripId}
         >
-          + Trekk List
-        </Button>
+          <DropdownButton
+            as={ButtonGroup}
+            name={tripId}
+            title="Add to Trip"
+            id="bg-nested-dropdown"
+          >
+            {snapshot &&
+              Object.entries(snapshot.data().Trips).map(trip => (
+                <Dropdown.Item
+                  eventKey={trip[0]}
+                  value={trip[0]}
+                  onClick={() =>
+                    handleClick(slicedImage, props, loggedInUser.uid, tripId)
+                  }
+                >
+                  {trip[1].tripName}
+                </Dropdown.Item>
+              ))}
+          </DropdownButton>
+        </ButtonGroup>
       </Card.Body>
     </Card>
   );
@@ -88,7 +127,7 @@ const handleClick = (slicedImage, props, uid, tripId) => {
   const placeRef = db.collection('Places').doc(props.sight.id);
 
   const { name, snippet } = props.sight;
-
+  // debugger;
   placeRef
     .get()
     .then(function(doc) {
@@ -107,6 +146,11 @@ const handleClick = (slicedImage, props, uid, tripId) => {
           .doc(props.sight.id)
           .set(props)
           .then(function() {
+            db.collection('Places')
+              .doc(props.sight.id)
+              .update({
+                placeImage: slicedImage,
+              });
             console.log('Document successfully written!');
           })
           .catch(function(error) {
@@ -156,5 +200,7 @@ const addToTrekk = (slicedImage, uid, placeId, placeName, snippet, tripId) => {
       [`bucketList.${placeId}`]: firebase.firestore.FieldValue.delete(),
     });
 };
+
+// put in render and change to dropdown
 
 export default SearchAPICard;

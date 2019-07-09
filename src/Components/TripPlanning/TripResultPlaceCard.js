@@ -5,7 +5,7 @@ import db from '../../firebase';
 import userContext from '../../Contexts/userContext';
 
 export const TripResultPlaceCard = props => {
-  const { placeName, snippet } = props.card;
+  const { placeName, snippet, placeImage } = props.card;
   const { tripId, placeId } = props;
   const loggedInUser = useContext(userContext);
   const { uid } = loggedInUser;
@@ -15,6 +15,8 @@ export const TripResultPlaceCard = props => {
     <Card>
       <Card.Body>
         <Card.Title>{placeName}</Card.Title>
+        {placeImage && <img src={placeImage} alt="sight" />}
+
         <Card.Text className={styles.cardText}>{snippet}</Card.Text>
         <Button
           style={{ margin: '0 1rem' }}

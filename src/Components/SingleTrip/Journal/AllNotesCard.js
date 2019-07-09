@@ -1,6 +1,6 @@
-import React from "react";
-import { Card } from "react-bootstrap";
-import timeago from "epoch-timeago";
+import React from 'react';
+import { Card } from 'react-bootstrap';
+import timeago from 'epoch-timeago';
 
 export const AllNotesCard = props => {
   return (

@@ -9,16 +9,16 @@ export const TripListItem = props => {
   const [value, loading, error] = useDocument(db.doc(`Trips/${props.tripId}`), {
     valueListenOptions: { includeMetadataChanges: true },
   });
-  console.log(props)
+  console.log(props);
   return (
     <>
       {error && <strong>Error: {error}</strong>}
       {loading && <Spinner animation="grow" variant="info" />}
-      {value && (
+      {/* {value && (
         <CardGroup>
           <TripResultCard tripId={props.tripId} card={value.data()} />
         </CardGroup>
-      )}
+      )} */}
     </>
   );
 };
