@@ -19,6 +19,7 @@ import TripMap from './SingleTrip/TripMap';
 import TripAlbum from './SingleTrip/TripAlbum';
 import CountrySelect from './Helper/CountrySelect';
 import PhotoLoad from './Helper/PhotoLoad';
+import TripSelect from './TripPlanning/TripSelect';
 
 export { default as TripSingle } from './SingleTrip/TripSingle';
 export { default as UserProfile } from './User/UserProfile';
@@ -40,3 +41,4 @@ export { default as TripMap } from './SingleTrip/TripMap';
 export { default as TripAlbum } from './SingleTrip/TripAlbum';
 export { default as CountrySelect } from './Helper/CountrySelect';
 export { default as PhotoLoad } from './Helper/PhotoLoad';
+export { default as TripSelect } from './TripPlanning/TripSelect';

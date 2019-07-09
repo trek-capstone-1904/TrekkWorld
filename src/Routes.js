@@ -11,7 +11,7 @@ import {
   CreateTrekkForm,
   TripPage,
   Journal,
-  CountrySelect
+  CountrySelect,
 } from './Components';
 import { PhotoLoad } from './Components/Helper/PhotoLoad';
 import { Welcome } from './Components/Welcome/Welcome';

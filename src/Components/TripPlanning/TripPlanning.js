@@ -21,21 +21,21 @@ export const TripPlanning = props => {
   const cityIdx = query.indexOf('&city=') + 6;
   const codeIdx = query.indexOf('&code=') + 6;
 
-  let countryQuery = query.substr(countryIdx, cityIdx - countryIdx - 6);
-  let cityQuery = query.substr(cityIdx, codeIdx - cityIdx - 6);
-  let codeQuery = query.substr(codeIdx, query.length);
-  if (cityQuery.includes(' ')) {
-    cityQuery = cityQuery.split('_').join(' ');
-  }
+  // let countryQuery = query.substr(countryIdx, cityIdx - countryIdx - 6);
+  // let cityQuery = query.substr(cityIdx, codeIdx - cityIdx - 6);
+  // let codeQuery = query.substr(codeIdx, query.length);
 
-  // const [city, setCity] = useState('');
-  // const [country, setCountry] = useState('');
-  // const [code, setCode] = useState('');
-  console.log(countryQuery, ',', cityQuery, ',', codeQuery);
+  // const TripSearch = memo();
+
+  // export const TripPlanning = () => {
+  const [city, setCity] = useState('');
+  const [country, setCountry] = useState('');
+  const [code, setCode] = useState('');
+  // console.log(countryQuery, ',', cityQuery, ',', codeQuery);
   // const [url, setUrl] = useState(props.location.search);
-  const [city, setCity] = useState(cityQuery);
-  const [country, setCountry] = useState(countryQuery);
-  const [code, setCode] = useState(codeQuery);
+  // const [city, setCity] = useState(cityQuery);
+  // const [country, setCountry] = useState(countryQuery);
+  // const [code, setCode] = useState(codeQuery);
   const [submitted, setSubmit] = useState(false);
   const [tripId, setTripId] = useState('');
 
@@ -71,12 +71,7 @@ export const TripPlanning = props => {
     if (country === 'Select a Country...' || country === '') {
       alert('Please select a country');
     } else {
-      if (city.includes(' ')) {
-        cityQuery = city.split(' ').join('_');
-      }
-      history.replace(
-        `/plantrip?country=${country}&city=${cityQuery}&code=${code}`
-      );
+      history.replace(`/plantrip?country=${country}&city=${city}&code=${code}`);
       setSubmit('true');
     }
   };
@@ -145,23 +140,20 @@ export const TripPlanning = props => {
             </Tabs>
           </div>
           <div className={styles.BucketList}>
-            {snapshot &&
-              snapshot.data().Trips &&
-              Object.keys(snapshot.data().Trips).length !== 0 && (
-                <Form.Control
-                  name="tripId"
-                  value={tripId}
-                  as="select"
-                  onChange={handleChange}
-                >
-                  <option>select a trip to plan</option>
-                  {Object.entries(snapshot.data().Trips).map(trip => (
-                    <option key={trip[0]} value={trip[0]}>
-                      {trip[1].tripName}
-                    </option>
-                  ))}
-                </Form.Control>
-              )}
+            <Form.Control
+              name="tripId"
+              value={tripId}
+              as="select"
+              onChange={changeTripId}
+            >
+              <option>select a trip to plan</option>
+              {snapshot &&
+                Object.entries(snapshot.data().Trips).map(trip => (
+                  <option key={trip[0]} value={trip[0]}>
+                    {trip[1].tripName}
+                  </option>
+                ))}
+            </Form.Control>
             <Tabs defaultActiveKey="Bucket List" id="Trekk-Bucket-List">
               <Tab eventKey="Bucket List" title="Bucket List">
                 <BucketList tripId={tripId} />

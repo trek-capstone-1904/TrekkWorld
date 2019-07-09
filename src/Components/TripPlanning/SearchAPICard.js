@@ -47,6 +47,9 @@ export const SearchAPICard = props => {
       })
       .catch(() => console.log('HELP'));
   }
+
+  const slicedImage = image.slice(0, image.indexOf('&key'));
+
   console.log('placeImage:', image && image);
   return (
     <Card style={{ margin: '.5rem 1rem' }}>
@@ -58,7 +61,7 @@ export const SearchAPICard = props => {
         <Button
           style={{ margin: '0 1rem' }}
           variant="info"
-          onClick={() => handleClick(props, loggedInUser.uid)}
+          onClick={() => handleClick(slicedImage, props, loggedInUser.uid)}
         >
           + Bucket
         </Button>
@@ -66,7 +69,9 @@ export const SearchAPICard = props => {
         <Button
           style={{ margin: '0 1rem' }}
           variant="info"
-          onClick={() => handleClick(props, loggedInUser.uid, tripId)}
+          onClick={() =>
+            handleClick(slicedImage, props, loggedInUser.uid, tripId)
+          }
         >
           + Trekk List
         </Button>
@@ -78,7 +83,7 @@ export const SearchAPICard = props => {
 //use a generic handleClick so that it adds a new place to the place db
 // after it adds the place to the db, it assigns the place to either the bucketList or the TrekkList
 
-const handleClick = (props, uid, tripId) => {
+const handleClick = (slicedImage, props, uid, tripId) => {
   //query Places
   const placeRef = db.collection('Places').doc(props.sight.id);
 
@@ -91,9 +96,9 @@ const handleClick = (props, uid, tripId) => {
         //add the props.id to the user
         console.log('Document data:', doc.data());
         if (tripId) {
-          addToTrekk(uid, props.sight.id, name, snippet, tripId);
+          addToTrekk(slicedImage, uid, props.sight.id, name, snippet, tripId);
         } else {
-          addToBucketList(uid, props.sight.id, name, snippet);
+          addToBucketList(slicedImage, uid, props.sight.id, name, snippet);
         }
       } else {
         // doc is created in 'Places' collection
@@ -108,9 +113,9 @@ const handleClick = (props, uid, tripId) => {
             console.error('Error writing document: ', error);
           });
         if (tripId) {
-          addToTrekk(uid, props.sight.id, name, snippet, tripId);
+          addToTrekk(slicedImage, uid, props.sight.id, name, snippet, tripId);
         } else {
-          addToBucketList(uid, props.sight.id, name, snippet);
+          addToBucketList(slicedImage, uid, props.sight.id, name, snippet);
         }
       }
     })
@@ -119,16 +124,17 @@ const handleClick = (props, uid, tripId) => {
     });
 };
 
-const addToBucketList = (uid, placeId, placeName, snippet) => {
+const addToBucketList = (slicedImage, uid, placeId, placeName, snippet) => {
   db.doc(`Users/${uid}`).update({
     [`bucketList.${placeId}`]: {
       placeName: placeName,
       snippet: snippet,
+      placeImage: slicedImage,
     },
   });
 };
 
-const addToTrekk = (uid, placeId, placeName, snippet, tripId) => {
+const addToTrekk = (slicedImage, uid, placeId, placeName, snippet, tripId) => {
   //add to Trekklist
   db.collection('Trips')
     .doc(`${tripId}`)
@@ -138,11 +144,12 @@ const addToTrekk = (uid, placeId, placeName, snippet, tripId) => {
       {
         placeName: placeName,
         snippet: snippet,
+        placeImage: slicedImage,
       },
       { merge: true }
     );
 
-  //delete from bucketList
+  // delete from bucketList
   db.collection('Users')
     .doc(uid)
     .update({
