@@ -9,8 +9,6 @@ import {
   Modal,
   Card,
   Badge,
-  Row,
-  CardColumns
 } from 'react-bootstrap';
 import userContext from '../../Contexts/userContext';
 import { useDocument } from 'react-firebase-hooks/firestore';
@@ -108,6 +106,7 @@ export const TripPage = props => {
 
     return (
       <div>
+        {/* jumbotron header */}
         <Jumbotron className={styles.Jumbotron}>
           <div className={styles.tripHeader}>
             <h1>{tripName}</h1>
@@ -149,8 +148,10 @@ export const TripPage = props => {
             </Card.Body>
           </Card>
         </Jumbotron>
+        {/* page body */}
         <div style={{ display: 'flex', justifyContent: 'space-around' }}>
           {/* <CardColumns> */}
+          {/* fellow trekkers card */}
             <Card border="info" style={{ maxWidth: '25rem', margin: '.5rem' }}>
               <Card.Header>
                 <h4>Fellow Trekkers</h4>
@@ -164,6 +165,7 @@ export const TripPage = props => {
                   </Button>
                 )}
               </Card.Header>
+              {/* display trekkers */}
               <ul className="list-unstyled" style={{ padding: '0 2rem' }}>
                 {Object.entries(users).map(user => (
                   <Media
@@ -218,7 +220,11 @@ export const TripPage = props => {
               </Modal>
             </Card>
           {/* </CardColumns> */}
+          {/*  */}
           <TripAlbum fellowTrekker={isThisAFellowTrekker()} tripId={tripId} />
+        </div>
+        <div>
+          {/* <TrekkList /> */}
         </div>
       </div>
     );

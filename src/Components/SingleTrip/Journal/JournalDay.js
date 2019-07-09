@@ -6,6 +6,7 @@ import AllNotes from "./AllNotes";
 import JournalCard from "./JournalCard";
 import { Form, CardDeck, Spinner, Badge } from "react-bootstrap";
 import db from "../../../firebase";
+import style from "./journal.module.css";
 
 const JournalDay = props => {
   //get Trekk List collection for the current trip
@@ -24,10 +25,12 @@ const JournalDay = props => {
   if (error) throw error;
   if (loading) return <Spinner animation="grow" variant="info" />;
   if (value) {
+    console.log("value", value);
     placesArray = value.get("places");
+    console.log(placesArray);
 
     return (
-      <div>
+      <div className={style.card}>
         <h3>{props.date}</h3>
         <Form style={{ maxWidth: "40rem", margin: "auto" }}>
           {/* query the journal date places map, put the results into an array, map over them, and render a journalCard for each place */}
@@ -46,11 +49,13 @@ const JournalDay = props => {
               Add a Location:
             </Badge> */}
           </Form.Label>
-          <div >
-            <div>All Notes</div>
+          <div>
+            <div>Notes</div>
             <AllNotes tripId={props.tripId} date={props.date} />
-            <Notes tripId={props.tripId} date={props.date} />
-          <Selector tripId={props.tripId} date={props.date} />
+            <div>
+              <Notes tripId={props.tripId} date={props.date} />
+              <Selector tripId={props.tripId} date={props.date} />
+            </div>
           </div>
         </Form>
       </div>

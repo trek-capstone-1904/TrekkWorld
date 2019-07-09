@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import React, { Component } from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
 import {
-  TripSingle,
   UserProfile,
   Login,
   SearchAPI,
@@ -11,10 +10,10 @@ import {
   CreateTrekkForm,
   TripPage,
   Journal,
-  CountrySelect,
-} from './Components';
-import { PhotoLoad } from './Components/Helper/PhotoLoad';
-import { Welcome } from './Components/Welcome/Welcome';
+  CountrySelect
+} from "./Components";
+import { PhotoLoad } from "./Components/Helper/PhotoLoad";
+import { Welcome } from "./Components/Welcome/Welcome";
 
 export class Routes extends Component {
   render() {

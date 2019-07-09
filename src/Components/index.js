@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import TripSingle from './SingleTrip/TripSingle';
+
 import UserProfile from './User/UserProfile';
 import UserProfileHeader from './User/UserProfileHeader';
 import UserProfileTrips from './User/UserProfileHeader';
@@ -22,7 +22,6 @@ import PhotoLoad from './Helper/PhotoLoad';
 import TripSelect from './TripPlanning/TripSelect';
 import TripSelectButton from './TripPlanning/TripSelectButton';
 
-export { default as TripSingle } from './SingleTrip/TripSingle';
 export { default as UserProfile } from './User/UserProfile';
 export { default as UserProfileHeader } from './User/UserProfileHeader';
 export { default as UserProfileTrips } from './User/UserProfileTrips';
