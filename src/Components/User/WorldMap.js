@@ -36,7 +36,8 @@ export const WorldMap = () => {
         <div >
           <Chart
             chartType="GeoChart"
-            width="100%"
+            // width="100%"
+            height="100%"
             data={dataCountries}
             options={{
               // colorAxis: { colors: 'blue' },
