@@ -48,8 +48,9 @@ export const Selector = props => {
 
     //map place document into the options array to display in selector drop down
     const options = trekkInfo.docs.map(function(doc) {
-      return { value: doc.id, label: doc.data().name };
+      return { value: doc.id, label: doc.data().placeName };
     });
+    console.log(options)
 
     function onChange(option) {
       db.collection("Trips")
@@ -64,6 +65,7 @@ export const Selector = props => {
         );
     }
 
+    //the only difference in the two renders is whether or not there will already be places selected
     if (datePlaces && datePlaces.length > 0) {
       return (
         <>
@@ -92,7 +94,11 @@ export const Selector = props => {
     } else {
       return (
         <>
-        <Modal>
+         <Button type="button" onClick={toggle}>Add a Location</Button>
+         <Modal show={isShowing} onHide={toggle} size="lg" centered>
+         <Modal.Header closeButton>
+          <Modal.Title>Add Locations</Modal.Title>
+        </Modal.Header>
           <Select isMulti name="places" options={options} onChange={onChange} />
         </Modal>
         </>

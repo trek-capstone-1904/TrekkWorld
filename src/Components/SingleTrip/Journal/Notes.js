@@ -23,9 +23,6 @@ export const Notes = props => {
         user: loggedInUser.uid,
         userName: loggedInUser.displayName,
         note: notes
-      })
-      .then(function() {
-        alert("Journal entry added!");
       });
   }
   function handleChangeNotes(e) {

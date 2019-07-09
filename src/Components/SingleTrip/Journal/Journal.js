@@ -5,6 +5,7 @@ import { useDocument } from "react-firebase-hooks/firestore";
 import { Spinner, Jumbotron } from "react-bootstrap";
 import moment from "moment";
 import JournalDay from "./JournalDay";
+import style from './journal.module.css'
 
 function calcDays(start, end) {
   const tripDays = [];
@@ -49,12 +50,12 @@ export const Journal = props => {
         .set({}, { merge: true });
     });
     return (
-      <div>
+      <div className={style.background}>
         <span>
           <div>
-            <Jumbotron>{tripInfo.tripName} Journal</Jumbotron>
+            <Jumbotron className={style.heading}>{tripInfo.tripName} Journal</Jumbotron>
             {days.map(date => (
-              <Jumbotron key={date}>
+              <Jumbotron className={style.dayJumbo} key={date}>
                 <JournalDay
                   key={date}
                   date={date}
