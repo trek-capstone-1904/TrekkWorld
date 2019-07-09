@@ -73,6 +73,29 @@
         "y4VsX9HRQTblv9S5PCCG6pGvIDx1": {
           "userName": "Justin Wyman",
           "userPicture": "https://robohash.org/Justin Wyman"
+        },
+        "I74vJTHti9XIQKSojug0TQLBRbC3": {
+          "userName": "Fabian Wiza",
+          "userPicture": "https://robohash.org/Fabian Wiza"
+        }
+      }
+    },
+    "sOsVmVuPZqhquoqe6xe2": {
+      "startDate": "2019-11-22",
+      "endDate": "2019-12-29",
+      "tripName": "Africa Safari Dream Trip",
+      "locations": ["South Africa"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Couples",
+      "users": {
+        "jKj1mv0VuJc0UauBQ6ozTuNbdSM2": {
+          "userName": "Adella Green",
+          "userPicture": "https://robohash.org/Adella Green"
+        },
+        "I74vJTHti9XIQKSojug0TQLBRbC3": {
+          "userName": "Fabian Wiza",
+          "userPicture": "https://robohash.org/Fabian Wiza"
         }
       }
     },
@@ -310,6 +333,55 @@
           "startDate": "2018-10-10",
           "endDate": "2018-10-20",
           "tripName": "Trip to visit Machu Picchu"
+        }
+      }
+    },
+    "I74vJTHti9XIQKSojug0TQLBRbC3": {
+      "userName": "Fabian Wiza",
+      "userPicture": "https://robohash.org/Fabian Wiza",
+      "email": "Fabian@email.com",
+      "bio": "Living in Chicago with my best friend working in the city as a UI designer. Reminiscing over my days traveling in South America and currently, saving up for my trip to Africa!",
+      "countriesVisited": [
+        "Peru",
+        "Panama",
+        "Guatemala",
+        "United States",
+        "Belize",
+        "Costa Rica",
+        "Argentina"
+      ],
+      "Trips": {
+        "G6RlGWPlpS8c9PujQOg2": {
+          "startDate": "2018-10-10",
+          "endDate": "2018-10-20",
+          "tripName": "Trip to visit Machu Picchu"
+        },
+        "sOsVmVuPZqhquoqe6xe2": {
+          "startDate": "2019-11-22",
+          "endDate": "2019-12-29",
+          "tripName": "Africa Safari Dream Trip"
+        }
+      }
+    },
+    "jKj1mv0VuJc0UauBQ6ozTuNbdSM2": {
+      "userName": "Adella Green",
+      "userPicture": "https://robohash.org/Adella Green",
+      "email": "adella@email.com",
+      "bio": "Living in Chicago. Moved from Florida. Loving the cold actually although people think I'm crazy. Excited to go to Africa this year!",
+      "countriesVisited": [
+        "Peru",
+        "Panama",
+        "Guatemala",
+        "United States",
+        "Belize",
+        "Costa Rica",
+        "Argentina"
+      ],
+      "Trips": {
+        "sOsVmVuPZqhquoqe6xe2": {
+          "startDate": "2019-11-22",
+          "endDate": "2019-12-29",
+          "tripName": "Africa Safari Dream Trip"
         }
       }
     },
