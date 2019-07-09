@@ -1,20 +1,21 @@
-import React from 'react'
-import {Card} from 'react-bootstrap'
+import React from "react";
+import { Card } from "react-bootstrap";
+import timeago from "epoch-timeago";
 
-export const AllNotesCard = (props) => {
+export const AllNotesCard = props => {
   return (
-    <div>
-      <Card>
-        <Card.Body>
-          <Card.Title>{props.note.userName}</Card.Title>
-          <Card.Subtitle>{props.note.time.seconds}</Card.Subtitle>
-          <Card.Text>{props.note.note}</Card.Text>
-        </Card.Body>
+    <Card>
+      <Card.Body>
+        <Card.Title>{props.note.userName}</Card.Title>
+        {props.note.time && (
+          <Card.Subtitle>
+            {timeago(props.note.time.seconds * 1000)}
+          </Card.Subtitle>
+        )}
+        <Card.Text>{props.note.note}</Card.Text>
+      </Card.Body>
+    </Card>
+  );
+};
 
-      </Card>
-
-    </div>
-  )
-}
-
-export default AllNotesCard
+export default AllNotesCard;
