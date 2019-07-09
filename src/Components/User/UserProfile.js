@@ -46,14 +46,14 @@ export const UserProfile = props => {
     return (
       <div>
         <UserProfileHeader user={userInfo} />
-        <div style={{ display: 'flex' }}>
+        <div className={styles.userBody}>
           <div style={{ minWidth: '60vw' }} className={styles.userProfileBody}>
             {userInfo.Trips && <UserProfileTrips trips={userInfo.Trips} />}
           </div>
-          <div>
+          <div className={styles.userStats}>
             <Card border="info" style={{ margin: '.5rem' }}>
               <Card.Header>Trekkers Stats</Card.Header>
-              <Card.Body style={{ display: 'flex' }}>
+              <Card.Body style={{ display: 'flex', flexDirection: 'column' }}>
                 <Card>
                   <Card.Header>Days Until Next Trekk</Card.Header>
                   {userInfo.Trips && (
@@ -68,7 +68,7 @@ export const UserProfile = props => {
                     </Card.Title>
                   )}
                 </Card>
-                <Card>
+                <Card >
                   <Card.Header>% of Countries Visited</Card.Header>
                   {userInfo.countriesVisited && (
                     <Card.Title>
@@ -82,7 +82,7 @@ export const UserProfile = props => {
               </Card.Body>
             </Card>
             {userInfo.countriesVisited && (
-              <Card border="info" style={{ margin: '.5rem' }}>
+              <Card border="info" style={{ margin: '.5rem', minWidth: "50%" }}>
                 <Card.Header>
                   Countries Visited ({userInfo.countriesVisited.length})
                 </Card.Header>

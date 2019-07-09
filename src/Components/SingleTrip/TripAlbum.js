@@ -25,30 +25,44 @@ export const TripAlbum = props => {
   }
   console.log(value && imageArr());
 
-  return (
-    <div style={{maxWidth:'40rem', maxHeight:'30rem'}}>{value && <ImageGallery items={imageArr()} />}</div>
-    // <Card style={{ maxWidth: '33rem' }}>
-    //   <Card.Header>Trip Album</Card.Header>
-    //   <Card.Body>
-    //     {value && (
-    //       <span>
-    //         {value.docs.map(doc => (
-    //           // console.log(doc.data().URL)
-    //           <Image
-    //             style={{ maxHeight: '7rem', margin:'.2rem' }}
-    //             key={doc.id}
-    //             src={doc.data().URL}
-    //             thumbnail
-    //           />
-    //         ))}
-    //       </span>
-    //     )}
-    //   </Card.Body>
-    //   <Card.Footer>
-    //     {props.fellowTrekker && <PhotoLoad from="trip" tripId={props.tripId} />}
-    //   </Card.Footer>
-    // </Card>
-  );
+  if(value && imageArr.length > 0){
+    return (
+
+      <div style={{maxWidth:'40rem', maxHeight:'30rem'}}>{value && <ImageGallery items={imageArr()} />}</div>
+    /* // <Card style={{ maxWidth: '33rem' }}>
+      //   <Card.Header>Trip Album</Card.Header>
+      //   <Card.Body>
+      //     {value && (
+      //       <span>
+      //         {value.docs.map(doc => (
+      //           // console.log(doc.data().URL)
+      //           <Image
+      //             style={{ maxHeight: '7rem', margin:'.2rem' }}
+      //             key={doc.id}
+      //             src={doc.data().URL}
+      //             thumbnail
+      //           />
+      //         ))}
+      //       </span>
+      //     )}
+            </Card.Body>
+      //   <Card.Footer>
+      <div>
+       {props.fellowTrekker && <PhotoLoad from="trip" tripId={props.tripId} />}
+      </div>
+      </>
+      //     {props.fellowTrekker && <PhotoLoad from="trip" tripId={props.tripId} />}
+      //   </Card.Footer>
+      // </Card> */
+    );
+
+  } else {
+    return(
+      <div>
+        Add an image to your trip album to get started.
+      </div>
+    )
+  }
 };
 
 export default TripAlbum;
