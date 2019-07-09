@@ -1,0 +1,42 @@
+.heading {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  background-color: transparent;
+}
+
+.background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../../images/map-and-gear.jpeg");
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dayJumbo {
+  opacity: .95;
+  padding: .5rem .5rem inherit;
+}
+
+.card {
+  opacity: 1 !important;
+  width: "50rem";
+   height: "3rem";
+}
+
+.cardDeck{
+  display: flex;
+  flex-direction: column-reverse
+}
+
+.cardNote{
+  opacity: 1;
+  width: 100%;
+  padding: 0rem;
+
+}
