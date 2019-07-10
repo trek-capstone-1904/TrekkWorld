@@ -53,7 +53,7 @@ export const UserProfile = props => {
             {userInfo.bucketList && <BucketList trips={'123'} />}
           </div>
         <h1>My Bucket List</h1>
-          <div style={{ minWidth: '60vw' }} className={styles.userProfileBody}>
+          <div style={{ minWidth: '60vw' }} className={`${styles.userProfileBody} ${styles.userProfileBackground}`}>
             {userInfo.Trips && <UserProfileTrips trips={userInfo.Trips} />}
           </div>
           <div className={styles.userStats}>

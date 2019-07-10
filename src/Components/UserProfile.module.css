@@ -5,6 +5,12 @@
   justify-content: space-around;
 }
 
+.userProfileBackground{
+  background-color: #e9ecef;
+  border-radius: 25px;
+
+}
+
 .Map {
   width: 90%;
   max-width: 1000px !important;

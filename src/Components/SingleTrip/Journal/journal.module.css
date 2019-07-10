@@ -21,6 +21,8 @@
 .dayJumbo {
   opacity: .95;
   padding: .5rem .5rem inherit;
+  margin: 1rem;
+
 }
 
 .card {
