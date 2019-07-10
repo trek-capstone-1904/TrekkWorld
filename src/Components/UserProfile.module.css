@@ -1,5 +1,6 @@
 .userProfileBody {
   display: flex;
+  flex-direction: row;
   flex: space-between;
   justify-content: space-around;
 }
