@@ -14,7 +14,7 @@ import {
 import userContext from '../../Contexts/userContext';
 import { useDocument } from 'react-firebase-hooks/firestore';
 import { Link } from 'react-router-dom';
-import { AddTrekker, TripMap } from '../index';
+import { AddTrekker, TripMap, PhotoLoad } from '../index';
 import {
   SearchAPI,
   TripSearch,
@@ -116,41 +116,66 @@ export const TripPage = props => {
                   Trip completed
                 </Badge>
               ) : (
-                <h3>
-                  Days until Trekk:{' '}
-                  <Badge className="badge-pill" variant="success">
-                    {daysRemaining}
-                  </Badge>
-                </h3>
+                <div>
+                  <h3>
+                    Days until Trekk:{' '}
+                    <Badge className="badge-pill" variant="success">
+                      {daysRemaining}
+                    </Badge>
+                  </h3>
+                </div>
               )}
               <hr />
               <Button variant="info" onClick={openJournal}>
                 Open Journal
               </Button>
+              <br />
+              {daysRemaining > 0 && (
+                <Button variant="info" style={{ marginTop: '1rem' }}>
+                  Add Activities to Trekk
+                </Button>
+              )}
             </div>
             <TripMap countries={locations} />
           </Jumbotron>
-          <h3 style={{textAlign:'left', marginLeft:'1rem'}}className={styles.headerTrip}>Trekk Activities Planned</h3>
+          <h3
+            style={{ textAlign: 'left', marginLeft: '1rem' }}
+            className={styles.headerTrip}
+          >
+            Trekk Activities Planned
+          </h3>
+          {/* {daysRemaining > 0 && <Button>Add Activities to Trekk</Button>} */}
           <TrekkList tripId={tripId} />
         </div>
-        <div style={{ backgroundColor: '#17a2b8', width: '30vw', minHeight:'100vh' }}>
+        <div
+          style={{
+            backgroundColor: '#17a2b8',
+            width: '30vw',
+            minHeight: '100vh',
+          }}
+        >
           <Card border="info" bg="info" className={styles.tripInfoCard}>
             <Card.Body>
               <Card.Title className={styles.headerTrip}>
                 <h4>Trip Details</h4>
               </Card.Title>
-              <Card.Text>
+              <Card.Text style={{ padding: '0 1rem' }}>
                 Dates: {moment(startDate).format('MMM D, YYYY')} -{' '}
                 {moment(endDate).format('MMM D, YYYY')}{' '}
               </Card.Text>
-              <Card.Text>Total Days: {totalDays} </Card.Text>
-              <Card.Text>
+              <Card.Text style={{ padding: '0 1rem' }}>
+                Total Days: {totalDays}{' '}
+              </Card.Text>
+              <Card.Text style={{ padding: '0 1rem' }}>
                 Countries:
                 {locations.map(country => (
                   <Badge variant="info"> {country}</Badge>
                 ))}
               </Card.Text>
-              <Card.Text> Trip type: {tripTags} </Card.Text>
+              <Card.Text style={{ padding: '0 1rem' }}>
+                {' '}
+                Trip type: {tripTags}{' '}
+              </Card.Text>
             </Card.Body>
           </Card>
           <div>
@@ -172,7 +197,7 @@ export const TripPage = props => {
                       backgroundColor: '#e9ecef',
                       justifyContent: 'center',
                       margin: '.1rem',
-                      width:'15rem'
+                      width: '15rem',
                     }}
                   >
                     <img
@@ -231,7 +256,12 @@ export const TripPage = props => {
             </Modal>
           </div>
           <hr />
-          <h4 className={styles.headerTrip}>Trip Images from Trekkers</h4>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignContent:'start' }}>
+            <h4 className={styles.headerTrip} style={{margin:'.2rem 1rem'}}>Trip Images from Trekkers </h4>
+            {isThisAFellowTrekker() && (
+              <PhotoLoad from="trip" tripId={props.tripId} />
+            )}
+          </div>
           <TripAlbum fellowTrekker={isThisAFellowTrekker()} tripId={tripId} />
         </div>
       </div>
