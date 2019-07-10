@@ -3,20 +3,24 @@ import { Card, Button } from 'react-bootstrap';
 import styles from '../SearchAPICard.module.css';
 import db from '../../firebase';
 import userContext from '../../Contexts/userContext';
-import { TripSelectButton } from '../index';
+import { TripSelectButtonTripSearch } from '../index';
+import * as secret from '../../secrets';
 
 export const TripResultPlaceCard = props => {
   const { placeName, snippet, placeImage } = props.card;
   const { tripId, placeId } = props;
   const loggedInUser = useContext(userContext);
   const { uid } = loggedInUser;
+  console.log('placeImage on TripResultPlaceCard props', placeImage);
+  console.log('props on TripResultPlaceCard props', props);
 
-  console.log('tripId on TripResultPlaceCard', tripId);
   return (
     <Card>
       <Card.Body>
         <Card.Title>{placeName}</Card.Title>
-        {placeImage && <img src={placeImage} alt="sight" />}
+        {placeImage && (
+          <img src={`${placeImage}&key=${secret.places}`} alt="sight" />
+        )}
 
         <Card.Text className={styles.cardText}>{snippet}</Card.Text>
         <Button
@@ -26,14 +30,7 @@ export const TripResultPlaceCard = props => {
         >
           + Bucket
         </Button>
-        {/* <Button
-          style={{ margin: '0 1rem' }}
-          variant="info"
-          onClick={() => addToTrekk(uid, placeId, placeName, snippet, tripId)}
-        >
-          + Trekk List
-        </Button> */}
-        <TripSelectButton slicedImage={placeImage} card={props} />
+        <TripSelectButtonTripSearch slicedImage={placeImage} button={props} />
       </Card.Body>
     </Card>
   );

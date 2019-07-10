@@ -20,6 +20,8 @@ export const TripSelectButton = props => {
   const { slicedImage } = props;
   const { button } = props;
 
+  // console.log('this is button on tripSelectButton', button);
+
   const [snapshot, loading, error] = useDocument(
     db.collection('Users').doc(`${loggedInUser.uid}`),
     {
@@ -28,16 +30,10 @@ export const TripSelectButton = props => {
   );
 
   return (
-    <ButtonGroup
-    // name="tripId"
-    // value={tripId}
-    // as="select"
-    >
+    <ButtonGroup>
       <DropdownButton
         as={ButtonGroup}
-        // name={tripId}
         title="Add to Trip"
-        // onChange={changeTripId}
         onSelect={evt =>
           handleClick(slicedImage, button, loggedInUser.uid, evt)
         }
@@ -56,15 +52,15 @@ export const TripSelectButton = props => {
 
 const handleClick = (slicedImage, props, uid, evt) => {
   //query Places
-
+  console.log('handleClick is hitting!!!!!!!!!!!!!!!!');
   const tripId = evt;
   console.log(tripId);
-
-  const placeRef = db.collection('Places').doc(props.sight.id);
+  const placeId = props.sight.id && props.placeId;
+  const placeRef = db.collection('Places').doc(placeId);
 
   const { name, snippet } = props.sight;
-  console.log('props.sight.id', props.sight.id);
-  console.log('props', props);
+  console.log('props.sight.id on selectbutton', props.sight.id);
+  console.log('props on selectbutton', props);
   let { sight, country, type } = props;
   sight.placeImage = slicedImage;
   const placeObj = { sight, country, type };
@@ -76,6 +72,7 @@ const handleClick = (slicedImage, props, uid, evt) => {
       if (doc.exists) {
         //add the props.id to the user
         console.log('Document data:', doc.data());
+
         if (tripId) {
           addToTrekk(slicedImage, uid, props.sight.id, name, snippet, tripId);
         }
