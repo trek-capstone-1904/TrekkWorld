@@ -2,10 +2,11 @@ import React, { useContext } from "react";
 import userContext from "../../../Contexts/userContext";
 import db from "../../../firebase";
 import { useDocument } from "react-firebase-hooks/firestore";
-import { Spinner, Jumbotron } from "react-bootstrap";
+import { Spinner, Jumbotron, Button } from "react-bootstrap";
 import moment from "moment";
 import JournalDay from "./JournalDay";
 import style from './journal.module.css'
+import history from '../../../history';
 
 function calcDays(start, end) {
   const tripDays = [];
@@ -17,6 +18,7 @@ function calcDays(start, end) {
   return tripDays;
 }
 
+
 export const Journal = props => {
 
   const loggedInUser = useContext(userContext);
@@ -26,8 +28,11 @@ export const Journal = props => {
   //get the document for the current trip
   const [value, loading, error] = useDocument(
     db.collection("Trips").doc(props.match.params.tripId)
-  );
+    );
 
+  function handleClick(event){
+    history.push(`/trip/${props.match.params.tripId}`)
+  }
   if (error) throw error;
   if (loading) return <Spinner animation="grow" variant="info" />;
 
@@ -54,6 +59,7 @@ export const Journal = props => {
         <span>
           <div>
             <Jumbotron className={style.heading}>{tripInfo.tripName} Journal</Jumbotron>
+            <Button onClick={handleClick}className="sticky-top">Close Journal</Button>
             {days.map(date => (
               <Jumbotron className={style.dayJumbo} key={date}>
                 <JournalDay
