@@ -109,11 +109,11 @@ const handleClick = (slicedImage, props, uid, tripId) => {
       if (doc.exists) {
         //add the props.id to the user
         console.log('Document data:', doc.data());
-        if (tripId) {
-          addToTrekk(slicedImage, uid, props.sight.id, name, snippet, tripId);
-        } else {
-          addToBucketList(slicedImage, uid, props.sight.id, name, snippet);
-        }
+        // if (tripId) {
+        //   addToTrekk(slicedImage, uid, props.sight.id, name, snippet, tripId);
+        // } else {
+        addToBucketList(slicedImage, uid, props.sight.id, name, snippet);
+        // }
       } else {
         // doc is created in 'Places' collection
         console.log('Place document did not exist');
@@ -128,11 +128,9 @@ const handleClick = (slicedImage, props, uid, tripId) => {
               });
             console.log('Document successfully written!');
           }).then(function(){
-            if (tripId) {
-              addToTrekk(slicedImage, uid, props.sight.id, name, snippet, tripId);
-            } else {
+
               addToBucketList(slicedImage, uid, props.sight.id, name, snippet);
-            }
+
 
           }
 
@@ -140,6 +138,11 @@ const handleClick = (slicedImage, props, uid, tripId) => {
           .catch(function(error) {
             console.error('Error writing document: ', error);
           });
+        // if (tripId) {
+        //   addToTrekk(slicedImage, uid, props.sight.id, name, snippet, tripId);
+        // } else {
+        addToBucketList(slicedImage, uid, props.sight.id, name, snippet);
+        // }
       }
     })
     .catch(function(error) {

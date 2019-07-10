@@ -8,7 +8,7 @@ import firebase from 'firebase/app';
 export const BucketListCard = props => {
   const loggedInUser = useContext(userContext);
   const uid = loggedInUser.uid;
-  const { tripId } = props;
+  // const { tripId } = props;
   const { placeName, snippet, placeImage } = props.card;
   const placeId = props.placeId;
 

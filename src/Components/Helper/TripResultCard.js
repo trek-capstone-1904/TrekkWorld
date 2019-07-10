@@ -53,10 +53,10 @@ export const TripResultCard = props => {
   tripCompleted();
 
   return (
-    <Card border="info" style={{ margin: '.5rem' }}>
+    <Card border="info" style={{ margin: '.5rem', minWidth:'20%', maxWidth:'20%' }}>
       {/* <Card.Img variant="top" src={`../${card.tripImageUrl}`} /> */}
 
-      <Link to={`trip/${props.tripId}`}>
+      <Link to={`/trip/${props.tripId}`}>
         <Card.Title>{card.tripName}</Card.Title>
       </Link>
       <Card.Subtitle className="mb-2 text-muted">
