@@ -5,6 +5,9 @@ import {
   ButtonGroup,
   DropdownButton,
   Dropdown,
+  Accordion,
+  Button,
+  ListGroup,
 } from 'react-bootstrap';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
@@ -52,58 +55,53 @@ export const TripResultCard = props => {
   return (
     <Card border="info" style={{ margin: '.5rem' }}>
       {/* <Card.Img variant="top" src={`../${card.tripImageUrl}`} /> */}
-      <Card.Body>
-        <Link to={`/trip/${props.tripId}`}>
-          <Card.Title>{card.tripName}</Card.Title>
-        </Link>
-        <Card.Subtitle className="mb-2 text-muted">
-          {moment(card.startDate).format('MMM D, YYYY')}
-        </Card.Subtitle>
-        {card.placeImage && <img src={card.placeImage} alt="sight" />}
-        {Object.entries(card.users).map(user => (
-          <Badge variant="primary" key={user[0]}>
-            {user[1].userName}
-          </Badge>
-        ))}
 
-        {/* {Object.entries(card.tripTags).map(tag => ( */}
-        <div>
-          <Badge variant="light">{card.tripTags} Trip</Badge>
-          {!tripCompleted() && <Badge variant="light"> Upcoming</Badge>}
-          {tripCompleted() && (
-            <Badge variant="success" display={tripCompleted()}>
-              {tripCompleted()}
-            </Badge>
-          )}
-        </div>
-        <div>
-          <ButtonGroup>
-            <DropdownButton
-              as={ButtonGroup}
-              title="Places"
-              id="bg-nested-dropdown"
-            >
-              {value && (
-                <Dropdown.Item eventKey="1">
-                  <Card style={{ maxWidth: '40vw', margin: '.5rem 1rem' }}>
-                    <Card.Header>Places</Card.Header>
-                    {value.docs
-                      .filter(doc => !doc.data().locations)
-                      .map(doc => (
-                        <TripResultPlaceCard
-                          key={doc.id}
-                          placeId={doc.id}
-                          card={doc.data()}
-                          tripId={tripId}
-                        />
-                      ))}
-                  </Card>
-                </Dropdown.Item>
-              )}
-            </DropdownButton>
-          </ButtonGroup>
-        </div>
-      </Card.Body>
+      <Link to={`trip/${props.tripId}`}>
+        <Card.Title>{card.tripName}</Card.Title>
+      </Link>
+      <Card.Subtitle className="mb-2 text-muted">
+        {moment(card.startDate).format('MMM D, YYYY')}
+      </Card.Subtitle>
+      {card.placeImage && <img src={card.placeImage} alt="sight" />}
+      {Object.entries(card.users).map(user => (
+        <Badge pill variant="primary" key={user[0]}>
+          {user[1].userName}
+        </Badge>
+      ))}
+
+      {/* {Object.entries(card.tripTags).map(tag => ( */}
+      <div>
+        <Badge variant="light">{card.tripTags} Trip</Badge>
+        {!tripCompleted() && <Badge variant="light"> Upcoming</Badge>}
+        {tripCompleted() && (
+          <Badge variant="success" display={tripCompleted()}>
+            {tripCompleted()}
+          </Badge>
+        )}
+      </div>
+      <Accordion>
+        <Accordion.Toggle as={Button} variant="link" eventKey="0">
+          Places
+        </Accordion.Toggle>
+        <Accordion.Collapse eventKey="0">
+          <ListGroup as="ul">
+            {value &&
+              value.docs
+                .filter(doc => !doc.data().locations)
+                .map(doc => (
+                  <ListGroup.Item as="li">
+                    <TripResultPlaceCard
+                      key={doc.id}
+                      placeId={doc.id}
+                      card={doc.data()}
+                      tripId={tripId}
+                    />
+                  </ListGroup.Item>
+                ))}
+          </ListGroup>
+        </Accordion.Collapse>
+      </Accordion>
+      <div />
     </Card>
   );
 };

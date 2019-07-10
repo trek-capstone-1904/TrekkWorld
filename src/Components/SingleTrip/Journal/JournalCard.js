@@ -3,8 +3,8 @@ import { Spinner, Button, Card, CardDeck } from "react-bootstrap";
 import Rating from "react-rating";
 import { useDocument } from "react-firebase-hooks/firestore";
 import db from "../../../firebase";
-import style from './journal.module.css'
-import * as secret from '../../../secrets'
+import style from "./journal.module.css";
+import * as secret from "../../../secrets";
 
 export const JournalCard = props => {
   //take the place ID passed down, and query the places collection to get the data that should go on the card
@@ -15,21 +15,22 @@ export const JournalCard = props => {
   if (error) throw error;
   if (loading) return <Spinner animation="grow" variant="info" />;
   if (value) {
-    console.log("props", props.place);
+    // console.log("props", props.place);
 
     // console.log("place doc", value)
     const placeInfo = value.data();
-    console.log("data in place doc", placeInfo)
+    // console.log("data in place doc", placeInfo)
     return (
       <div>
         <Card className={style.card}>
-        <Card.Img src={`${placeInfo.sight.placeImage}&key=${secret.places}`} />
+          <Card.Img
+            src={`${placeInfo.sight.placeImage}&key=${secret.places}`}
+          />
 
-          <Card.Body>{placeInfo.sight.name}
-          {/* <Rating /> */}
+          <Card.Body >
+            {placeInfo.sight.name}
+            {/* <Rating /> */}
           </Card.Body>
-
-
 
           {/* <Button >+Review</Button> */}
 

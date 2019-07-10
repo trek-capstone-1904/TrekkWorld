@@ -1,6 +1,6 @@
 .heading {
   color: white;
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   text-align: center;
   font-size: 3rem;
   background-color: transparent;
@@ -8,7 +8,7 @@
 
 .background {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../../../images/map-and-gear.jpeg");
+    url('../../../images/map-and-gear.jpeg');
   height: 100%;
 
   /* Create the parallax scrolling effect */
@@ -19,30 +19,38 @@
 }
 
 .dayJumbo {
-  opacity: .95;
-  padding: .5rem .5rem inherit;
+  opacity: 0.95;
+  padding: 0.5rem 0.5rem inherit;
   margin: 1rem 15rem;
 }
 
 .card {
   opacity: 1 !important;
-  width: "50rem";
-   height: "3rem";
+  width: '50rem';
+  height: '3rem';
+  padding: 0rem;
 }
 
-.cardDeck{
+.cardDeck {
   display: flex;
-  flex-direction: column-reverse
+  flex-direction: column-reverse;
 }
 
-.cardNote{
+.cardNote {
   opacity: 1;
   width: 100%;
   padding: 0rem;
-
 }
+.cardBody {
+  padding: 0rem;
+}
+
+.cardHeader {
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 750px) {
-  .dayJumbo{
-    margin:2rem;
+  .dayJumbo {
+    margin: 2rem;
   }
 }

@@ -73,7 +73,7 @@ export const SearchAPICard = props => {
   }
 
   const slicedImage = image.slice(0, image.indexOf('&key'));
-  // console.log('placeImage:', image && image);
+
   return (
     <Card style={{ margin: '.5rem 1rem' }}>
       <Card.Body>

@@ -1,7 +1,14 @@
 .userProfileBody {
   display: flex;
+  flex-direction: row;
   flex: space-between;
   justify-content: space-around;
+}
+
+.userProfileBackground{
+  background-color: #e9ecef;
+  border-radius: 25px;
+
 }
 
 .Map {

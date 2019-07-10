@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import { useDocument } from "react-firebase-hooks/firestore";
 import Selector from "./Selector";
 import Notes from "./Notes";
@@ -7,10 +7,14 @@ import JournalCard from "./JournalCard";
 import { Form, CardDeck, Spinner, Badge } from "react-bootstrap";
 import db from "../../../firebase";
 import style from "./journal.module.css";
+import userContext from '../../../Contexts/userContext';
+
 
 const JournalDay = props => {
   //get Trekk List collection for the current trip
-
+  console.log(props)
+  const loggedInUser = useContext(userContext);
+  const userId = `${loggedInUser.uid}`;
   const [value, loading, error] = useDocument(
     db
       .collection("Trips")
@@ -19,6 +23,15 @@ const JournalDay = props => {
       .doc(props.date)
   );
 
+  const [tripValue, tripLoading, tripError] = useDocument(db.collection('Trips').doc(props.tripId),
+  {
+    valueListenOptions: { includeMetadataChanges: true },
+  })
+
+  if(tripLoading || tripError){
+    return <Spinner animation="grow" variant="info" />
+  }
+  const {users} = tripValue.data()
   //create an array to store all of the places on the Trekk List to be used in the selector drop down options
   let placesArray;
 
@@ -29,6 +42,17 @@ const JournalDay = props => {
     placesArray = value.get("places");
     console.log(placesArray);
 
+    function isThisAFellowTrekker() {
+      console.log('users on trip', users);
+      let trekkersIds = Object.keys(users);
+      if (trekkersIds.includes(userId)) {
+        console.log('GOING ON VACATION');
+        return true;
+      } else {
+        console.log('not my trip');
+        return false;
+      }
+    }
     return (
       <div className={style.card}>
         <h3>{props.date}</h3>
@@ -50,11 +74,15 @@ const JournalDay = props => {
             </Badge> */}
           </Form.Label>
           <div>
-            <div>Notes</div>
+            {/* <div>Notes</div> */}
             <AllNotes tripId={props.tripId} date={props.date} />
             <div>
-              <Notes tripId={props.tripId} date={props.date} />
-              <Selector tripId={props.tripId} date={props.date} />
+              {isThisAFellowTrekker() && (
+                <>
+                <Notes tripId={props.tripId} date={props.date} />
+                <Selector tripId={props.tripId} date={props.date} />
+                </>
+              )}
             </div>
           </div>
         </Form>
