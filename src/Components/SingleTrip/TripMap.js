@@ -43,27 +43,16 @@ export const TripMap = props => {
     console.log(value.data());
     const regionCode = regions[value.data().region];
     console.log(regionCode);
-    console.log(window.innerWidth)
+    console.log(window.innerWidth);
     let widthMap;
-    if(window.innerWidth<800){
-      widthMap=`${window.innerWidth-50}px`;
-    }else{
-      widthMap='30rem';
+    if (window.innerWidth < 800) {
+      widthMap = `${window.innerWidth - 50}px`;
+    } else {
+      widthMap = '30rem';
     }
     return (
       <div styles={{ maxWidth: '30rem' }}>
-        <span style={{ display: 'flex', maxWidth:'100vw' }}>
-          <Chart
-            chartType="GeoChart"
-            width={widthMap}
-            data={dataCountries}
-            options={{
-              region: regionCode,
-              backgroundColor: 'none',
-              datalessRegionColor: 'lightgray',
-              defaultColor: '#17a2b8',
-            }}
-          />
+        <span style={{ display: 'flex', maxWidth: '100vw' }}>
           <button
             onClick={toggle}
             style={{
@@ -75,6 +64,17 @@ export const TripMap = props => {
           >
             <img style={{ width: '1rem' }} src={zoom} alt="zoom" />
           </button>
+          <Chart
+            chartType="GeoChart"
+            width={widthMap}
+            data={dataCountries}
+            options={{
+              region: regionCode,
+              backgroundColor: 'none',
+              datalessRegionColor: 'lightgray',
+              defaultColor: '#17a2b8',
+            }}
+          />
         </span>
         <Modal size="lg" show={isZoom} onHide={handleClose}>
           <Modal.Header>

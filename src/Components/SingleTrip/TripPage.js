@@ -130,10 +130,10 @@ export const TripPage = props => {
             </div>
             <TripMap countries={locations} />
           </Jumbotron>
-          <h2 className={styles.headerTrip}>Trekk Activities Planned</h2>
+          <h3 style={{textAlign:'left', marginLeft:'1rem'}}className={styles.headerTrip}>Trekk Activities Planned</h3>
           <TrekkList tripId={tripId} />
         </div>
-        <div style={{ backgroundColor: '#17a2b8', width: '30vw', height:'100vw' }}>
+        <div style={{ backgroundColor: '#17a2b8', width: '30vw', minHeight:'100vh' }}>
           <Card border="info" bg="info" className={styles.tripInfoCard}>
             <Card.Body>
               <Card.Title className={styles.headerTrip}>
