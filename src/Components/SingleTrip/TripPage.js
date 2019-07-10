@@ -9,11 +9,12 @@ import {
   Modal,
   Card,
   Badge,
+  InputGroup,
 } from 'react-bootstrap';
 import userContext from '../../Contexts/userContext';
 import { useDocument } from 'react-firebase-hooks/firestore';
 import { Link } from 'react-router-dom';
-import { AddTrekker, TripMap } from '../index';
+import { AddTrekker, TripMap, PhotoLoad } from '../index';
 import {
   SearchAPI,
   TripSearch,
@@ -40,6 +41,9 @@ export const TripPage = props => {
   //redirects to journal
   function openJournal() {
     props.history.push(`${tripId}/journal`);
+  }
+  function openTrekkPlan() {
+    props.history.push(`/plantrip`);
   }
 
   const [isShowing, setIsShowing] = useState(false);
@@ -105,77 +109,102 @@ export const TripPage = props => {
     }
 
     return (
-      <div>
-        {/* jumbotron header */}
-        <Jumbotron className={styles.Jumbotron}>
-          <div className={styles.tripHeader}>
-            <h1>{tripName}</h1>
-            {daysRemaining < 0 ? (
-              <Badge style={{ margin: '.5rem' }} variant="success">
-                Trip completed
-              </Badge>
-            ) : (
-              <h3>
-                Days until Trekk:{' '}
-                <Badge className="badge-pill" variant="success">
-                  {daysRemaining}
+      <div className={styles.tripPage}>
+        <div className={styles.mobile} style={{ width: '70vw' }}>
+          <Jumbotron className={styles.Jumbotron}>
+            <div>
+              <h1 className={styles.headerTrip}>{tripName}</h1>
+              {daysRemaining < 0 ? (
+                <Badge style={{ margin: '.5rem' }} variant="success">
+                  Trip completed
                 </Badge>
-              </h3>
-            )}
-            <hr />
-            <Button variant="info" onClick={openJournal}>
-              Open Journal
-            </Button>
-          </div>
-          <TripMap countries={locations} />
+              ) : (
+                <div>
+                  <h3>
+                    Days until Trekk:{' '}
+                    <Badge className="badge-pill" variant="success">
+                      {daysRemaining}
+                    </Badge>
+                  </h3>
+                </div>
+              )}
+              <hr />
+              <Button variant="info" onClick={openJournal}>
+                Open Journal
+              </Button>
+              <br />
+              {daysRemaining > 0 && (
+                <Button
+                  variant="info"
+                  style={{ marginTop: '1rem' }}
+                  onClick={openTrekkPlan}
+                >
+                  Add Activities to Trekk
+                </Button>
+              )}
+            </div>
+            <TripMap countries={locations} />
+          </Jumbotron>
+          <h3
+            style={{ textAlign: 'left', marginLeft: '1rem' }}
+            className={styles.headerTrip}
+          >
+            Trekk Activities Planned
+          </h3>
+          {/* {daysRemaining > 0 && <Button>Add Activities to Trekk</Button>} */}
+          <TrekkList tripId={tripId} />
+        </div>
+        <div
+          style={{
+            backgroundColor: '#17a2b8',
+            width: '30vw',
+            minHeight: '100vh',
+          }}
+        >
           <Card border="info" bg="info" className={styles.tripInfoCard}>
             <Card.Body>
-              <Card.Title>Trip Details</Card.Title>
-              <Card.Text>
-                Start: {moment(startDate).format('MMM D, YYYY')}{' '}
+              <Card.Title className={styles.headerTrip}>
+                <h4>Trip Details</h4>
+              </Card.Title>
+              <Card.Text style={{ padding: '0 1rem' }}>
+                Dates: {moment(startDate).format('MMM D, YYYY')} -{' '}
+                {moment(endDate).format('MMM D, YYYY')}{' '}
               </Card.Text>
-              <Card.Text>
-                End: {moment(endDate).format('MMM D, YYYY')}{' '}
+              <Card.Text style={{ padding: '0 1rem' }}>
+                Total Days: {totalDays}{' '}
               </Card.Text>
-              <Card.Text>Total Days: {totalDays} </Card.Text>
-              <Card.Text>
+              <Card.Text style={{ padding: '0 1rem' }}>
                 Countries:
                 {locations.map(country => (
                   <Badge variant="info"> {country}</Badge>
                 ))}
               </Card.Text>
-              <Card.Text> Trip type: {tripTags} </Card.Text>
+              <Card.Text style={{ padding: '0 1rem' }}>
+                {' '}
+                Trip type: {tripTags}{' '}
+              </Card.Text>
             </Card.Body>
           </Card>
-        </Jumbotron>
-        {/* page body */}
-        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-          {/* <CardColumns> */}
-          {/* fellow trekkers card */}
-            <Card border="info" style={{ maxWidth: '25rem', margin: '.5rem' }}>
-              <Card.Header>
-                <h4>Fellow Trekkers</h4>
-                {isThisAFellowTrekker() && (
-                  <Button
-                    variant="info"
-                    style={{ margin: '.5rem' }}
-                    onClick={toggleForm}
-                  >
-                    + New Trekker
-                  </Button>
-                )}
-              </Card.Header>
-              {/* display trekkers */}
-              <ul className="list-unstyled" style={{ padding: '0 2rem' }}>
-                {Object.entries(users).map(user => (
+          <div>
+            <hr />
+            <h4 className={styles.headerTrip} style={{ margin: '1rem' }}>
+              Trekkers
+            </h4>
+            <ul className={`list-unstyled ${styles.listTrekkers}`}>
+              {/* <h5>Fellow Trekkers</h5> */}
+              {Object.entries(users).map(user => (
+                <Link to={`/profile/${user[0]}`}>
                   <Media
                     key={user[0]}
                     as="li"
                     style={{
-                      margin: '.5rem',
                       alignItems: 'center',
                       border: '1px dotted teal',
-                      padding: '0 1.5rem',
+                      float: 'left',
+                      backgroundColor: '#e9ecef',
+                      justifyContent: 'center',
+                      margin: '.1rem',
+                      width: '15rem',
                     }}
                   >
                     <img
@@ -186,7 +215,10 @@ export const TripPage = props => {
                       alt="Profile Pic"
                     />
                     <Media.Body>
-                      <h5 style={{ margin: '0' }}> {user[1].userName}</h5>
+                      <p style={{ margin: '0', paddingRight: '.3rem' }}>
+                        {' '}
+                        {user[1].userName}
+                      </p>
                     </Media.Body>
                     {isThisAFellowTrekker() && (
                       <button
@@ -199,32 +231,53 @@ export const TripPage = props => {
                       </button>
                     )}
                   </Media>
-                ))}
-              </ul>
-              <Modal show={isShowing} onHide={handleClose}>
-                <Modal.Header closeButton>
-                  <Modal.Title>Who's trekking with?</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                  <AddTrekker
-                    userDoc={props}
-                    tripId={tripId}
-                    trip={trip.data()}
-                  />
-                </Modal.Body>
-                <Modal.Footer>
-                  <Button variant="secondary" onClick={handleClose}>
-                    Close
-                  </Button>
-                </Modal.Footer>
-              </Modal>
-            </Card>
-          {/* </CardColumns> */}
-          <TrekkList tripId={tripId}/>
+                </Link>
+              ))}
+              {isThisAFellowTrekker() && (
+                <Button
+                  variant="light"
+                  style={{ margin: '.5rem' }}
+                  onClick={toggleForm}
+                >
+                  + New Trekker
+                </Button>
+              )}
+            </ul>
+
+            <Modal show={isShowing} onHide={handleClose}>
+              <Modal.Header closeButton>
+                <Modal.Title>Who's trekking with?</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <AddTrekker
+                  userDoc={props}
+                  tripId={tripId}
+                  trip={trip.data()}
+                />
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          </div>
+          <hr />
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignContent: 'start',
+            }}
+          >
+            <h4 className={styles.headerTrip} style={{ margin: '.2rem 1rem' }}>
+              Trip Images from Trekkers{' '}
+            </h4>
+            {isThisAFellowTrekker() && (
+              <PhotoLoad from="trip" tripId={props.tripId} />
+            )}
+          </div>
           <TripAlbum fellowTrekker={isThisAFellowTrekker()} tripId={tripId} />
-        </div>
-        <div>
-          {/* <TrekkList /> */}
         </div>
       </div>
     );

@@ -12,7 +12,7 @@ export const TrekkListCard = props => {
   const { tripId, placeId } = props;
   const { placeName, snippet, placeImage } = props.card;
   return (
-    <Card style={{ margin: '.5rem 1rem' }}>
+    <Card style={{ margin: '.5rem 1rem', width:'30vw' }}>
       <Card.Body>
         <Card.Title>{placeName}</Card.Title>
         {placeImage && (

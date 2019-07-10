@@ -1,33 +1,66 @@
 .Jumbotron {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 1rem;
-}
-
-.tripHeader{
-  text-align: left
-}
-
-.tripInfoCard{
-  width: 20rem;
+  margin-bottom: 0.6rem;
   text-align: left;
-  color: white
+}
+.headerTrip {
+  font-family: 'Oswald', sans-serif;
+}
+h4.headerTrip {
+  color: white;
+  text-align: left;
+  margin: 1rem;
+}
+.headerTrip > .tripHeader {
+  text-align: left;
 }
 
+.tripInfoCard {
+  /* width: 20rem; */
+  text-align: left;
+  color: white;
+}
+.listTrekkers {
+  list-style-type: none;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  /* padding:15rem */
+}
+.listTrekkers > li {
+  float: left;
+  margin: 0;
+  width: 15rem;
+  background-color: gray;
+}
+
+.tripPage {
+  display: flex;
+  justify-content: space-between;
+}
 
 @media only screen and (max-width: 750px) {
   .Jumbotron {
     display: block;
     text-align: center;
   }
-  .tripHeader{
-    text-align:center;
-    margin-bottom: .5rem;
+  .tripHeader {
+    text-align: center;
+    margin-bottom: 0.5rem;
   }
-  .tripInfoCard{
-    margin:auto;
+  .tripInfoCard {
+    margin: auto;
   }
-
+  .tripPage {
+    display: block;
+  }
+  .mobile {
+    width: 100vw;
+  }
 }
-
-

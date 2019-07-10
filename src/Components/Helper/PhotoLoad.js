@@ -18,7 +18,7 @@ export const PhotoLoad = props => {
   const [imageUrl, setImageUrl] = useState('');
 
   function handleInput() {
-    setAddImage(false)
+    setAddImage(false);
   }
   function handleClickAdd() {
     setAddImage(true);
@@ -95,8 +95,15 @@ export const PhotoLoad = props => {
   }
   return (
     <div>
-      <Button onClick={handleClickAdd}>+ Add Image</Button>
-      <Modal  style={{ padding: '2rem' }} show={addImage} onHide={handleInput}>
+      <Button
+        style={{ margin: '.5rem' }}
+        variant="light"
+        size="sm"
+        onClick={handleClickAdd}
+      >
+        + Add Image
+      </Button>
+      <Modal style={{ padding: '2rem' }} show={addImage} onHide={handleInput}>
         <Modal.Header>Add Image From Files</Modal.Header>
         <progress value={progressValue} max="100" id="uploader">
           0%

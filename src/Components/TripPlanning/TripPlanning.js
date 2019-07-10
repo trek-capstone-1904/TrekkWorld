@@ -122,7 +122,7 @@ export const TripPlanning = props => {
         <div className={styles.searchResults}>
           <div className={styles.placeholderTripSearch}>
             <Tabs defaultActiveKey="Search-API" id="Trip Search Results">
-              <Tab eventKey="Search-API" title="Search API">
+              <Tab eventKey="Search-API" title="Search Local Sights">
                 {submitted && (
                   <SearchAPI
                     city={city}

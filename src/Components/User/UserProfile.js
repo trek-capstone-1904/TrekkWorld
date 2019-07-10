@@ -33,9 +33,16 @@ const daysUntil = trips => {
 };
 
 export const UserProfile = props => {
+  console.log('props.match.params',props.match.params)
   const loggedInUser = useContext(userContext);
+  let user;
+  if(props.match.params.userId){
+    user=props.match.params.userId
+  }else{
+    user=loggedInUser.uid
+  }
   const [value, loading, error] = useDocument(
-    db.doc(`Users/${loggedInUser.uid}`),
+    db.doc(`Users/${user}`),
     {
       valueListenOptions: { includeMetadataChanges: true },
     }

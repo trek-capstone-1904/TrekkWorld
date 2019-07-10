@@ -19,10 +19,11 @@ export class Routes extends Component {
   render() {
     return (
       <Switch>
-        <Route path="/profile" component={UserProfile} />
-        <Route exact path="/plantrip" component={TripPlanning} />
         <Route path="/trip/:tripId/journal" component={Journal} />
         <Route path="/trip/:tripId" component={TripPage} />
+        <Route exact path="/profile" component={UserProfile} />
+        <Route path="/profile/:userId" component={UserProfile} />
+        <Route exact path="/plantrip" component={TripPlanning} />
         <Route path="/login" component={Login} />
         {/* Testing Routes */}
         <Route path="/triposoAPI" component={SearchAPI} />
