@@ -4,6 +4,7 @@ import styles from '../SearchAPICard.module.css';
 import userContext from '../../Contexts/userContext';
 import db from '../../firebase';
 import firebase from 'firebase/app';
+import * as secret from '../../secrets';
 
 export const BucketListCard = props => {
   const loggedInUser = useContext(userContext);
@@ -13,19 +14,21 @@ export const BucketListCard = props => {
   const placeId = props.placeId;
 
   let snippetShort;
-  if(snippet.length>140){
-    snippetShort = snippet.substr(0, snippet.indexOf('.')+1)
+  if (snippet.length > 140) {
+    snippetShort = snippet.substr(0, snippet.indexOf('.') + 1);
   } else {
-    snippetShort = snippet
+    snippetShort = snippet;
   }
   return (
-    <Card style={{ margin: '.5rem 1rem', maxHeight: '20rem', maxWidth: '15rem' }}>
+    <Card
+      style={{ margin: '.5rem 1rem', maxHeight: '20rem', maxWidth: '15rem' }}
+    >
       <Card.Body>
         <Card.Title>{placeName}</Card.Title>
-        {placeImage && <img src={placeImage} alt="sight" />}
-        <Card.Text className={styles.cardText}>{
-         snippetShort
-          }</Card.Text>
+        {placeImage && (
+          <img src={`${placeImage}&key=${secret.places}`} alt="sight" />
+        )}
+        <Card.Text className={styles.cardText}>{snippetShort}</Card.Text>
         <Button
           style={{ margin: '0 1rem' }}
           variant="info"
