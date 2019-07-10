@@ -42,6 +42,9 @@ export const TripPage = props => {
   function openJournal() {
     props.history.push(`${tripId}/journal`);
   }
+  function openTrekkPlan() {
+    props.history.push(`/plantrip`);
+  }
 
   const [isShowing, setIsShowing] = useState(false);
 
@@ -131,7 +134,7 @@ export const TripPage = props => {
               </Button>
               <br />
               {daysRemaining > 0 && (
-                <Button variant="info" style={{ marginTop: '1rem' }}>
+                <Button variant="info" style={{ marginTop: '1rem' }} onClick={openTrekkPlan}>
                   Add Activities to Trekk
                 </Button>
               )}
