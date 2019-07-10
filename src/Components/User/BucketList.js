@@ -22,7 +22,7 @@ export const BucketList = props => {
         {loading && <span>Document: Loading...</span>}
         {/* //TODO: add spinner */}
         {snapshot && snapshot.data().bucketList && (
-          <span>
+          <span style={{display: "flex", flexDirection: "row" }}>
             {Object.keys(snapshot.data().bucketList).map(key => {
               return (
                 <BucketListCard

@@ -14,6 +14,7 @@ import {
 } from 'react-bootstrap';
 import userContext from '../../Contexts/userContext';
 import TrekkList from '../SingleTrip/TrekkList';
+import BucketList from './BucketList'
 
 const daysUntil = trips => {
   let tripDates = Object.values(trips)
@@ -43,10 +44,15 @@ export const UserProfile = props => {
   if (loading) return <Spinner animation="grow" variant="info" />;
   if (value) {
     const userInfo = value.data();
+    console.log("userInfo", userInfo)
     return (
       <div>
         <UserProfileHeader user={userInfo} />
         <div className={styles.userBody}>
+          <div style={{ minWidth: '60vw' }} className={styles.userProfileBody}>
+            {userInfo.bucketList && <BucketList trips={'123'} />}
+          </div>
+        <h1>My Bucket List</h1>
           <div style={{ minWidth: '60vw' }} className={styles.userProfileBody}>
             {userInfo.Trips && <UserProfileTrips trips={userInfo.Trips} />}
           </div>
