@@ -13,7 +13,7 @@ export const UserProfileTrips = props => {
   return (
     <div style={{ maxWidth: '100rem', justifyContent: "space-around" }}>
       <h1>My Trekks</h1>
-      <CardGroup>
+      <CardGroup style={{flexWrap:'wrap', justifyContent:'center'}}>
       {trips.map(trip => (
         <TripListItem key={trip.id} tripId={trip.id} />
         ))}
