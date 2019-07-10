@@ -127,15 +127,19 @@ const handleClick = (slicedImage, props, uid, tripId) => {
                 placeImage: slicedImage,
               });
             console.log('Document successfully written!');
-          })
+          }).then(function(){
+            if (tripId) {
+              addToTrekk(slicedImage, uid, props.sight.id, name, snippet, tripId);
+            } else {
+              addToBucketList(slicedImage, uid, props.sight.id, name, snippet);
+            }
+
+          }
+
+          )
           .catch(function(error) {
             console.error('Error writing document: ', error);
           });
-        if (tripId) {
-          addToTrekk(slicedImage, uid, props.sight.id, name, snippet, tripId);
-        } else {
-          addToBucketList(slicedImage, uid, props.sight.id, name, snippet);
-        }
       }
     })
     .catch(function(error) {

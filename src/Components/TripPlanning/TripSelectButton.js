@@ -41,7 +41,7 @@ export const TripSelectButton = props => {
       >
         {snapshot &&
           Object.entries(snapshot.data().Trips).map(trip => (
-            <Dropdown.Item eventKey={trip[0]} value={trip[0]}>
+            <Dropdown.Item key={trip[0]} eventKey={trip[0]} value={trip[0]}>
               {trip[1].tripName}
             </Dropdown.Item>
           ))}
