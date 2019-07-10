@@ -109,8 +109,8 @@ export const TripPage = props => {
     }
 
     return (
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <div style={{ width: '70vw' }}>
+      <div className={styles.tripPage}>
+        <div className={styles.mobile} style={{ width: '70vw' }}>
           <Jumbotron className={styles.Jumbotron}>
             <div>
               <h1 className={styles.headerTrip}>{tripName}</h1>
@@ -134,7 +134,11 @@ export const TripPage = props => {
               </Button>
               <br />
               {daysRemaining > 0 && (
-                <Button variant="info" style={{ marginTop: '1rem' }} onClick={openTrekkPlan}>
+                <Button
+                  variant="info"
+                  style={{ marginTop: '1rem' }}
+                  onClick={openTrekkPlan}
+                >
                   Add Activities to Trekk
                 </Button>
               )}
@@ -259,8 +263,16 @@ export const TripPage = props => {
             </Modal>
           </div>
           <hr />
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignContent:'start' }}>
-            <h4 className={styles.headerTrip} style={{margin:'.2rem 1rem'}}>Trip Images from Trekkers </h4>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignContent: 'start',
+            }}
+          >
+            <h4 className={styles.headerTrip} style={{ margin: '.2rem 1rem' }}>
+              Trip Images from Trekkers{' '}
+            </h4>
             {isThisAFellowTrekker() && (
               <PhotoLoad from="trip" tripId={props.tripId} />
             )}

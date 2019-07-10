@@ -41,7 +41,7 @@ export const TripSelectButton = props => {
       >
         {snapshot &&
           Object.entries(snapshot.data().Trips).map(trip => (
-            <Dropdown.Item eventKey={trip[0]} value={trip[0]}>
+            <Dropdown.Item key={trip[0]} eventKey={trip[0]} value={trip[0]}>
               {trip[1].tripName}
             </Dropdown.Item>
           ))}
@@ -55,8 +55,10 @@ const handleClick = (slicedImage, props, uid, evt) => {
   console.log('handleClick is hitting!!!!!!!!!!!!!!!!');
   const tripId = evt;
   console.log(tripId);
-  const placeId = props.sight.id && props.placeId;
-  const placeRef = db.collection('Places').doc(placeId);
+  console.log(props);
+  // const placeId = props.sight.id && props.placeId;
+  // const placeId = props.sight.id && props.placeId;
+  const placeRef = db.collection('Places').doc(props.sight.id);
 
   const { name, snippet } = props.sight;
   console.log('props.sight.id on selectbutton', props.sight.id);
