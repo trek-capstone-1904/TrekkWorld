@@ -13,6 +13,7 @@ import userContext from '../../Contexts/userContext';
 import db from '../../firebase';
 import { useDocument } from 'react-firebase-hooks/firestore';
 import history from '../../history';
+import { Link } from 'react-router-dom';
 
 export const TripPlanning = props => {
   const query = props.location.search;
@@ -157,6 +158,11 @@ export const TripPlanning = props => {
                       </option>
                     ))}
                 </Form.Control>
+                <div>
+                  <Link to={`trip/${tripId}`}>
+                    <Button variant="info">Trip Page</Button>
+                  </Link>
+                </div>
                 {tripId && <TrekkList list={'trekkList'} tripId={tripId} />}
               </Tab>
             </Tabs>
