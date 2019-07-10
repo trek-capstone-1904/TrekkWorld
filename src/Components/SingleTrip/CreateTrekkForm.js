@@ -92,6 +92,10 @@ export const CreateTrekkForm = props => {
     history.push(`/trip/${tripId}`);
   }
 
+  function handleClickPlan(event){
+    history.push(`/plantrip`)
+  }
+
   return (
     <div>
       {loading && <Spinner animation="grow" variant="info" />}
@@ -186,6 +190,7 @@ export const CreateTrekkForm = props => {
         <div>
           <h4>Successfully Created Trip!</h4>
           <Button onClick={handleClick}> > Go To Trip Page</Button>
+          <Button onClick={handleClickPlan}>Start Planning Your Trip</Button>
         </div>
       )}
     </div>

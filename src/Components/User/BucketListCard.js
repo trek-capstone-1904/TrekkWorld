@@ -9,7 +9,7 @@ import * as secret from '../../secrets';
 export const BucketListCard = props => {
   const loggedInUser = useContext(userContext);
   const uid = loggedInUser.uid;
-  const { tripId } = props;
+  // const { tripId } = props;
   const { placeName, snippet, placeImage } = props.card;
   const placeId = props.placeId;
 
