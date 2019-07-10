@@ -193,45 +193,45 @@ export const TripPage = props => {
             <ul className={`list-unstyled ${styles.listTrekkers}`}>
               {/* <h5>Fellow Trekkers</h5> */}
               {Object.entries(users).map(user => (
-                <Link to={`/profile/${user[0]}`}>
-                  <Media
-                    key={user[0]}
-                    as="li"
-                    style={{
-                      alignItems: 'center',
-                      border: '1px dotted teal',
-                      float: 'left',
-                      backgroundColor: '#e9ecef',
-                      justifyContent: 'center',
-                      margin: '.1rem',
-                      width: '15rem',
-                    }}
-                  >
-                    <img
-                      width={64}
-                      height={64}
-                      className="mr-3"
-                      src={user[1].userPicture}
-                      alt="Profile Pic"
-                    />
+                <Media
+                  key={user[0]}
+                  as="li"
+                  style={{
+                    alignItems: 'center',
+                    border: '1px dotted teal',
+                    float: 'left',
+                    backgroundColor: '#e9ecef',
+                    justifyContent: 'center',
+                    margin: '.1rem',
+                    width: '15rem',
+                  }}
+                >
+                  <img
+                    width={64}
+                    height={64}
+                    className="mr-3"
+                    src={user[1].userPicture}
+                    alt="Profile Pic"
+                  />
+                  <Link to={`/profile/${user[0]}`}>
                     <Media.Body>
                       <p style={{ margin: '0', paddingRight: '.3rem' }}>
                         {' '}
                         {user[1].userName}
                       </p>
                     </Media.Body>
-                    {isThisAFellowTrekker() && (
-                      <button
-                        onClick={() => handleDelete(user[0], tripId)}
-                        type="button"
-                        className="close"
-                        aria-label="Close"
-                      >
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    )}
-                  </Media>
-                </Link>
+                  </Link>
+                  {isThisAFellowTrekker() && (
+                    <button
+                      onClick={() => handleDelete(user[0], tripId)}
+                      type="button"
+                      className="close"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  )}
+                </Media>
               ))}
               {isThisAFellowTrekker() && (
                 <Button
