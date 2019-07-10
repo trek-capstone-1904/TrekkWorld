@@ -2,32 +2,44 @@
   display: flex;
   justify-content: space-around;
   padding: 1rem;
+  margin-bottom:.6rem
 }
 
-.tripHeader{
-  text-align: left
+.tripHeader {
+  text-align: left;
 }
 
-.tripInfoCard{
+.tripInfoCard {
   width: 20rem;
   text-align: left;
-  color: white
+  color: white;
 }
-
+.listTrekkers {
+  list-style-type: none;
+  overflow: hidden;
+  display: flex;
+  margin: 0;
+  align-items: left;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  padding:15rem
+}
+.listTrekkers > li {
+  float: left;
+  margin: 0;
+  width: 15rem;
+}
 
 @media only screen and (max-width: 750px) {
   .Jumbotron {
     display: block;
     text-align: center;
   }
-  .tripHeader{
-    text-align:center;
-    margin-bottom: .5rem;
+  .tripHeader {
+    text-align: center;
+    margin-bottom: 0.5rem;
   }
-  .tripInfoCard{
-    margin:auto;
+  .tripInfoCard {
+    margin: auto;
   }
-
 }
-
-

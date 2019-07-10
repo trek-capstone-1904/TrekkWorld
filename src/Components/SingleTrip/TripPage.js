@@ -9,6 +9,7 @@ import {
   Modal,
   Card,
   Badge,
+  InputGroup,
 } from 'react-bootstrap';
 import userContext from '../../Contexts/userContext';
 import { useDocument } from 'react-firebase-hooks/firestore';
@@ -149,34 +150,29 @@ export const TripPage = props => {
           </Card>
         </Jumbotron>
         {/* page body */}
-        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-          {/* <CardColumns> */}
-          {/* fellow trekkers card */}
-          <Card border="info" style={{ maxWidth: '25rem', margin: '.5rem' }}>
-            <Card.Header>
-              <h4>Fellow Trekkers</h4>
-              {isThisAFellowTrekker() && (
-                <Button
-                  variant="info"
-                  style={{ margin: '.5rem' }}
-                  onClick={toggleForm}
-                >
-                  + New Trekker
-                </Button>
-              )}
-            </Card.Header>
-            {/* display trekkers */}
-            <ul className="list-unstyled" style={{ padding: '0 2rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div
+            style={{
+              borderBottom: '1px solid #e9ecef',
+              paddingBottom: '.6rem',
+            }}
+          >
+            <ul
+              className={`list-unstyled ${styles.listTrekkers}`}
+              style={{ padding: '0 7rem', width: '100vw' }}
+            >
+              {/* <h5>Fellow Trekkers</h5> */}
               {Object.entries(users).map(user => (
                 <Link to={`/profile/${user[0]}`}>
                   <Media
                     key={user[0]}
                     as="li"
                     style={{
-                      margin: '.5rem',
                       alignItems: 'center',
                       border: '1px dotted teal',
-                      padding: '0 1.5rem',
+                      padding: '0 1rem',
+                      float: 'left',
+                      // justifyContent:'center'
                     }}
                   >
                     <img
@@ -187,7 +183,10 @@ export const TripPage = props => {
                       alt="Profile Pic"
                     />
                     <Media.Body>
-                      <h5 style={{ margin: '0' }}> {user[1].userName}</h5>
+                      <p style={{ margin: '0', paddingRight: '.3rem' }}>
+                        {' '}
+                        {user[1].userName}
+                      </p>
                     </Media.Body>
                     {isThisAFellowTrekker() && (
                       <button
@@ -202,25 +201,39 @@ export const TripPage = props => {
                   </Media>
                 </Link>
               ))}
-            </ul>
-            <Modal show={isShowing} onHide={handleClose}>
-              <Modal.Header closeButton>
-                <Modal.Title>Who's trekking with?</Modal.Title>
-              </Modal.Header>
-              <Modal.Body>
-                <AddTrekker
-                  userDoc={props}
-                  tripId={tripId}
-                  trip={trip.data()}
-                />
-              </Modal.Body>
-              <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                  Close
+              {isThisAFellowTrekker() && (
+                <Button
+                  variant="info"
+                  style={{ margin: '.5rem', width: '14.25rem' }}
+                  onClick={toggleForm}
+                >
+                  + New Trekker
                 </Button>
-              </Modal.Footer>
-            </Modal>
-          </Card>
+              )}
+            </ul>
+            {/* </InputGroup> */}
+          </div>
+          <Modal show={isShowing} onHide={handleClose}>
+            <Modal.Header closeButton>
+              <Modal.Title>Who's trekking with?</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <AddTrekker userDoc={props} tripId={tripId} trip={trip.data()} />
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handleClose}>
+                Close
+              </Button>
+            </Modal.Footer>
+          </Modal>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+          {/* <CardColumns> */}
+          {/* fellow trekkers card */}
+          {/* <Card border="info" style={{ maxWidth: '25rem', margin: '.5rem' }}> */}
+          {/* <Card.Header> */}
+
+          {/* </Card> */}
           {/* </CardColumns> */}
           <TrekkList tripId={tripId} />
           <TripAlbum fellowTrekker={isThisAFellowTrekker()} tripId={tripId} />
