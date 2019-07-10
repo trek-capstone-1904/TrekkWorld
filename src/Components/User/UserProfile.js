@@ -64,7 +64,7 @@ export const UserProfile = props => {
             {userInfo.Trips && <UserProfileTrips trips={userInfo.Trips} />}
           </div>
           <div className={styles.userStats}>
-            <Card border="info" style={{ margin: '.5rem' }}>
+            <Card style={{ margin: '.5rem' }}>
               <Card.Header>Trekkers Stats</Card.Header>
               <Card.Body style={{ display: 'flex', flexDirection: 'column' }}>
                 <Card>

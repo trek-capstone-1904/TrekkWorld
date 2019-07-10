@@ -121,8 +121,8 @@ export const TripPlanning = props => {
         </Jumbotron>
         {/* TODO: For now search requires a city and uses city to search locations. Make it flexible so city is optional ALSO fix that city must be capital for it to work*/}
         <div style={{display: "flex", flexDirection: "row", justifyContent: "space-around"}}>
-        <h1 className={styles.headerFont}>Search Results</h1>
-        <h1 className={styles.headerFont}>My Trip</h1>
+        <h1 style={{width:'65%'}}className={styles.headerFont}>Search Results</h1>
+        <h1 style={{width:'35%'}}className={styles.headerFont}>My Trips</h1>
         </div>
         <div className={styles.searchResults}>
           <div className={styles.placeholderTripSearch}>
