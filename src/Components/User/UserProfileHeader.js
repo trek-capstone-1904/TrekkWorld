@@ -40,7 +40,7 @@ export const UserProfileHeader = props => {
             <Col>
               <h1>{userName}</h1>
               <p>{bio}</p>
-              <p>Trekking somewhere new?</p>
+              {/* <p>Trekking somewhere new?</p> */}
               <Button variant="info" onClick={toggle}>
                 + Create New Trekk
               </Button>
