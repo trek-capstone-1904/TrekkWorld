@@ -21,6 +21,7 @@
 .dayJumbo {
   opacity: .95;
   padding: .5rem .5rem inherit;
+  margin: 1rem 15rem;
 }
 
 .card {
@@ -39,4 +40,9 @@
   width: 100%;
   padding: 0rem;
 
+}
+@media only screen and (max-width: 750px) {
+  .dayJumbo{
+    margin:2rem;
+  }
 }
