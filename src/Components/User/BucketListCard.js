@@ -11,20 +11,29 @@ export const BucketListCard = props => {
   const { tripId } = props;
   const { placeName, snippet, placeImage } = props.card;
   const placeId = props.placeId;
+
+  let snippetShort;
+  if(snippet.length>140){
+    snippetShort = snippet.substr(0, snippet.indexOf('.')+1)
+  } else {
+    snippetShort = snippet
+  }
   return (
-    <Card style={{ margin: '.5rem 1rem' }}>
+    <Card style={{ margin: '.5rem 1rem', maxHeight: '20rem', maxWidth: '15rem' }}>
       <Card.Body>
         <Card.Title>{placeName}</Card.Title>
         {placeImage && <img src={placeImage} alt="sight" />}
-        <Card.Text className={styles.cardText}>{snippet}</Card.Text>
+        <Card.Text className={styles.cardText}>{
+         snippetShort
+          }</Card.Text>
         <Button
           style={{ margin: '0 1rem' }}
           variant="info"
           onClick={() => handleClick(uid, placeId)}
         >
-          - Bucket
+          Remove
         </Button>
-        <Button
+        {/* <Button
           style={{ margin: '0 1rem' }}
           variant="info"
           onClick={() => {
@@ -33,7 +42,7 @@ export const BucketListCard = props => {
           }}
         >
           + Trekk List
-        </Button>
+        </Button> */}
       </Card.Body>
     </Card>
   );
