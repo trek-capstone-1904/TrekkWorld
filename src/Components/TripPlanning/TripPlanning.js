@@ -86,7 +86,7 @@ export const TripPlanning = props => {
   if (loggedInUser) {
     console.log('render!');
     return (
-      <div>
+      <div className={styles.background}>
         <Jumbotron className={styles.tripPlanningJumbo}>
           <h1>Where in the world are YOU trekking?</h1>
           <Form onSubmit={handleSubmit}>
@@ -120,6 +120,10 @@ export const TripPlanning = props => {
           </Form>
         </Jumbotron>
         {/* TODO: For now search requires a city and uses city to search locations. Make it flexible so city is optional ALSO fix that city must be capital for it to work*/}
+        <div style={{display: "flex", flexDirection: "row", justifyContent: "space-around"}}>
+        <h1 className={styles.headerFont}>Search Results</h1>
+        <h1 className={styles.headerFont}>My Trip</h1>
+        </div>
         <div className={styles.searchResults}>
           <div className={styles.placeholderTripSearch}>
             <Tabs defaultActiveKey="Search-API" id="Trip Search Results">
@@ -139,11 +143,12 @@ export const TripPlanning = props => {
             </Tabs>
           </div>
           <div className={styles.BucketList}>
+
             <Tabs defaultActiveKey="Trekk List" id="Trekk-Bucket-List">
               {/* <Tab eventKey="Bucket List" title="Bucket List">
                 <BucketList tripId={'d26eX8KPoeNu1WtKhVfF'} />
               </Tab> */}
-              <Tab eventKey="Trekk List" title="Trekk List">
+              <Tab eventKey="Trekk List" >
                 <Form.Control
                   name="tripId"
                   value={tripId}
