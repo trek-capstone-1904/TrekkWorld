@@ -33,9 +33,10 @@ export const TripAlbum = props => {
       //   {imageArr().length === 0 && <div>Add Images to your trip!</div>}
       //   {props.fellowTrekker && <PhotoLoad from="trip" tripId={props.tripId} />}
       // </div>
-      <Card style={{ maxWidth: '33rem' }}>
-        <Card.Header>Trip Album</Card.Header>
-        <Card.Body>
+      // <Card style={{ maxWidth: '33rem' }}>
+      //   <Card.Header>Trip Album</Card.Header>
+      //   <Card.Body>
+      <>
           {value && (
             <span>
               {value.docs.map(doc => (
@@ -49,11 +50,12 @@ export const TripAlbum = props => {
               ))}
             </span>
           )}
-        </Card.Body>
-        <Card.Footer>
+        {/* // </Card.Body> */}
+        {/* // <Card.Footer> */}
           {props.fellowTrekker && <PhotoLoad from="trip" tripId={props.tripId} />}
-        </Card.Footer>
-      </Card>
+        {/* </Card.Footer> */}
+       {/* </Card> */}
+      </>
     );
   }
 };

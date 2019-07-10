@@ -95,7 +95,7 @@ export const PhotoLoad = props => {
   }
   return (
     <div>
-      <Button onClick={handleClickAdd}>+ Add Image</Button>
+      <Button variant="light" onClick={handleClickAdd}>+ Add Image</Button>
       <Modal  style={{ padding: '2rem' }} show={addImage} onHide={handleInput}>
         <Modal.Header>Add Image From Files</Modal.Header>
         <progress value={progressValue} max="100" id="uploader">

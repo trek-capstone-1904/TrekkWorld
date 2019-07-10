@@ -106,37 +106,42 @@ export const TripPage = props => {
     }
 
     return (
-      <div>
-        {/* jumbotron header */}
-        <Jumbotron className={styles.Jumbotron}>
-          <div className={styles.tripHeader}>
-            <h1>{tripName}</h1>
-            {daysRemaining < 0 ? (
-              <Badge style={{ margin: '.5rem' }} variant="success">
-                Trip completed
-              </Badge>
-            ) : (
-              <h3>
-                Days until Trekk:{' '}
-                <Badge className="badge-pill" variant="success">
-                  {daysRemaining}
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div style={{ width: '70vw' }}>
+          <Jumbotron className={styles.Jumbotron}>
+            <div>
+              <h1 className={styles.headerTrip}>{tripName}</h1>
+              {daysRemaining < 0 ? (
+                <Badge style={{ margin: '.5rem' }} variant="success">
+                  Trip completed
                 </Badge>
-              </h3>
-            )}
-            <hr />
-            <Button variant="info" onClick={openJournal}>
-              Open Journal
-            </Button>
-          </div>
-          <TripMap countries={locations} />
+              ) : (
+                <h3>
+                  Days until Trekk:{' '}
+                  <Badge className="badge-pill" variant="success">
+                    {daysRemaining}
+                  </Badge>
+                </h3>
+              )}
+              <hr />
+              <Button variant="info" onClick={openJournal}>
+                Open Journal
+              </Button>
+            </div>
+            <TripMap countries={locations} />
+          </Jumbotron>
+          <h2 className={styles.headerTrip}>Trekk Activities Planned</h2>
+          <TrekkList tripId={tripId} />
+        </div>
+        <div style={{ backgroundColor: '#17a2b8', width: '30vw', height:'100vw' }}>
           <Card border="info" bg="info" className={styles.tripInfoCard}>
             <Card.Body>
-              <Card.Title>Trip Details</Card.Title>
+              <Card.Title className={styles.headerTrip}>
+                <h4>Trip Details</h4>
+              </Card.Title>
               <Card.Text>
-                Start: {moment(startDate).format('MMM D, YYYY')}{' '}
-              </Card.Text>
-              <Card.Text>
-                End: {moment(endDate).format('MMM D, YYYY')}{' '}
+                Dates: {moment(startDate).format('MMM D, YYYY')} -{' '}
+                {moment(endDate).format('MMM D, YYYY')}{' '}
               </Card.Text>
               <Card.Text>Total Days: {totalDays} </Card.Text>
               <Card.Text>
@@ -148,19 +153,12 @@ export const TripPage = props => {
               <Card.Text> Trip type: {tripTags} </Card.Text>
             </Card.Body>
           </Card>
-        </Jumbotron>
-        {/* page body */}
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <div
-            style={{
-              borderBottom: '1px solid #e9ecef',
-              paddingBottom: '.6rem',
-            }}
-          >
-            <ul
-              className={`list-unstyled ${styles.listTrekkers}`}
-              style={{ padding: '0 7rem', width: '100vw' }}
-            >
+          <div>
+            <hr />
+            <h4 className={styles.headerTrip} style={{ margin: '1rem' }}>
+              Trekkers
+            </h4>
+            <ul className={`list-unstyled ${styles.listTrekkers}`}>
               {/* <h5>Fellow Trekkers</h5> */}
               {Object.entries(users).map(user => (
                 <Link to={`/profile/${user[0]}`}>
@@ -170,9 +168,11 @@ export const TripPage = props => {
                     style={{
                       alignItems: 'center',
                       border: '1px dotted teal',
-                      padding: '0 1rem',
                       float: 'left',
-                      // justifyContent:'center'
+                      backgroundColor: '#e9ecef',
+                      justifyContent: 'center',
+                      margin: '.1rem',
+                      width:'15rem'
                     }}
                   >
                     <img
@@ -203,42 +203,37 @@ export const TripPage = props => {
               ))}
               {isThisAFellowTrekker() && (
                 <Button
-                  variant="info"
-                  style={{ margin: '.5rem', width: '14.25rem' }}
+                  variant="light"
+                  style={{ margin: '.5rem' }}
                   onClick={toggleForm}
                 >
                   + New Trekker
                 </Button>
               )}
             </ul>
-            {/* </InputGroup> */}
-          </div>
-          <Modal show={isShowing} onHide={handleClose}>
-            <Modal.Header closeButton>
-              <Modal.Title>Who's trekking with?</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <AddTrekker userDoc={props} tripId={tripId} trip={trip.data()} />
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-            </Modal.Footer>
-          </Modal>
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-          {/* <CardColumns> */}
-          {/* fellow trekkers card */}
-          {/* <Card border="info" style={{ maxWidth: '25rem', margin: '.5rem' }}> */}
-          {/* <Card.Header> */}
 
-          {/* </Card> */}
-          {/* </CardColumns> */}
-          <TrekkList tripId={tripId} />
+            <Modal show={isShowing} onHide={handleClose}>
+              <Modal.Header closeButton>
+                <Modal.Title>Who's trekking with?</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <AddTrekker
+                  userDoc={props}
+                  tripId={tripId}
+                  trip={trip.data()}
+                />
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          </div>
+          <hr />
+          <h4 className={styles.headerTrip}>Trip Images from Trekkers</h4>
           <TripAlbum fellowTrekker={isThisAFellowTrekker()} tripId={tripId} />
         </div>
-        <div>{/* <TrekkList /> */}</div>
       </div>
     );
   }

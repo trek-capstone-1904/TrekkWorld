@@ -1,8 +1,19 @@
 .Jumbotron {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 1rem;
-  margin-bottom:.6rem
+  margin-bottom: 0.6rem;
+  text-align:left
+}
+.headerTrip{
+  font-family: 'Oswald', sans-serif;
+
+}
+h4.headerTrip{
+  color: white;
+  text-align:left;
+  margin:1rem;
+
 }
 
 .tripHeader {
@@ -10,24 +21,26 @@
 }
 
 .tripInfoCard {
-  width: 20rem;
+  /* width: 20rem; */
   text-align: left;
   color: white;
 }
 .listTrekkers {
   list-style-type: none;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
+  flex-direction: column;
   margin: 0;
-  align-items: left;
-  flex-wrap: wrap;
-  /* justify-content: center; */
-  padding:15rem
+  align-items: center;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  /* padding:15rem */
 }
 .listTrekkers > li {
   float: left;
   margin: 0;
   width: 15rem;
+  background-color: gray;
 }
 
 @media only screen and (max-width: 750px) {
