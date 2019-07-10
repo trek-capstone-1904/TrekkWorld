@@ -53,7 +53,16 @@ export const TripResultCard = props => {
   tripCompleted();
 
   return (
-    <Card border="info" style={{ margin: '.5rem', minWidth:'20%', maxWidth:'20%' }}>
+    <Card
+      style={{
+        margin: '.5rem auto',
+        width: '40rem',
+        minWidth: '27%',
+        maxWidth: '30rem',
+        padding: '.5rem',
+      }}
+    >
+      {/* // <Card style={{ margin: '.5rem', minWidth: '40%', maxWidth: '40%' }}> */}
       {/* <Card.Img variant="top" src={`../${card.tripImageUrl}`} /> */}
 
       <Link to={`/trip/${props.tripId}`}>
@@ -63,25 +72,26 @@ export const TripResultCard = props => {
         {moment(card.startDate).format('MMM D, YYYY')}
       </Card.Subtitle>
       {card.placeImage && <img src={card.placeImage} alt="sight" />}
-      {Object.entries(card.users).map(user => (
-        <Badge pill variant="primary" key={user[0]}>
-          {user[1].userName}
-        </Badge>
-      ))}
-
+      <div>
+        {Object.entries(card.users).map(user => (
+          <Badge variant="primary" key={user[0]}>
+            {user[1].userName}
+          </Badge>
+        ))}
+      </div>
       {/* {Object.entries(card.tripTags).map(tag => ( */}
       <div>
         <Badge variant="light">{card.tripTags} Trip</Badge>
         {!tripCompleted() && <Badge variant="light"> Upcoming</Badge>}
         {tripCompleted() && (
-          <Badge variant="success" display={tripCompleted()}>
+          <Badge variant="light" display={tripCompleted()}>
             {tripCompleted()}
           </Badge>
         )}
       </div>
       <Accordion>
         <Accordion.Toggle as={Button} variant="link" eventKey="0">
-          Places
+          View Places
         </Accordion.Toggle>
         <Accordion.Collapse eventKey="0">
           <ListGroup as="ul">
