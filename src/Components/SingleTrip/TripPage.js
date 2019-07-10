@@ -152,22 +152,23 @@ export const TripPage = props => {
         <div style={{ display: 'flex', justifyContent: 'space-around' }}>
           {/* <CardColumns> */}
           {/* fellow trekkers card */}
-            <Card border="info" style={{ maxWidth: '25rem', margin: '.5rem' }}>
-              <Card.Header>
-                <h4>Fellow Trekkers</h4>
-                {isThisAFellowTrekker() && (
-                  <Button
-                    variant="info"
-                    style={{ margin: '.5rem' }}
-                    onClick={toggleForm}
-                  >
-                    + New Trekker
-                  </Button>
-                )}
-              </Card.Header>
-              {/* display trekkers */}
-              <ul className="list-unstyled" style={{ padding: '0 2rem' }}>
-                {Object.entries(users).map(user => (
+          <Card border="info" style={{ maxWidth: '25rem', margin: '.5rem' }}>
+            <Card.Header>
+              <h4>Fellow Trekkers</h4>
+              {isThisAFellowTrekker() && (
+                <Button
+                  variant="info"
+                  style={{ margin: '.5rem' }}
+                  onClick={toggleForm}
+                >
+                  + New Trekker
+                </Button>
+              )}
+            </Card.Header>
+            {/* display trekkers */}
+            <ul className="list-unstyled" style={{ padding: '0 2rem' }}>
+              {Object.entries(users).map(user => (
+                <Link to={`/profile/${user[0]}`}>
                   <Media
                     key={user[0]}
                     as="li"
@@ -199,33 +200,32 @@ export const TripPage = props => {
                       </button>
                     )}
                   </Media>
-                ))}
-              </ul>
-              <Modal show={isShowing} onHide={handleClose}>
-                <Modal.Header closeButton>
-                  <Modal.Title>Who's trekking with?</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                  <AddTrekker
-                    userDoc={props}
-                    tripId={tripId}
-                    trip={trip.data()}
-                  />
-                </Modal.Body>
-                <Modal.Footer>
-                  <Button variant="secondary" onClick={handleClose}>
-                    Close
-                  </Button>
-                </Modal.Footer>
-              </Modal>
-            </Card>
+                </Link>
+              ))}
+            </ul>
+            <Modal show={isShowing} onHide={handleClose}>
+              <Modal.Header closeButton>
+                <Modal.Title>Who's trekking with?</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <AddTrekker
+                  userDoc={props}
+                  tripId={tripId}
+                  trip={trip.data()}
+                />
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          </Card>
           {/* </CardColumns> */}
-          <TrekkList tripId={tripId}/>
+          <TrekkList tripId={tripId} />
           <TripAlbum fellowTrekker={isThisAFellowTrekker()} tripId={tripId} />
         </div>
-        <div>
-          {/* <TrekkList /> */}
-        </div>
+        <div>{/* <TrekkList /> */}</div>
       </div>
     );
   }

@@ -28,7 +28,7 @@ export const TripAlbum = props => {
   if (loading) return <Spinner animation="grow" variant="info" />;
   if (value) {
     return (
-      <div style={{ maxWidth: '30vw', maxHeight: '40vh' }}>
+      <div style={{ maxWidth: '30vw', maxHeight: '40vh', minWidth:'20vw' }}>
         {imageArr().length > 0 && <ImageGallery width="10rem"items={imageArr()} />}
         {imageArr().length === 0 && <div>Add Images to your trip!</div>}
         {props.fellowTrekker && <PhotoLoad from="trip" tripId={props.tripId} />}

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import userContext from '../../Contexts/userContext';
-import { CardGroup } from 'react-bootstrap';
+import { CardGroup, Spinner } from 'react-bootstrap';
 import db from '../../firebase';
 import { BucketListCard } from '../index';
 import { useCollection } from 'react-firebase-hooks/firestore';
@@ -26,7 +26,7 @@ export const TrekkList = props => {
   return (
     <div>
       {error && <strong>Error: {error}</strong>}
-      {loading && <span>Collection: Loading...</span>}
+      {loading && <Spinner animation="grow" variant="info" />}
       {value && (
         <span>
           {value.docs
