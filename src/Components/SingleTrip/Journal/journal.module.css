@@ -29,6 +29,7 @@
   opacity: 1 !important;
   width: "50rem";
    height: "3rem";
+   padding: 0rem;
 }
 
 .cardDeck{
@@ -41,4 +42,12 @@
   width: 100%;
   padding: 0rem;
 
+}
+
+.cardBody {
+  padding: 0rem;
+}
+
+.cardHeader{
+  font-weight: bold;
 }

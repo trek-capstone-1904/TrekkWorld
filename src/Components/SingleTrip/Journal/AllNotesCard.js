@@ -6,8 +6,8 @@ import styles from './journal.module.css';
 export const AllNotesCard = props => {
   return (
     <Card className={styles.cardNote}>
-      <Card.Body>
-        <Card.Header>{props.note.userName}</Card.Header>
+      <Card.Body className={styles.cardBody}>
+        <Card.Header className={styles.cardHeader}>{props.note.userName}</Card.Header>
         <Card.Text>{props.note.note}</Card.Text>
         {props.note.time && (
           <Card.Subtitle className="mb-2 text-muted">
