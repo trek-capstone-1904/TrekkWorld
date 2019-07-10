@@ -84,7 +84,7 @@ export const TripResultCard = props => {
         <Badge variant="light">{card.tripTags} Trip</Badge>
         {!tripCompleted() && <Badge variant="light"> Upcoming</Badge>}
         {tripCompleted() && (
-          <Badge variant="light" display={tripCompleted()}>
+          <Badge variant="success" display={tripCompleted()}>
             {tripCompleted()}
           </Badge>
         )}
