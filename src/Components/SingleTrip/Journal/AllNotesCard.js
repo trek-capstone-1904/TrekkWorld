@@ -6,13 +6,13 @@ import styles from './journal.module.css';
 export const AllNotesCard = props => {
   return (
     <Card className={styles.cardNote}>
-      <Card.Body className={styles.cardBody}>
-        <Card.Header className={styles.cardHeader}>{props.note.userName}</Card.Header>
-        <Card.Text>{props.note.note}</Card.Text>
+      <Card.Body className={styles.cardNoteBody}>
+        {/* <Card.Header className={styles.cardHeader}>{props.note.userName}</Card.Header> */}
+        <Card.Text >{props.note.note}</Card.Text>
         {props.note.time && (
-          <Card.Subtitle className="mb-2 text-muted">
-            {timeago(props.note.time.seconds * 1000)}
-          </Card.Subtitle>
+          <footer style={{fontSize: ".8rem"}} className="mb-2 text-muted">
+           {props.note.userName} | {timeago(props.note.time.seconds * 1000)}
+          </footer>
         )}
       </Card.Body>
     </Card>
