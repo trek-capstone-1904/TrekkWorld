@@ -18,7 +18,7 @@ export const JournalCard = props => {
   if (loading) return <Spinner animation="grow" variant="info" />;
   if (value) {
     // console.log("props", props.place);
-
+    console.log(props)
     // console.log("place doc", value)
     const placeInfo = value.data();
     // console.log("data in place doc", placeInfo)
@@ -33,7 +33,7 @@ export const JournalCard = props => {
           <Card.Text>
             {placeInfo.sight.name}
             <footer style={{fontSize: ".8rem"}} className="mb-2 text-muted">
-              Added by {loggedInUser.displayName}
+              Added by {props.placeUser}
             </footer>
           </Card.Text>
             {/* <Rating /> */}
