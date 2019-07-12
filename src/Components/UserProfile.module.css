@@ -20,6 +20,28 @@
   width: 34vw;
 }
 
+.BucketCardImage {
+  min-width: 13rem;
+  height: 8rem;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+}
+
+.BucketCardText {
+  color: #003d5b;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-weight:600;
+  font-size: 2rem;
+}
+
+.BucketButton {
+  background-color: #EDAE49;
+  border-color: #EDAE49;
+  padding: 0.2rem;
+  margin: 0.5rem;
+}
+
 @media only screen and (max-width: 750px) {
   .userProfileBody {
     display: block;

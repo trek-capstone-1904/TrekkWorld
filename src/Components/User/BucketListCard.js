@@ -5,6 +5,7 @@ import userContext from '../../Contexts/userContext';
 import db from '../../firebase';
 import firebase from 'firebase/app';
 import * as secret from '../../secrets';
+import style from '../UserProfile.module.css';
 
 export const BucketListCard = props => {
   const loggedInUser = useContext(userContext);
@@ -20,33 +21,21 @@ export const BucketListCard = props => {
     snippetShort = snippet;
   }
   return (
-    <Card
-      style={{ margin: '.5rem 1rem', maxHeight: '20rem', maxWidth: '15rem' }}
-    >
-      <Card.Body>
-        <Card.Title>{placeName}</Card.Title>
-        {placeImage && (
-          <img src={`${placeImage}&key=${secret.places}`} alt="sight" />
-        )}
-        <Card.Text className={styles.cardText}>{snippetShort}</Card.Text>
-        <Button
-          style={{ margin: '0 1rem' }}
-          variant="info"
-          onClick={() => handleClick(uid, placeId)}
-        >
-          Remove
-        </Button>
-        {/* <Button
-          style={{ margin: '0 1rem' }}
-          variant="info"
-          onClick={() => {
-            handleClick(uid, placeId);
-            addToTrekk(placeId, placeName, snippet, tripId);
-          }}
-        >
-          + Trekk List
-        </Button> */}
-      </Card.Body>
+    <Card>
+      <Card.Img
+        className={style.BucketCardImage}
+        src={`${placeImage}&key=${secret.places}`}
+      />
+      <Card.ImgOverlay>
+        <Card.Text className={style.BucketCardText}>{placeName}</Card.Text>
+      <Button
+      className={style.BucketButton}
+
+        onClick={() => handleClick(uid, placeId)}
+      >
+        Remove
+      </Button>
+      </Card.ImgOverlay>
     </Card>
   );
 };
