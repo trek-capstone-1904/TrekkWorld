@@ -34,7 +34,7 @@ export const UserProfileHeader = props => {
               <Image
                 src={userPicture}
                 roundedCircle
-                style={{ width: '10rem'}}
+              style={{ width: '10rem', borderColor: "white", borderStyle: "solid", borderWidth: ".05rem"}}
               />
             </Col>
             <Col style={{color: "white"}}>

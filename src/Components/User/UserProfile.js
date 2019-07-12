@@ -54,7 +54,7 @@ export const UserProfile = props => {
     const userInfo = value.data();
     console.log("userInfo", userInfo);
     return (
-      <div>
+      <div style={{justifyContent:"center"}}>
         <UserProfileHeader user={userInfo} />
         <div className={styles.userBody}>
           <div style={{ minWidth: "60vw" }} className={styles.userProfileBody}>
@@ -62,7 +62,7 @@ export const UserProfile = props => {
           </div>
           <h1>My Bucket List</h1>
           <div
-            style={{ minWidth: "60vw" }}
+            style={{ minWidth: "60vw", maxWidth: "95vw" }}
             className={`${styles.userProfileBody} ${
               styles.userProfileBackground
             }`}
