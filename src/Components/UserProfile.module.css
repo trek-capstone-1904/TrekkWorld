@@ -5,10 +5,9 @@
   justify-content: space-around;
 }
 
-.userProfileBackground{
+.userProfileBackground {
   background-color: #e9ecef;
   border-radius: 25px;
-
 }
 
 .Map {
@@ -19,16 +18,14 @@
 
 .BucketList {
   width: 34vw;
-
 }
 
 @media only screen and (max-width: 750px) {
-  .userProfileBody{
+  .userProfileBody {
     display: block;
   }
-  .BucketList{
-    max-width:40rem;
-
+  .BucketList {
+    max-width: 40rem;
   }
 }
 
@@ -36,21 +33,16 @@
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
-  /* align-items: center; */
-  /* align-self: "center" */
-
-
 }
 
 .userStats {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  flex-wrap: wrap-reverse
+  flex-wrap: wrap-reverse;
 }
 
 .userCountries {
-
 }
 /* @media (min-width: 992px) .modal-lg, .modal-xl {
   max-width: 975px;
