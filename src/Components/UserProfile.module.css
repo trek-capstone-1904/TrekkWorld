@@ -5,9 +5,33 @@
   justify-content: space-around;
 }
 
-.userProfileBackground {
+/* .userProfileBackground {
   background-color: #e9ecef;
   border-radius: 25px;
+} */
+.CardUser > div {
+  background-color: #30638e;
+}
+
+.CardUser > .TripCard {
+  margin: 1rem;
+  width: 23rem;
+}
+.CardUser > .TripCard > a {
+  color: white;
+}
+.CardUser > .TripCard {
+  color: white;
+}
+
+.TripSearch > .TripCard {
+  margin: 0.5rem auto;
+  max-width: 35rem;
+  color: gray;
+}
+
+.TripSearch > .TripCard >a{
+  color:#003d5b
 }
 
 .Map {
@@ -31,13 +55,13 @@
   color: #003d5b;
   font-family: 'Oswald', sans-serif;
   text-align: center;
-  font-weight:600;
+  font-weight: 600;
   font-size: 2rem;
 }
 
 .BucketButton {
-  background-color: #EDAE49;
-  border-color: #EDAE49;
+  background-color: #edae49;
+  border-color: #edae49;
   padding: 0.2rem;
   margin: 0.5rem;
 }

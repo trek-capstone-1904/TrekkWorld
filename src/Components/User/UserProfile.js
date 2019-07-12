@@ -1,23 +1,23 @@
-import React, { useContext } from "react";
-import { useDocument } from "react-firebase-hooks/firestore";
-import { Tabs, Tab, Media } from "react-bootstrap";
-import db from "../../firebase";
-import { UserProfileHeader, UserProfileTrips, WorldMap } from "../index.js";
-import styles from "../UserProfile.module.css";
+import React, { useContext } from 'react';
+import { useDocument } from 'react-firebase-hooks/firestore';
+import { Tabs, Tab, Media } from 'react-bootstrap';
+import db from '../../firebase';
+import { UserProfileHeader, UserProfileTrips, WorldMap } from '../index.js';
+import styles from '../UserProfile.module.css';
 import {
   InputGroup,
   Button,
   FormControl,
   CardGroup,
   Spinner,
-  Card
-} from "react-bootstrap";
-import userContext from "../../Contexts/userContext";
-import TrekkList from "../SingleTrip/TrekkList";
-import BucketList from "./BucketList";
-import luggage from "./luggage.png";
-import globe from "./globe.png";
-import calendar from "./calendar.png";
+  Card,
+} from 'react-bootstrap';
+import userContext from '../../Contexts/userContext';
+import TrekkList from '../SingleTrip/TrekkList';
+import BucketList from './BucketList';
+import luggage from './luggage.png';
+import globe from './globe.png';
+import calendar from './calendar.png';
 
 const daysUntil = trips => {
   let tripDates = Object.values(trips)
@@ -36,7 +36,7 @@ const daysUntil = trips => {
 };
 
 export const UserProfile = props => {
-  console.log("props.match.params", props.match.params);
+  console.log('props.match.params', props.match.params);
   const loggedInUser = useContext(userContext);
   let user;
   if (props.match.params.userId) {
@@ -45,28 +45,34 @@ export const UserProfile = props => {
     user = loggedInUser.uid;
   }
   const [value, loading, error] = useDocument(db.doc(`Users/${user}`), {
-    valueListenOptions: { includeMetadataChanges: true }
+    valueListenOptions: { includeMetadataChanges: true },
   });
   if (error) throw error;
   if (loading) return <Spinner animation="grow" variant="info" />;
   if (value) {
     const userInfo = value.data();
-    console.log("userInfo", userInfo);
+    console.log('userInfo', userInfo);
     return (
-      <div style={{ justifyContent: "center" }}>
+      <div style={{ justifyContent: 'center' }}>
         <UserProfileHeader user={userInfo} />
         <div className={styles.userBody}>
           <div
-            style={{ minWidth: "90vw", maxWidth: "95vw", alignSelf: "center", margin: "1rem", padding: ".25rem" }}
+            style={{
+              minWidth: '90vw',
+              maxWidth: '95vw',
+              alignSelf: 'center',
+              margin: '1rem',
+              padding: '.25rem',
+            }}
             className={`${styles.userProfileBody} ${
               styles.userProfileBackground
             }`}
           >
-            {userInfo.bucketList && <BucketList trips={"123"} />}
+            {userInfo.bucketList && <BucketList trips={'123'} />}
           </div>
 
           <div
-            style={{ minWidth: "60vw", maxWidth: "90vw", alignSelf: "center", margin: "1rem", padding: ".25rem" }}
+            style={{ padding: '.25rem' }}
             className={`${styles.userProfileBody} ${
               styles.userProfileBackground
             }`}
@@ -76,9 +82,9 @@ export const UserProfile = props => {
           <div className={styles.userStats}>
             <div
               style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-around"
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-around',
               }}
             >
               {userInfo.Trips && (
@@ -87,30 +93,30 @@ export const UserProfile = props => {
                     className="align-self-center mr-3"
                     alt="img"
                     src={calendar}
-                    style={{ opacity: ".4", maxHeight: "5rem" }}
+                    style={{ opacity: '.4', maxHeight: '5rem' }}
                   />
                   <Media.Body
-                    style={{ minHeight: "5rem", justfContent: "center" }}
+                    style={{ minHeight: '5rem', justfContent: 'center' }}
                   >
                     <p
                       style={{
-                        fontSize: "1.5rem",
-                        alignContent: "center",
-                        color: "gray",
-                        fontWeight: "bold",
-                        margin: "0rem"
+                        fontSize: '1.5rem',
+                        alignContent: 'center',
+                        color: 'gray',
+                        fontWeight: 'bold',
+                        margin: '0rem',
                       }}
                     >
                       {daysUntil(userInfo.Trips)}
                     </p>
                     <p
                       style={{
-                        fontSize: "1.5rem",
-                        alignContent: "center",
-                        color: "gray"
+                        fontSize: '1.5rem',
+                        alignContent: 'center',
+                        color: 'gray',
                       }}
                     >
-                      {" "}
+                      {' '}
                       days until the next trekk
                     </p>
                   </Media.Body>
@@ -123,27 +129,27 @@ export const UserProfile = props => {
                     className="align-self-center mr-3"
                     alt="img"
                     src={luggage}
-                    style={{ opacity: ".4", maxHeight: "5rem" }}
+                    style={{ opacity: '.4', maxHeight: '5rem' }}
                   />
                   <Media.Body
-                    style={{ minHeight: "5rem", justfContent: "center" }}
+                    style={{ minHeight: '5rem', justfContent: 'center' }}
                   >
                     <p
                       style={{
-                        fontSize: "1.5rem",
-                        alignContent: "center",
-                        color: "gray",
-                        fontWeight: "bold",
-                        margin: "0rem"
+                        fontSize: '1.5rem',
+                        alignContent: 'center',
+                        color: 'gray',
+                        fontWeight: 'bold',
+                        margin: '0rem',
                       }}
                     >
                       {Object.values(Object.values(userInfo.Trips)).length}
                     </p>
                     <p
                       style={{
-                        fontSize: "1.5rem",
-                        alignContent: "center",
-                        color: "gray"
+                        fontSize: '1.5rem',
+                        alignContent: 'center',
+                        color: 'gray',
                       }}
                     >
                       trekks completed
@@ -158,18 +164,18 @@ export const UserProfile = props => {
                     className="align-self-center mr-3"
                     alt="img"
                     src={globe}
-                    style={{ opacity: ".4", maxHeight: "5rem" }}
+                    style={{ opacity: '.4', maxHeight: '5rem' }}
                   />
                   <Media.Body
-                    style={{ minHeight: "5rem", justfContent: "center" }}
+                    style={{ minHeight: '5rem', justfContent: 'center' }}
                   >
                     <p
                       style={{
-                        fontSize: "1.5rem",
-                        alignContent: "center",
-                        color: "gray",
-                        fontWeight: "bold",
-                        margin: "0rem"
+                        fontSize: '1.5rem',
+                        alignContent: 'center',
+                        color: 'gray',
+                        fontWeight: 'bold',
+                        margin: '0rem',
                       }}
                     >
                       {Math.ceil(
@@ -179,12 +185,12 @@ export const UserProfile = props => {
                     </p>
                     <p
                       style={{
-                        fontSize: "1.5rem",
-                        alignContent: "center",
-                        color: "gray"
+                        fontSize: '1.5rem',
+                        alignContent: 'center',
+                        color: 'gray',
                       }}
                     >
-                      {" "}
+                      {' '}
                       of countries visited
                     </p>
                   </Media.Body>
@@ -193,13 +199,13 @@ export const UserProfile = props => {
             </div>
 
             {userInfo.countriesVisited && (
-              <Card style={{ margin: ".5rem", minWidth: "50%" }}>
+              <Card style={{ margin: '.5rem', minWidth: '50%' }}>
                 <Card.Body
                   style={{
-                    fontSize: "1.5rem",
+                    fontSize: '1.5rem',
 
-                    color: "gray",
-                    fontWeight: "bold"
+                    color: 'gray',
+                    fontWeight: 'bold',
                   }}
                 >
                   {userInfo.countriesVisited.length} Countries Visited

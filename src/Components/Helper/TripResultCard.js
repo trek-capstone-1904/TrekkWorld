@@ -17,6 +17,7 @@ import userContext from '../../Contexts/userContext';
 import { useCollection } from 'react-firebase-hooks/firestore';
 import './scrollbar.css';
 import TripResultPlaceCard from '../TripPlanning/TripResultPlaceCard';
+import styles from '../UserProfile.module.css';
 
 export const TripResultCard = props => {
   console.log('card:', props.card);
@@ -55,33 +56,55 @@ export const TripResultCard = props => {
   return (
     <Card
       style={{
-        margin: '.5rem auto',
-        width: '40rem',
-        minWidth: '27%',
-        maxWidth: '30rem',
+        // margin: '.5rem',
+        // width: '40rem',
         padding: '.5rem',
       }}
+      className={styles.TripCard}
     >
-
-
       <Link to={`/trip/${props.tripId}`}>
-        <Card.Title style={{color: "#003D5B"}}>{card.tripName}</Card.Title>
+        <Card.Title className={styles.TripTitle}>{card.tripName}</Card.Title>
       </Link>
-      <Card.Subtitle className="mb-2 text-muted">
+      <Card.Subtitle className="mb-2">
         {moment(card.startDate).format('MMM D, YYYY')}
       </Card.Subtitle>
       {card.placeImage && <img src={card.placeImage} alt="sight" />}
       <div>
         {Object.entries(card.users).map(user => (
-          <Badge style={{backgroundColor: "#EDAE49", margin: ".25rem"}}variant="primary" key={user[0]}>
+          <Badge
+            style={{ backgroundColor: '#EDAE49', margin: '.25rem' }}
+            variant="primary"
+            key={user[0]}
+          >
             {user[1].userName}
           </Badge>
         ))}
       </div>
 
       <div>
-        <Badge style={{backgroundColor: "#00798C", color: "white", margin: ".25rem"}}variant="light">{card.tripTags} Trip</Badge>
-        {!tripCompleted() && <Badge style={{backgroundColor: "#D1495B", color: "white", margin: ".25rem"}}variant="light"> Upcoming</Badge>}
+        <Badge
+          style={{
+            backgroundColor: '#00798C',
+            color: 'white',
+            margin: '.25rem',
+          }}
+          variant="light"
+        >
+          {card.tripTags} Trip
+        </Badge>
+        {!tripCompleted() && (
+          <Badge
+            style={{
+              backgroundColor: '#D1495B',
+              color: 'white',
+              margin: '.25rem',
+            }}
+            variant="light"
+          >
+            {' '}
+            Upcoming
+          </Badge>
+        )}
         {tripCompleted() && (
           <Badge variant="success" display={tripCompleted()}>
             {tripCompleted()}
@@ -89,7 +112,12 @@ export const TripResultCard = props => {
         )}
       </div>
       <Accordion>
-        <Accordion.Toggle as={Button} style={{color: "#00798C"}}variant="link" eventKey="0">
+        <Accordion.Toggle
+          as={Button}
+          style={{ color: '#00798C' }}
+          variant="link"
+          eventKey="0"
+        >
           View Places
         </Accordion.Toggle>
         <Accordion.Collapse eventKey="0">
