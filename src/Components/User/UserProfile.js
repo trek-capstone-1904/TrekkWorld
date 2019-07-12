@@ -57,10 +57,12 @@ export const UserProfile = props => {
       <div style={{justifyContent:"center"}}>
         <UserProfileHeader user={userInfo} />
         <div className={styles.userBody}>
-          <div style={{ minWidth: "60vw" }} className={styles.userProfileBody}>
+          <div style={{ minWidth: "60vw" }} className={`${styles.userProfileBody} ${
+              styles.userProfileBackground
+            }`}>
             {userInfo.bucketList && <BucketList trips={"123"} />}
           </div>
-          <h1>My Bucket List</h1>
+          {/* <h1>My Bucket List</h1> */}
           <div
             style={{ minWidth: "60vw", maxWidth: "95vw" }}
             className={`${styles.userProfileBody} ${
