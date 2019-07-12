@@ -16,7 +16,7 @@ export const BucketList = props => {
   );
 
   return (
-    <div style={{ maxWidth: '80rem', justifyContent: "space-around" }}>
+    <div style={{ maxWidth: '80rem', justifyContent: "space-around"}}>
     <h1 style={{color: "#003D5B"}}>My Bucket List</h1>
       <CardGroup>
         {error && <strong>Error: {error}</strong>}
