@@ -15,7 +15,6 @@ import {
 import userContext from "../../Contexts/userContext";
 import TrekkList from "../SingleTrip/TrekkList";
 import BucketList from "./BucketList";
-import { MdDateRange } from "react-icons/md";
 import luggage from "./luggage.png";
 import globe from "./globe.png";
 import calendar from "./calendar.png";
