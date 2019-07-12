@@ -20,14 +20,15 @@
 
 .dayJumbo {
   opacity: 0.95;
-  padding: 0.5rem 0.5rem inherit;
+  padding: 0.5rem 0.5rem;
   margin: 1rem 15rem;
 }
 
 .card {
   opacity: 1 !important;
-  width: '50rem';
-  height: '3rem';
+  /* width: 13rem; */
+  /* height: 12rem; */
+  /* min-height: 8rem; */
   padding: 0rem;
 }
 
@@ -37,11 +38,11 @@
 }
 
 .cardNote {
-  opacity: 1;
+  opacity: 1 !important;
   width: 100%;
   padding: 0rem;
 }
-.cardBody {
+.cardNoteBody {
   padding: 0rem;
 }
 

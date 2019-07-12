@@ -11,8 +11,8 @@ export const UserProfileTrips = props => {
   trips.sort((a, b) => (a.date > b.date ? 1 : -1));
 
   return (
-    <div style={{ maxWidth: '100rem', justifyContent: "space-around" }}>
-      <h1>My Trekks</h1>
+    <div style={{ maxWidth: '80rem', justifyContent: "space-around" }}>
+      <h1 style={{color: "#003D5B"}}>My Trekks</h1>
       <CardGroup style={{flexWrap:'wrap', justifyContent:'center'}}>
       {trips.map(trip => (
         <TripListItem key={trip.id} tripId={trip.id} />
