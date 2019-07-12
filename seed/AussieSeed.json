@@ -1,0 +1,116 @@
+{
+  "Trips": {
+    "EjOfY9QczRhygMJcrTnk": {
+      "startDate": "2019-12-20",
+      "endDate": "2020-01-05",
+      "tripName": "Visiting Family in Denmark for Christmas",
+      "locations": ["Denmark"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Family",
+      "users": {
+        "DtegaUxzECdchoeX4Ex3tFgrP673": {
+          "userName": "Alice Reilly",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FAlice.jpg?alt=media&token=49c478dd-e887-4f22-b998-359afd9bc3de"
+        },
+        "Fi7zSHe9zwf528IWiIXi4lAmWg62": {
+          "userName": "Trevor Tillmann",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2Ftrevor.jpg?alt=media&token=5be6b93c-c911-4eb5-9f4b-ae248e7ca892"
+        }
+      }
+    },
+    "vxaP0gTosllRPz4Mp3JP": {
+      "startDate": "2018-11-22",
+      "endDate": "2018-11-29",
+      "tripName": "Africa Safari Dream Trip",
+      "locations": ["South Africa"],
+      "tripImageUrl": "",
+      "origin": "seed",
+      "tripTags": "Friends",
+      "users": {
+        "DtegaUxzECdchoeX4Ex3tFgrP673": {
+          "userName": "Alice Reilly",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FAlice.jpg?alt=media&token=49c478dd-e887-4f22-b998-359afd9bc3de"
+        },
+        "w2ZXk7xj1eare3Yr2RW8705C3eq2": {
+          "userName": "Jane Stark",
+          "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FJane.jpg?alt=media&token=1d324a72-72ce-41f1-b961-52a0ec5beee8"
+        }
+      }
+    }
+  },
+  "Users": {
+    "DtegaUxzECdchoeX4Ex3tFgrP673": {
+      "userName": "Alice Reilly",
+      "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FAlice.jpg?alt=media&token=49c478dd-e887-4f22-b998-359afd9bc3de",
+      "email": "alicereilly@email.com",
+      "bio": "My family is originally from Denmark. Came to the US for college and met some amazing people, got a job here, and have fallen in love with the US. I have the travel bug, and hope to one day visit every country in the world!",
+      "countriesVisited": [
+        "Denmark",
+        "Sweden",
+        "Netherlands",
+        "United Kingdom",
+        "United States",
+        "Canada",
+        "Norway",
+        "South Africa"
+      ],
+      "Trips": {
+        "EjOfY9QczRhygMJcrTnk": {
+          "startDate": "2019-12-20",
+          "endDate": "2020-01-05",
+          "tripName": "Visiting Family in Denmark for Christmas"
+        },
+        "vxaP0gTosllRPz4Mp3JP": {
+          "startDate": "2018-11-22",
+          "endDate": "2018-11-29",
+          "tripName": "Africa Safari Dream Trip"
+        }
+      }
+    },
+    "w2ZXk7xj1eare3Yr2RW8705C3eq2": {
+      "userName": "Jane Stark",
+      "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2FJane.jpg?alt=media&token=1d324a72-72ce-41f1-b961-52a0ec5beee8",
+      "email": "janestark@email.com",
+      "bio": "Currently living in Chicago working as an analyst. Currently building up my own company on the side which will hopefully allow me to travel more. I fell in love with travel after my amazing trip with my friend to South Africa",
+      "countriesVisited": ["Mexico", "United States", "Canada", "South Africa"],
+      "Trips": {
+        "vxaP0gTosllRPz4Mp3JP": {
+          "startDate": "2018-11-22",
+          "endDate": "2018-11-29",
+          "tripName": "Africa Safari Dream Trip"
+        }
+      }
+    },
+    "Fi7zSHe9zwf528IWiIXi4lAmWg62": {
+      "userName": "Trevor Tillmann",
+      "userPicture": "https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/userProfilePics%2Ftrevor.jpg?alt=media&token=5be6b93c-c911-4eb5-9f4b-ae248e7ca892",
+      "email": "trevor@email.com",
+      "bio": "Living in Chicago now. Working as a software developer. My job allows me to work remotely so I've been trying to get in as much travel as possible while I can. Besides coding, travel is my other big passion, especially eating the food in other countries.",
+      "countriesVisited": [
+        "Poland",
+        "France",
+        "Italy",
+        "United States",
+        "Mexico",
+        "Canada",
+        "Belgium",
+        "Netherlands",
+        "Peru",
+        "Argentina"
+      ],
+      "Trips": {
+        "EjOfY9QczRhygMJcrTnk": {
+          "startDate": "2019-12-20",
+          "endDate": "2020-01-05",
+          "tripName": "Visiting Family in Denmark for Christmas"
+        },
+        "G6RlGWPlpS8c9PujQOg2": {
+          "startDate": "2018-10-10",
+          "endDate": "2018-10-20",
+          "tripName": "Trip to visit Machu Picchu"
+        }
+      }
+    }
+  }
+}
