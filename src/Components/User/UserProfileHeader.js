@@ -27,21 +27,21 @@ export const UserProfileHeader = props => {
 
   return (
     <div>
-      <Jumbotron>
+      <Jumbotron style={{backgroundColor: "#30638E"}}>
         <Container>
           <Row>
             <Col>
               <Image
                 src={userPicture}
                 roundedCircle
-                style={{ width: '10rem', border: '1px solid black' }}
+                style={{ width: '10rem'}}
               />
             </Col>
-            <Col>
+            <Col style={{color: "white"}}>
               <h1>{userName}</h1>
               <p>{bio}</p>
               {/* <p>Trekking somewhere new?</p> */}
-              <Button variant="info" onClick={toggle}>
+              <Button style={{backgroundColor: "#D55969", borderColor: "#D55969"}} onClick={toggle}>
                 + Create New Trekk
               </Button>
               <Modal show={isShowing} onHide={handleClose}>

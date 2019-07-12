@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useDocument } from 'react-firebase-hooks/firestore';
-import { Tabs, Tab } from 'react-bootstrap';
+import { Tabs, Tab, Media } from 'react-bootstrap';
 import db from '../../firebase';
 import { UserProfileHeader, UserProfileTrips, WorldMap } from '../index.js';
 import styles from '../UserProfile.module.css';
@@ -15,6 +15,7 @@ import {
 import userContext from '../../Contexts/userContext';
 import TrekkList from '../SingleTrip/TrekkList';
 import BucketList from './BucketList'
+import {MdDateRange} from 'react-icons/md'
 
 const daysUntil = trips => {
   let tripDates = Object.values(trips)
@@ -33,6 +34,7 @@ const daysUntil = trips => {
 };
 
 export const UserProfile = props => {
+
   console.log('props.match.params',props.match.params)
   const loggedInUser = useContext(userContext);
   let user;
@@ -64,15 +66,20 @@ export const UserProfile = props => {
             {userInfo.Trips && <UserProfileTrips trips={userInfo.Trips} />}
           </div>
           <div className={styles.userStats}>
-            <Card style={{ margin: '.5rem' }}>
-              <Card.Header>Trekkers Stats</Card.Header>
-              <Card.Body style={{ display: 'flex', flexDirection: 'column' }}>
+
+              {/* <Card.Header>Trekkers Stats</Card.Header> */}
+              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: "space-around"}}>
+              <Media>
+              {/* <MdDateRange style={{minHeight: "10rem"}} /> */}
+              <img alt="img"src='src/Components/User/iconfinder_ic_card_travel_48px_3669137.png' />
                 <Card>
-                  <Card.Header>Days Until Next Trekk</Card.Header>
+                  {/* <Card.Header>
+                    <MdDateRange  />Days Until Next Trekk</Card.Header> */}
                   {userInfo.Trips && (
-                    <Card.Title>{daysUntil(userInfo.Trips)}</Card.Title>
+                    <Card.Title>{daysUntil(userInfo.Trips)} Days Until The Next Trekk</Card.Title>
                   )}
                 </Card>
+              </Media>
                 <Card>
                   <Card.Header>Number Of Trekks</Card.Header>
                   {userInfo.Trips && (
@@ -92,10 +99,10 @@ export const UserProfile = props => {
                     </Card.Title>
                   )}
                 </Card>
-              </Card.Body>
-            </Card>
+              </div>
+
             {userInfo.countriesVisited && (
-              <Card border="info" style={{ margin: '.5rem', minWidth: "50%" }}>
+              <Card style={{ margin: '.5rem', minWidth: "50%" }}>
                 <Card.Header>
                   Countries Visited ({userInfo.countriesVisited.length})
                 </Card.Header>
