@@ -72,7 +72,7 @@ export const TripMap = props => {
               region: regionCode,
               backgroundColor: 'none',
               datalessRegionColor: 'lightgray',
-              defaultColor: '#17a2b8',
+              defaultColor: '#D1495B',
             }}
           />
         </span>
@@ -89,7 +89,7 @@ export const TripMap = props => {
               options={{
                 backgroundColor: 'none',
                 datalessRegionColor: 'lightgray',
-                defaultColor: '#17a2b8',
+                defaultColor: '#D1495B',
               }}
             />
           </Modal.Body>

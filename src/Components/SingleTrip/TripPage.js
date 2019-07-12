@@ -129,13 +129,14 @@ export const TripPage = props => {
                 </div>
               )}
               <hr />
-              <Button variant="info" onClick={openJournal}>
+              <Button className={styles.specialBlue} onClick={openJournal}>
                 Open Journal
               </Button>
               <br />
               {daysRemaining > 0 && (
                 <Button
                   variant="info"
+                  className={styles.specialBlue}
                   style={{ marginTop: '1rem' }}
                   onClick={openTrekkPlan}
                 >
@@ -156,12 +157,12 @@ export const TripPage = props => {
         </div>
         <div
           style={{
-            backgroundColor: '#17a2b8',
+            backgroundColor: '#30638E',
             width: '30vw',
             minHeight: '100vh',
           }}
         >
-          <Card border="info" bg="info" className={styles.tripInfoCard}>
+          <Card className={styles.tripInfoCard}>
             <Card.Body>
               <Card.Title className={styles.headerTrip}>
                 <h4>Trip Details</h4>
@@ -198,7 +199,7 @@ export const TripPage = props => {
                   as="li"
                   style={{
                     alignItems: 'center',
-                    border: '1px dotted teal',
+                    // border: '1px dotted teal',
                     float: 'left',
                     backgroundColor: '#e9ecef',
                     justifyContent: 'center',
