@@ -37,7 +37,7 @@ export const Notes = props => {
 
   return (
     <div>
-      <Button type="button" onClick={toggle}>
+      <Button style={{margin: ".5rem"}} type="button" onClick={toggle}>
         Add a Note
       </Button>
       <Modal show={isShowing} onHide={toggle} size="lg" centered>
