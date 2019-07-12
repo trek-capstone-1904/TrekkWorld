@@ -53,17 +53,20 @@ export const UserProfile = props => {
     const userInfo = value.data();
     console.log("userInfo", userInfo);
     return (
-      <div style={{justifyContent:"center"}}>
+      <div style={{ justifyContent: "center" }}>
         <UserProfileHeader user={userInfo} />
         <div className={styles.userBody}>
-          <div style={{ minWidth: "60vw" }} className={`${styles.userProfileBody} ${
+          <div
+            style={{ minWidth: "90vw", maxWidth: "95vw", alignSelf: "center", margin: "1rem", padding: ".25rem" }}
+            className={`${styles.userProfileBody} ${
               styles.userProfileBackground
-            }`}>
+            }`}
+          >
             {userInfo.bucketList && <BucketList trips={"123"} />}
           </div>
-          {/* <h1>My Bucket List</h1> */}
+
           <div
-            style={{ minWidth: "60vw", maxWidth: "95vw" }}
+            style={{ minWidth: "60vw", maxWidth: "90vw", alignSelf: "center", margin: "1rem", padding: ".25rem" }}
             className={`${styles.userProfileBody} ${
               styles.userProfileBackground
             }`}
@@ -71,7 +74,6 @@ export const UserProfile = props => {
             {userInfo.Trips && <UserProfileTrips trips={userInfo.Trips} />}
           </div>
           <div className={styles.userStats}>
-            {/* <Card.Header>Trekkers Stats</Card.Header> */}
             <div
               style={{
                 display: "flex",
@@ -114,13 +116,7 @@ export const UserProfile = props => {
                   </Media.Body>
                 </Media>
               )}
-              {/* <Card>
-                  <Card.Header>
-                    <MdDateRange  />Days Until Next Trekk</Card.Header>
-                  {userInfo.Trips && (
-                    <Card.Title>{daysUntil(userInfo.Trips)} Days Until The Next Trekk</Card.Title>
-                  )}
-                </Card> */}
+
               {userInfo.Trips && (
                 <Media>
                   <img
@@ -156,15 +152,6 @@ export const UserProfile = props => {
                 </Media>
               )}
 
-              {/* <Card>
-                  <Card.Header>Number Of Trekks</Card.Header>
-                  {userInfo.Trips && (
-                    <Card.Title>
-                      {Object.values(Object.values(userInfo.Trips)).length}
-                    </Card.Title>
-                  )}
-                </Card> */}
-
               {userInfo.countriesVisited && (
                 <Media>
                   <img
@@ -185,7 +172,10 @@ export const UserProfile = props => {
                         margin: "0rem"
                       }}
                     >
-                      {Object.values(Object.values(userInfo.Trips)).length}%
+                      {Math.ceil(
+                        (userInfo.countriesVisited.length / 193) * 100
+                      )}
+                      %
                     </p>
                     <p
                       style={{
@@ -200,27 +190,19 @@ export const UserProfile = props => {
                   </Media.Body>
                 </Media>
               )}
-
-              {/* <Card >
-                  <Card.Header>% of Countries Visited</Card.Header>
-                  {userInfo.countriesVisited && (
-                    <Card.Title>
-                      {Math.ceil(
-                        (userInfo.countriesVisited.length / 193) * 100
-                      )}
-                      %
-                    </Card.Title>
-                  )}
-                </Card> */}
             </div>
 
             {userInfo.countriesVisited && (
               <Card style={{ margin: ".5rem", minWidth: "50%" }}>
-                <Card.Body style={{fontSize: "1.5rem",
+                <Card.Body
+                  style={{
+                    fontSize: "1.5rem",
 
-                        color: "gray",
-                        fontWeight: "bold"}}>
-                {userInfo.countriesVisited.length} Countries Visited
+                    color: "gray",
+                    fontWeight: "bold"
+                  }}
+                >
+                  {userInfo.countriesVisited.length} Countries Visited
                 </Card.Body>
                 <WorldMap />
               </Card>
