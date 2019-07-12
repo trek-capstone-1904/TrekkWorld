@@ -63,7 +63,7 @@ const JournalDay = props => {
           {placesArray && (
             <CardColumns style={{alignContent: "middle"}}>
               {placesArray.map(place => (
-                <JournalCard key={place.value} place={place.value} />
+                <JournalCard key={place.value} place={place.value} placeUser={place.user}/>
               ))}
             </CardColumns>
           )}

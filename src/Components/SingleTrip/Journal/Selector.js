@@ -48,7 +48,7 @@ export const Selector = props => {
 
     //map place document into the options array to display in selector drop down
     const options = trekkInfo.docs.map(function(doc) {
-      return { value: doc.id, label: doc.data().placeName };
+      return { value: doc.id, label: doc.data().placeName, user: loggedInUser.displayName };
     });
     console.log(options)
 
