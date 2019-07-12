@@ -17,6 +17,7 @@ import userContext from '../../Contexts/userContext';
 import { useCollection } from 'react-firebase-hooks/firestore';
 import './scrollbar.css';
 import TripResultPlaceCard from '../TripPlanning/TripResultPlaceCard';
+import styles from '../UserProfile.module.css';
 
 export const TripResultCard = props => {
   console.log('card:', props.card);
@@ -53,63 +54,89 @@ export const TripResultCard = props => {
   tripCompleted();
 
   return (
-    <Card
-      style={{
-        margin: '.5rem auto',
-        width: '40rem',
-        minWidth: '27%',
-        maxWidth: '30rem',
-        padding: '.5rem',
-      }}
-    >
-
-
+    <Card className={styles.TripCard}>
       <Link to={`/trip/${props.tripId}`}>
-        <Card.Title style={{color: "#003D5B"}}>{card.tripName}</Card.Title>
+        <Card.Title className={styles.TripTitle} style={{ fontSize: '1.6rem' }}>
+          {card.tripName}
+        </Card.Title>
       </Link>
-      <Card.Subtitle className="mb-2 text-muted">
+      <Card.Subtitle style={{ fontSize: '.9rem' }} className="mb-2">
         {moment(card.startDate).format('MMM D, YYYY')}
       </Card.Subtitle>
       {card.placeImage && <img src={card.placeImage} alt="sight" />}
       <div>
         {Object.entries(card.users).map(user => (
-          <Badge style={{backgroundColor: "#EDAE49", margin: ".25rem"}}variant="primary" key={user[0]}>
+          <Badge
+            style={{
+              color: '#D1495B',
+              backgroundColor: 'white',
+              margin: '.25rem',
+            }}
+            key={user[0]}
+          >
             {user[1].userName}
           </Badge>
         ))}
       </div>
 
       <div>
-        <Badge style={{backgroundColor: "#00798C", color: "white", margin: ".25rem"}}variant="light">{card.tripTags} Trip</Badge>
-        {!tripCompleted() && <Badge style={{backgroundColor: "#D1495B", color: "white", margin: ".25rem"}}variant="light"> Upcoming</Badge>}
+        <Badge
+          className={styles.badge}
+          style={{
+            // backgroundColor: '#EDAE49',
+            // color: '#EDAE49',
+            margin: '.25rem',
+          }}
+        >
+          {card.tripTags} Trip
+        </Badge>
+        {!tripCompleted() && (
+          <Badge
+            style={{
+              // backgroundColor: '#D1495B',
+              color: 'lightgray',
+              margin: '.25rem',
+            }}
+          >
+            {' '}
+            Upcoming
+          </Badge>
+        )}
         {tripCompleted() && (
-          <Badge variant="success" display={tripCompleted()}>
+          <Badge className={styles.complete} display={tripCompleted()}>
             {tripCompleted()}
           </Badge>
         )}
       </div>
-      <Accordion>
-        <Accordion.Toggle as={Button} style={{color: "#00798C"}}variant="link" eventKey="0">
-          View Places
-        </Accordion.Toggle>
-        <Accordion.Collapse eventKey="0">
-          <ListGroup as="ul">
-            {value &&
-              value.docs
-                .filter(doc => !doc.data().locations)
-                .map(doc => (
-                  <ListGroup.Item as="li">
-                    <TripResultPlaceCard
-                      key={doc.id}
-                      placeId={doc.id}
-                      card={doc.data()}
-                      tripId={tripId}
-                    />
-                  </ListGroup.Item>
-                ))}
-          </ListGroup>
-        </Accordion.Collapse>
-      </Accordion>
+      {!props.userProfile && (
+        <Accordion>
+          <Accordion.Toggle
+            as={Button}
+            style={{ color: '#00798C' }}
+            variant="link"
+            eventKey="0"
+          >
+            View Places
+          </Accordion.Toggle>
+          <Accordion.Collapse eventKey="0">
+            <ListGroup as="ul">
+              {value &&
+                value.docs
+                  .filter(doc => !doc.data().locations)
+                  .map(doc => (
+                    <ListGroup.Item as="li">
+                      <TripResultPlaceCard
+                        key={doc.id}
+                        placeId={doc.id}
+                        card={doc.data()}
+                        tripId={tripId}
+                      />
+                    </ListGroup.Item>
+                  ))}
+            </ListGroup>
+          </Accordion.Collapse>
+        </Accordion>
+      )}
       <div />
     </Card>
   );

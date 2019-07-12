@@ -5,9 +5,59 @@
   justify-content: space-around;
 }
 
-.userProfileBackground {
+/* .userProfileBackground {
   background-color: #e9ecef;
   border-radius: 25px;
+} */
+.CardUser > div {
+  background-color: #30638e;
+
+}
+
+.CardUser > .TripCard {
+  margin: 1rem;
+  width: 23rem;
+  padding: 1.2rem;
+}
+.CardUser > .TripCard > a {
+  color: white;
+}
+
+.CardUser > .TripCard {
+  color: white;
+}
+
+.CardUser > .TripCard > div > .badge {
+  color: #edae49;
+}
+
+.TripSearch > .TripCard > div > .badge {
+  background-color: #edae49;
+  color: white;
+}
+
+.CardUser > .TripCard > div > .complete {
+  color: #54b948;
+}
+
+.TripSearch > .TripCard > div > .complete {
+  background-color: #54b948;
+  color: white;
+}
+
+.TripSearch > .TripCard {
+  margin: 0.5rem auto;
+  max-width: 35rem;
+  color: gray;
+  padding: .7rem;
+}
+
+/* .TripSearch > .TripCard > .badge{
+  background-color:'blue'
+} */
+
+.TripSearch > .TripCard > a {
+  color: #003d5b;
 }
 
 .Map {
@@ -18,26 +68,27 @@
 
 .BucketList {
   width: 34vw;
+  margin:1rem;
 }
 
 .BucketCardImage {
-  min-width: 13rem;
-  height: 8rem;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
+  min-width: 20rem;
+  height: 12rem;
+  opacity: 0.75;
+  filter: alpha(opacity=70);
 }
 
 .BucketCardText {
   color: #003d5b;
   font-family: 'Oswald', sans-serif;
   text-align: center;
-  font-weight:600;
+  font-weight: 600;
   font-size: 2rem;
 }
 
 .BucketButton {
-  background-color: #EDAE49;
-  border-color: #EDAE49;
+  background-color: #edae49;
+  border-color: #edae49;
   padding: 0.2rem;
   margin: 0.5rem;
 }

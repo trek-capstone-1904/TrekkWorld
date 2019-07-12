@@ -16,14 +16,15 @@ export const BucketList = props => {
   );
 
   return (
-    <div style={{ maxWidth: '80rem', justifyContent: "space-around"}}>
-    <h1 style={{color: "#003D5B"}}>My Bucket List</h1>
+    <div style={{ justifyContent: 'space-around' }}>
+      <hr />
+      <h1 style={{ color: 'gray' }}>My Bucket List</h1>
       <CardGroup>
         {error && <strong>Error: {error}</strong>}
         {loading && <span>Document: Loading...</span>}
         {/* //TODO: add spinner */}
         {snapshot && snapshot.data().bucketList && (
-          <span style={{ display: 'flex', flexDirection: 'row'}}>
+          <span style={{ display: 'flex', flexDirection: 'row' }}>
             {Object.keys(snapshot.data().bucketList).map(key => {
               return (
                 <BucketListCard

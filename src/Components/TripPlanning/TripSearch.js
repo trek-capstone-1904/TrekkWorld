@@ -4,6 +4,7 @@ import db from '../../firebase';
 import { useCollectionOnce } from 'react-firebase-hooks/firestore';
 import TripResultCard from '../Helper/TripResultCard';
 import userContext from '../../Contexts/userContext';
+import styles from '../UserProfile.module.css';
 
 export const TripSearch = props => {
   console.log('props in tripsearch', props);
@@ -36,7 +37,7 @@ export const TripSearch = props => {
   // );
 
   return (
-    <div>
+    <div className={styles.TripSearch}>
       {error && <strong>Error: {error}</strong>}
       {loading && <Spinner animation="grow" variant="info" />}
       {snapshot &&
