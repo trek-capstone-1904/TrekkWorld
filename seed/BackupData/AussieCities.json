@@ -1,0 +1,111 @@
+{
+  "results": [
+    {
+      "snippet": "The capital of the state and largest city in Australia, and its suburban surroundings, forms its own vibrant region.",
+      "score": 9.32774560951156,
+      "intro": "The capital of the state and largest city in Australia, and its suburban surroundings, forms its own vibrant region.",
+      "name": "Sydney",
+      "id": "Sydney"
+    },
+    {
+      "snippet": "Australia's second largest city, Melbourne is the country's sporting, shopping, food and cultural capital, while also being regarded as Australia's most European city.",
+      "score": 8.95716188831523,
+      "intro": "Australia's second largest city, Melbourne is the country's sporting, shopping, food and cultural capital, while also being regarded as Australia's most European city.",
+      "name": "Melbourne",
+      "id": "Melbourne"
+    },
+    {
+      "snippet": "The state capital on the Swan River sandy coastal plain, the beaches to the west, the hills to the east.",
+      "score": 8.28556163164655,
+      "intro": "The state capital on the Swan River sandy coastal plain, the beaches to the west, the hills to the east.",
+      "name": "Perth",
+      "id": "Perth2C_Western_Australia"
+    },
+    {
+      "snippet": "Capital of sun-drenched Queensland and gateway to beautiful sandy beaches.",
+      "score": 8.23457048359417,
+      "intro": "Capital of sun-drenched Queensland and gateway to beautiful sandy beaches.",
+      "name": "Brisbane",
+      "id": "Brisbane"
+    },
+    {
+      "snippet": "The relatively small, purpose-built national capital of Australia is home to plenty of museums.",
+      "score": 8.20596685958013,
+      "intro": "The relatively small, purpose-built national capital of Australia is home to plenty of museums.",
+      "name": "Canberra",
+      "id": "Canberra"
+    },
+    {
+      "snippet": "The \"City of Churches\", a relaxed South Australian alternative to the big eastern cities.",
+      "score": 8.08061444103923,
+      "intro": "The \"City of Churches\", a relaxed South Australian alternative to the big eastern cities.",
+      "name": "Adelaide",
+      "id": "Adelaide"
+    },
+    {
+      "snippet": "Picturesque and quiet capital of Tasmania, the site of the second convict settlement in Australia.",
+      "score": 7.91373027264536,
+      "intro": "Picturesque and quiet capital of Tasmania, the site of the second convict settlement in Australia.",
+      "name": "Hobart",
+      "id": "Hobart"
+    },
+    {
+      "snippet": "Known for dinner. Recommended places to visit are Cataract Gorge, City Park and Prince's Square.",
+      "score": 7.7640586398619,
+      "intro": "Launceston is the second largest city in Tasmania after Hobart and the twelfth-largest non-capital city in Australia. Known for dinner. Recommended places to visit are Cataract Gorge, City Park and Prince's Square.",
+      "name": "Launceston",
+      "id": "Launceston2C_Tasmania"
+    },
+    {
+      "snippet": "Gateway to the Great Barrier Reef, Port Douglas, Daintree National Park, and many beautiful beaches and resorts; a great place for people to get away and relax.",
+      "score": 7.67885268975386,
+      "intro": "Gateway to the Great Barrier Reef, Port Douglas, Daintree National Park, and many beautiful beaches and resorts; a great place for people to get away and relax.",
+      "name": "Cairns",
+      "id": "Cairns"
+    },
+    {
+      "snippet": "Known for diving. Recommended places to visit are Port Douglas Court House Museum, St Mary's by the Sea and The Rainforest Habitat Wildlife Sanctuary.",
+      "score": 7.65115481135905,
+      "intro": "Port Douglas is an ideal base for visits to the Great Barrier Reef or to the Daintree Rainforest, with Cape Tribulation a 90 minute drive on well maintained sealed roads.",
+      "name": "Port Douglas",
+      "id": "Port_Douglas2C_Queensland"
+    },
+    {
+      "snippet": "Known for dinner. Recommended places to visit are Cape Byron Lighthouse, Arakwal National Park and Lone Goat Gallery.",
+      "score": 7.55624969244838,
+      "intro": "During summer time the western road in and out of town to the North can get crowded and slow. Known for dinner. Recommended places to visit are Cape Byron Lighthouse, Arakwal National Park and Lone Goat Gallery.",
+      "name": "Byron Bay",
+      "id": "Byron_Bay2C_New_South_Wales"
+    },
+    {
+      "snippet": "Known for coffee. Recommended places to visit are Ballarat Tramway Museum, Sovereign Hill and Ballarat Wildlife Park.",
+      "score": 7.52362958259405,
+      "intro": "Drive time from Melbourne is about 80–90 minutes. Ballarat is most noted as a former goldmining town with excellent examples of Australian colonial architecture, and as the site of the famous miners' revolt at the Eureka Stockade in 1854.",
+      "name": "Ballarat",
+      "id": "Ballarat"
+    },
+    {
+      "snippet": "Australia's tropical northern capital, at the top end of the Northern Territory.",
+      "score": 7.51239843937915,
+      "intro": "Australia's tropical northern capital, at the top end of the Northern Territory.",
+      "name": "Darwin",
+      "id": "Darwin2C_Northern_Territory"
+    },
+    {
+      "snippet": "Known for lunch. Recommended places to visit are Wentworth Falls, Echo Point and Waradah Aboriginal Centre.",
+      "score": 7.26642461530536,
+      "intro": "Katoomba developed as a popular mountain resort town in the early 20th century, with holidaymakers taking advantage of the train services along the current line from Sydney.",
+      "name": "Katoomba",
+      "id": "Katoomba2C_New_South_Wales"
+    },
+    {
+      "snippet": "Known for dinner. Recommended places to visit are Eastern Beach, National Wool Museum and St Mary of the Angels Basilica.",
+      "score": 7.17642167957468,
+      "intro": "Geelong City is also known as the 'Gateway City' due to its central location to surrounding Victorian regional centres like Ballarat in the north west, Torquay, Great Ocean Road and Warrnambool in the southwest, Hamilton, Colac and Winchelsea to the west, and the state capital of Melbourne in the north east.",
+      "name": "Geelong",
+      "id": "Geelong"
+    }
+  ],
+  "estimated_total": 6244,
+  "more": true
+}

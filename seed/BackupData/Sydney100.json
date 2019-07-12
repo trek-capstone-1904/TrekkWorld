@@ -1,0 +1,1905 @@
+{
+  "results": [
+    {
+      "name": "Sydney Harbour Bridge",
+      "tag_labels": ["poitype-Bridge", "topattractions", "sightseeing"],
+      "sightseeing_score": 9.89706518609158,
+      "coordinates": {
+        "latitude": -33.8515983,
+        "longitude": 151.2110991
+      },
+      "snippet": "Under the direction of Dr John Bradfield of the NSW Department of Public Works, the bridge was designed and built by British firm Dorman Long and Co Ltd of Middlesbrough and opened in 1932.",
+      "score": 9.89706518609158,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__18372554"
+    },
+    {
+      "name": "Art Gallery of New South Wales",
+      "tag_labels": [
+        "subtype-Art_museums",
+        "architectural_style-neoclassical_architecture",
+        "topattractions",
+        "museums",
+        "district-sydney_central_business_district",
+        "person_architect-walter_liberty_vernon",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.85792596205538,
+      "coordinates": {
+        "latitude": -33.86887111320513,
+        "longitude": 151.21735127698264
+      },
+      "snippet": "The Art Gallery of New South Wales is the leading museum of art in New South Wales and Sydney, and one of Australia's foremost cultural institutions.",
+      "score": 9.85792596205538,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__13757765"
+    },
+    {
+      "name": "Museum of Contemporary Art",
+      "tag_labels": [
+        "subtype-Art_museums",
+        "subtype-Modern_art_museums",
+        "topattractions",
+        "museums",
+        "architectural_style-art_deco_architecture",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.83879395679778,
+      "coordinates": {
+        "latitude": -33.86008548494921,
+        "longitude": 151.20897477411017
+      },
+      "snippet": "Housed in a fabulous 1930s art deco building, former location of the Maritime Services Board and facing onto the western side of Circular Quay and Sydney Cove, the MCA has been dedicated - since its opening in 1991 - to showcasing great works of modern and contemporary art in all media.",
+      "score": 9.83879395679778,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "W__16599528"
+    },
+    {
+      "name": "Coogee Pavilion",
+      "tag_labels": [
+        "coffee",
+        "district-coogee",
+        "cuisine-Wine",
+        "cuisine-Cocktail",
+        "cuisine-Seafood",
+        "cuisine-Pizza",
+        "poitype-Restaurant",
+        "lunch",
+        "dinner",
+        "character-Kid_friendly",
+        "eatingout",
+        "cuisine-Beer",
+        "breakfast"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -33.9187341,
+        "longitude": 151.2582358
+      },
+      "snippet": "Fans praise the excellent pastries, excellent burgers and awesome cakes.",
+      "score": 9.79580835225306,
+      "eatingout_score": 9.79580835225306,
+      "location_id": "Sydney",
+      "id": "T__b6caa698e860"
+    },
+    {
+      "name": "Sydney Opera House",
+      "tag_labels": [
+        "architectural_style-modernist_architecture",
+        "topattractions",
+        "poitype-Music_venue",
+        "district-sydney_central_business_district",
+        "musicandshows",
+        "nightlife",
+        "architectural_style-expressionist_architecture",
+        "architectural_style-high-tech_architecture",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.95861046418663,
+      "coordinates": {
+        "latitude": -33.856783,
+        "longitude": 151.2155463
+      },
+      "snippet": "The world heritage listed Sydney Opera House in the north east of the city is one of Sydney's most beautiful and unusual buildings; its sail shaped structure, designed by Jørn Utzon, is world famous, and it is the only structure in the world to have been designated a UNESCO World Heritage Site during the lifetime of its architect.",
+      "score": 9.76929908799161,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__1263141006"
+    },
+    {
+      "name": "Tetsuya's",
+      "tag_labels": [
+        "district-darling_harbour",
+        "cuisine-Dessert",
+        "cuisine-Japanese",
+        "cuisine-Wine",
+        "cuisine-Seafood",
+        "district-sydney_central_business_district",
+        "poitype-Restaurant",
+        "lunch",
+        "dinner",
+        "eatingout",
+        "cuisine-Asian"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -33.8751964,
+        "longitude": 151.2051527
+      },
+      "snippet": "Tetsuya's, which serves fusion Japanese and French style food, is one of Sydney's most famous and highly regarded restaurants, generally named in the top three year after year.",
+      "score": 9.76775554208521,
+      "eatingout_score": 9.76775554208521,
+      "location_id": "Sydney",
+      "id": "Tetsuya27s"
+    },
+    {
+      "name": "Royal Botanic Garden",
+      "tag_labels": [
+        "poitype-Park",
+        "district-sydney_central_business_district",
+        "topattractions",
+        "relaxinapark",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.66615034948719,
+      "coordinates": {
+        "latitude": -33.8636544557417,
+        "longitude": 151.216496755485
+      },
+      "snippet": "One of Sydney's greatest assets, from in front of the State Art Gallery, out to Mrs Macquaries chair, across to Farm Cove and onto the Sydney Opera House.",
+      "score": 9.66615034948719,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__26526161"
+    },
+    {
+      "name": "Sydney Tower",
+      "tag_labels": [
+        "cuisine-Dessert",
+        "cuisine-Wine",
+        "cuisine-Cocktail",
+        "cuisine-Steak",
+        "poitype-Restaurant",
+        "character-Romantic",
+        "lunch",
+        "dinner",
+        "eatingout",
+        "architectural_style-high-tech_architecture",
+        "district-sydney_central_business_district"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -33.8707038,
+        "longitude": 151.2084686
+      },
+      "snippet": "Towering above the city of Sydney since 1981, when it became the tallest structure in the city, the Sydney Tower reaches a total height of 305m - great views are available from the 250m high viewing level.",
+      "score": 9.63030585647519,
+      "eatingout_score": 9.63030585647519,
+      "location_id": "Sydney",
+      "id": "Sydney_Tower"
+    },
+    {
+      "name": "Carriageworks",
+      "tag_labels": [
+        "subtype-Art_museums",
+        "district-inner_west",
+        "frequented_by_locals",
+        "subtype-Modern_art_museums",
+        "topattractions",
+        "museums",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.5929122002552,
+      "coordinates": {
+        "latitude": -33.89415975509391,
+        "longitude": 151.19160109056025
+      },
+      "snippet": "Carriageworks is a cultural facility of the NSW Government and receives support from Arts NSW and the Australian Government through the Australia Council for the Arts.",
+      "score": 9.5929122002552,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__e4b887084bbe"
+    },
+    {
+      "name": "Sailors Thai",
+      "tag_labels": [
+        "cuisine-Dessert",
+        "district-the_rocks",
+        "cuisine-Wine",
+        "cuisine-Thai",
+        "poitype-Restaurant",
+        "lunch",
+        "dinner",
+        "cuisine-Spicy",
+        "eatingout",
+        "feature-Outdoor_seating"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -33.8586771,
+        "longitude": 151.2092784
+      },
+      "snippet": "One of the Thai restaurants owned by David Thompson, probably one of the best Thai chefs in the world.",
+      "score": 9.5600156318833,
+      "eatingout_score": 9.5600156318833,
+      "location_id": "Sydney",
+      "id": "wtl__61532594"
+    },
+    {
+      "name": "Hyde Park",
+      "tag_labels": [
+        "poitype-Park",
+        "district-sydney_central_business_district",
+        "topattractions",
+        "relaxinapark",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.4886487708071,
+      "coordinates": {
+        "latitude": -33.87336487264165,
+        "longitude": 151.21125807091357
+      },
+      "snippet": "An extensive city centre park of a formal design tradition dissected by Park St, elongated in layout and containing a large fountain (Archibald Fountain) towards the northern end and the Anzac War Memorial at the south - a favorite with city workers at lunchtime, joggers and sunbakers.",
+      "score": 9.4886487708071,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__2308911faea6"
+    },
+    {
+      "name": "The Apollo Restaurant",
+      "tag_labels": [
+        "coffee",
+        "cuisine-Greek",
+        "cuisine-Japanese",
+        "cuisine-Wine",
+        "cuisine-Cocktail",
+        "poitype-Restaurant",
+        "lunch",
+        "dinner",
+        "district-city_east",
+        "eatingout",
+        "cuisine-Dessert",
+        "district-eastern_suburbs"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -33.8709498,
+        "longitude": 151.2253531
+      },
+      "snippet": "A great venue that offers greek pastry, greek barbecue and outstanding options.",
+      "score": 9.47284077021194,
+      "eatingout_score": 9.47284077021194,
+      "location_id": "Sydney",
+      "id": "T__26600f81264b"
+    },
+    {
+      "name": "Catalina Rose Bay",
+      "tag_labels": [
+        "coffee",
+        "cuisine-Dessert",
+        "cuisine-Wine",
+        "cuisine-Cocktail",
+        "cuisine-Seafood",
+        "poitype-Restaurant",
+        "lunch",
+        "dinner",
+        "district-eastern_suburbs",
+        "eatingout",
+        "feature-Outdoor_seating"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -33.87045756457186,
+        "longitude": 151.26284792322818
+      },
+      "snippet": "Customers rave about the excellent food, amazing pastry and sensational seafood.",
+      "score": 9.46264487087397,
+      "eatingout_score": 9.46264487087397,
+      "location_id": "Sydney",
+      "id": "153959371303790"
+    },
+    {
+      "name": "Taronga Zoo",
+      "tag_labels": [
+        "district-lower_north_shore",
+        "topattractions",
+        "zoos",
+        "character-Kid_friendly",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.42038411271055,
+      "coordinates": {
+        "latitude": -33.84352516717327,
+        "longitude": 151.24151662262108
+      },
+      "snippet": "is Sydney's major zoo and houses both Australian and exotic animals. Worth the trip for the views back to the city and Opera House.",
+      "score": 9.42038411271055,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "W__4354532"
+    },
+    {
+      "name": "The Meat & Wine Co",
+      "tag_labels": [
+        "district-darling_harbour",
+        "cuisine-Dessert",
+        "cuisine-Wine",
+        "cuisine-Steak",
+        "poitype-Restaurant",
+        "lunch",
+        "dinner",
+        "cuisine-Ribs",
+        "eatingout",
+        "feature-Outdoor_seating",
+        "district-sydney_central_business_district"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -33.87333470185294,
+        "longitude": 151.20131584618863
+      },
+      "snippet": "Good beef, big meat and perfect cooking on offer in this good pub.",
+      "score": 9.3716613517744,
+      "eatingout_score": 9.3716613517744,
+      "location_id": "Sydney",
+      "id": "T__f7304bd59a8e"
+    },
+    {
+      "name": "La Rosa The Strand",
+      "tag_labels": [
+        "coffee",
+        "cuisine-Dessert",
+        "cuisine-Wine",
+        "cuisine-Pizza",
+        "poitype-Cafe",
+        "lunch",
+        "dinner",
+        "poitype-Restaurant",
+        "eatingout",
+        "cuisine-Italian",
+        "district-sydney_central_business_district"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -33.8694312,
+        "longitude": 151.2076346
+      },
+      "snippet": "Customers recommend the amazing desserts, delicate cheese and excellent portions.",
+      "score": 9.33305215149523,
+      "eatingout_score": 9.33305215149523,
+      "location_id": "Sydney",
+      "id": "T__550471bbe7e8"
+    },
+    {
+      "name": "St Mary's Cathedral",
+      "tag_labels": [
+        "architectural_style-gothic_revival_architecture",
+        "poitype-Church",
+        "district-sydney_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.32574275663651,
+      "coordinates": {
+        "latitude": -33.87120519995822,
+        "longitude": 151.21336829716682
+      },
+      "snippet": "The Catholic Sydney diocese's cathedral, built in 1868.",
+      "score": 9.32574275663651,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__13764181"
+    },
+    {
+      "name": "SEA LIFE Sydney Aquarium",
+      "tag_labels": [
+        "district-darling_harbour",
+        "character-Kid_friendly",
+        "zoos",
+        "district-sydney_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.30824131085732,
+      "coordinates": {
+        "latitude": -33.870046,
+        "longitude": 151.2023742
+      },
+      "snippet": "A massive aquarium.",
+      "score": 9.30824131085732,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__15449484"
+    },
+    {
+      "name": "Queen Victoria Building",
+      "tag_labels": [
+        "architectural_style-victorian_architecture",
+        "architectural_style-colonial_architecture",
+        "architectural_style-romanesque_architecture",
+        "district-sydney_central_business_district",
+        "poitype-Memorial",
+        "person_architect-george_mcrae",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.21052097042543,
+      "coordinates": {
+        "latitude": -33.8717101,
+        "longitude": 151.2068055
+      },
+      "snippet": "The site of a market place since 1810, its current Romanesque facade was completed in 1896 and was extensively restored in the late 1980s as a prestigious shopping centre.",
+      "score": 9.21052097042543,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__20827959"
+    },
+    {
+      "name": "Harry's Cafe de Wheels",
+      "tag_labels": [
+        "eatingout",
+        "poitype-Restaurant",
+        "lunch",
+        "dinner",
+        "district-city_east",
+        "cuisine-Seafood",
+        "cuisine-Meat_pie",
+        "breakfast",
+        "cuisine-Pattiserie"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -33.869254275167634,
+        "longitude": 151.2211821688814
+      },
+      "snippet": "Located in this part of town.",
+      "score": 9.16437840679053,
+      "eatingout_score": 9.16437840679053,
+      "location_id": "Sydney",
+      "id": "N__21397974"
+    },
+    {
+      "name": "Australian Museum",
+      "tag_labels": [
+        "museums",
+        "subtype-Natural_history_museums",
+        "district-darlinghurst",
+        "architectural_style-neoclassical_architecture",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.1538910348393,
+      "coordinates": {
+        "latitude": -33.87435863223116,
+        "longitude": 151.2132512486735
+      },
+      "snippet": "Natural history collections, exhibitions, natural science and indigenous cultures.",
+      "score": 9.1538910348393,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "W__16748926"
+    },
+    {
+      "name": "Alpha Restaurant",
+      "tag_labels": [
+        "coffee",
+        "cuisine-Dessert",
+        "cuisine-Japanese",
+        "cuisine-Wine",
+        "district-sydney_central_business_district",
+        "poitype-Restaurant",
+        "lunch",
+        "dinner",
+        "eatingout"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -33.87524127573174,
+        "longitude": 151.20912831451415
+      },
+      "snippet": "Located close to the Museum Railway Station.",
+      "score": 9.13652246035318,
+      "eatingout_score": 9.13652246035318,
+      "location_id": "Sydney",
+      "id": "T__df831312d351"
+    },
+    {
+      "name": "Government House",
+      "tag_labels": [
+        "architectural_style-gothic_revival_architecture",
+        "architectural_style-victorian_architecture",
+        "museums",
+        "district-sydney_central_business_district",
+        "subtype-History_museums",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.08746012440092,
+      "coordinates": {
+        "latitude": -33.85992554751181,
+        "longitude": 151.21505736990375
+      },
+      "snippet": "Open to the public, with the entrance to the house and gardens through the Botanic Gardens.",
+      "score": 9.08746012440092,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "W__156581638"
+    },
+    {
+      "name": "Cho Cho San",
+      "tag_labels": [
+        "cuisine-Dessert",
+        "cuisine-Japanese",
+        "icecream",
+        "cuisine-Wine",
+        "cuisine-Cocktail",
+        "poitype-Restaurant",
+        "lunch",
+        "dinner",
+        "district-city_east",
+        "eatingout",
+        "district-eastern_suburbs"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -33.8694619,
+        "longitude": 151.2253675
+      },
+      "snippet": "A japanese bar that is frequented by big crowd for its awesome food, superb fish and beautiful sashimi.",
+      "score": 9.07551566448921,
+      "eatingout_score": 9.07551566448921,
+      "location_id": "Sydney",
+      "id": "T__478700850474"
+    },
+    {
+      "name": "Manly Cove Pavilion",
+      "tag_labels": [
+        "cuisine-Dessert",
+        "cuisine-Wine",
+        "cuisine-Cocktail",
+        "poitype-Restaurant",
+        "lunch",
+        "dinner",
+        "district-sydney2fmanly",
+        "eatingout",
+        "cuisine-Italian"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -33.7992,
+        "longitude": 151.2809
+      },
+      "snippet": "Good seafood in a friendly ambience.",
+      "score": 9.01395740113021,
+      "eatingout_score": 9.01395740113021,
+      "location_id": "Sydney",
+      "id": "T__3c2f9b6be5ac"
+    },
+    {
+      "name": "Overseas Passenger Terminal",
+      "tag_labels": ["district-the_rocks", "poitype-Sight", "sightseeing"],
+      "sightseeing_score": 8.9778680793812,
+      "coordinates": {
+        "latitude": -33.858,
+        "longitude": 151.2101
+      },
+      "snippet": "As such, it has been host to many major international cruise liners which are unable to clear the underside of the bridge, including the largest liner to dock at the OPT to date, the Queen Mary II.",
+      "score": 8.9778680793812,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__b15bc1f731b6"
+    },
+    {
+      "name": "Fort Denison",
+      "tag_labels": ["museums", "subtype-Military_museums", "sightseeing"],
+      "sightseeing_score": 8.91711203818996,
+      "coordinates": {
+        "latitude": -33.8549,
+        "longitude": 151.2255
+      },
+      "snippet": "Fort Denison, part of the Sydney Harbour National Park, is a protected national park that is an heritage-listed former penal site and defensive facility occupying a small island located north-east of the Royal Botanic Gardens and approximately 1km east of the Opera House in Sydney Harbour, New South Wales, Australia.",
+      "score": 8.91711203818996,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "W__151442921"
+    },
+    {
+      "name": "WILD LIFE Sydney Zoo",
+      "tag_labels": [
+        "district-darling_harbour",
+        "character-Kid_friendly",
+        "zoos",
+        "district-sydney_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.87914005116144,
+      "coordinates": {
+        "latitude": -33.8695963,
+        "longitude": 151.2016335
+      },
+      "snippet": "If you don't have time to get out to the zoo, then this offers the chance to see Australian wildlife close to the city.",
+      "score": 8.87914005116144,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "Wild_Life_Sydney"
+    },
+    {
+      "name": "Mrs Macquarie's Chair",
+      "tag_labels": [
+        "district-sydney_central_business_district",
+        "poitype-Memorial",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.74612985450283,
+      "coordinates": {
+        "latitude": -33.8596269,
+        "longitude": 151.222521
+      },
+      "snippet": "This park area is just outside the gates of the Botanic Garden (above), and has free access all the time. It has magnificent views of the harbour.",
+      "score": 8.74612985450283,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__13887214"
+    },
+    {
+      "name": "ANZAC Memorial",
+      "tag_labels": [
+        "district-sydney_central_business_district",
+        "poitype-Memorial",
+        "architectural_style-art_deco_architecture",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.70328555190102,
+      "coordinates": {
+        "latitude": -33.87575286421252,
+        "longitude": 151.21094696362334
+      },
+      "snippet": "A large war memorial in the middle of the city, built after World War I. It is a focus of military memorial events in New South Wales.",
+      "score": 8.70328555190102,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__20930436"
+    },
+    {
+      "name": "The Domain",
+      "tag_labels": [
+        "poitype-Park",
+        "district-sydney_central_business_district",
+        "relaxinapark",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.69000169528514,
+      "coordinates": {
+        "latitude": -33.86810670942632,
+        "longitude": 151.21500083979828
+      },
+      "snippet": "In colonial times this land was the Governor’s buffer of privacy between his residence and the penal colony.",
+      "score": 8.69000169528514,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "The_Domain2C_Sydney"
+    },
+    {
+      "name": "Darling Harbour",
+      "tag_labels": [
+        "poitype-Port",
+        "district-sydney_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.64981871267539,
+      "coordinates": {
+        "latitude": -33.8714291,
+        "longitude": 151.2004539
+      },
+      "snippet": "great views and the convenience of three modes of public transportation at your doorstep.",
+      "score": 8.64981871267539,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__25843272"
+    },
+    {
+      "name": "Paddy's Markets",
+      "tag_labels": [
+        "shopping",
+        "do",
+        "district-darling_harbour",
+        "markets",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.43207051837654,
+      "coordinates": {
+        "latitude": -33.87975883402313,
+        "longitude": 151.2034213772233
+      },
+      "snippet": "A famous, large market place in the Haymarket. Lots of clothing, sunglasses, souvenirs, and food. Probably not too many bargains to be had, however.",
+      "score": 8.63991601554469,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__20930522"
+    },
+    {
+      "name": "Chinese Garden of Friendship",
+      "tag_labels": [
+        "district-darling_harbour",
+        "poitype-Park",
+        "district-sydney_central_business_district",
+        "relaxinapark",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.62328290420248,
+      "coordinates": {
+        "latitude": -33.87652658603639,
+        "longitude": 151.20267851077728
+      },
+      "snippet": "Modelled on the typical private gardens of the Ming Dynasty, the garden offers an insight into Chinese heritage and culture.",
+      "score": 8.62328290420248,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "W__4334305"
+    },
+    {
+      "name": "Sydney Observatory",
+      "tag_labels": [
+        "museums",
+        "district-the_rocks",
+        "character-Kid_friendly",
+        "subtype-Sci-tech_museums",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.60289167335234,
+      "coordinates": {
+        "latitude": -33.859573735505634,
+        "longitude": 151.2045698420219
+      },
+      "snippet": "Australia's oldest observatory. It has a variety of exhibitions, a “beanbag planetarium” and of course, telescopes.",
+      "score": 8.60289167335234,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__356930115"
+    },
+    {
+      "name": "Hyde Park Barracks",
+      "tag_labels": [
+        "architectural_style-neoclassical_architecture",
+        "district-sydney_central_business_district",
+        "architectural_style-georgian_architecture",
+        "museums",
+        "character-Kid_friendly",
+        "person_architect-francis_greenway",
+        "subtype-History_museums",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.59652546628828,
+      "coordinates": {
+        "latitude": -33.869612446998374,
+        "longitude": 151.212793177444
+      },
+      "snippet": "Built in 1818-1819.",
+      "score": 8.59652546628828,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__15448625"
+    },
+    {
+      "name": "Australian National Maritime Museum",
+      "tag_labels": [
+        "district-darling_harbour",
+        "subtype-Maritime_museums",
+        "district-sydney_central_business_district",
+        "museums",
+        "character-Kid_friendly",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.58076707785829,
+      "coordinates": {
+        "latitude": -33.86935331748402,
+        "longitude": 151.19875118554717
+      },
+      "snippet": "Two floors of internal exhibits, outlining the maritime role in Australia's history. Houses significant full scale exhibits.",
+      "score": 8.58076707785829,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__15407538"
+    },
+    {
+      "name": "Deus Bar & Kitchen",
+      "tag_labels": [
+        "coffee",
+        "district-inner_west",
+        "poitype-Cafe",
+        "lunch",
+        "dinner",
+        "poitype-Restaurant",
+        "eatingout",
+        "breakfast"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -33.8858861,
+        "longitude": 151.1793258
+      },
+      "snippet": "With its perfect burgers Deus Bar & Kitchen is a place worth considering.",
+      "score": 8.56169906669695,
+      "eatingout_score": 8.56169906669695,
+      "location_id": "Sydney",
+      "id": "T__4fc1e37c3b46"
+    },
+    {
+      "name": "Riverview Hotel",
+      "tag_labels": [
+        "district-inner_west",
+        "cuisine-Wine",
+        "poitype-Bar",
+        "cuisine-Pizza",
+        "cuisine-Tapas",
+        "lunch",
+        "dinner",
+        "nightlife",
+        "eatingout",
+        "cuisine-Beer",
+        "drinks"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -33.8549217,
+        "longitude": 151.1753608
+      },
+      "snippet": "You can choose to eat in the dining room upstairs but you can also choose from a selection of the same menu and eat in the bar.",
+      "score": 8.54549954762623,
+      "eatingout_score": 9.29751090887365,
+      "location_id": "Sydney",
+      "id": "N__84049792"
+    },
+    {
+      "name": "Pyrmont Bridge",
+      "tag_labels": [
+        "poitype-Bridge",
+        "district-sydney_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.53068111047145,
+      "coordinates": {
+        "latitude": -33.87055773523803,
+        "longitude": 151.2004871525154
+      },
+      "snippet": "The Pyrmont Bridge is an old swing bridge, that historically was a main thouroughfare into Sydney. Now it only carries pedestrians across the harbour.",
+      "score": 8.53068111047145,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__20828205"
+    },
+    {
+      "name": "Sydney Tramway Museum",
+      "tag_labels": [
+        "museums",
+        "district-sydney2fsutherland_shire",
+        "frequented_by_locals",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.5015015180957,
+      "coordinates": {
+        "latitude": -34.04553747284564,
+        "longitude": 151.0519254204677
+      },
+      "snippet": "They have an old Bondi tram, overseas trams, and tramrides, including rides to the Royal National Park. They also have a large display area.",
+      "score": 8.5015015180957,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__fa8d413dfd64"
+    },
+    {
+      "name": "St Andrew's Cathedral",
+      "tag_labels": [
+        "architectural_style-gothic_revival_architecture",
+        "poitype-Church",
+        "district-sydney_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.45802155088039,
+      "coordinates": {
+        "latitude": -33.87398401666279,
+        "longitude": 151.2062748986121
+      },
+      "snippet": "Joan Kerr described St Andrew's as \"a perfect example of the colonial desire to reproduce England in Australia in the mid nineteenth century.\" The cathedral holds services every day, including choral services on Sundays and several times a week during school term.",
+      "score": 8.45802155088039,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "St_Andrew27s_Cathedral2C_Sydney"
+    },
+    {
+      "name": "Royal Australian Navy Heritage Centre",
+      "tag_labels": [
+        "museums",
+        "subtype-Maritime_museums",
+        "subtype-Military_museums",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.44879781246895,
+      "coordinates": {
+        "latitude": -33.8598014,
+        "longitude": 151.2291777
+      },
+      "snippet": "The NHC contains more than 250,000 individual items, and the mission of the RANHC is to display those objects of museum standard to the public, and through these displays capture something of the Australian naval experience.",
+      "score": 8.44879781246895,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "Royal_Australian_Navy_Heritage_Centre"
+    },
+    {
+      "name": "Old Government House",
+      "tag_labels": [
+        "museums",
+        "subtype-History_museums",
+        "district-sydney2fparramatta",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.39171934663318,
+      "coordinates": {
+        "latitude": -33.8121312,
+        "longitude": 150.9973229
+      },
+      "snippet": "The site of the residence of early colonial governors, today a UNESCO World Heritage site.",
+      "score": 8.39171934663318,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__df191c4105e6"
+    },
+    {
+      "name": "Waverley Cemetery",
+      "tag_labels": ["poitype-Cemetery", "sightseeing"],
+      "sightseeing_score": 8.359153237717,
+      "coordinates": {
+        "latitude": -33.90903975250754,
+        "longitude": 151.2669655830139
+      },
+      "snippet": "Opened in 1877 and built by R. Watkins and P.",
+      "score": 8.359153237717,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "W__19259215"
+    },
+    {
+      "name": "Cremorne Reserve",
+      "tag_labels": [
+        "architectural_style-vernacular_architecture",
+        "district-lower_north_shore",
+        "poitype-Lighthouse",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.33067714330364,
+      "coordinates": {
+        "latitude": -33.8487524,
+        "longitude": 151.2330478
+      },
+      "snippet": "Cremorne Reserve is a small park along the water near Cremorne Wharf, with sweeping views southwest to the city and Harbour Bridge.",
+      "score": 8.33067714330364,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__13811927"
+    },
+    {
+      "name": "Barrenjoey Head Lighthouse",
+      "tag_labels": [
+        "architectural_style-vernacular_architecture",
+        "poitype-Lighthouse",
+        "district-sydney2fpalm_beach",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.29414671043471,
+      "coordinates": {
+        "latitude": -33.5802438,
+        "longitude": 151.3298675
+      },
+      "snippet": "The Barrenjoey Head Lighthouse is an heritage-listed lighthouse at Barrenjoey Headland, Palm Beach, Northern Beaches Council, New South Wales, Australia.",
+      "score": 8.29414671043471,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__d67e5251b39c"
+    },
+    {
+      "name": "Archibald Fountain",
+      "tag_labels": [
+        "district-sydney_central_business_district",
+        "poitype-Memorial",
+        "architectural_style-art_deco_architecture",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.28802735812111,
+      "coordinates": {
+        "latitude": -33.87096941944341,
+        "longitude": 151.21179648701263
+      },
+      "snippet": "Archibald specified that it must be designed by a French artist, both because of his great love of French culture and to commemorate the association of Australia and France in World War I.",
+      "score": 8.28802735812111,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "W__50540207"
+    },
+    {
+      "name": "St James' Church",
+      "tag_labels": [
+        "architectural_style-neoclassical_architecture",
+        "architectural_style-colonial_architecture",
+        "architectural_style-georgian_architecture",
+        "district-sydney_central_business_district",
+        "person_architect-francis_greenway",
+        "poitype-Church",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.28052336269465,
+      "coordinates": {
+        "latitude": -33.86944764160138,
+        "longitude": 151.2111793565873
+      },
+      "snippet": "Designed in the style of a Georgian town church by the transported convict architect Francis Greenway during the governorship of Lachlan Macquarie, St James' is part of the historical precinct of Macquarie Street which includes other early colonial era buildings such as the Hyde Park Barracks.",
+      "score": 8.28052336269465,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "St_James27_Church2C_Sydney"
+    },
+    {
+      "name": "Sydney Town Hall",
+      "tag_labels": [
+        "poitype-City_hall",
+        "architectural_style-neoclassical_architecture",
+        "architectural_style-victorian_architecture",
+        "architectural_style-historicist_architecture",
+        "district-sydney_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.27884463603233,
+      "coordinates": {
+        "latitude": -33.87320873823247,
+        "longitude": 151.2061676758358
+      },
+      "snippet": "The Sydney Town Hall is a late 19th-century building in the city of Sydney, the capital city of New South Wales, Australia, housing the chambers of the Lord Mayor of Sydney, council offices, and venues for meetings and functions.",
+      "score": 8.27884463603233,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "W__104948253"
+    },
+    {
+      "name": "Port Jackson",
+      "tag_labels": ["poitype-Port", "sightseeing"],
+      "sightseeing_score": 8.26207425022508,
+      "coordinates": {
+        "latitude": -33.84794503279091,
+        "longitude": 151.24370112581266
+      },
+      "snippet": "Port Jackson, consisting of the waters of Sydney Harbour, Middle Harbour, North Harbour and the Lane Cove and Parramatta Rivers, is the ria or natural harbour of Sydney, New South Wales, Australia.",
+      "score": 8.26207425022508,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "Port_Jackson"
+    },
+    {
+      "name": "Hornby Lighthouse",
+      "tag_labels": [
+        "architectural_style-vernacular_architecture",
+        "poitype-Lighthouse",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.25045971386187,
+      "coordinates": {
+        "latitude": -33.8335652,
+        "longitude": 151.2809945
+      },
+      "snippet": "It is the third oldest lighthouse in New South Wales.",
+      "score": 8.25045971386187,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__26525026"
+    },
+    {
+      "name": "Fort Denison Light",
+      "tag_labels": [
+        "architectural_style-vernacular_architecture",
+        "poitype-Lighthouse",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.20111554721782,
+      "coordinates": {
+        "latitude": -33.8548645,
+        "longitude": 151.2256031
+      },
+      "snippet": "Fort Denison Light, also known as Pinchgut Light, is an active lighthouse located on top of a Martello Tower at Fort Denison, a former penal site and defensive facility occupying a small island in Sydney Harbour, New South Wales, Australia.",
+      "score": 8.20111554721782,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "Fort_Denison_Light"
+    },
+    {
+      "name": "Powerhouse Museum",
+      "tag_labels": [
+        "museums",
+        "district-darling_harbour",
+        "character-Kid_friendly",
+        "subtype-Sci-tech_museums",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.19089222012472,
+      "coordinates": {
+        "latitude": -33.87826769405265,
+        "longitude": 151.19958273549116
+      },
+      "snippet": "The Powerhouse Museum has a variety of permanent and temporary exhibitions including the King's Cinema, an intact art deco cinema, Locomotive No 1, Experimentations, Ecologic, the Strasbourg Clock, the Steam Revolution and Interface.",
+      "score": 8.19089222012472,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "W__16765958"
+    },
+    {
+      "name": "Manly Sea Life Sanctuary",
+      "tag_labels": [
+        "character-Kid_friendly",
+        "zoos",
+        "district-sydney2fmanly",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.17886085691304,
+      "coordinates": {
+        "latitude": -33.79904368117474,
+        "longitude": 151.2813442090677
+      },
+      "snippet": "It featured sharks, giant stingrays, sea turtles, little penguins and other marine life.",
+      "score": 8.17886085691304,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__7103b37a9f9b"
+    },
+    {
+      "name": "Great Synagogue",
+      "tag_labels": [
+        "district-sydney_central_business_district",
+        "poitype-Synagogue",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.14724585340742,
+      "coordinates": {
+        "latitude": -33.87258077612116,
+        "longitude": 151.20959758414244
+      },
+      "snippet": "The Great Synagogue is a large synagogue in Sydney. It is located in Elizabeth Street opposite Hyde Park and extends back to Castlereagh Street.",
+      "score": 8.14724585340742,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "Great_Synagogue_28Sydney29"
+    },
+    {
+      "name": "Cronulla sand dunes",
+      "tag_labels": ["exploringnature", "sightseeing"],
+      "sightseeing_score": 8.1423340511766,
+      "coordinates": {
+        "latitude": -34.031501,
+        "longitude": 151.171875
+      },
+      "snippet": "You can stand on the rock where Captain Cook first stepped ashore, starting the process of European settlement.",
+      "score": 8.1423340511766,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__9766d616a89b"
+    },
+    {
+      "name": "SS South Steyne",
+      "tag_labels": ["poitype-Ship", "sightseeing"],
+      "sightseeing_score": 8.1054960890662,
+      "coordinates": {
+        "latitude": -33.8707218,
+        "longitude": 151.1994381
+      },
+      "snippet": "For 36 years, she operated on the Manly run on Sydney Harbour and was the largest, steam-powered, passenger ferry in the world.",
+      "score": 8.1054960890662,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__1343310912"
+    },
+    {
+      "name": "General Post Office",
+      "tag_labels": [
+        "architectural_style-neoclassical_architecture",
+        "architectural_style-italianate_architecture",
+        "architectural_style-victorian_architecture",
+        "district-sydney_central_business_district",
+        "poitype-Sight",
+        "person_architect-james_barnet",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.10415824381583,
+      "coordinates": {
+        "latitude": -33.8676568,
+        "longitude": 151.2073995
+      },
+      "snippet": "Composed primarily of local Sydney sandstone, mined in Pyrmont, the primary load-bearing northern façade has been described as \"the finest example of the Victorian Italian Renaissance Style in NSW\" and stretches 114m along Martin Place, making it one of the largest sandstone buildings in Sydney.",
+      "score": 8.10415824381583,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "W__40717464"
+    },
+    {
+      "name": "Bradleys Head Light",
+      "tag_labels": [
+        "architectural_style-vernacular_architecture",
+        "poitype-Lighthouse",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.0922952249174,
+      "coordinates": {
+        "latitude": -33.8535904,
+        "longitude": 151.2467471
+      },
+      "snippet": "Bradleys Head Light is an active lighthouse located at Bradleys Head, a headland protruding from the north shore of Sydney Harbour, within the metropolitan area of Sydney, New South Wales, Australia.",
+      "score": 8.0922952249174,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__475560358"
+    },
+    {
+      "name": "Sydney Heritage Fleet",
+      "tag_labels": ["museums", "subtype-Maritime_museums", "sightseeing"],
+      "sightseeing_score": 8.08232002269986,
+      "coordinates": {
+        "latitude": -33.8675,
+        "longitude": 151.1985
+      },
+      "snippet": "The Fleet restores and operates a number of historic vessels including the barque James Craig.",
+      "score": 8.08232002269986,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "Sydney_Maritime_Museum"
+    },
+    {
+      "name": "Macquarie Lighthouse",
+      "tag_labels": [
+        "architectural_style-vernacular_architecture",
+        "poitype-Lighthouse",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.03118680580562,
+      "coordinates": {
+        "latitude": -33.8539417,
+        "longitude": 151.2851733
+      },
+      "snippet": "In 2008, the University introduced an official logo, described as an 'abstract, timeless image' of water lilies, as its public visual identity; use of the arms was subsequently restricted to official documents such as graduation testamurs and legal documentation.",
+      "score": 8.03118680580562,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__d74886dacd15"
+    },
+    {
+      "name": "Bicentennial Park",
+      "tag_labels": ["poitype-Park", "relaxinapark", "sightseeing"],
+      "sightseeing_score": 8.02796650612012,
+      "coordinates": {
+        "latitude": -33.84887256111394,
+        "longitude": 151.0784715621762
+      },
+      "snippet": "Bicentennial Park is a 40ha of parkland located 16km west of the Sydney central business district in the local government area of City of Parramatta.",
+      "score": 8.02796650612012,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__4e9241c2c8e4"
+    },
+    {
+      "name": "Sydney Mint",
+      "tag_labels": [
+        "museums",
+        "district-sydney_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.00017142330331,
+      "coordinates": {
+        "latitude": -33.86895285301303,
+        "longitude": 151.21241985275861
+      },
+      "snippet": "Located in Sydney’s central business district at 10 Macquarie Street, it is near many other famous Australian historical buildings including Hyde Park Barracks, St James' Church and Parliament House.",
+      "score": 8.00017142330331,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__1546527196"
+    },
+    {
+      "name": "Bronte Park",
+      "tag_labels": [
+        "architectural_style-gothic_revival_architecture",
+        "poitype-Park",
+        "relaxinapark",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.97735062894288,
+      "coordinates": {
+        "latitude": -33.90272358789333,
+        "longitude": 151.2658923571256
+      },
+      "snippet": "Described as a \"magnificent, mid-Victorian mansion\", the house is a sandstone, one-storey bungalow with verandahs on the west and east sides; and features a service wing that extends to the south, plus two octagonal rooms with cone-shaped roofs.",
+      "score": 7.97735062894288,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__117202341"
+    },
+    {
+      "name": "North Head Quarantine Station",
+      "tag_labels": ["poitype-Cemetery", "sightseeing"],
+      "sightseeing_score": 7.94354436713002,
+      "coordinates": {
+        "latitude": -33.8153254126402,
+        "longitude": 151.28929432734066
+      },
+      "snippet": "The North Head Quarantine Station is an heritage-listed former quarantine station and associated buildings that is now a tourist attraction at North Head Scenic Drive, on the north side of Sydney Harbour at North Head, near Manly, in the Northern Beaches Council local government area of New South Wales, Australia.",
+      "score": 7.94354436713002,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__535170616"
+    },
+    {
+      "name": "Artspace Sydney",
+      "tag_labels": [
+        "museums",
+        "subtype-Modern_art_museums",
+        "subtype-Art_museums",
+        "district-city_east",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.93393104374859,
+      "coordinates": {
+        "latitude": -33.8694818,
+        "longitude": 151.2205966
+      },
+      "snippet": "The Artspace Sydney Visual Arts Centre is a leading international residency-based contemporary art centre, housed in the historic Gunnery Building in Woolloomooloo, fronting Sydney Harbour in Sydney, Australia.",
+      "score": 7.93393104374859,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "Artspace_Sydney"
+    },
+    {
+      "name": "Rookwood Cemetery",
+      "tag_labels": ["poitype-Cemetery", "sightseeing"],
+      "sightseeing_score": 7.92788098830339,
+      "coordinates": {
+        "latitude": -33.87418749715163,
+        "longitude": 151.05550432029344
+      },
+      "snippet": "Rookwood Cemetery is the largest necropolis in the Southern Hemisphere, located in Sydney, New South Wales, Australia.",
+      "score": 7.92788098830339,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "Rookwood_Cemetery"
+    },
+    {
+      "name": "Anzac Bridge",
+      "tag_labels": ["poitype-Bridge", "district-inner_west", "sightseeing"],
+      "sightseeing_score": 7.92346120038836,
+      "coordinates": {
+        "latitude": -33.86895279745726,
+        "longitude": 151.18551245764863
+      },
+      "snippet": "The Anzac Bridge is an 8-lane cable-stayed bridge spanning Johnstons Bay between Pyrmont and Glebe Island close to the central business district of Sydney, Australia.",
+      "score": 7.92346120038836,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "ANZAC_Bridge"
+    },
+    {
+      "name": "Nielsen Park",
+      "tag_labels": ["poitype-Park", "relaxinapark", "sightseeing"],
+      "sightseeing_score": 7.92219058155884,
+      "coordinates": {
+        "latitude": -33.851948238270474,
+        "longitude": 151.26717904619488
+      },
+      "snippet": "Nielsen Park is a part of Sydney Harbour National Park at the suburb of Vaucluse in the eastern suburbs of Sydney, Australia.",
+      "score": 7.92219058155884,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "W__4354510"
+    },
+    {
+      "name": "Garrison Church",
+      "tag_labels": ["district-the_rocks", "poitype-Church", "sightseeing"],
+      "sightseeing_score": 7.85883808607103,
+      "coordinates": {
+        "latitude": -33.85844839311661,
+        "longitude": 151.20575061266945
+      },
+      "snippet": "The Garrison Church, also known as Holy Trinity in Millers Point, Sydney was the first military church built in colonial Australia.",
+      "score": 7.85883808607103,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__1652394243"
+    },
+    {
+      "name": "Museum of Sydney",
+      "tag_labels": [
+        "museums",
+        "subtype-History_museums",
+        "district-sydney_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.85688198339701,
+      "coordinates": {
+        "latitude": -33.86376482541508,
+        "longitude": 151.21148135855637
+      },
+      "snippet": "Built on the site of the first Government House, erected in 1788 by Governor Arthur Phillip and demolished in 1846.",
+      "score": 7.85688198339701,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__314603047"
+    },
+    {
+      "name": "Sydney Park",
+      "tag_labels": [
+        "poitype-Park",
+        "relaxinapark",
+        "district-inner_west",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.85538746027164,
+      "coordinates": {
+        "latitude": -33.910379376467596,
+        "longitude": 151.18447715344993
+      },
+      "snippet": "A large park (40 hectares) at the very southern end of Newtown's King Street, it was a former brick pit that was filled with the city's rubbish in the 1970s and 1980s before being topped with soil and landscaped.",
+      "score": 7.85538746027164,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "W__4601188"
+    },
+    {
+      "name": "Lakemba Mosque",
+      "tag_labels": ["poitype-Mosque", "sightseeing"],
+      "sightseeing_score": 7.84678484495278,
+      "coordinates": {
+        "latitude": -33.912561320354364,
+        "longitude": 151.07420061367026
+      },
+      "snippet": "Lakemba Mosque is reportedly Australia's largest mosque.",
+      "score": 7.84678484495278,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__6d2a1ecb1ec8"
+    },
+    {
+      "name": "Nutcote",
+      "tag_labels": ["museums", "frequented_by_locals", "sightseeing"],
+      "sightseeing_score": 7.83731039305653,
+      "coordinates": {
+        "latitude": -33.8421,
+        "longitude": 151.2213
+      },
+      "snippet": "Nutcote is the name of the house which the renowned Australian children’s author and illustrator May Gibbs lived in for 44 years.",
+      "score": 7.83731039305653,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "Nutcote"
+    },
+    {
+      "name": "Sydney Lyric",
+      "tag_labels": [
+        "district-darling_harbour",
+        "poitype-Theatre",
+        "showstheatresandmusic",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.83581793079724,
+      "coordinates": {
+        "latitude": -33.8684024,
+        "longitude": 151.1961483
+      },
+      "snippet": "The theatre has been owned and operated by the Foundation Entertainment Group Limited since October 2011, which also owns Sydney's Capitol Theatre.",
+      "score": 7.83581793079724,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__1460582139"
+    },
+    {
+      "name": "Nicholson Museum",
+      "tag_labels": ["museums", "district-inner_west", "sightseeing"],
+      "sightseeing_score": 7.8305994837161,
+      "coordinates": {
+        "latitude": -33.8863948,
+        "longitude": 151.1887091
+      },
+      "snippet": "The Nicholson Museum at the University of Sydney is home to the largest collection of antiquities in both Australia and the southern Hemisphere.",
+      "score": 7.8305994837161,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__1170946760"
+    },
+    {
+      "name": "Vaucluse House",
+      "tag_labels": [
+        "museums",
+        "subtype-History_museums",
+        "architectural_style-gothic_revival_architecture",
+        "district-eastern_suburbs",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.80838394782491,
+      "coordinates": {
+        "latitude": -33.85566718434429,
+        "longitude": 151.27349242737918
+      },
+      "snippet": "(Historic Houses Trust) - first built in 1803, Vaucluse House is one of Sydney's oldest residences on a grand scale.",
+      "score": 7.80838394782491,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__26525164"
+    },
+    {
+      "name": "Oatley Park",
+      "tag_labels": ["poitype-Park", "relaxinapark", "sightseeing"],
+      "sightseeing_score": 7.79623796199871,
+      "coordinates": {
+        "latitude": -33.98167278972923,
+        "longitude": 151.06022677872426
+      },
+      "snippet": "One of the finest examples of Australian remnant bushland about 30 minutes drive of the CBD.",
+      "score": 7.79623796199871,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__d6c062aee418"
+    },
+    {
+      "name": "Elizabeth Bay House",
+      "tag_labels": [
+        "architectural_style-neoclassical_architecture",
+        "museums",
+        "district-city_east",
+        "subtype-History_museums",
+        "district-eastern_suburbs",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.7891499870361,
+      "coordinates": {
+        "latitude": -33.868493,
+        "longitude": 151.2291733
+      },
+      "snippet": "Built between 1835-1839 and once \"the finest house in the colony\", this colonial mansion preserves the lifestyle of some of Sydney's wealthiest early settlers, Colonial Secretary Alexander Macleay and his family.",
+      "score": 7.7891499870361,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__13887144"
+    },
+    {
+      "name": "Queen's Square",
+      "tag_labels": [
+        "district-sydney_central_business_district",
+        "poitype-Memorial",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.76731639994208,
+      "coordinates": {
+        "latitude": -33.8696848,
+        "longitude": 151.2117984
+      },
+      "snippet": "The square was established during the late 1970s when the Law Courts Building was constructed and King Street was terminated at its junction with Phillip Street, and the former thoroughfare between Phillip Street and Macquarie Street turned into a public square.",
+      "score": 7.76731639994208,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__cfa2cfbab662"
+    },
+    {
+      "name": "Signal Hill Battery",
+      "tag_labels": ["poitype-Park", "relaxinapark", "sightseeing"],
+      "sightseeing_score": 7.75986178206745,
+      "coordinates": {
+        "latitude": -33.8500604,
+        "longitude": 151.2871673
+      },
+      "snippet": "The Signal Hill Battery was constructed in 1892-3 at Watsons Bay and is adjacent to the Signal Hill Lighthouse on Old South Head Road.",
+      "score": 7.75986178206745,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__b68d8be8e0a9"
+    },
+    {
+      "name": "St Patrick's Cathedral",
+      "tag_labels": [
+        "district-sydney2fparramatta",
+        "poitype-Church",
+        "frequented_by_locals",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.75676751081539,
+      "coordinates": {
+        "latitude": -33.8086196,
+        "longitude": 151.0033034
+      },
+      "snippet": "St Patrick's Cathedral, Parramatta is the cathedral church of the Roman Catholic Diocese of Parramatta and the seat and residence of the Catholic Bishop of Parramatta, New South Wales, Australia, currently the Most Reverend Vincent Long Van Nguyen OFM Conv.",
+      "score": 7.75676751081539,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__950966082"
+    },
+    {
+      "name": "Statue of Queen Victoria",
+      "tag_labels": [
+        "district-sydney_central_business_district",
+        "poitype-Memorial",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.75098708514522,
+      "coordinates": {
+        "latitude": -33.8728036,
+        "longitude": 151.2067247
+      },
+      "snippet": "The Statue of Queen Victoria, currently in Sydney, Australia, was made by John Hughes in 1908 and was originally located in Dublin.",
+      "score": 7.75098708514522,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__a317c62460c1"
+    },
+    {
+      "name": "El Alamein Fountain",
+      "tag_labels": ["poitype-Memorial", "sightseeing"],
+      "sightseeing_score": 7.74946457132078,
+      "coordinates": {
+        "latitude": -33.87289736506901,
+        "longitude": 151.22509487605365
+      },
+      "snippet": "Designed by Robert Woodward and erected in 1961 as a memorial to the Ninth Division during World War II.",
+      "score": 7.74946457132078,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__206396215"
+    },
+    {
+      "name": "Centennial Parklands",
+      "tag_labels": [
+        "poitype-Park",
+        "relaxinapark",
+        "district-eastern_suburbs",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.73494892383702,
+      "coordinates": {
+        "latitude": -33.899241481028746,
+        "longitude": 151.23441741749298
+      },
+      "snippet": "Centennial Parklands is the name given to a group of three urban parklands located in the eastern suburbs of Sydney, New South Wales, Australia.",
+      "score": 7.73494892383702,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "Centennial_Parklands"
+    },
+    {
+      "name": "Auburn Botanic Gardens",
+      "tag_labels": [
+        "district-auburn",
+        "poitype-Park",
+        "relaxinapark",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.72622599525206,
+      "coordinates": {
+        "latitude": -33.85801721571883,
+        "longitude": 151.0164445557714
+      },
+      "snippet": "The Auburn Botanic Gardens attract thousands of visitors each year, including a significant number from outside Australia, who come to enjoy the surrounds of the gardens, which provide a variety of flora and fauna.",
+      "score": 7.72622599525206,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__1d2e4fe64e35"
+    },
+    {
+      "name": "Manly Dam",
+      "tag_labels": ["exploringnature", "sightseeing"],
+      "sightseeing_score": 7.72566282803082,
+      "coordinates": {
+        "latitude": -33.77765937762062,
+        "longitude": 151.25057538729328
+      },
+      "snippet": "The Manly Dam is an heritage-listed former reservoir near King Street,, in the Northern Beaches Council local government area of New South Wales, Australia.",
+      "score": 7.72566282803082,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__7c81a0bda369"
+    },
+    {
+      "name": "Kokoda Track Memorial Walkway",
+      "tag_labels": ["poitype-Memorial", "sightseeing"],
+      "sightseeing_score": 7.72504284891723,
+      "coordinates": {
+        "latitude": -33.8336335,
+        "longitude": 151.0897325
+      },
+      "snippet": "It is located along the foreshore of shores of Brays Bay on the Parramatta River, and is a unique tribute to the Australian troops who fought in the World War II Papua-New Guinea campaign of July 1942 till January 1943.",
+      "score": 7.72504284891723,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__301114294"
+    },
+    {
+      "name": "Parramatta Park",
+      "tag_labels": [
+        "district-sydney2fparramatta",
+        "poitype-Park",
+        "relaxinapark",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.71782801750183,
+      "coordinates": {
+        "latitude": -33.80885251646183,
+        "longitude": 150.99670633691602
+      },
+      "snippet": "Parramatta Park is a major urban park and historic site in Parramatta in Western Sydney, Australia.",
+      "score": 7.71782801750183,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__fe34b60c28ba"
+    },
+    {
+      "name": "Sydney Markets",
+      "tag_labels": ["shopping", "do", "markets", "sightseeing"],
+      "sightseeing_score": 7.47375753704006,
+      "coordinates": {
+        "latitude": -33.8616,
+        "longitude": 151.0704
+      },
+      "snippet": "Sydney Markets are located in the Inner West suburb of Homebush West, 16 kilometres west of the Sydney central business district, in the local government area of the Municipality of Strathfield.",
+      "score": 7.71461646889145,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__98afb7db1ee9"
+    },
+    {
+      "name": "Gladesville Bridge",
+      "tag_labels": ["poitype-Bridge", "sightseeing"],
+      "sightseeing_score": 7.68936545417217,
+      "coordinates": {
+        "latitude": -33.842,
+        "longitude": 151.1477
+      },
+      "snippet": "Gladesville Bridge is the largest of a complex of three bridges, including Fig Tree Bridge and Tarban Creek Bridge, designed to carry traffic as part of the North Western Expressway.",
+      "score": 7.68936545417217,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "Gladesville_Bridge"
+    },
+    {
+      "name": "Victoria Park",
+      "tag_labels": [
+        "poitype-Park",
+        "relaxinapark",
+        "district-inner_west",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.66566479543004,
+      "coordinates": {
+        "latitude": -33.886313653613996,
+        "longitude": 151.19251438492537
+      },
+      "snippet": "Victoria Park is a large park in Sydney, situated on the corner of Parramatta Road and City Road, adjacent to the grounds of University of Sydney and across Parramatta Road from Broadway Shopping Centre.",
+      "score": 7.66566479543004,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "W__148331260"
+    },
+    {
+      "name": "White Rabbit Gallery",
+      "tag_labels": [
+        "museums",
+        "subtype-Modern_art_museums",
+        "subtype-Art_museums",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.63853272783393,
+      "coordinates": {
+        "latitude": -33.8865996,
+        "longitude": 151.200127
+      },
+      "snippet": "An Australian gallery dedicated to showing contemporary Chinese art, and claims to have one of the largest collections of it in the world.",
+      "score": 7.63853272783393,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__1b9d108b48cf"
+    },
+    {
+      "name": "St Philip's Church",
+      "tag_labels": [
+        "architectural_style-gothic_revival_architecture",
+        "poitype-Church",
+        "district-sydney_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.62985742576389,
+      "coordinates": {
+        "latitude": -33.864018022864485,
+        "longitude": 151.20511810394171
+      },
+      "snippet": "The St Philip's Church, Sydney is the oldest Anglican church parish in Australia.",
+      "score": 7.62985742576389,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__20959249"
+    },
+    {
+      "name": "Madame Tussauds Sydney",
+      "tag_labels": [
+        "museums",
+        "district-darling_harbour",
+        "district-sydney_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.62544217023966,
+      "coordinates": {
+        "latitude": -33.8697254,
+        "longitude": 151.2016549
+      },
+      "snippet": "Sydney's own version of Madame Tussauds has recently opened. It features a variety of personalities, mostly Australian such as Hugh Jackman.",
+      "score": 7.62544217023966,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__8ba692f95269"
+    },
+    {
+      "name": "Hyde Park Obelisk",
+      "tag_labels": [
+        "architectural_style-egyptian_revival_architecture",
+        "district-sydney_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.62476354075227,
+      "coordinates": {
+        "latitude": -33.874682,
+        "longitude": 151.209946
+      },
+      "snippet": "The Hyde Park Obelisk is an obelisk in the Victorian Egyptian architectural style located in Hyde Park in Sydney, New South Wales, Australia.",
+      "score": 7.62476354075227,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "Hyde_Park_Obelisk"
+    },
+    {
+      "name": "Pitt Street Mall",
+      "tag_labels": [
+        "poitype-Street",
+        "district-sydney_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.62284924452672,
+      "coordinates": {
+        "latitude": -33.869834478858145,
+        "longitude": 151.2082817864742
+      },
+      "snippet": "Pitt Street is well known for the pedestrian only retail centre of Pitt Street Mall, a section of the street which runs from Market Street to King Street.",
+      "score": 7.62284924452672,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__2039bf0fcb8c"
+    },
+    {
+      "name": "Macquarie Place Park",
+      "tag_labels": [
+        "poitype-Park",
+        "district-sydney_central_business_district",
+        "relaxinapark",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.61803204092959,
+      "coordinates": {
+        "latitude": -33.863218645482576,
+        "longitude": 151.21005447520363
+      },
+      "snippet": "The Macquarie Place Park is an heritage-listed small triangular urban park located in the central business district of Sydney, New South Wales, Australia.",
+      "score": 7.61803204092959,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__55be6eff6e81"
+    },
+    {
+      "name": "Callan Park",
+      "tag_labels": ["poitype-Park", "relaxinapark", "sightseeing"],
+      "sightseeing_score": 7.60809399256199,
+      "coordinates": {
+        "latitude": -33.866873322897405,
+        "longitude": 151.16051651665614
+      },
+      "snippet": "The area was originally a private residence until it was purchased by the Colonial Government and transformed into a psychiatric hospital, known until 1914 as the Callan Park Hospital for the Insane, which remained in use until 1994 when it was relocated to new buildings on the site.",
+      "score": 7.60809399256199,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__c12a5c58197f"
+    }
+  ],
+  "estimated_total": 1,
+  "more": true
+}
