@@ -81,7 +81,7 @@ export const TripResultCard = props => {
 
       <div>
         <Badge style={{backgroundColor: "#00798C", color: "white", margin: ".25rem"}}variant="light">{card.tripTags} Trip</Badge>
-        {!tripCompleted() && <Badge variant="light"> Upcoming</Badge>}
+        {!tripCompleted() && <Badge style={{backgroundColor: "#D1495B", color: "white", margin: ".25rem"}}variant="light"> Upcoming</Badge>}
         {tripCompleted() && (
           <Badge variant="success" display={tripCompleted()}>
             {tripCompleted()}
