@@ -63,17 +63,20 @@ export const TripResultCard = props => {
       className={styles.TripCard}
     >
       <Link to={`/trip/${props.tripId}`}>
-        <Card.Title className={styles.TripTitle}>{card.tripName}</Card.Title>
+        <Card.Title className={styles.TripTitle} style={{fontSize:'1.6rem'}}>{card.tripName}</Card.Title>
       </Link>
-      <Card.Subtitle className="mb-2">
+      <Card.Subtitle style={{fontSize:'.9rem'}} className="mb-2">
         {moment(card.startDate).format('MMM D, YYYY')}
       </Card.Subtitle>
       {card.placeImage && <img src={card.placeImage} alt="sight" />}
       <div>
         {Object.entries(card.users).map(user => (
           <Badge
-            style={{ backgroundColor: '#EDAE49', margin: '.25rem' }}
-            variant="primary"
+            style={{
+              color: '#D1495B',
+              backgroundColor: 'lightgray',
+              margin: '.25rem',
+            }}
             key={user[0]}
           >
             {user[1].userName}
@@ -83,30 +86,29 @@ export const TripResultCard = props => {
 
       <div>
         <Badge
+          className={styles.badge}
           style={{
-            backgroundColor: '#00798C',
-            color: 'white',
+            // backgroundColor: '#EDAE49',
+            // color: '#EDAE49',
             margin: '.25rem',
           }}
-          variant="light"
         >
           {card.tripTags} Trip
         </Badge>
         {!tripCompleted() && (
           <Badge
             style={{
-              backgroundColor: '#D1495B',
-              color: 'white',
+              // backgroundColor: '#D1495B',
+              color: 'lightgray',
               margin: '.25rem',
             }}
-            variant="light"
           >
             {' '}
             Upcoming
           </Badge>
         )}
         {tripCompleted() && (
-          <Badge variant="success" display={tripCompleted()}>
+          <Badge className={styles.complete}  display={tripCompleted()}>
             {tripCompleted()}
           </Badge>
         )}

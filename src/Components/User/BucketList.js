@@ -18,7 +18,7 @@ export const BucketList = props => {
   return (
     <div style={{ justifyContent: 'space-around' }}>
       <hr />
-      <h1 style={{ color: '#003D5B' }}>My Bucket List</h1>
+      <h1 style={{ color: 'gray' }}>My Bucket List</h1>
       <CardGroup>
         {error && <strong>Error: {error}</strong>}
         {loading && <span>Document: Loading...</span>}

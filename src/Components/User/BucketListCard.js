@@ -21,7 +21,7 @@ export const BucketListCard = props => {
     snippetShort = snippet;
   }
   return (
-    <Card>
+    <Card style={{margin:'0 1rem'}}>
       <Card.Img
         className={style.BucketCardImage}
         src={`${placeImage}&key=${secret.places}`}

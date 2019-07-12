@@ -20,7 +20,26 @@
 .CardUser > .TripCard > a {
   color: white;
 }
+
 .CardUser > .TripCard {
+  color: white;
+}
+
+.CardUser > .TripCard > div > .badge {
+  color: #edae49;
+}
+
+.TripSearch > .TripCard > div > .badge {
+  background-color: #edae49;
+  color: white;
+}
+
+.CardUser > .TripCard > div > .complete {
+  color: #54b948;
+}
+
+.TripSearch > .TripCard > div > .complete {
+  background-color: #54b948;
   color: white;
 }
 
@@ -30,8 +49,12 @@
   color: gray;
 }
 
-.TripSearch > .TripCard >a{
-  color:#003d5b
+/* .TripSearch > .TripCard > .badge{
+  background-color:'blue'
+} */
+
+.TripSearch > .TripCard > a {
+  color: #003d5b;
 }
 
 .Map {
@@ -42,13 +65,14 @@
 
 .BucketList {
   width: 34vw;
+  margin:1rem;
 }
 
 .BucketCardImage {
-  min-width: 13rem;
-  height: 8rem;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
+  min-width: 20rem;
+  height: 12rem;
+  opacity: 0.75;
+  filter: alpha(opacity=70);
 }
 
 .BucketCardText {
