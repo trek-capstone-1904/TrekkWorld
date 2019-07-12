@@ -186,7 +186,10 @@ export const UserProfile = props => {
                         margin: "0rem"
                       }}
                     >
-                      {Object.values(Object.values(userInfo.Trips)).length}%
+                      {Math.ceil(
+                        (userInfo.countriesVisited.length / 193) * 100
+                      )}
+                      %
                     </p>
                     <p
                       style={{
