@@ -120,59 +120,55 @@ export const TripPlanning = props => {
           </Form>
         </Jumbotron>
         {/* TODO: For now search requires a city and uses city to search locations. Make it flexible so city is optional ALSO fix that city must be capital for it to work*/}
-        <div style={{display: "flex", flexDirection: "row", justifyContent: "space-around"}}>
-        <h1 style={{width:'65%'}}className={styles.headerFont}>Search Results</h1>
-        <h1 style={{width:'35%'}}className={styles.headerFont}>My Trips</h1>
-        </div>
-        <div className={styles.searchResults}>
-          <div className={styles.placeholderTripSearch}>
-            <Tabs defaultActiveKey="Search-API" id="Trip Search Results">
-              <Tab eventKey="Search-API" title="Search Local Sights">
-                {submitted && (
-                  <SearchAPI
-                    city={city}
-                    country={country}
-                    // tripId={tripId}
-                    code={code}
-                  />
-                )}
-              </Tab>
-              <Tab eventKey="Trip-Search" title="Trip Search">
-                {submitted && <TripSearch city={city} country={country} />}
-              </Tab>
-            </Tabs>
-          </div>
-          <div className={styles.BucketList}>
-
-            <Tabs defaultActiveKey="Trekk List" id="Trekk-Bucket-List">
-              {/* <Tab eventKey="Bucket List" title="Bucket List">
-                <BucketList tripId={'d26eX8KPoeNu1WtKhVfF'} />
-              </Tab> */}
-              <Tab eventKey="Trekk List" >
-                <Form.Control
-                  name="tripId"
-                  value={tripId}
-                  as="select"
-                  onChange={changeTripId}
-                >
-                  <option>select a trip to plan</option>
-                  {snapshot &&
-                    Object.entries(snapshot.data().Trips).map(trip => (
-                      <option key={trip[0]} value={trip[0]}>
-                        {trip[1].tripName}
-                      </option>
-                    ))}
-                </Form.Control>
-                <div>
-                  <Link to={`trip/${tripId}`}>
-                    <Button variant="info">Trip Page</Button>
-                  </Link>
-                </div>
-                {tripId && <TrekkList list={'trekkList'} tripId={tripId} />}
-              </Tab>
-            </Tabs>
-          </div>
-        </div>
+        {submitted && (
+          <>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'space-around',
+              }}
+            >
+              <h1 style={{ width: '65%' }} className={styles.headerFont}>
+                Search Results
+                {/* </h1> */}
+                {/* <h1 style={{ width: '35%' }} className={styles.headerFont}>
+            My Trips */}
+              </h1>
+            </div>
+            <div className={styles.searchResults}>
+              <div className={styles.placeholderTripSearch}>
+                <Tabs defaultActiveKey="Trip-Search" id="Trip Search Results">
+                  <Tab eventKey="Trip-Search" title="Trip Ideas">
+                    {submitted && <TripSearch city={city} country={country} />}
+                  </Tab>
+                  <Tab eventKey="Search-API-Sights" title="Search Local Sights">
+                    {submitted && (
+                      <SearchAPI
+                        city={city}
+                        country={country}
+                        // tripId={tripId}
+                        code={code}
+                        type={'sights'}
+                      />
+                    )}
+                  </Tab>
+                  <Tab eventKey="Search-API-Cities" title="Popular Cities">
+                    {submitted && (
+                      <SearchAPI
+                        city={city}
+                        country={country}
+                        // tripId={tripId}
+                        code={code}
+                        type={'cities'}
+                      />
+                    )}
+                  </Tab>
+                </Tabs>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     );
   } else {
@@ -181,3 +177,50 @@ export const TripPlanning = props => {
 };
 
 export default TripPlanning;
+{
+  /* <div className={styles.BucketList} /> */
+}
+
+{
+  /* // <Tabs defaultActiveKey="Trekk List" id="Trekk-Bucket-List"> */
+}
+{
+  /* // <Tab eventKey="Bucket List" title="Bucket List"> */
+}
+{
+  /* //   <BucketList tripId={'d26eX8KPoeNu1WtKhVfF'} />
+// </Tab>  */
+}
+{
+  /* // <Tab eventKey="Trekk List" >
+//   <Form.Control */
+}
+{
+  /* //     name="tripId"
+//     value={tripId}
+//     as="select"
+//     onChange={changeTripId}
+//   >
+//     <option>select a trip to plan</option>
+//     {snapshot && */
+}
+{
+  /* //       Object.entries(snapshot.data().Trips).map(trip => (
+//         <option key={trip[0]} value={trip[0]}>
+//           {trip[1].tripName}
+//         </option>
+//       ))}
+//   </Form.Control> */
+}
+{
+  /* //   <div>
+//     <Link to={`trip/${tripId}`}>
+//       <Button variant="info">Trip Page</Button>
+//     </Link>
+//   </div>
+//   {tripId && <TrekkList list={'trekkList'} tripId={tripId} />}
+// </Tab> */
+}
+{
+  /* // // // // // </Tabs> */
+}
