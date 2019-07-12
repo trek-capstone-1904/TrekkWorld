@@ -215,9 +215,12 @@ export const UserProfile = props => {
 
             {userInfo.countriesVisited && (
               <Card style={{ margin: ".5rem", minWidth: "50%" }}>
-                <Card.Header>
+                <Card.Body style={{fontSize: "1.5rem",
+
+                        color: "gray",
+                        fontWeight: "bold"}}>
                 {userInfo.countriesVisited.length} Countries Visited
-                </Card.Header>
+                </Card.Body>
                 <WorldMap />
               </Card>
             )}
