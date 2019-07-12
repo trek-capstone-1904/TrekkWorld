@@ -39,7 +39,7 @@ export const UserProfileHeader = props => {
             </Col>
             <Col style={{color: "white"}}>
               <h1>{userName}</h1>
-              <p>{bio}</p>
+              <p style={{color:'gray'}}>{bio}</p>
               {/* <p>Trekking somewhere new?</p> */}
               <Button style={{backgroundColor: "#D55969", borderColor: "#D55969"}} onClick={toggle}>
                 + Create New Trekk

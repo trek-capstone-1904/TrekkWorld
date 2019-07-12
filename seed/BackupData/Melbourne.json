@@ -1,0 +1,1927 @@
+{
+  "results": [
+  {
+  "name": "Grossi Florentino",
+  "tag_labels": [
+  "coffee",
+  "cuisine-Dessert",
+  "cuisine-Wine",
+  "cuisine-Steak",
+  "poitype-Restaurant",
+  "character-Romantic",
+  "lunch",
+  "dinner",
+  "district-city_centre",
+  "eatingout",
+  "breakfast",
+  "cuisine-Italian"
+  ],
+  "sightseeing_score": null,
+  "coordinates": {
+  "latitude": -37.8117718,
+  "longitude": 144.9708785
+  },
+  "snippet": "Good lunch and knowledgable staff.",
+  "score": 9.84077245093904,
+  "eatingout_score": 9.84077245093904,
+  "location_id": "Melbourne",
+  "id": "N__614041180"
+  },
+  {
+  "name": "National Gallery of Victoria",
+  "tag_labels": [
+  "museums",
+  "topattractions",
+  "subtype-Art_museums",
+  "architectural_style-modernist_architecture",
+  "sightseeing"
+  ],
+  "sightseeing_score": 9.8173348749118,
+  "coordinates": {
+  "latitude": -37.82212418494084,
+  "longitude": 144.9693718372177
+  },
+  "snippet": "The premier venue for international fine art exhibitions in Melbourne, with a permanent collection and international collections.",
+  "score": 9.8173348749118,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__614060527"
+  },
+  {
+  "name": "ACMI",
+  "tag_labels": [
+  "museums",
+  "district-city_centre",
+  "character-Kid_friendly",
+  "topattractions",
+  "sightseeing"
+  ],
+  "sightseeing_score": 9.76652381814172,
+  "coordinates": {
+  "latitude": -37.8177335,
+  "longitude": 144.9689234
+  },
+  "snippet": "A museum, gallery and collection of cinemas dedicated to film, TV, video games, new media and art, both old and new.",
+  "score": 9.76652381814172,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__22963244"
+  },
+  {
+  "name": "Hellenic Republic Restaurant",
+  "tag_labels": [
+  "coffee",
+  "cuisine-Greek",
+  "cuisine-Japanese",
+  "cuisine-Wine",
+  "cuisine-Seafood",
+  "poitype-Restaurant",
+  "cuisine-Dessert",
+  "lunch",
+  "dinner",
+  "eatingout",
+  "cuisine-Beer"
+  ],
+  "sightseeing_score": null,
+  "coordinates": {
+  "latitude": -37.76450165000001,
+  "longitude": 144.97323425000002
+  },
+  "snippet": "Tasty portions in a nice atmosphere.",
+  "score": 9.4983584240391,
+  "eatingout_score": 9.4983584240391,
+  "location_id": "Melbourne",
+  "id": "T__4d567b872c47"
+  },
+  {
+  "name": "Matteo's Restaurant",
+  "tag_labels": [
+  "cuisine-Dessert",
+  "cuisine-Japanese",
+  "cuisine-Wine",
+  "poitype-Restaurant",
+  "lunch",
+  "dinner",
+  "eatingout",
+  "cuisine-Italian"
+  ],
+  "sightseeing_score": null,
+  "coordinates": {
+  "latitude": -37.7911127,
+  "longitude": 144.9795448
+  },
+  "snippet": "Craft beer, great cappuccino and wonderful pina colada.",
+  "score": 9.38670747367166,
+  "eatingout_score": 9.38670747367166,
+  "location_id": "Melbourne",
+  "id": "N__628589110"
+  },
+  {
+  "name": "GAZI",
+  "tag_labels": [
+  "cuisine-Dessert",
+  "cuisine-Japanese",
+  "cuisine-Wine",
+  "cuisine-Cocktail",
+  "cuisine-Mexican",
+  "poitype-Restaurant",
+  "character-Romantic",
+  "lunch",
+  "dinner",
+  "district-city_centre",
+  "eatingout",
+  "badge-Book_in_advance"
+  ],
+  "sightseeing_score": null,
+  "coordinates": {
+  "latitude": -37.8158623,
+  "longitude": 144.9724543
+  },
+  "snippet": "Customers love the wonderful wines, scrummy ale and amazing cocktails.",
+  "score": 9.352877712683,
+  "eatingout_score": 9.352877712683,
+  "location_id": "Melbourne",
+  "id": "T__b68ef799e876"
+  },
+  {
+  "name": "Sea Life Melbourne Aquarium",
+  "tag_labels": [
+  "district-city_centre",
+  "topattractions",
+  "zoos",
+  "character-Kid_friendly",
+  "sightseeing"
+  ],
+  "sightseeing_score": 9.28751423203551,
+  "coordinates": {
+  "latitude": -37.8207354,
+  "longitude": 144.9582574
+  },
+  "snippet": "Home to over 10,000 aquatic creatures, there are four distinct areas of the aquarium dedicated to Antarctica, seahorses, the rainforest and the ocean, the latter of which includes a glass walk-through experience.",
+  "score": 9.28751423203551,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__27086581"
+  },
+  {
+  "name": "Shrine of Remembrance",
+  "tag_labels": [
+  "architectural_style-neoclassical_architecture",
+  "district-city_centre",
+  "topattractions",
+  "poitype-Memorial",
+  "architectural_style-art_deco_architecture",
+  "sightseeing"
+  ],
+  "sightseeing_score": 9.2478223052336,
+  "coordinates": {
+  "latitude": -37.8305456,
+  "longitude": 144.9734468
+  },
+  "snippet": "It is a site of annual observances of ANZAC Day (25 April) and Remembrance Day (11 November) and is one of the largest war memorials in Australia.",
+  "score": 9.2478223052336,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__24590190"
+  },
+  {
+  "name": "Om Nom Kitchen",
+  "tag_labels": [
+  "coffee",
+  "cuisine-Dessert",
+  "cuisine-Wine",
+  "cuisine-Cocktail",
+  "poitype-Restaurant",
+  "cuisine-Tapas",
+  "lunch",
+  "dinner",
+  "district-city_centre",
+  "eatingout",
+  "breakfast"
+  ],
+  "sightseeing_score": null,
+  "coordinates": {
+  "latitude": -37.81618525257258,
+  "longitude": 144.96832175384674
+  },
+  "snippet": "A trendy restaurant that offers good cheese, good wine and cold meat.",
+  "score": 9.2036207568725,
+  "eatingout_score": 9.2036207568725,
+  "location_id": "Melbourne",
+  "id": "T__d589a11b5007"
+  },
+  {
+  "name": "Melbourne Zoo",
+  "tag_labels": [
+  "topattractions",
+  "zoos",
+  "character-Kid_friendly",
+  "district-inner_north",
+  "sightseeing"
+  ],
+  "sightseeing_score": 9.1711521518783,
+  "coordinates": {
+  "latitude": -37.783986,
+  "longitude": 144.9522185
+  },
+  "snippet": "This very popular Melbourne attraction opened in 1861 from the proceeds of the Gold Rush, making it the oldest zoo in Australia and third-oldest in the world.",
+  "score": 9.1711521518783,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__4749328"
+  },
+  {
+  "name": "Attica",
+  "tag_labels": [
+  "cuisine-Dessert",
+  "icecream",
+  "cuisine-Wine",
+  "poitype-Restaurant",
+  "lunch",
+  "dinner",
+  "eatingout"
+  ],
+  "sightseeing_score": null,
+  "coordinates": {
+  "latitude": -37.8770267,
+  "longitude": 144.9972939
+  },
+  "snippet": "Good dessert and exceptionally good waiters.",
+  "score": 9.09471841132748,
+  "eatingout_score": 9.09471841132748,
+  "location_id": "Melbourne",
+  "id": "N__1021358707"
+  },
+  {
+  "name": "Heide Museum of Modern Art",
+  "tag_labels": [
+  "museums",
+  "subtype-Modern_art_museums",
+  "subtype-Art_museums",
+  "architectural_style-vernacular_architecture",
+  "sightseeing"
+  ],
+  "sightseeing_score": 9.09252915399934,
+  "coordinates": {
+  "latitude": -37.7586271,
+  "longitude": 145.0842075
+  },
+  "snippet": "A world-famous contemporary and modern art museum set amongst the Yarra River floodplains in Bulleen.",
+  "score": 9.09252915399934,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "Heide_Museum_of_Modern_Art"
+  },
+  {
+  "name": "Le Bon Ton",
+  "tag_labels": [
+  "district-collingwood",
+  "cuisine-Dessert",
+  "cuisine-Wine",
+  "cuisine-Cocktail",
+  "cuisine-Fried_chicken",
+  "poitype-Restaurant",
+  "lunch",
+  "dinner",
+  "eatingout",
+  "cuisine-Beer"
+  ],
+  "sightseeing_score": null,
+  "coordinates": {
+  "latitude": -37.8047541,
+  "longitude": 144.988535
+  },
+  "snippet": "American beer in a great vibe.",
+  "score": 9.04970810450262,
+  "eatingout_score": 9.04970810450262,
+  "location_id": "Melbourne",
+  "id": "T__378ced868ca5"
+  },
+  {
+  "name": "St Paul's Cathedral",
+  "tag_labels": [
+  "district-city_centre",
+  "architectural_style-gothic_revival_architecture",
+  "poitype-Church",
+  "sightseeing"
+  ],
+  "sightseeing_score": 9.0420003983958,
+  "coordinates": {
+  "latitude": -37.81679775069125,
+  "longitude": 144.9675752285054
+  },
+  "snippet": "Gothic-revival cathedral on the site of the colony's first church services in 1836.",
+  "score": 9.0420003983958,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__13127644"
+  },
+  {
+  "name": "Queen Victoria Market",
+  "tag_labels": [
+  "do",
+  "shopping",
+  "architectural_style-neoclassical_architecture",
+  "district-city_centre",
+  "markets",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.79758398834893,
+  "coordinates": {
+  "latitude": -37.8063319,
+  "longitude": 144.9570787
+  },
+  "snippet": "The Queen Victoria Market is a major landmark in Melbourne, Australia, and at around seven hectares (17 acres) is the largest open air market in the Southern Hemisphere.",
+  "score": 9.01247593605433,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__113434071"
+  },
+  {
+  "name": "Eureka Skydeck 88",
+  "tag_labels": [
+  "poitype-Skyscraper",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.9881901755128,
+  "coordinates": {
+  "latitude": -37.8213472,
+  "longitude": 144.9646188
+  },
+  "snippet": "Contains the highest observation deck in the Southern Hemisphere on level 88, with panoramic views of the entirety of Melbourne.",
+  "score": 8.9881901755128,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__13307317"
+  },
+  {
+  "name": "Third Wave Cafe",
+  "tag_labels": [
+  "coffee",
+  "frequented_by_locals",
+  "poitype-Restaurant",
+  "lunch",
+  "dinner",
+  "cuisine-Ribs",
+  "eatingout",
+  "breakfast"
+  ],
+  "sightseeing_score": null,
+  "coordinates": {
+  "latitude": -37.8417926,
+  "longitude": 144.9385515
+  },
+  "snippet": "Whether it is amazing cheese or excellent coffee that you want, try Third Wave Cafe.",
+  "score": 8.92052067527625,
+  "eatingout_score": 8.92052067527625,
+  "location_id": "Melbourne",
+  "id": "T__209374af7143"
+  },
+  {
+  "name": "Royal Exhibition Building",
+  "tag_labels": [
+  "architectural_style-neoclassical_architecture",
+  "subtype-UNESCO_World_Heritage",
+  "architectural_style-victorian_architecture",
+  "architectural_style-historicist_architecture",
+  "poitype-Sight",
+  "district-inner_north",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.91196335406839,
+  "coordinates": {
+  "latitude": -37.80471617134532,
+  "longitude": 144.97149873350128
+  },
+  "snippet": "Australia's only World Heritage listed building, it was completed in 1880 to host the Melbourne International Exhibition and was the site of Australia's first Federal Parliament in 1901.",
+  "score": 8.91196335406839,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__4817059"
+  },
+  {
+  "name": "Birrarung Marr",
+  "tag_labels": [
+  "district-city_centre",
+  "poitype-Park",
+  "relaxinapark",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.90901264450112,
+  "coordinates": {
+  "latitude": -37.81882630475581,
+  "longitude": 144.9738586291638
+  },
+  "snippet": "Birrarung Marr is an inner-city park between the central business district in Melbourne, Victoria, Australia and the Yarra River.",
+  "score": 8.90901264450112,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__46330961"
+  },
+  {
+  "name": "Melbourne Museum",
+  "tag_labels": [
+  "subtype-Sci-tech_museums",
+  "character-Kid_friendly",
+  "museums",
+  "subtype-Natural_history_museums",
+  "district-inner_north",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.78209030864157,
+  "coordinates": {
+  "latitude": -37.80332396736615,
+  "longitude": 144.9716555470141
+  },
+  "snippet": "Opening in 2000, the award-winning Melbourne Museum houses a permanent collection in eight galleries, including one just for children.",
+  "score": 8.78209030864157,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__4817074"
+  },
+  {
+  "name": "Princes Bridge",
+  "tag_labels": [
+  "poitype-Bridge",
+  "district-city_centre",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.76164920611331,
+  "coordinates": {
+  "latitude": -37.8193387,
+  "longitude": 144.9683234
+  },
+  "snippet": "The bridge connects Swanston Street on the north bank of the Yarra River to St Kilda Road on the south bank, and carries road, tram and pedestrian traffic.",
+  "score": 8.76164920611331,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__42657827"
+  },
+  {
+  "name": "Federation Square",
+  "tag_labels": [
+  "district-city_centre",
+  "poitype-Square",
+  "feature-Free_wifi",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.70715195941641,
+  "coordinates": {
+  "latitude": -37.817861,
+  "longitude": 144.9692129
+  },
+  "snippet": "The city's most popular meeting place.",
+  "score": 8.70715195941641,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__760335648"
+  },
+  {
+  "name": "Old Melbourne Gaol",
+  "tag_labels": [
+  "museums",
+  "district-city_centre",
+  "character-Kid_friendly",
+  "subtype-Reportedly_haunted_locations",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.66210309104956,
+  "coordinates": {
+  "latitude": -37.80782729380176,
+  "longitude": 144.96512158964129
+  },
+  "snippet": "Built in 1841, it is now a penal museum, with a watch house and magistrate's court also on-site. Bushranger Ned Kelly was hanged here in 1880.",
+  "score": 8.66210309104956,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__26564392"
+  },
+  {
+  "name": "Carlton Gardens",
+  "tag_labels": [
+  "poitype-Park",
+  "subtype-UNESCO_World_Heritage",
+  "relaxinapark",
+  "district-inner_north",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.65563171232844,
+  "coordinates": {
+  "latitude": -37.80430589985617,
+  "longitude": 144.971572431421
+  },
+  "snippet": "Beautiful European-style gardens featuring a number of towering plane trees and majestic fountains, some of which date from the Victorian era.",
+  "score": 8.65563171232844,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__4817050"
+  },
+  {
+  "name": "Cooks' Cottage",
+  "tag_labels": [
+  "museums",
+  "subtype-History_museums",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.65175107852227,
+  "coordinates": {
+  "latitude": -37.8145,
+  "longitude": 144.9794426
+  },
+  "snippet": "Features Captain Cook’s Cottage which is the cottage that belonged to Captain James Cook’s parents and was transported from Yorkshire to Melbourne in 1934.",
+  "score": 8.65175107852227,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__660544710"
+  },
+  {
+  "name": "Montsalvat",
+  "tag_labels": [
+  "museums",
+  "frequented_by_locals",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.5562175732956,
+  "coordinates": {
+  "latitude": -37.72773194128985,
+  "longitude": 145.15257741793394
+  },
+  "snippet": "The Great Hall offers an extensive network of spaces from extravagant halls and vast exhibition spaces, to small corridors and tiny balconies overlooking the gardens.",
+  "score": 8.5562175732956,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__32900352"
+  },
+  {
+  "name": "Albert Park and Lake",
+  "tag_labels": [
+  "poitype-Park",
+  "relaxinapark",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.5368669913822,
+  "coordinates": {
+  "latitude": -37.84673700504308,
+  "longitude": 144.97120768507847
+  },
+  "snippet": "The park encompasses 2.25km2 of parkland including Albert Park Lake and provides numerous ovals, sporting facilities, the Albert Park Public Golf Course, a 4.7km walking track around the lake, and the Melbourne Grand Prix Circuit.",
+  "score": 8.5368669913822,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__15865305"
+  },
+  {
+  "name": "Werribee Open Range Zoo",
+  "tag_labels": [
+  "character-Kid_friendly",
+  "zoos",
+  "district-melbourne2fwyndham",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.48933625437294,
+  "coordinates": {
+  "latitude": -37.92268243956864,
+  "longitude": 144.66667984491326
+  },
+  "snippet": "Werribee Open Range Zoo is an African themed zoo in Werribee, about 32km south-west of Melbourne, Victoria, Australia.",
+  "score": 8.48933625437294,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "T__13aff21ac164"
+  },
+  {
+  "name": "Fitzroy Gardens",
+  "tag_labels": [
+  "poitype-Park",
+  "relaxinapark",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.48658428038649,
+  "coordinates": {
+  "latitude": -37.8129536172004,
+  "longitude": 144.98044867516387
+  },
+  "snippet": "The Fitzroy Gardens are 26 hectares located on the southeastern edge of the Melbourne Central Business District in East Melbourne, Victoria, Australia.",
+  "score": 8.48658428038649,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__4817020"
+  },
+  {
+  "name": "Koorie Heritage Trust",
+  "tag_labels": [
+  "museums",
+  "district-city_centre",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.4740688514401,
+  "coordinates": {
+  "latitude": -37.8177084,
+  "longitude": 144.9682725
+  },
+  "snippet": "It has \"...a commitment to protect, preserve and promote the living culture of the Indigenous people of south-east Australia.\" The Koorie Heritage Trust also runs a variety of cultural educational programs and a Koorie family history service.",
+  "score": 8.4740688514401,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "T__db142b3b6324"
+  },
+  {
+  "name": "St Patrick's Cathedral",
+  "tag_labels": [
+  "architectural_style-gothic_revival_architecture",
+  "poitype-Church",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.4642761198968,
+  "coordinates": {
+  "latitude": -37.809999999999995,
+  "longitude": 144.97611111111112
+  },
+  "snippet": "Although its 103.6m length is marginally shorter than that of St Mary's Cathedral, Sydney, St Patrick's has the distinction of being both the tallest and, overall, the largest church building in Australia.",
+  "score": 8.4642761198968,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__155809136"
+  },
+  {
+  "name": "Cafe Florentine",
+  "tag_labels": [
+  "coffee",
+  "cuisine-Wine",
+  "poitype-Restaurant",
+  "lunch",
+  "dinner",
+  "eatingout",
+  "breakfast",
+  "cuisine-Italian"
+  ],
+  "sightseeing_score": null,
+  "coordinates": {
+  "latitude": -37.91287180095036,
+  "longitude": 144.99294065517535
+  },
+  "snippet": "A reasonably good venue that does good wines, warm mocha and very good milkshakes.",
+  "score": 8.43473070552984,
+  "eatingout_score": 8.43473070552984,
+  "location_id": "Melbourne",
+  "id": "T__9db572e45f76"
+  },
+  {
+  "name": "Rialto Towers",
+  "tag_labels": [
+  "poitype-Skyscraper",
+  "district-city_centre",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.41365895923297,
+  "coordinates": {
+  "latitude": -37.8188796,
+  "longitude": 144.9576904
+  },
+  "snippet": "It is the second-tallest reinforced concrete building and the tallest office building in the Southern Hemisphere, when measured to its roof (several other skyscrapers in Australia are taller if their spires are included, as are some other structures in Australia such as communications masts and observation towers).",
+  "score": 8.41365895923297,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__626259676"
+  },
+  {
+  "name": "Sandridge Bridge",
+  "tag_labels": [
+  "poitype-Bridge",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.282722619185,
+  "coordinates": {
+  "latitude": -37.8208073,
+  "longitude": 144.9621907
+  },
+  "snippet": "The Sandridge Bridge is a historic former railway bridge over the Yarra River in Melbourne, Victoria, Australia.",
+  "score": 8.282722619185,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "Sandridge_Bridge"
+  },
+  {
+  "name": "St Kilda Sea Baths",
+  "tag_labels": [
+  "district-melbourne2fst_kilda",
+  "poitype-Baths",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.21222638257613,
+  "coordinates": {
+  "latitude": -37.8652948,
+  "longitude": 144.9718453
+  },
+  "snippet": "An old Melbourne institution perched on the St Kilda foreshore, the Sea Baths building now has a variety of different functions, including a gymnasium, a spa, a sea water pool and countless restaurants, bars and cafés.",
+  "score": 8.21222638257613,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__45027023"
+  },
+  {
+  "name": "Ian Potter Centre",
+  "tag_labels": [
+  "museums",
+  "district-city_centre",
+  "subtype-Art_museums",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.16651991346565,
+  "coordinates": {
+  "latitude": -37.81752861644482,
+  "longitude": 144.96994369903624
+  },
+  "snippet": "Houses over 25,000 works of only Australian art, including paintings, sculptures, photography and fashion.",
+  "score": 8.16651991346565,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__22963243"
+  },
+  {
+  "name": "Queen Victoria Gardens",
+  "tag_labels": [
+  "district-city_centre",
+  "poitype-Park",
+  "relaxinapark",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.16045554332501,
+  "coordinates": {
+  "latitude": -37.8218355,
+  "longitude": 144.9724873
+  },
+  "snippet": "Features memorials to Queen Victoria and King Edward VII, sculptures and a floral clock of 7000 plants.",
+  "score": 8.16045554332501,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__23909867"
+  },
+  {
+  "name": "Alexandra Gardens",
+  "tag_labels": [
+  "district-city_centre",
+  "poitype-Park",
+  "relaxinapark",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.13126379900174,
+  "coordinates": {
+  "latitude": -37.82064331598301,
+  "longitude": 144.9723698564307
+  },
+  "snippet": "They are listed on the Victorian Heritage Register due to their historical and archaeological significance.",
+  "score": 8.13126379900174,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__24593719"
+  },
+  {
+  "name": "Spencer Street Bridge",
+  "tag_labels": [
+  "poitype-Bridge",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.11909426145435,
+  "coordinates": {
+  "latitude": -37.82304634502161,
+  "longitude": 144.95582806072267
+  },
+  "snippet": "The Spencer Street Bridge is a road and tram bridge over the Yarra River in Melbourne, Victoria, Australia.",
+  "score": 8.11909426145435,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "Spencer_Street_Bridge"
+  },
+  {
+  "name": "Royal Botanic Gardens",
+  "tag_labels": [
+  "district-city_centre",
+  "poitype-Park",
+  "relaxinapark",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.11520231458414,
+  "coordinates": {
+  "latitude": -37.8334,
+  "longitude": 144.98033
+  },
+  "snippet": "Recognised as one of the world’s finest botanic gardens, with over 10,000 species and 50,000 individual plants in the 38 hectare gardens.",
+  "score": 8.11520231458414,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__533627421"
+  },
+  {
+  "name": "The Forum",
+  "tag_labels": [
+  "poitype-Theatre",
+  "showstheatresandmusic",
+  "frequented_by_locals",
+  "district-city_centre",
+  "architectural_style-moorish_revival_architecture",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.03030089522387,
+  "coordinates": {
+  "latitude": -37.816565,
+  "longitude": 144.96947
+  },
+  "snippet": "Built in 1929, it was designed by leading US ‘picture palace’ architect John Eberson, in association with the local architectural firm Bohringer, Taylor & Johnson.",
+  "score": 8.03030089522387,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "Forum_Theatre"
+  },
+  {
+  "name": "Old Treasury Building",
+  "tag_labels": [
+  "museums",
+  "subtype-History_museums",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.01554156216194,
+  "coordinates": {
+  "latitude": -37.8131966,
+  "longitude": 144.9743813
+  },
+  "snippet": "Built in 1858 by a 19 year old architect, it was the city’s first Italian Renaissance building and many consider that its elegance has not been surpassed by anything in Melbourne since.",
+  "score": 8.01554156216194,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__46503614"
+  },
+  {
+  "name": "Immigration Museum",
+  "tag_labels": [
+  "museums",
+  "district-city_centre",
+  "subtype-History_museums",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.99849498263989,
+  "coordinates": {
+  "latitude": -37.81910876279257,
+  "longitude": 144.96041029293937
+  },
+  "snippet": "Located in the restored Old Customs House, it covers customs and immigration history over the past 200 years.",
+  "score": 7.99849498263989,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__14251243"
+  },
+  {
+  "name": "Royal Park",
+  "tag_labels": [
+  "poitype-Park",
+  "relaxinapark",
+  "district-inner_north",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.98596637142248,
+  "coordinates": {
+  "latitude": -37.78570663253778,
+  "longitude": 144.95064550885394
+  },
+  "snippet": "Royal Park is the largest of Melbourne's inner city parks.",
+  "score": 7.98596637142248,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "Royal_Park2C_Melbourne"
+  },
+  {
+  "name": "Bolte Bridge",
+  "tag_labels": [
+  "poitype-Bridge",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.94477433872534,
+  "coordinates": {
+  "latitude": -37.819477777777784,
+  "longitude": 144.93212499999998
+  },
+  "snippet": "The Bolte Bridge is a large twin cantilever bridge in Melbourne, Victoria, Australia.",
+  "score": 7.94477433872534,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "Bolte_Bridge"
+  },
+  {
+  "name": "Queens Bridge",
+  "tag_labels": [
+  "poitype-Bridge",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.94271291474632,
+  "coordinates": {
+  "latitude": -37.821051,
+  "longitude": 144.9611164
+  },
+  "snippet": "The Queens Bridge is a historic road bridge over the Yarra River in Melbourne, Victoria, Australia.",
+  "score": 7.94271291474632,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "Queens_Bridge_28Melbourne29"
+  },
+  {
+  "name": "Rippon Lea Estate",
+  "tag_labels": [
+  "museums",
+  "subtype-History_museums",
+  "architectural_style-victorian_architecture",
+  "district-brighton_and_caulfield",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.89838176297821,
+  "coordinates": {
+  "latitude": -37.87960745052694,
+  "longitude": 144.9989626718245
+  },
+  "snippet": "Rippon Lea Estate is a heritage-listed historic house and gardens located in Elsternwick, Melbourne, Victoria, Australia.",
+  "score": 7.89838176297821,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__27858621"
+  },
+  {
+  "name": "Ruffey Lake Park",
+  "tag_labels": [
+  "poitype-Park",
+  "relaxinapark",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.88327933540363,
+  "coordinates": {
+  "latitude": -37.77568690709558,
+  "longitude": 145.13828994783754
+  },
+  "snippet": "Despite being the second largest park in Manningham, second to Westerfolds Park, it is the biggest urban park managed by the City of Manningham.",
+  "score": 7.88327933540363,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__43313390"
+  },
+  {
+  "name": "Kings Domain",
+  "tag_labels": [
+  "district-city_centre",
+  "poitype-Park",
+  "relaxinapark",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.88006876276553,
+  "coordinates": {
+  "latitude": -37.8282598,
+  "longitude": 144.9775815
+  },
+  "snippet": "The park was established in 1854, extending the Domain Parklands further north-west, it covers an area of 36 hectares of lawns and pathways set among non-native and native Australian mature trees, a mixture of deciduous and evergreens.",
+  "score": 7.88006876276553,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__50883300"
+  },
+  {
+  "name": "Parliament House",
+  "tag_labels": [
+  "poitype-Sight",
+  "architectural_style-neoclassical_architecture",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.87270691684109,
+  "coordinates": {
+  "latitude": -37.81108215655002,
+  "longitude": 144.97377814837014
+  },
+  "snippet": "Built between 1856 and 1879, the Australian federal parliament sat in this impressive building from 1901 to 1927 while Canberra was built.",
+  "score": 7.87270691684109,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__24530652"
+  },
+  {
+  "name": "Arts Centre Melbourne",
+  "tag_labels": [
+  "poitype-Music_venue",
+  "musicandshows",
+  "nightlife",
+  "sightseeing"
+  ],
+  "sightseeing_score": 8.10159573132048,
+  "coordinates": {
+  "latitude": -37.82027777777778,
+  "longitude": 144.96833333333333
+  },
+  "snippet": "The Arts Centre Melbourne is home to the Melbourne Symphony Orchestra, the Australian Ballet, Opera Australia and the Melbourne Theatre Company.",
+  "score": 7.85915238178377,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__22664488"
+  },
+  {
+  "name": "State Theatre",
+  "tag_labels": [
+  "poitype-Theatre",
+  "showstheatresandmusic",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.85483030998325,
+  "coordinates": {
+  "latitude": -37.8211694,
+  "longitude": 144.9685371
+  },
+  "snippet": "The stage is one of the largest in the world. The State Theatre is typically used as a venue for ballet, opera and musical theatre.",
+  "score": 7.85483030998325,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__847533152"
+  },
+  {
+  "name": "Flagstaff Gardens",
+  "tag_labels": [
+  "poitype-Park",
+  "relaxinapark",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.83920995475422,
+  "coordinates": {
+  "latitude": -37.81049079733375,
+  "longitude": 144.95442874831696
+  },
+  "snippet": "The former Royal Mint building is a well-preserved example of Victorian Gold Rush boom-period classical styled architecture.",
+  "score": 7.83920995475422,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__4817082"
+  },
+  {
+  "name": "South Melbourne Market",
+  "tag_labels": [
+  "shopping",
+  "do",
+  "markets",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.58153011114917,
+  "coordinates": {
+  "latitude": -37.832334500939346,
+  "longitude": 144.95647789861906
+  },
+  "snippet": "The worst of these was in 1981 when two of the original sheds were destroyed and, later in the year, stalls were damaged by bombs.",
+  "score": 7.81430522586785,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__26104523"
+  },
+  {
+  "name": "Melbourne Town Hall",
+  "tag_labels": [
+  "poitype-City_hall",
+  "architectural_style-neoclassical_architecture",
+  "district-city_centre",
+  "architectural_style-victorian_architecture",
+  "architectural_style-historicist_architecture",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.80890015733911,
+  "coordinates": {
+  "latitude": -37.81498688794765,
+  "longitude": 144.9668638615619
+  },
+  "snippet": "Built in 1870, the city's town hall is grand and historic. 1 hour tours allow visitors to see the ornate Council chambers, the richly-carved Grand Organ and sit in the Lord Mayor's chair.",
+  "score": 7.80890015733911,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__17036922"
+  },
+  {
+  "name": "Westerfolds Park",
+  "tag_labels": [
+  "poitype-Park",
+  "relaxinapark",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.80588171045769,
+  "coordinates": {
+  "latitude": -37.74588823190774,
+  "longitude": 145.12847407527815
+  },
+  "snippet": "Near the centre of the park atop a large hill lies the Manor House which housed the Mia Mia Gallery and Cafe, Indigenous Australian cultural education programs and galley exhibiting Indigenous Australian Art.",
+  "score": 7.80588171045769,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__156129701"
+  },
+  {
+  "name": "Monash University Museum of Art",
+  "tag_labels": [
+  "museums",
+  "district-brighton_and_caulfield",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.80433991970464,
+  "coordinates": {
+  "latitude": -37.8771439,
+  "longitude": 145.0460965
+  },
+  "snippet": "Monash University, Caulfield campus is a campus of Monash University located in Caulfield, which is a suburb of Melbourne, Australia, in the state of Victoria.",
+  "score": 7.80433991970464,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "T__3f6524b5f240"
+  },
+  {
+  "name": "Treasury Gardens",
+  "tag_labels": [
+  "poitype-Park",
+  "relaxinapark",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.77956436730938,
+  "coordinates": {
+  "latitude": -37.8141071053187,
+  "longitude": 144.97616582420778
+  },
+  "snippet": "The avenues of mature elms and Moreton Bay fig are some of the best tree lined avenues in Victoria.\" Mature tree species include Moreton Bay fig (Ficus macrophylla), deodar cedar (Cedrus deodara), English elm (Ulmus procera), white poplar (Populus alba), Dutch elm (Ulmus x hollandica), Dutch elm (small-leaved form), Port Jackson fig (Ficus rubiginosa), Platanus × acerifolia, pedunculate oak (Quercus robur), Agonis flexuosa, Phoenix canariensis, Washingtonia robusta, Butia capitata, Chamaerops humilis, river red gum (Eucalyptus camaldulensis), Norfolk Island pine (Araucaria heterophylla), Brachychiton x roseus, and grevillea (Grevillea hilliana).",
+  "score": 7.77956436730938,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__4817097"
+  },
+  {
+  "name": "RMIT Building 8",
+  "tag_labels": [
+  "district-city_centre",
+  "poitype-Park",
+  "relaxinapark",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.76144305308872,
+  "coordinates": {
+  "latitude": -37.8082821,
+  "longitude": 144.9627482
+  },
+  "snippet": "RMIT Building 8 is an educational building, part of the RMIT University's City campus in Melbourne, Victoria.",
+  "score": 7.76144305308872,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "T__0a0ab70ce3b4"
+  },
+  {
+  "name": "Scots' Church",
+  "tag_labels": [
+  "district-city_centre",
+  "architectural_style-gothic_revival_architecture",
+  "poitype-Church",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.74077537131355,
+  "coordinates": {
+  "latitude": -37.814522301901924,
+  "longitude": 144.96848672644077
+  },
+  "snippet": "Gothic church built in 1873, the first Presbyterian house of worship in the city.",
+  "score": 7.74077537131355,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__176731558"
+  },
+  {
+  "name": "Melbourne Observatory",
+  "tag_labels": [
+  "district-city_centre",
+  "poitype-Planetarium",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.7046212956375,
+  "coordinates": {
+  "latitude": -37.8296652,
+  "longitude": 144.975925
+  },
+  "snippet": "The Great Melbourne Telescope was eventually moved to the Mount Stromlo Observatory where it was badly damaged in the 2003 Canberra bushfires, and a project is underway to restore the telescope to working order so that it may be used for educational and public viewing in its original home at the Melbourne Observatory.",
+  "score": 7.7046212956375,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__38701073"
+  },
+  {
+  "name": "Princess Theatre",
+  "tag_labels": [
+  "district-city_centre",
+  "poitype-Theatre",
+  "showstheatresandmusic",
+  "subtype-Reportedly_haunted_locations",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.67269111377005,
+  "coordinates": {
+  "latitude": -37.810709549601086,
+  "longitude": 144.9723404963795
+  },
+  "snippet": "The Princess Theatre is a 1452-seat theatre in Melbourne's East End Theatre District, Australia, and is the oldest continuous entertainment site on mainland Australia.",
+  "score": 7.67269111377005,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__471821422"
+  },
+  {
+  "name": "Palais Theatre",
+  "tag_labels": [
+  "poitype-Theatre",
+  "district-melbourne2fst_kilda",
+  "showstheatresandmusic",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.65622036933604,
+  "coordinates": {
+  "latitude": -37.8675559,
+  "longitude": 144.976061
+  },
+  "snippet": "With a capacity of 2,896 people, it is the largest seated theatre in Australia.",
+  "score": 7.65622036933604,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__188795650"
+  },
+  {
+  "name": "Prahran Market",
+  "tag_labels": [
+  "shopping",
+  "do",
+  "markets",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.37962964459211,
+  "coordinates": {
+  "latitude": -37.8464199,
+  "longitude": 144.9919446
+  },
+  "snippet": "The Prahran Market is one of the premier fresh food markets in Melbourne, Australia.",
+  "score": 7.6328312350972,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "T__b79fcadee825"
+  },
+  {
+  "name": "Batman Park",
+  "tag_labels": [
+  "district-city_centre",
+  "poitype-Park",
+  "relaxinapark",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.63051446765196,
+  "coordinates": {
+  "latitude": -37.821793435054154,
+  "longitude": 144.95659696200912
+  },
+  "snippet": "The park was established in 1982 through the conversion of a disused freight train rail yard and was named after one of the founders of Melbourne, John Batman with historical associations as a landing place of the Schooner Rebecca and nearby settlement at Batman's Hill.",
+  "score": 7.63051446765196,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__27462510"
+  },
+  {
+  "name": "Melbourne General Cemetery",
+  "tag_labels": [
+  "poitype-Cemetery",
+  "district-inner_north",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.60329146929108,
+  "coordinates": {
+  "latitude": -37.7890979315535,
+  "longitude": 144.96568351469026
+  },
+  "snippet": "The Melbourne General Cemetery is a large necropolis located 2km north of the city of Melbourne in the suburb of Carlton North.",
+  "score": 7.60329146929108,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__4990457"
+  },
+  {
+  "name": "National Sports Museum",
+  "tag_labels": [
+  "museums",
+  "character-Kid_friendly",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.59306194690203,
+  "coordinates": {
+  "latitude": -37.8186461,
+  "longitude": 144.9841739
+  },
+  "snippet": "On 6 October 2010, the Australian Racing Museum was absorbed into the National Sports Museum, which has now resulted in Horse Racing standing alongside other prominent Australian sports.",
+  "score": 7.59306194690203,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__131709273"
+  },
+  {
+  "name": "St Michael's Uniting Church",
+  "tag_labels": [
+  "district-city_centre",
+  "poitype-Church",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.59022183949879,
+  "coordinates": {
+  "latitude": -37.8143529462429,
+  "longitude": 144.96922156948423
+  },
+  "snippet": "Romanesque-style church built in 1866.",
+  "score": 7.59022183949879,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__247022841"
+  },
+  {
+  "name": "Flinders Lane",
+  "tag_labels": [
+  "district-city_centre",
+  "poitype-Street",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.55495840782451,
+  "coordinates": {
+  "latitude": -37.8184161,
+  "longitude": 144.9664779
+  },
+  "snippet": "Arguably the defining landmark of Melbourne, this colonial-era railway station was designed in an 1899 competition.",
+  "score": 7.55495840782451,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__46500436"
+  },
+  {
+  "name": "St Mary Star of the Sea",
+  "tag_labels": [
+  "architectural_style-gothic_revival_architecture",
+  "poitype-Church",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.53964319273802,
+  "coordinates": {
+  "latitude": -37.80592477460851,
+  "longitude": 144.95300475448798
+  },
+  "snippet": "Built with seating for over 1,200 people, it has been described as the largest parish church in Melbourne, in Victoria, or even in Australia.",
+  "score": 7.53964319273802,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__39698173"
+  },
+  {
+  "name": "Victoria Police Academy",
+  "tag_labels": [
+  "poitype-Church",
+  "district-melbourne2fbox_hill_and_glen_waverley",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.52957101430698,
+  "coordinates": {
+  "latitude": -37.89271238187338,
+  "longitude": 145.17403449593732
+  },
+  "snippet": "The Victoria Police Academy is the main induction training establishment for the Victoria Police.",
+  "score": 7.52957101430698,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__4463035"
+  },
+  {
+  "name": "RMIT Capitol Theatre",
+  "tag_labels": [
+  "district-city_centre",
+  "poitype-Theatre",
+  "showstheatresandmusic",
+  "architectural_style-art_deco_architecture",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.52681482441165,
+  "coordinates": {
+  "latitude": -37.814989,
+  "longitude": 144.965733
+  },
+  "snippet": "The Capitol Theatre is a single screen cinema located on Swanston Street in Melbourne, Australia.",
+  "score": 7.52681482441165,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__46593858"
+  },
+  {
+  "name": "Sidney Myer Music Bowl",
+  "tag_labels": [
+  "district-city_centre",
+  "poitype-Music_venue",
+  "musicandshows",
+  "nightlife",
+  "architectural_style-high-tech_architecture",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.84795493375406,
+  "coordinates": {
+  "latitude": -37.8242562,
+  "longitude": 144.9756934
+  },
+  "snippet": "An outdoor setting, excellent acoustics as well as fresh food.",
+  "score": 7.5212726434621,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__24488865"
+  },
+  {
+  "name": "Yarra Park",
+  "tag_labels": [
+  "poitype-Park",
+  "relaxinapark",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.51814787372273,
+  "coordinates": {
+  "latitude": -37.819532946524596,
+  "longitude": 144.9857310506348
+  },
+  "snippet": "Nearby is an old eucalyptus scar tree which shows a big scar caused by harvesting of bark for a canoe by the original inhabitants of the Yarra River Valley, the Wurundjeri people of the Kulin nation.",
+  "score": 7.51814787372273,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__131707394"
+  },
+  {
+  "name": "Yarra Bend Park",
+  "tag_labels": [
+  "poitype-Park",
+  "relaxinapark",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.5100861318799,
+  "coordinates": {
+  "latitude": -37.79601127493811,
+  "longitude": 145.0123550313416
+  },
+  "snippet": "Beautiful and large expanse of parkland and bushland only 3km from the CBD.",
+  "score": 7.5100861318799,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__26830085"
+  },
+  {
+  "name": "King Street Bridge",
+  "tag_labels": [
+  "poitype-Bridge",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.50126364089698,
+  "coordinates": {
+  "latitude": -37.82208333333334,
+  "longitude": 144.95805555555555
+  },
+  "snippet": "The King Street Bridge takes King Street over the Yarra River in Melbourne, Victoria, Australia.",
+  "score": 7.50126364089698,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "King_Street_Bridge_28Melbourne29"
+  },
+  {
+  "name": "Abbotsford Convent",
+  "tag_labels": [
+  "poitype-Sight",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.49921854856068,
+  "coordinates": {
+  "latitude": -37.8022947,
+  "longitude": 145.0029123
+  },
+  "snippet": "This site is host to a number of historic buildings which were originally home to sisters from a Christian religious order.",
+  "score": 7.49921854856068,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__267343471"
+  },
+  {
+  "name": "Australian Centre for Contemporary Art",
+  "tag_labels": [
+  "museums",
+  "subtype-Modern_art_museums",
+  "subtype-Art_museums",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.4946378210978,
+  "coordinates": {
+  "latitude": -37.8266419,
+  "longitude": 144.9668874
+  },
+  "snippet": "The Australian Centre For Contemporary Art is a contemporary art gallery in Melbourne, Australia.",
+  "score": 7.4946378210978,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__45461060"
+  },
+  {
+  "name": "Grainger Museum",
+  "tag_labels": [
+  "museums",
+  "district-inner_north",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.49211201043144,
+  "coordinates": {
+  "latitude": -37.797263605957035,
+  "longitude": 144.95843139228288
+  },
+  "snippet": "A small but fascinating autobiographical museum on the university's fast western side.",
+  "score": 7.49211201043144,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__22871395"
+  },
+  {
+  "name": "La Trobe's Cottage",
+  "tag_labels": [
+  "museums",
+  "district-city_centre",
+  "subtype-History_museums",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.48909187804535,
+  "coordinates": {
+  "latitude": -37.831916415080194,
+  "longitude": 144.97619099901962
+  },
+  "snippet": "La Trobe's Cottage is a historic cottage in Melbourne, Victoria, Australia, built in 1839 by the first Superintendent of the Port Phillip District of New South Wales, Charles La Trobe, and his family.",
+  "score": 7.48909187804535,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__38701075"
+  },
+  {
+  "name": "Ian Potter Museum of Art",
+  "tag_labels": [
+  "subtype-Modern_art_museums",
+  "subtype-Art_museums",
+  "museums",
+  "subtype-Archaeological_museums",
+  "district-inner_north",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.48748766910313,
+  "coordinates": {
+  "latitude": -37.797493806194225,
+  "longitude": 144.96416992543746
+  },
+  "snippet": "Houses and displays the university's wide collection of artworks, from classical antiquity to the contemporary, of Australia and European origin.",
+  "score": 7.48748766910313,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__23024027"
+  },
+  {
+  "name": "Wattle Park",
+  "tag_labels": [
+  "poitype-Park",
+  "relaxinapark",
+  "frequented_by_locals",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.47531578138842,
+  "coordinates": {
+  "latitude": -37.83918496003709,
+  "longitude": 145.10420288796416
+  },
+  "snippet": "Wattle Park is a public park in Melbourne, Australia, located in the suburb of Burwood.",
+  "score": 7.47531578138842,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__41566950"
+  },
+  {
+  "name": "East Melbourne Hebrew Congregation",
+  "tag_labels": [
+  "poitype-Synagogue",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.4491128719435,
+  "coordinates": {
+  "latitude": -37.80899659906699,
+  "longitude": 144.97424169758034
+  },
+  "snippet": "The East Melbourne Hebrew Congregation also known as East Melbourne Shule, East Melbourne Synagogue, Melbourne City Synagogue or City of Melbourne Synagogue is a historically significant Jewish congregation in East Melbourne, Victoria, Australia.",
+  "score": 7.4491128719435,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__306067347"
+  },
+  {
+  "name": "City Square",
+  "tag_labels": [
+  "district-city_centre",
+  "poitype-Square",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.4366942785638,
+  "coordinates": {
+  "latitude": -37.8162817,
+  "longitude": 144.967009
+  },
+  "snippet": "The City Square was a public plaza located in the Central Business District of Melbourne, Australia.",
+  "score": 7.4366942785638,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__338857834"
+  },
+  {
+  "name": "Her Majesty's Theatre",
+  "tag_labels": [
+  "poitype-Theatre",
+  "showstheatresandmusic",
+  "architectural_style-art_deco_architecture",
+  "district-chinatown",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.43403287429858,
+  "coordinates": {
+  "latitude": -37.81094904824046,
+  "longitude": 144.96963098982673
+  },
+  "snippet": "Her Majesty's Theatre is a 1,700 seat theatre in Melbourne's East End Theatre District, Australia.",
+  "score": 7.43403287429858,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__247018085"
+  },
+  {
+  "name": "Federation Bells",
+  "tag_labels": [
+  "district-city_centre",
+  "poitype-Sight",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.42208148119933,
+  "coordinates": {
+  "latitude": -37.8187414,
+  "longitude": 144.9741461
+  },
+  "snippet": "Using an intuitive drag 'n' drop timeline,would be composers can create original compositions for the bells and submit them for playing to the curator.",
+  "score": 7.42208148119933,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "Federation_Bells"
+  },
+  {
+  "name": "CERES Community Environment Park",
+  "tag_labels": [
+  "poitype-Park",
+  "relaxinapark",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.41911294244192,
+  "coordinates": {
+  "latitude": -37.76592468993081,
+  "longitude": 144.9838727694616
+  },
+  "snippet": "CERES is a place for community-based learning and action for environmental benefit, social justice, economic satisfaction, cultural enrichment and spiritual nurturing.",
+  "score": 7.41911294244192,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__26152601"
+  },
+  {
+  "name": "Southbank Theatre",
+  "tag_labels": [
+  "poitype-Theatre",
+  "showstheatresandmusic",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.39370746764187,
+  "coordinates": {
+  "latitude": -37.82415682439367,
+  "longitude": 144.96813690753092
+  },
+  "snippet": "It is the principal home of the Melbourne Theatre Company.",
+  "score": 7.39370746764187,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "T__e01eae231f03"
+  },
+  {
+  "name": "Scienceworks",
+  "tag_labels": [
+  "museums",
+  "character-Kid_friendly",
+  "subtype-Sci-tech_museums",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.38916381911017,
+  "coordinates": {
+  "latitude": -37.83156065187444,
+  "longitude": 144.89390518317637
+  },
+  "snippet": "It is located in the suburb of Spotswood.",
+  "score": 7.38916381911017,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__23144072"
+  },
+  {
+  "name": "Victoria Police Museum",
+  "tag_labels": [
+  "museums",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.36093617354183,
+  "coordinates": {
+  "latitude": -37.822500000000005,
+  "longitude": 144.9541111111111
+  },
+  "snippet": "Displays with over 150 years of stories and of crime, justice, courage and forensic techniques.",
+  "score": 7.36093617354183,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__597124780"
+  },
+  {
+  "name": "Seafarers Bridge",
+  "tag_labels": [
+  "poitype-Bridge",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.34345055139983,
+  "coordinates": {
+  "latitude": -37.8232078,
+  "longitude": 144.9517882
+  },
+  "snippet": "The Seafarers Bridge is a footbridge over the Yarra River between Docklands and South Wharf in Melbourne, Victoria, Australia.",
+  "score": 7.34345055139983,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "T__d87bb0e8dbef"
+  },
+  {
+  "name": "West Gate Bridge",
+  "tag_labels": [
+  "poitype-Bridge",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.3398325282492,
+  "coordinates": {
+  "latitude": -37.8278543,
+  "longitude": 144.8951127
+  },
+  "snippet": "It spans the Yarra River, just north of its mouth into Port Phillip, and is a vital link between the inner city and Melbourne's western suburbs; with the industrial suburbs in the west and with the city of Geelong, 80 kilometres (50 mi) to the south-west.",
+  "score": 7.3398325282492,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__23144061"
+  },
+  {
+  "name": "Regent Theatre",
+  "tag_labels": [
+  "district-city_centre",
+  "poitype-Theatre",
+  "showstheatresandmusic",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.32999003761518,
+  "coordinates": {
+  "latitude": -37.815497,
+  "longitude": 144.967598
+  },
+  "snippet": "The Regent Theatre is a 2,143 seat theatre in Melbourne's East End Theatre District, Australia.",
+  "score": 7.32999003761518,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__176729780"
+  },
+  {
+  "name": "Chinese Museum",
+  "tag_labels": [
+  "museums",
+  "district-city_centre",
+  "subtype-History_museums",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.32418652189078,
+  "coordinates": {
+  "latitude": -37.810739473751894,
+  "longitude": 144.96921194365694
+  },
+  "snippet": "Situated in the midst of Chinatown, it documents and explains the history of Chinese immigrants in Australia.",
+  "score": 7.32418652189078,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__247018105"
+  },
+  {
+  "name": "Werribee Park",
+  "tag_labels": [
+  "museums",
+  "subtype-History_museums",
+  "district-melbourne2fwyndham",
+  "architectural_style-victorian_architecture",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.31941866227867,
+  "coordinates": {
+  "latitude": -37.934535076186265,
+  "longitude": 144.66571141490772
+  },
+  "snippet": "It includes Werribee Park Mansion, the Victoria State Rose Garden, formal gardens, the Werribee Park National Equestrian Centre, the Werribee Open Range Zoo, a contemporary sculpture walk and a natural riverine which is being grown with the plants of the Kurung Jang Balluk clan who lived on Werribee River.",
+  "score": 7.31941866227867,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "T__e7e06a502d8b"
+  },
+  {
+  "name": "St Kilda Botanical Gardens",
+  "tag_labels": [
+  "poitype-Park",
+  "district-melbourne2fst_kilda",
+  "relaxinapark",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.31606160067912,
+  "coordinates": {
+  "latitude": -37.870840960378324,
+  "longitude": 144.98399210620772
+  },
+  "snippet": "St Kilda's own botanical gardens were established in the 1800s and are an oasis of tranquility amongst the area's bustling surrounds.",
+  "score": 7.31606160067912,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__15479037"
+  },
+  {
+  "name": "452 Flinders Street",
+  "tag_labels": [
+  "poitype-Bridge",
+  "district-city_centre",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.3147414852525,
+  "coordinates": {
+  "latitude": -37.81960882266556,
+  "longitude": 144.95861690896442
+  },
+  "snippet": "The viaduct takes a twisted path, passing behind the former Victorian Railways headquarters at 67 Spencer Street, taking a sharp 90 degree turn east from Spencer Street, swinging southward around the back of the former Fish Market beside Batman Park, then north-east to avoid the swinging basin on the Yarra River, then crossing over the Banana Alley Vaults before entering Flinders Street.",
+  "score": 7.3147414852525,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__624940912"
+  },
+  {
+  "name": "Melbourne Star",
+  "tag_labels": [
+  "character-Kid_friendly",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.29496760537234,
+  "coordinates": {
+  "latitude": -37.811860450528,
+  "longitude": 144.93766699173506
+  },
+  "snippet": "Loathed by Melburnians for its exorbitant cost and constant delays, this observation wheel opened late to much fanfare in 2008, to only be closed 40 days later due to engineering faults and cracks.",
+  "score": 7.29496760537234,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "N__310728610"
+  },
+  {
+  "name": "Footscray Park",
+  "tag_labels": [
+  "poitype-Park",
+  "relaxinapark",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.29409914839921,
+  "coordinates": {
+  "latitude": -37.79358907977167,
+  "longitude": 144.90496182518916
+  },
+  "snippet": "Footscray Park is one of the largest and most intact examples of an Edwardian park in Australia.",
+  "score": 7.29409914839921,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "W__45792871"
+  },
+  {
+  "name": "St Peter's",
+  "tag_labels": [
+  "poitype-Church",
+  "sightseeing"
+  ],
+  "sightseeing_score": 7.28173011774557,
+  "coordinates": {
+  "latitude": -37.80983998709225,
+  "longitude": 144.97512238965936
+  },
+  "snippet": "St Peter's, Eastern Hill, Melbourne, Australia\t \t \t Vicar\tHugh Kempster\t Assistant Priests\tStanislaw Kokolus Philip GillRichard Wilson\t Associate Clergy\tDon Edgar, Graeme Rutherford\t Director of Music\tAndrew Raiskums\t Affiliations\tAnglican Church\t Location\tCorner of Albert and Gisborne Streets\t Website\tstpeters.org.au\t St Peter's, Eastern Hill is the Anglican parish church of the City of Melbourne, Victoria, Australia.",
+  "score": 7.28173011774557,
+  "eatingout_score": null,
+  "location_id": "Melbourne",
+  "id": "T__b24f35a1654f"
+  }
+  ],
+  "estimated_total": 1,
+  "more": true
+  }

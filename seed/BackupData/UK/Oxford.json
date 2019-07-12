@@ -1,0 +1,218 @@
+{
+  "results": [
+    {
+      "name": "Ashmolean Museum",
+      "tag_labels": [
+        "museums",
+        "topattractions",
+        "subtype-Art_museums",
+        "district-beaumont_street",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.62392076142339,
+      "coordinates": {
+        "latitude": 51.75548841933187,
+        "longitude": -1.2604175278878207
+      },
+      "snippet": "Vast, impressive, and has undergone major redevelopment, the Ashmolean is Britain's oldest public museum, having been founded in 1683.",
+      "score": 9.62392076142339,
+      "eatingout_score": null,
+      "location_id": "Oxford",
+      "id": "Ashmolean_Museum"
+    },
+    {
+      "name": "Oxford University Museum of Natural History",
+      "tag_labels": [
+        "architectural_style-gothic_revival_architecture",
+        "topattractions",
+        "subtype-Natural_history_museums",
+        "museums",
+        "character-Kid_friendly",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.50814169169016,
+      "coordinates": {
+        "latitude": 51.75863332608847,
+        "longitude": -1.2556350435350347
+      },
+      "snippet": "Houses the university's scientific collections of zoological, entomological, geological, palaeontological and mineralogical specimens, accumulated in the course of the last 3 centuries.",
+      "score": 9.50814169169016,
+      "eatingout_score": null,
+      "location_id": "Oxford",
+      "id": "W__25999883"
+    },
+    {
+      "name": "Pitt Rivers Museum",
+      "tag_labels": [
+        "museums",
+        "character-Kid_friendly",
+        "topattractions",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.27871555757385,
+      "coordinates": {
+        "latitude": 51.75876686597246,
+        "longitude": -1.255066502094973
+      },
+      "snippet": "Oxford's museum of anthropology and ethnology, still largely arranged in Victorian style, making this a rare museum experience.",
+      "score": 9.27871555757385,
+      "eatingout_score": null,
+      "location_id": "Oxford",
+      "id": "W__99873920"
+    },
+    {
+      "name": "Museum of the History of Science",
+      "tag_labels": [
+        "museums",
+        "topattractions",
+        "subtype-Sci-tech_museums",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.11999775992519,
+      "coordinates": {
+        "latitude": 51.75426055354556,
+        "longitude": -1.2554543621620062
+      },
+      "snippet": "Located in the Old Ashmolean building and housing an unrivaled collection of early scientific instruments.",
+      "score": 9.11999775992519,
+      "eatingout_score": null,
+      "location_id": "Oxford",
+      "id": "W__60903336"
+    },
+    {
+      "name": "Al-Andalus Tapas Bar",
+      "tag_labels": [
+        "cuisine-Dessert",
+        "cuisine-Wine",
+        "poitype-Restaurant",
+        "cuisine-Tapas",
+        "lunch",
+        "dinner",
+        "feature-Outdoor_seating",
+        "eatingout",
+        "cuisine-Vegetarian",
+        "cuisine-Spanish"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 51.75862418496591,
+        "longitude": -1.2619000083051857
+      },
+      "snippet": "Customers rave about the excellent food, fabulous tapas and excellent paella.",
+      "score": 9.0693642545562,
+      "eatingout_score": 9.0693642545562,
+      "location_id": "Oxford",
+      "id": "N__465460523"
+    },
+    {
+      "name": "The Jericho Cafe",
+      "tag_labels": [
+        "coffee",
+        "poitype-Cafe",
+        "lunch",
+        "dinner",
+        "poitype-Restaurant",
+        "eatingout",
+        "breakfast"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 51.760630323181005,
+        "longitude": -1.2666094424440277
+      },
+      "snippet": "With its amazing brownies and amazing cappuccino Jericho Health Centre is a place worth considering.",
+      "score": 8.89419435348485,
+      "eatingout_score": 8.89419435348485,
+      "location_id": "Oxford",
+      "id": "W__111843903"
+    },
+    {
+      "name": "4500 Miles From Delhi",
+      "tag_labels": [
+        "cuisine-Wine",
+        "cuisine-Vegetarian",
+        "lunch",
+        "dinner",
+        "cuisine-Indian",
+        "poitype-Restaurant",
+        "cuisine-Spicy",
+        "eatingout",
+        "cuisine-Curry"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 51.752669,
+        "longitude": -1.265448
+      },
+      "snippet": "Customers love the amazing shrimp, really excellent meals and fantastic buffet.",
+      "score": 8.85974351671531,
+      "eatingout_score": 8.85974351671531,
+      "location_id": "Oxford",
+      "id": "T__bb00a45eac4c"
+    },
+    {
+      "name": "The Eagle and Child",
+      "tag_labels": [
+        "cuisine-Ale",
+        "person_author-j2e_r2e_r2e_tolkien",
+        "eatingout",
+        "person_author-c2e_s2e_lewis",
+        "lunch",
+        "nightlife",
+        "poitype-Bar",
+        "cuisine-Beer",
+        "cuisine-Fish_and_chips",
+        "drinks"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 51.75722665619714,
+        "longitude": -1.2603299724021813
+      },
+      "snippet": "Popularly known as \"the bird and baby\", this pub was the frequent haunt of the Inklings, a group of Oxford literary dons that included C.S.",
+      "score": 8.7930851851182,
+      "eatingout_score": 8.98940043555312,
+      "location_id": "Oxford",
+      "id": "W__113720981"
+    },
+    {
+      "name": "The Bear",
+      "tag_labels": [
+        "cuisine-Ale",
+        "eatingout",
+        "lunch",
+        "nightlife",
+        "poitype-Bar",
+        "cuisine-Beer",
+        "feature-Outdoor_seating",
+        "drinks"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 51.7515537,
+        "longitude": -1.2557349
+      },
+      "snippet": "Customers come to this local hangout for its good beer and a great ambience.",
+      "score": 8.73188133213432,
+      "eatingout_score": 8.7827396007705,
+      "location_id": "Oxford",
+      "id": "N__175023572"
+    },
+    {
+      "name": "University Church of St Mary the Virgin",
+      "tag_labels": ["poitype-Church", "topattractions", "sightseeing"],
+      "sightseeing_score": 8.69193671338386,
+      "coordinates": {
+        "latitude": 51.75277181883753,
+        "longitude": -1.2537695772931896
+      },
+      "snippet": "Some of the best views of Oxford are afforded from the tower of the church, dating to 1280.",
+      "score": 8.69193671338386,
+      "eatingout_score": null,
+      "location_id": "Oxford",
+      "id": "W__60903337"
+    }
+  ],
+  "estimated_total": 1,
+  "more": true
+}

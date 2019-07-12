@@ -1,0 +1,526 @@
+{
+  "results": [
+    {
+      "name": "Palace of Westminster",
+      "tag_labels": [
+        "architectural_style-gothic_revival_architecture",
+        "subtype-UNESCO_World_Heritage",
+        "topattractions",
+        "district-westminster",
+        "sightseeing",
+        "person_architect-augustus_welby_northmore_pugin",
+        "poitype-Palace"
+      ],
+      "sightseeing_score": 9.98882041378372,
+      "coordinates": {
+        "latitude": 51.499299749581816,
+        "longitude": -0.1245629128075426
+      },
+      "snippet": "On the UNESCO World Heritage List, the Palace of Westminster is the seat of Parliament in the United Kingdom.",
+      "score": 9.98882041378372,
+      "eatingout_score": null,
+      "location_id": "London",
+      "id": "W__4376766"
+    },
+    {
+      "name": "British Museum",
+      "tag_labels": [
+        "subtype-Art_museums",
+        "architectural_style-neoclassical_architecture",
+        "topattractions",
+        "architectural_style-georgian_architecture",
+        "museums",
+        "architectural_style-greek_revival_architecture",
+        "person_architect-robert_smirke_28architect29",
+        "subtype-Archaeological_museums",
+        "district-london_borough_of_camden",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.96633852504328,
+      "coordinates": {
+        "latitude": 51.5191205,
+        "longitude": -0.1246918
+      },
+      "snippet": "A vast repository of the world's cultures, with entire sections devoted to Egyptian, Greek, and Middle Eastern artifacts, as well as the piece which united them all, the Rosetta Stone.",
+      "score": 9.96633852504328,
+      "eatingout_score": null,
+      "location_id": "London",
+      "id": "W__40405915"
+    },
+    {
+      "name": "Tate Modern",
+      "tag_labels": [
+        "subtype-Art_museums",
+        "subtype-Modern_art_museums",
+        "topattractions",
+        "museums",
+        "district-london_borough_of_southwark",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.95174342782313,
+      "coordinates": {
+        "latitude": 51.5078947,
+        "longitude": -0.0996448
+      },
+      "snippet": "An enormous art gallery converted from the former Bankside Power Station, a visit to Tate Modern could easily take half a day.",
+      "score": 9.95174342782313,
+      "eatingout_score": null,
+      "location_id": "London",
+      "id": "W__24642569"
+    },
+    {
+      "name": "Dinner by Heston Blumenthal",
+      "tag_labels": [
+        "coffee",
+        "cuisine-Dessert",
+        "cuisine-Triple_cooked_chips",
+        "icecream",
+        "cuisine-Wine",
+        "cuisine-Cocktail",
+        "cuisine-British",
+        "cuisine-Steak",
+        "poitype-Restaurant",
+        "cuisine-Marrow",
+        "lunch",
+        "dinner",
+        "district-south_kensington-chelsea",
+        "cuisine-Spicy",
+        "eatingout",
+        "cuisine-Italian",
+        "cuisine-Porridge"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 51.50234629363135,
+        "longitude": -0.16031198217458187
+      },
+      "snippet": "Reviews rave about the magnificent food, wonderful desserts and excellent chips and the excellent espresso, beautiful ale and amazing teas.",
+      "score": 9.94131950733211,
+      "eatingout_score": 9.94131950733211,
+      "location_id": "London",
+      "id": "Dinner_by_Heston_Blumenthal"
+    },
+    {
+      "name": "Victoria and Albert Museum",
+      "tag_labels": [
+        "subtype-Art_museums",
+        "subtype-Fashion_museums",
+        "topattractions",
+        "museums",
+        "architectural_style-edwardian_architecture",
+        "district-south_kensington-chelsea",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.92737643694099,
+      "coordinates": {
+        "latitude": 51.4944088,
+        "longitude": -0.1735182
+      },
+      "snippet": "Named in honour of Queen Victoria and her consort Prince Albert, this museum has existed for over 150 years.",
+      "score": 9.92737643694099,
+      "eatingout_score": null,
+      "location_id": "London",
+      "id": "N__469765002"
+    },
+    {
+      "name": "Tower of London",
+      "tag_labels": [
+        "district-london_borough_of_tower_hamlets",
+        "subtype-Reportedly_haunted_locations",
+        "subtype-UNESCO_World_Heritage",
+        "topattractions",
+        "architectural_style-norman_architecture",
+        "museums",
+        "subtype-Military_museums",
+        "subtype-History_museums",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.92155880251295,
+      "coordinates": {
+        "latitude": 51.50814025635494,
+        "longitude": -0.0760746748271691
+      },
+      "snippet": "Founded by William the Conqueror in 1066, enlarged and modified by successive sovereigns, the Tower is today one of the world's most famous and spectacular fortresses and a UNESCO World Heritage Site.",
+      "score": 9.92155880251295,
+      "eatingout_score": null,
+      "location_id": "London",
+      "id": "W__4486210"
+    },
+    {
+      "name": "Veeraswamy",
+      "tag_labels": [
+        "district-north",
+        "cuisine-Dessert",
+        "district-west_end_of_london",
+        "icecream",
+        "cuisine-Wine",
+        "cuisine-Cocktail",
+        "cuisine-Vegetarian",
+        "lunch",
+        "dinner",
+        "cuisine-Indian",
+        "poitype-Restaurant",
+        "cuisine-Spicy",
+        "eatingout",
+        "cuisine-Curry",
+        "cuisine-Beer",
+        "district-mayfair",
+        "district-mayfair-marylebone"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 51.5098955,
+        "longitude": -0.1379192
+      },
+      "snippet": "Located in the center.",
+      "score": 9.92147492246252,
+      "eatingout_score": 9.92147492246252,
+      "location_id": "London",
+      "id": "N__623366167"
+    },
+    {
+      "name": "Natural History Museum",
+      "tag_labels": [
+        "topattractions",
+        "subtype-Natural_history_museums",
+        "museums",
+        "architectural_style-romanesque_architecture",
+        "character-Kid_friendly",
+        "district-south_kensington-chelsea",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.910782819171,
+      "coordinates": {
+        "latitude": 51.4955742,
+        "longitude": -0.1790756
+      },
+      "snippet": "Probably the most popular of all the museums here and a must see for many visitors to London.",
+      "score": 9.910782819171,
+      "eatingout_score": null,
+      "location_id": "London",
+      "id": "W__24436446"
+    },
+    {
+      "name": "Dishoom",
+      "tag_labels": [
+        "district-north",
+        "cuisine-Dessert",
+        "district-west_end_theatre",
+        "district-west_end_of_london",
+        "cuisine-Cocktail",
+        "district-leicester_square",
+        "district-covent_garden",
+        "cuisine-Vegetarian",
+        "lunch",
+        "dinner",
+        "cuisine-Roti",
+        "cuisine-Indian",
+        "poitype-Restaurant",
+        "cuisine-Spicy",
+        "eatingout",
+        "cuisine-Curry",
+        "breakfast",
+        "badge-Book_in_advance"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 51.512439009071805,
+        "longitude": -0.12683830061576773
+      },
+      "snippet": "Fans recommend the excellent food, amazing bread and wonderful curries.",
+      "score": 9.90245769217566,
+      "eatingout_score": 9.90245769217566,
+      "location_id": "London",
+      "id": "T__090ce1e666ea"
+    },
+    {
+      "name": "Buckingham Palace",
+      "tag_labels": [
+        "architectural_style-victorian_architecture",
+        "architectural_style-neoclassical_architecture",
+        "architectural_style-vernacular_architecture",
+        "topattractions",
+        "architectural_style-georgian_architecture",
+        "architectural_style-edwardian_architecture",
+        "sightseeing",
+        "district-st_james27s",
+        "poitype-Palace"
+      ],
+      "sightseeing_score": 9.89885635235068,
+      "coordinates": {
+        "latitude": 51.5007981733965,
+        "longitude": -0.14252340732909244
+      },
+      "snippet": "Residence of King George III at the time of Assassin's Creed III, Queen Victoria at the time of Assassin's Creed: Syndicate and currently Queen Elizabeth II.",
+      "score": 9.89885635235068,
+      "eatingout_score": null,
+      "location_id": "London",
+      "id": "W__8137715"
+    },
+    {
+      "name": "National Gallery",
+      "tag_labels": [
+        "subtype-Art_museums",
+        "architectural_style-neoclassical_architecture",
+        "topattractions",
+        "architectural_style-georgian_architecture",
+        "museums",
+        "architectural_style-greek_revival_architecture",
+        "district-west_end_of_london",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.89353929879291,
+      "coordinates": {
+        "latitude": 51.50886106986929,
+        "longitude": -0.12896074114217967
+      },
+      "snippet": "Houses the British national collection of western European art dating from the 13th to 19th centuries.",
+      "score": 9.89353929879291,
+      "eatingout_score": null,
+      "location_id": "London",
+      "id": "W__4372002"
+    },
+    {
+      "name": "Bob Bob Ricard",
+      "tag_labels": [
+        "cuisine-Dessert",
+        "cuisine-Wine",
+        "cuisine-Cocktail",
+        "cuisine-Steak",
+        "poitype-Restaurant",
+        "cuisine-Vodka",
+        "lunch",
+        "dinner",
+        "eatingout",
+        "cuisine-Beef_wellington",
+        "character-Romantic",
+        "district-soho"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 51.5123435,
+        "longitude": -0.1372546
+      },
+      "snippet": "If you are looking for fantastic food head for Bob Bob Ricard.",
+      "score": 9.88073780356575,
+      "eatingout_score": 9.88073780356575,
+      "location_id": "London",
+      "id": "Bob_Bob_Ricard"
+    },
+    {
+      "name": "Rules",
+      "tag_labels": [
+        "coffee",
+        "cuisine-Dessert",
+        "cuisine-Roast_beef",
+        "cuisine-Crumble",
+        "cuisine-Wine",
+        "cuisine-Cocktail",
+        "cuisine-Custard",
+        "dinner",
+        "poitype-Restaurant",
+        "cuisine-Sticky_toffee_pudding",
+        "lunch",
+        "cuisine-Steak",
+        "eatingout",
+        "badge-Book_now",
+        "district-covent_garden"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 51.51082267500512,
+        "longitude": -0.12319120453024995
+      },
+      "snippet": "This refreshing house does good steak and kidney pudding, excellent soup and good pub food.",
+      "score": 9.8707335664099,
+      "eatingout_score": 9.8707335664099,
+      "location_id": "London",
+      "id": "N__1598420155"
+    },
+    {
+      "name": "Big Ben",
+      "tag_labels": [
+        "architectural_style-gothic_revival_architecture",
+        "topattractions",
+        "poitype-Tower",
+        "district-london_borough_of_tower_hamlets",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.86177763507444,
+      "coordinates": {
+        "latitude": 51.5006895,
+        "longitude": -0.1245838
+      },
+      "snippet": "Strictly limited numbers of tickets are available to climb the Elizabeth Tower, which was renamed from Clock Tower in 2012.",
+      "score": 9.86177763507444,
+      "eatingout_score": null,
+      "location_id": "London",
+      "id": "W__123557148"
+    },
+    {
+      "name": "Regency Café",
+      "tag_labels": [
+        "cuisine-Black_pudding",
+        "cuisine-Burgers_26_fries",
+        "coffee",
+        "district-westminster",
+        "cuisine-Bubble_and_squeak",
+        "cuisine-Seafood",
+        "cuisine-Steak",
+        "poitype-Cafe",
+        "cuisine-Full_breakfast",
+        "lunch",
+        "dinner",
+        "poitype-Restaurant",
+        "eatingout",
+        "breakfast",
+        "cuisine-Tea_house",
+        "cuisine-Hash"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 51.493988137027856,
+        "longitude": -0.1321177988454467
+      },
+      "snippet": "Good quality food, huge portions and very good fish and chips on the menu in this fantastic cafe.",
+      "score": 9.84951028805519,
+      "eatingout_score": 9.84951028805519,
+      "location_id": "London",
+      "id": "W__100822479"
+    },
+    {
+      "name": "Hakkasan",
+      "tag_labels": [
+        "cuisine-Dessert",
+        "cuisine-Wine",
+        "cuisine-Cocktail",
+        "character-Romantic",
+        "poitype-Restaurant",
+        "lunch",
+        "dinner",
+        "cuisine-Spicy",
+        "eatingout",
+        "cuisine-Vegetarian",
+        "district-london_borough_of_camden",
+        "badge-Book_now",
+        "cuisine-Chinese"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 51.5171134,
+        "longitude": -0.1316867
+      },
+      "snippet": "Michelin starred kitchen based on Cantonese tradition but also experimenting in other areas.",
+      "score": 9.84105871520739,
+      "eatingout_score": 9.84105871520739,
+      "location_id": "London",
+      "id": "N__699779199"
+    },
+    {
+      "name": "The Wolseley",
+      "tag_labels": [
+        "coffee",
+        "cuisine-Dessert",
+        "coffeeandcake",
+        "cuisine-Wine",
+        "cuisine-Steak",
+        "poitype-Restaurant",
+        "cuisine-Eggs_benedict",
+        "cuisine-Regional",
+        "lunch",
+        "dinner",
+        "cuisine-Sandwich",
+        "district-westminster",
+        "eatingout",
+        "district-north",
+        "breakfast",
+        "badge-Book_in_advance",
+        "district-mayfair",
+        "district-st_james27s",
+        "cuisine-Scone",
+        "district-mayfair-marylebone"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 51.50739518106854,
+        "longitude": -0.14090970511285783
+      },
+      "snippet": "A charming venue that offers brilliant fish and chips, decent cheese and delicious pancakes.",
+      "score": 9.83187209881813,
+      "eatingout_score": 9.83187209881813,
+      "location_id": "London",
+      "id": "N__344650101"
+    },
+    {
+      "name": "Madame Tussauds",
+      "tag_labels": [
+        "museums",
+        "district-mayfair-marylebone",
+        "district-north",
+        "topattractions",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.81521300272389,
+      "coordinates": {
+        "latitude": 51.5228224,
+        "longitude": -0.1547768
+      },
+      "snippet": "Madame Tussaud's is a world famous waxwork museum, best known for its Grand Hall, with a collection of international royalty, statesmen and world leaders.",
+      "score": 9.81521300272389,
+      "eatingout_score": null,
+      "location_id": "London",
+      "id": "N__29269886"
+    },
+    {
+      "name": "Chutney Mary",
+      "tag_labels": [
+        "cuisine-Dessert",
+        "cuisine-Wine",
+        "cuisine-Cocktail",
+        "character-Romantic",
+        "poitype-Restaurant",
+        "lunch",
+        "dinner",
+        "cuisine-Indian",
+        "district-westminster",
+        "cuisine-Spicy",
+        "eatingout",
+        "cuisine-Curry",
+        "district-st_james27s"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 51.5056905,
+        "longitude": -0.138682
+      },
+      "snippet": "Excellent fish, delicious tempura and indian cooking on the menu in this upmarket address.",
+      "score": 9.8131770476099,
+      "eatingout_score": 9.8131770476099,
+      "location_id": "London",
+      "id": "T__4e2dc10ba3e0"
+    },
+    {
+      "name": "Science Museum",
+      "tag_labels": [
+        "subtype-Sci-tech_museums",
+        "topattractions",
+        "museums",
+        "character-Kid_friendly",
+        "district-south_kensington-chelsea",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.80373769782713,
+      "coordinates": {
+        "latitude": 51.49724400438113,
+        "longitude": -0.17600857843471468
+      },
+      "snippet": "Dedicated to scientific exhibitions and collections bar those related to the life sciences.",
+      "score": 9.80373769782713,
+      "eatingout_score": null,
+      "location_id": "London",
+      "id": "W__27765411"
+    }
+  ],
+  "estimated_total": 6,
+  "more": true
+}

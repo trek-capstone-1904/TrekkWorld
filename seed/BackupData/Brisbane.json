@@ -1,0 +1,924 @@
+{
+  "results": [
+    {
+      "name": "Gallery of Modern Art",
+      "tag_labels": [
+        "subtype-Art_museums",
+        "topattractions",
+        "museums",
+        "character-Kid_friendly",
+        "architectural_style-modernist_architecture",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.72572452595238,
+      "coordinates": {
+        "latitude": -27.47055820877899,
+        "longitude": 153.01710524034533
+      },
+      "snippet": "The Gallery of Modern Art forms part of the Queensland Art Gallery and is a short walk from the Main Gallery.",
+      "score": 9.72572452595238,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__24228971"
+    },
+    {
+      "name": "Queensland Art Gallery",
+      "tag_labels": [
+        "subtype-Art_museums",
+        "topattractions",
+        "museums",
+        "character-Kid_friendly",
+        "architectural_style-modernist_architecture",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.55589448138671,
+      "coordinates": {
+        "latitude": -27.472591733480115,
+        "longitude": 153.01852901535617
+      },
+      "snippet": "The Queensland Art Gallery is housed in two buildings within Brisbane's Cultural Precinct at South Bank.",
+      "score": 9.55589448138671,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__145079447"
+    },
+    {
+      "name": "Lone Pine Koala Sanctuary",
+      "tag_labels": ["topattractions", "zoos", "sightseeing"],
+      "sightseeing_score": 9.20524027392101,
+      "coordinates": {
+        "latitude": -27.5343697,
+        "longitude": 152.9685511
+      },
+      "snippet": "World's first and largest koala sanctuary, with over 130 koalas. Cuddle a koala, hand feed kangaroos and see some other Aussie wildlife.",
+      "score": 9.20524027392101,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "N__127753422"
+    },
+    {
+      "name": "Jellyfish Restaurant",
+      "tag_labels": [
+        "cuisine-Dessert",
+        "cuisine-Wine",
+        "cuisine-Seafood",
+        "cuisine-Steak",
+        "poitype-Restaurant",
+        "lunch",
+        "dinner",
+        "eatingout",
+        "district-brisbane_central_business_district",
+        "feature-Outdoor_seating"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -27.4677801,
+        "longitude": 153.0308647
+      },
+      "snippet": "Customers rave about the amazing meals, superb cooking and fantastic soup.",
+      "score": 9.19753428876478,
+      "eatingout_score": 9.19753428876478,
+      "location_id": "Brisbane",
+      "id": "T__dbbffc8a2183"
+    },
+    {
+      "name": "South Bank Parklands",
+      "tag_labels": [
+        "poitype-Park",
+        "character-Kid_friendly",
+        "topattractions",
+        "relaxinapark",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.01178527516259,
+      "coordinates": {
+        "latitude": -27.4783054,
+        "longitude": 153.023086
+      },
+      "snippet": "The parklands consist of a mixture of rainforest, water, grassed areas and plazas as well as features such as the riverfront promenade, the Streets Beach, the Grand Arbour, the Courier Mail Piazza, the Nepal Peace Pagoda, the Wheel of Brisbane, restaurants, shops and fountains.",
+      "score": 9.01178527516259,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__71185217"
+    },
+    {
+      "name": "Putia Pure Food Kitchen",
+      "tag_labels": [
+        "coffee",
+        "cuisine-Wine",
+        "poitype-Restaurant",
+        "lunch",
+        "dinner",
+        "eatingout",
+        "cuisine-Vegetarian",
+        "breakfast",
+        "feature-Outdoor_seating"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -27.374832876963225,
+        "longitude": 153.0768127556665
+      },
+      "snippet": "French beer in a fantastic ambience.",
+      "score": 8.97882854877671,
+      "eatingout_score": 8.97882854877671,
+      "location_id": "Brisbane",
+      "id": "T__e9d83ca63e48"
+    },
+    {
+      "name": "Queensland Maritime Museum",
+      "tag_labels": ["museums", "character-Kid_friendly", "sightseeing"],
+      "sightseeing_score": 8.8910840525538,
+      "coordinates": {
+        "latitude": -27.481889420238414,
+        "longitude": 153.02648908422424
+      },
+      "snippet": "The Queensland Maritime Museum hosts a range of exhibitions and vessels in their Museum at South Bank.",
+      "score": 8.8910840525538,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "Queensland_Maritime_Museum"
+    },
+    {
+      "name": "City Botanic Gardens",
+      "tag_labels": [
+        "district-brisbane_central_business_district",
+        "poitype-Park",
+        "topattractions",
+        "relaxinapark",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.86952597944118,
+      "coordinates": {
+        "latitude": -27.476014415313095,
+        "longitude": 153.03008154836039
+      },
+      "snippet": "Walking and cycling tracks. Exhibits.",
+      "score": 8.86952597944118,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__4282955"
+    },
+    {
+      "name": "Queensland Museum",
+      "tag_labels": [
+        "museums",
+        "subtype-History_museums",
+        "character-Kid_friendly",
+        "architectural_style-modernist_architecture",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.82135748291739,
+      "coordinates": {
+        "latitude": -27.473298,
+        "longitude": 153.0184223
+      },
+      "snippet": "The Queensland Museum is a large museum featuring several exhibitions that generally focus on Natural History and Queensland History.",
+      "score": 8.82135748291739,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__144850147"
+    },
+    {
+      "name": "Nantucket Kitchen & Bar",
+      "tag_labels": [
+        "coffee",
+        "cuisine-Dessert",
+        "frequented_by_locals",
+        "cuisine-Wine",
+        "poitype-Restaurant",
+        "lunch",
+        "dinner",
+        "eatingout",
+        "breakfast",
+        "cuisine-American"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -27.501303,
+        "longitude": 152.9730978
+      },
+      "snippet": "A spanish tapas bar that does gluten free options, good lunch and delicious steaks.",
+      "score": 8.7811082296766,
+      "eatingout_score": 8.7811082296766,
+      "location_id": "Brisbane",
+      "id": "T__ebd3e420c82a"
+    },
+    {
+      "name": "Roma Street Parkland",
+      "tag_labels": [
+        "district-brisbane_central_business_district",
+        "poitype-Park",
+        "relaxinapark",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.61314947874772,
+      "coordinates": {
+        "latitude": -27.46285722449251,
+        "longitude": 153.01886917033815
+      },
+      "snippet": "Is the world's largest subtropical garden in a city centre and home to 1,800 unique species of plants.",
+      "score": 8.61314947874772,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__9856604"
+    },
+    {
+      "name": "Brisbane City Hall",
+      "tag_labels": [
+        "district-brisbane_central_business_district",
+        "poitype-Tower",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.56728777726204,
+      "coordinates": {
+        "latitude": -27.468962591156604,
+        "longitude": 153.02348204922123
+      },
+      "snippet": "The building is considered one of Brisbane's finest and is registered on the Register of the National Estate since 1978.",
+      "score": 8.56728777726204,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "Brisbane_City_Hall"
+    },
+    {
+      "name": "Port Office Hotel",
+      "tag_labels": [
+        "cuisine-Dessert",
+        "cuisine-Wine",
+        "poitype-Bar",
+        "cuisine-Steak",
+        "lunch",
+        "dinner",
+        "nightlife",
+        "eatingout",
+        "district-brisbane_central_business_district",
+        "cuisine-Beer",
+        "cuisine-Italian",
+        "drinks"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -27.4716872,
+        "longitude": 153.0297791
+      },
+      "snippet": "Trendy bar downstairs dance floor upstairs popular spot in Brisbane. Crowded with students on Thursday.",
+      "score": 8.50905756801981,
+      "eatingout_score": 9.65049039106006,
+      "location_id": "Brisbane",
+      "id": "W__125140110"
+    },
+    {
+      "name": "ANZAC Square",
+      "tag_labels": [
+        "district-brisbane_central_business_district",
+        "poitype-Memorial",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.44350357697816,
+      "coordinates": {
+        "latitude": -27.466531853141674,
+        "longitude": 153.0266582953312
+      },
+      "snippet": "Parade starts 10AM on April 25.",
+      "score": 8.44350357697816,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__10103904"
+    },
+    {
+      "name": "Norman Hotel",
+      "tag_labels": [
+        "cuisine-Wine",
+        "poitype-Bar",
+        "cuisine-Steak",
+        "cuisine-Vegetarian",
+        "lunch",
+        "dinner",
+        "nightlife",
+        "eatingout",
+        "cuisine-Beer",
+        "drinks"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -27.4919214,
+        "longitude": 153.0352752
+      },
+      "snippet": "Woolloongabba. Along with the Breakfast Creek Hotel, possibly the best steaks in town, it's slogan is \"Brisbane's worst vegetarian restaurant\".",
+      "score": 8.43670993702923,
+      "eatingout_score": 9.31579737002816,
+      "location_id": "Brisbane",
+      "id": "N__355543251"
+    },
+    {
+      "name": "Breakfast Creek Hotel",
+      "tag_labels": [
+        "cuisine-Spanish",
+        "poitype-Bar",
+        "cuisine-Steak",
+        "architectural_style-historicist_architecture",
+        "feature-Outdoor_seating",
+        "lunch",
+        "dinner",
+        "nightlife",
+        "eatingout",
+        "cuisine-Beer",
+        "breakfast",
+        "cuisine-Seafood",
+        "drinks"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -27.4408158,
+        "longitude": 153.0454694
+      },
+      "snippet": "Some people praise the excellent staff.",
+      "score": 8.41099897246539,
+      "eatingout_score": 9.27530508790526,
+      "location_id": "Brisbane",
+      "id": "N__198484812"
+    },
+    {
+      "name": "Story Bridge",
+      "tag_labels": [
+        "poitype-Bridge",
+        "district-fortitude_valley",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.36265944110628,
+      "coordinates": {
+        "latitude": -27.4645858,
+        "longitude": 153.0358079
+      },
+      "snippet": "Offers the opportunity to scale the top of Brisbane's iconic bridge.",
+      "score": 8.36265944110628,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "Story_Bridge"
+    },
+    {
+      "name": "Brisbane Botanic Gardens",
+      "tag_labels": [
+        "district-brisbane_central_business_district",
+        "poitype-Park",
+        "relaxinapark",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.32774400914897,
+      "coordinates": {
+        "latitude": -27.477708802814227,
+        "longitude": 152.97426649358002
+      },
+      "snippet": "The Brisbane Botanic Gardens are located 7km from the Brisbane CBD in Toowong, Queensland, Australia, at the foot of Brisbane's tallest mountain, Mount Coot-tha.",
+      "score": 8.32774400914897,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__19451473"
+    },
+    {
+      "name": "Victoria Bridge Abutment",
+      "tag_labels": ["poitype-Bridge", "sightseeing"],
+      "sightseeing_score": 8.2490291900005,
+      "coordinates": {
+        "latitude": -27.473287860064257,
+        "longitude": 153.0199763572598
+      },
+      "snippet": "Victoria Bridge Abutment is a heritage-listed road bridge at 74 Stanley Street, South Brisbane, City of Brisbane, Queensland, Australia.",
+      "score": 8.2490291900005,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "T__ecbf6dda0ca0"
+    },
+    {
+      "name": "Goodwill Bridge",
+      "tag_labels": [
+        "poitype-Bridge",
+        "district-brisbane_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.14058152356328,
+      "coordinates": {
+        "latitude": -27.480591250399776,
+        "longitude": 153.02709392518642
+      },
+      "snippet": "The Goodwill Bridge is a pedestrian and cyclist bridge which spans the Brisbane River in Brisbane, Queensland, Australia.",
+      "score": 8.14058152356328,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "Goodwill_Bridge"
+    },
+    {
+      "name": "King George Square",
+      "tag_labels": [
+        "district-brisbane_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.11628153734231,
+      "coordinates": {
+        "latitude": -27.468456868972236,
+        "longitude": 153.024137667192
+      },
+      "snippet": "Located between Adelaide and Ann Streets, this is the city's most significant historical landmark. This area has free public Wi-Fi.",
+      "score": 8.11628153734231,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__141457143"
+    },
+    {
+      "name": "New Farm Park",
+      "tag_labels": [
+        "poitype-Park",
+        "character-Kid_friendly",
+        "district-new_farm",
+        "relaxinapark",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.06169101449782,
+      "coordinates": {
+        "latitude": -27.46922186752546,
+        "longitude": 153.0512479467224
+      },
+      "snippet": "This historic park is famous for the long line of jacaranda trees, shady picnic areas and its large rose gardens that contain hundreds of variety of roses, and over 40,000 plants.",
+      "score": 8.06169101449782,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__11349422"
+    },
+    {
+      "name": "Victoria Bridge",
+      "tag_labels": [
+        "poitype-Bridge",
+        "district-brisbane_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.00808136931168,
+      "coordinates": {
+        "latitude": -27.47247254979942,
+        "longitude": 153.02101030903086
+      },
+      "snippet": "The Victoria Bridge is a vehicular and pedestrian bridge over the Brisbane River.",
+      "score": 8.00808136931168,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "Victoria_Bridge2C_Brisbane"
+    },
+    {
+      "name": "Toowong Cemetery",
+      "tag_labels": ["poitype-Cemetery", "sightseeing"],
+      "sightseeing_score": 7.99071756131442,
+      "coordinates": {
+        "latitude": -27.474261317680487,
+        "longitude": 152.98252142205482
+      },
+      "snippet": "It was established in 1866 and formally opened in 1875.",
+      "score": 7.99071756131442,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__19142882"
+    },
+    {
+      "name": "Kurilpa Bridge",
+      "tag_labels": [
+        "poitype-Bridge",
+        "architectural_style-high-tech_architecture",
+        "district-brisbane_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.97459789357243,
+      "coordinates": {
+        "latitude": -27.469345196460697,
+        "longitude": 153.018050603606
+      },
+      "snippet": "The Kurilpa Bridge is a 63 million pedestrian and bicycle bridge over the Brisbane River in Brisbane, Queensland, Australia.",
+      "score": 7.97459789357243,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__34158707"
+    },
+    {
+      "name": "Newstead House",
+      "tag_labels": ["museums", "subtype-History_museums", "sightseeing"],
+      "sightseeing_score": 7.92065613315573,
+      "coordinates": {
+        "latitude": -27.442633750245957,
+        "longitude": 153.04616927894264
+      },
+      "snippet": "Newstead House is the oldest surviving home in Brisbane, but not the oldest surviving building, built in 1846, for Patrick Leslie and his wife Catherine.",
+      "score": 7.92065613315573,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__31010041"
+    },
+    {
+      "name": "Queensland Performing Arts Centre",
+      "tag_labels": ["poitype-Theatre", "showstheatresandmusic", "sightseeing"],
+      "sightseeing_score": 7.91952241662147,
+      "coordinates": {
+        "latitude": -27.4747096,
+        "longitude": 153.0197086
+      },
+      "snippet": "It was opened by the Duke of Kent in 1985.",
+      "score": 7.91952241662147,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__146305201"
+    },
+    {
+      "name": "Commissariat Store",
+      "tag_labels": [
+        "museums",
+        "district-brisbane_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.91694705061978,
+      "coordinates": {
+        "latitude": -27.473253644237857,
+        "longitude": 153.02424094600684
+      },
+      "snippet": "Occupying the oldest habitable building in Queensland the Commissariat Store Museum highlights both the building and various aspects of Brisbane and Queensland's convict, colonial and more recent history.",
+      "score": 7.91694705061978,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__23579447"
+    },
+    {
+      "name": "Parliament House",
+      "tag_labels": [
+        "district-brisbane_central_business_district",
+        "poitype-Sight",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.91323088964651,
+      "coordinates": {
+        "latitude": -27.475415445073306,
+        "longitude": 153.02717307667075
+      },
+      "snippet": "Parliament House in Brisbane is the meeting place of the Parliament of Queensland, housing its only chamber, the Legislative Assembly.",
+      "score": 7.91323088964651,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__8040447"
+    },
+    {
+      "name": "Sir Thomas Brisbane Planetarium",
+      "tag_labels": ["character-Kid_friendly", "sightseeing"],
+      "sightseeing_score": 7.89477245203157,
+      "coordinates": {
+        "latitude": -27.475694918328266,
+        "longitude": 152.9769476638586
+      },
+      "snippet": "Located in the beautiful subtropical Brisbane Botanic Gardens, Mt Coot-tha Road, Toowong.",
+      "score": 7.89477245203157,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__37025041"
+    },
+    {
+      "name": "Cremorne Theatre",
+      "tag_labels": ["poitype-Theatre", "showstheatresandmusic", "sightseeing"],
+      "sightseeing_score": 7.87027473082199,
+      "coordinates": {
+        "latitude": -27.4751048,
+        "longitude": 153.0200707
+      },
+      "snippet": "The Cremorne Theatre was a theatre in South Brisbane Brisbane, Queensland, Australia that operated, with interruptions, from 1911 to 1954.",
+      "score": 7.87027473082199,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "T__ca8d5bb30b2c"
+    },
+    {
+      "name": "Albert Street Uniting Church",
+      "tag_labels": [
+        "district-brisbane_central_business_district",
+        "architectural_style-gothic_revival_architecture",
+        "poitype-Church",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.83650393442213,
+      "coordinates": {
+        "latitude": -27.467723868305004,
+        "longitude": 153.0238286098162
+      },
+      "snippet": "Albert Street Uniting Church is a heritage-listed church at 319 Albert Street Brisbane City, City of Brisbane, Queensland, Australia.",
+      "score": 7.83650393442213,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "T__ceadabdd550c"
+    },
+    {
+      "name": "William Jolly Bridge",
+      "tag_labels": [
+        "poitype-Bridge",
+        "district-brisbane_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.82647862876888,
+      "coordinates": {
+        "latitude": -27.468617950000002,
+        "longitude": 153.01551755
+      },
+      "snippet": "When opened, during the worst year of the Great Depression, the bridge was known simply as the Grey Street Bridge.",
+      "score": 7.82647862876888,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__157252024"
+    },
+    {
+      "name": "South Bank Grand Arbour",
+      "tag_labels": ["poitype-Park", "relaxinapark", "sightseeing"],
+      "sightseeing_score": 7.71103934461423,
+      "coordinates": {
+        "latitude": -27.47808157226815,
+        "longitude": 153.02255430850536
+      },
+      "snippet": "The South Bank Grand Arbour is a kilometre long arbour located in the South Bank Parklands in Brisbane, Australia.",
+      "score": 7.71103934461423,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "South_Bank_Grand_Arbour"
+    },
+    {
+      "name": "Cathedral of St Stephen",
+      "tag_labels": [
+        "district-brisbane_central_business_district",
+        "architectural_style-gothic_revival_architecture",
+        "poitype-Church",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.70682064114107,
+      "coordinates": {
+        "latitude": -27.468677139639365,
+        "longitude": 153.02897602147686
+      },
+      "snippet": "The Cathedral of St Stephen is the heritage-listed cathedral church of the Roman Catholic Archdiocese of Brisbane and seat of its archbishop.",
+      "score": 7.70682064114107,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__23892775"
+    },
+    {
+      "name": "Customs House",
+      "tag_labels": [
+        "district-brisbane_central_business_district",
+        "poitype-Sight",
+        "architectural_style-neoclassical_architecture",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.6972455943175,
+      "coordinates": {
+        "latitude": -27.4654285204772,
+        "longitude": 153.03109932171333
+      },
+      "snippet": "It was originally used for the collection of customs duty and was opened in 1889, when Queensland was a British colony, replacing the original Customs House located at Petrie Bight.",
+      "score": 7.6972455943175,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__26253545"
+    },
+    {
+      "name": "The Old Windmill",
+      "tag_labels": [
+        "district-brisbane_central_business_district",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.67327409889197,
+      "coordinates": {
+        "latitude": -27.4657523,
+        "longitude": 153.0230753
+      },
+      "snippet": "The Old Windmill is a heritage-listed tower mill in Observatory Park adjacent to Wickham Park at 226 Wickham Terrace, Spring Hill, City of Brisbane, Queensland, Australia.",
+      "score": 7.67327409889197,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "N__83203998"
+    },
+    {
+      "name": "Old Museum Building",
+      "tag_labels": [
+        "museums",
+        "architectural_style-romanesque_architecture",
+        "architectural_style-colonial_architecture",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.6483847387042,
+      "coordinates": {
+        "latitude": -27.451790142631122,
+        "longitude": 153.02951417029524
+      },
+      "snippet": "The Old Museum Building is a heritage-listed former exhibition building, former museum and now performance venue in Bowen Hills, Brisbane, Queensland, Australia.",
+      "score": 7.6483847387042,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__27150587"
+    },
+    {
+      "name": "Museum of Brisbane",
+      "tag_labels": [
+        "architectural_style-neoclassical_architecture",
+        "museums",
+        "district-brisbane_central_business_district",
+        "character-Kid_friendly",
+        "subtype-History_museums",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.61209560707786,
+      "coordinates": {
+        "latitude": -27.4687147,
+        "longitude": 153.0234187
+      },
+      "snippet": "Features one floor of exhibits about the history of the city, and another floor for exhibitions of local artists.",
+      "score": 7.61209560707786,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "N__1246519882"
+    },
+    {
+      "name": "Eagle Street Fig Trees",
+      "tag_labels": [
+        "district-brisbane_central_business_district",
+        "exploringnature",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.58256351088473,
+      "coordinates": {
+        "latitude": -27.46774022411745,
+        "longitude": 153.02962909834554
+      },
+      "snippet": "Eagle Street Fig Trees is a heritage-listed group of trees at 118A Eagle Street, Brisbane City, City of Brisbane, Queensland, Australia.",
+      "score": 7.58256351088473,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "T__95a21ac83b03"
+    },
+    {
+      "name": "Chung Tian Temple",
+      "tag_labels": ["poitype-Temple", "sightseeing"],
+      "sightseeing_score": 7.58110253993469,
+      "coordinates": {
+        "latitude": -27.60333055555556,
+        "longitude": 153.15121944444445
+      },
+      "snippet": "Chung Tian Temple is a Zen Buddhist temple located at 1034 Underwood Road, Priestdale, Queensland.",
+      "score": 7.58110253993469,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "Chung_Tian_Temple"
+    },
+    {
+      "name": "Eleanor Schonell Bridge",
+      "tag_labels": ["poitype-Bridge", "sightseeing"],
+      "sightseeing_score": 7.57661456756183,
+      "coordinates": {
+        "latitude": -27.497811341031483,
+        "longitude": 153.02180155015074
+      },
+      "snippet": "The Eleanor Schonell Bridge, better known as the Green Bridge, is a 390-metre -long cable-stayed bridge which crosses the Brisbane River between Dutton Park and the University of Queensland's St Lucia campus, connecting the UQ Lakes and Dutton Park Place busway stations.",
+      "score": 7.57661456756183,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "Eleanor_Schonell_Bridge"
+    },
+    {
+      "name": "State Library of Queensland",
+      "tag_labels": [
+        "character-Kid_friendly",
+        "poitype-Library",
+        "feature-Free_wifi",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.57295579261722,
+      "coordinates": {
+        "latitude": -27.471230736182886,
+        "longitude": 153.01817572244477
+      },
+      "snippet": "Free Internet (including Wi-Fi) access is available at the Queensland State Library, in selected areas.",
+      "score": 7.57295579261722,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__146305691"
+    },
+    {
+      "name": "Richard Randall Art Studio",
+      "tag_labels": ["museums", "subtype-Art_museums", "sightseeing"],
+      "sightseeing_score": 7.55911674705001,
+      "coordinates": {
+        "latitude": -27.474997,
+        "longitude": 152.9776929
+      },
+      "snippet": "Richard Randall Art Studio is a heritage-listed studio at Brisbane Botanic Gardens, Mt Coot-tha Road, Toowong, City of Brisbane, Queensland, Australia.",
+      "score": 7.55911674705001,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "T__7e00171fa783"
+    },
+    {
+      "name": "Mooney Memorial Fountain",
+      "tag_labels": [
+        "district-brisbane_central_business_district",
+        "poitype-Memorial",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.54390663213752,
+      "coordinates": {
+        "latitude": -27.4659647,
+        "longitude": 153.0301939
+      },
+      "snippet": "Mooney Memorial Fountain is a heritage-listed memorial at 118 Eagle Street, Brisbane City, City of Brisbane, Queensland, Australia.",
+      "score": 7.54390663213752,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "N__382977047"
+    },
+    {
+      "name": "Sir Leo Hielscher Bridges",
+      "tag_labels": ["poitype-Bridge", "sightseeing"],
+      "sightseeing_score": 7.53641841600807,
+      "coordinates": {
+        "latitude": -27.44452,
+        "longitude": 153.100415
+      },
+      "snippet": "The Sir Leo Hielscher Bridges are a side-by-side pair of road bridges on the Gateway Motorway which skirts the eastern suburbs of Brisbane, Queensland, Australia.",
+      "score": 7.53641841600807,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "Sir_Leo_Hielscher_Bridges"
+    },
+    {
+      "name": "Westport & Lee Cafe",
+      "tag_labels": [
+        "lunch",
+        "coffee",
+        "breakfast",
+        "poitype-Cafe",
+        "eatingout"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -27.458596099999998,
+        "longitude": 152.99407635
+      },
+      "snippet": "A really beautiful cafe that offers good meals, great sandwiches and really good pastries.",
+      "score": 7.52356015717036,
+      "eatingout_score": 7.52356015717036,
+      "location_id": "Brisbane",
+      "id": "T__b5743dfdea53"
+    },
+    {
+      "name": "Old Government House",
+      "tag_labels": [
+        "museums",
+        "subtype-History_museums",
+        "district-brisbane_central_business_district",
+        "architectural_style-neoclassical_architecture",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.52184851393864,
+      "coordinates": {
+        "latitude": -27.477331,
+        "longitude": 153.029053
+      },
+      "snippet": "Queensland's first Government House is located at Gardens Point in the grounds of the Queensland University of Technology at the end of George Street in Brisbane, Queensland, Australia.",
+      "score": 7.52184851393864,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__8040468"
+    },
+    {
+      "name": "Mount Coot-tha Forest",
+      "tag_labels": [
+        "poitype-Park",
+        "district-mount_coot-tha",
+        "relaxinapark",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.49798470975508,
+      "coordinates": {
+        "latitude": -27.470522691587895,
+        "longitude": 152.94435580396888
+      },
+      "snippet": "Mount Coot-tha Forest is a heritage-listed forest reserve at Sir Samuel Griffith Drive, Mount Coot-tha, City of Brisbane, Queensland, Australia.",
+      "score": 7.49798470975508,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "T__7ba965cfef6f"
+    },
+    {
+      "name": "Portside Wharf",
+      "tag_labels": ["poitype-Port", "sightseeing"],
+      "sightseeing_score": 7.48266344566755,
+      "coordinates": {
+        "latitude": -27.44097222222222,
+        "longitude": 153.06833333333333
+      },
+      "snippet": "It is also an upscale residential and retail precinct including restaurants, shops, a large fish shop/cafe, a supermarket, Dendy cinema complex and a public plaza.",
+      "score": 7.48266344566755,
+      "eatingout_score": null,
+      "location_id": "Brisbane",
+      "id": "W__26381776"
+    }
+  ],
+  "estimated_total": 1,
+  "more": true
+}
