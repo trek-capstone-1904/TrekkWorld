@@ -1,0 +1,773 @@
+{
+  "results": [
+    {
+      "name": "Museum of Old and New Art",
+      "tag_labels": [
+        "museums",
+        "topattractions",
+        "subtype-Art_museums",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.4594215130895,
+      "coordinates": {
+        "latitude": -42.8125139,
+        "longitude": 147.2615637
+      },
+      "snippet": "This world-class museum of contemporary art has created a buzz in Hobart.",
+      "score": 9.4594215130895,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "W__148015865"
+    },
+    {
+      "name": "Salamanca Market",
+      "tag_labels": ["shopping", "do", "markets", "sightseeing"],
+      "sightseeing_score": 8.20933322105974,
+      "coordinates": {
+        "latitude": -42.8866027,
+        "longitude": 147.3323122
+      },
+      "snippet": "A major Saturday morning attraction, for locals and visitors alike.",
+      "score": 8.41289093697996,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__7d562a9141c1"
+    },
+    {
+      "name": "Tasmanian Museum and Art Gallery",
+      "tag_labels": [
+        "museums",
+        "character-Kid_friendly",
+        "subtype-Art_museums",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.32025936958193,
+      "coordinates": {
+        "latitude": -42.881983543393,
+        "longitude": 147.3319933693963
+      },
+      "snippet": "Established in 1843 by the Royal Society of Tasmania, TMAG is an impressive natural history museum, art gallery and herbarium in one.",
+      "score": 8.32025936958193,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "W__114368587"
+    },
+    {
+      "name": "Tasman Bridge",
+      "tag_labels": ["poitype-Bridge", "sightseeing"],
+      "sightseeing_score": 8.05767160792089,
+      "coordinates": {
+        "latitude": -42.86469095270212,
+        "longitude": 147.34543349228355
+      },
+      "snippet": "The bridge has a total length of 1,396m.",
+      "score": 8.05767160792089,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "Tasman_Bridge"
+    },
+    {
+      "name": "Hobart Zoo",
+      "tag_labels": ["zoos", "sightseeing"],
+      "sightseeing_score": 8.05435645302108,
+      "coordinates": {
+        "latitude": -42.8706371,
+        "longitude": 147.3329231
+      },
+      "snippet": "Although its location is now primarily the site of a Hobart City Council depot, some remnants, and archaeological remains of the original Zoo can still be seen.",
+      "score": 8.05435645302108,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__27775e043ce9"
+    },
+    {
+      "name": "Royal Tasmanian Botanical Gardens",
+      "tag_labels": ["poitype-Park", "relaxinapark", "sightseeing"],
+      "sightseeing_score": 7.77246424625589,
+      "coordinates": {
+        "latitude": -42.86457703144647,
+        "longitude": 147.33084674463225
+      },
+      "snippet": "Established in 1818 and located within the grounds of The Domain, the Royal Tasmanian Botanical Gardens showcase 6,500 species, including over 400 Tasmanian species.",
+      "score": 7.77246424625589,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "W__60305733"
+    },
+    {
+      "name": "Maritime Museum of Tasmania",
+      "tag_labels": ["museums", "sightseeing"],
+      "sightseeing_score": 7.60061544454688,
+      "coordinates": {
+        "latitude": -42.8826396,
+        "longitude": 147.33160740000002
+      },
+      "snippet": "This museum houses the largest collection of maritime artefacts in Tasmania.",
+      "score": 7.60061544454688,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "N__1011745586"
+    },
+    {
+      "name": "Army Museum of Tasmania",
+      "tag_labels": ["museums", "sightseeing"],
+      "sightseeing_score": 7.50594494968114,
+      "coordinates": {
+        "latitude": -42.88893367959637,
+        "longitude": 147.3255598574091
+      },
+      "snippet": "Located within the grounds of the historic Anglesea Barracks, which were established in 1811, this museum covers Tasmania's military history.",
+      "score": 7.50594494968114,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "N__487196884"
+    },
+    {
+      "name": "Cascades Female Factory",
+      "tag_labels": ["museums", "sightseeing"],
+      "sightseeing_score": 7.48579226998169,
+      "coordinates": {
+        "latitude": -42.8938107,
+        "longitude": 147.2998215
+      },
+      "snippet": "This site operated as a female factory between 1828 and 1856, which was intended to reform female convicts and segregate them from the \"temptations\" of Hobart.",
+      "score": 7.48579226998169,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "N__361030152"
+    },
+    {
+      "name": "Hope and Anchor Tavern",
+      "tag_labels": [
+        "poitype-Bar",
+        "cuisine-Steak",
+        "lunch",
+        "dinner",
+        "nightlife",
+        "eatingout",
+        "cuisine-Beer",
+        "drinks"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -42.8812145,
+        "longitude": 147.3318882
+      },
+      "snippet": "Vegetarian options, friendly staff and great food.",
+      "score": 7.48423097461043,
+      "eatingout_score": 7.50670757170007,
+      "location_id": "Hobart",
+      "id": "T__7815dfeb8f53"
+    },
+    {
+      "name": "St David's Cathedral",
+      "tag_labels": [
+        "architectural_style-gothic_revival_architecture",
+        "poitype-Church",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.46880098454715,
+      "coordinates": {
+        "latitude": -42.883555308111504,
+        "longitude": 147.32844059301038
+      },
+      "snippet": "The Cathedral Church of St David in Hobart is the principal Anglican church in Tasmania.",
+      "score": 7.46880098454715,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "N__331124450"
+    },
+    {
+      "name": "Shot Tower",
+      "tag_labels": ["sightseeing"],
+      "sightseeing_score": 7.40813843985296,
+      "coordinates": {
+        "latitude": -42.9579748,
+        "longitude": 147.3374626
+      },
+      "snippet": "This historic landmark boasts the titles of being the first shot tower in Australia and the tallest shot tower in the southern hemisphere.",
+      "score": 7.40813843985296,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "N__325574200"
+    },
+    {
+      "name": "Salamanca Arts Centre",
+      "tag_labels": ["poitype-Sight", "sightseeing"],
+      "sightseeing_score": 7.37528360726529,
+      "coordinates": {
+        "latitude": -42.88738401349489,
+        "longitude": 147.33287309730068
+      },
+      "snippet": "One of Hobart's smaller theatres, seating 165, the Peacock is located in the heart of the historic Salamanca Place.",
+      "score": 7.37528360726529,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "N__1295742525"
+    },
+    {
+      "name": "Hobart Town Hall",
+      "tag_labels": ["sightseeing"],
+      "sightseeing_score": 7.22804254791063,
+      "coordinates": {
+        "latitude": -42.8825759,
+        "longitude": 147.3309967
+      },
+      "snippet": "Hobart Town Hall is a landmark sandstone building which serves as seat of the City of Hobart local government area, hosting council meetings as well as acting as public auditorium that can be hired from the council.",
+      "score": 7.22804254791063,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__a49f55ee5b9e"
+    },
+    {
+      "name": "Parliament House",
+      "tag_labels": ["poitype-Sight", "sightseeing"],
+      "sightseeing_score": 7.20312849395114,
+      "coordinates": {
+        "latitude": -42.88550116356445,
+        "longitude": 147.33041191681704
+      },
+      "snippet": "Originally designated as a customs house, the Parliament House of Tasmania opened in 1840, but came to serve solely as the states Parliament House and in 1904.",
+      "score": 7.20312849395114,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "Parliament_House2C_Hobart"
+    },
+    {
+      "name": "Hobart Cenotaph",
+      "tag_labels": [
+        "architectural_style-egyptian_revival_architecture",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.18757493717019,
+      "coordinates": {
+        "latitude": -42.8778144,
+        "longitude": 147.3365526
+      },
+      "snippet": "Hobart Cenotaph, is the main commemorative military monument for the Australian state of Tasmania.",
+      "score": 7.18757493717019,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "N__301928920"
+    },
+    {
+      "name": "St. George's Anglican Church",
+      "tag_labels": ["poitype-Church", "sightseeing"],
+      "sightseeing_score": 7.16765744027963,
+      "coordinates": {
+        "latitude": -42.89147148025687,
+        "longitude": 147.33216420668717
+      },
+      "snippet": "St. George's Anglican Church is a church of the Diocese of Tasmania located in Cromwell Street, Battery Point, Hobart, Tasmania.",
+      "score": 7.16765744027963,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__29f9e84a8044"
+    },
+    {
+      "name": "Theatre Royal",
+      "tag_labels": [
+        "poitype-Theatre",
+        "showstheatresandmusic",
+        "frequented_by_locals",
+        "sightseeing"
+      ],
+      "sightseeing_score": 7.12752639846992,
+      "coordinates": {
+        "latitude": -42.87947414658443,
+        "longitude": 147.3312044949912
+      },
+      "snippet": "Hobart's famous theatre, and Australia's oldest, that opened in 1837 and has been saved from demolition on countless occasions.",
+      "score": 7.12752639846992,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "Theatre_Royal2C_Hobart"
+    },
+    {
+      "name": "Franklin Square",
+      "tag_labels": ["poitype-Square", "sightseeing"],
+      "sightseeing_score": 7.00290242811481,
+      "coordinates": {
+        "latitude": -42.8775,
+        "longitude": 147.3361111111111
+      },
+      "snippet": "Franklin Square is an oak lined public space in Central Hobart, Tasmania, Australia.",
+      "score": 7.00290242811481,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__c8f876ba59fc"
+    },
+    {
+      "name": "Mawson’s Huts Replica Museum",
+      "tag_labels": ["museums", "sightseeing"],
+      "sightseeing_score": 6.96640240742301,
+      "coordinates": {
+        "latitude": -42.88310080362169,
+        "longitude": 147.3322692757795
+      },
+      "snippet": "One of Hobart's newest attractions, this museum is a replica of the base stations constructed for Douglas Mawson's Australiasian Antarctic expedition of 1911.",
+      "score": 6.96640240742301,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__a0a1eefdfa7b"
+    },
+    {
+      "name": "Parliament Square",
+      "tag_labels": ["poitype-Square", "sightseeing"],
+      "sightseeing_score": 6.92969090275796,
+      "coordinates": {
+        "latitude": -42.885005,
+        "longitude": 147.330181
+      },
+      "snippet": "The site includes the former St Mary’s Hospital, the Red Brick Building, 34 West Davey Street, the former Government Printing Office building at 2-4 Salamanca Place and the former PABX building; and Government offices at 10 Murray Street, 12 Murray Street and 34 Davey Street, all of which are occupied by the State Government.",
+      "score": 6.92969090275796,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "Parliament_Square2C_Hobart"
+    },
+    {
+      "name": "Bonorong Wildlife Sanctuary",
+      "tag_labels": ["zoos", "sightseeing"],
+      "sightseeing_score": 6.89742887603989,
+      "coordinates": {
+        "latitude": -42.70916670847214,
+        "longitude": 147.27146840283
+      },
+      "snippet": "Established in 1981, this wildlife sanctuary aims to care for injured and orphaned wildlife, with all proceeds going to maintaining the park.",
+      "score": 6.89742887603989,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__33c4209a6d03"
+    },
+    {
+      "name": "Mcgees Bridge",
+      "tag_labels": ["poitype-Bridge", "sightseeing"],
+      "sightseeing_score": 6.84625935631504,
+      "coordinates": {
+        "latitude": -42.806526121453125,
+        "longitude": 147.52579259598116
+      },
+      "snippet": "The bridge provides a vital link between Hobart and two of Tasmania's principal tourist attractions - Port Arthur Historic Site on the Tasman Peninsula and the picturesque East Coast via the Tasman Highway.",
+      "score": 6.84625935631504,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__e256a310f102"
+    },
+    {
+      "name": "Hobart Synagogue",
+      "tag_labels": [
+        "architectural_style-egyptian_revival_architecture",
+        "sightseeing"
+      ],
+      "sightseeing_score": 6.83628634392489,
+      "coordinates": {
+        "latitude": -42.87965114706193,
+        "longitude": 147.32807894880273
+      },
+      "snippet": "Although several synagogues and churches were built in the Egyptian Revival style in the early nineteenth century, only a few are known to survive, they include the Downtown Presbyterian Church, Nashville, Tennessee, the First Presbyterian Church New York, the Old Synagogue at Canterbury, England and the Launceston Synagogue, Launceston, Tasmania.",
+      "score": 6.83628634392489,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "N__559832925"
+    },
+    {
+      "name": "Queenborough Memorial Garden",
+      "tag_labels": ["poitype-Park", "relaxinapark", "sightseeing"],
+      "sightseeing_score": 6.82441041553392,
+      "coordinates": {
+        "latitude": -42.904876,
+        "longitude": 147.3312984
+      },
+      "snippet": "After the demise of Sandy Bay in 1997, Hutchins moved to the ground during the 1998 season after vacating their former home ground of 43 years (Hutchins War Memorial Oval) just up the street from Queenborough.",
+      "score": 6.82441041553392,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "Queenborough_Oval"
+    },
+    {
+      "name": "Bowen Bridge",
+      "tag_labels": ["poitype-Bridge", "sightseeing"],
+      "sightseeing_score": 6.81982178183402,
+      "coordinates": {
+        "latitude": -42.81738758478905,
+        "longitude": 147.30742433595924
+      },
+      "snippet": "The Bowen Bridge is a four-lane road bridge crossing the Derwent River in Tasmania, Australia.",
+      "score": 6.81982178183402,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "Bowen_Bridge"
+    },
+    {
+      "name": "Railway Roundabout",
+      "tag_labels": ["sightseeing"],
+      "sightseeing_score": 6.8085817931461,
+      "coordinates": {
+        "latitude": -42.8780417,
+        "longitude": 147.3310268
+      },
+      "snippet": "Railway Roundabout is a three-lane roundabout in Hobart, Tasmania.",
+      "score": 6.8085817931461,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__289da373067f"
+    },
+    {
+      "name": "Mount Nelson",
+      "tag_labels": ["poitype-Mountain", "exploringnature", "sightseeing"],
+      "sightseeing_score": 6.76703430260038,
+      "coordinates": {
+        "latitude": -42.9242733,
+        "longitude": 147.3441611
+      },
+      "snippet": "A lookout that is a great, but lower altitude, alternative to the more popular Mount Wellington, still with some impressive views of Hobart and the Derwent River.",
+      "score": 6.76703430260038,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__d0089ffdeffd"
+    },
+    {
+      "name": "Sorell Causeway",
+      "tag_labels": ["poitype-Bridge", "sightseeing"],
+      "sightseeing_score": 6.7583491357111,
+      "coordinates": {
+        "latitude": -42.79805555555556,
+        "longitude": 147.54444444444445
+      },
+      "snippet": "The Sorell Causeway is a causeway in Tasmania that stretches from the western side of Midway Point across Orielton Lagoon to Sorell.",
+      "score": 6.7583491357111,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__5d9688a91812"
+    },
+    {
+      "name": "Farm Gate Market",
+      "tag_labels": ["shopping", "do", "markets", "sightseeing"],
+      "sightseeing_score": 6.94272249529086,
+      "coordinates": {
+        "latitude": -42.881075967629016,
+        "longitude": 147.32503362545023
+      },
+      "snippet": "This outdoor market is brimming with fresh seasonal produce, dairy products, wine and other food items from around Tasmania.",
+      "score": 6.6940892677491,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__d0ce3ff659f9"
+    },
+    {
+      "name": "Mount Wellington",
+      "tag_labels": ["poitype-Mountain", "exploringnature", "sightseeing"],
+      "sightseeing_score": 6.6910270925596,
+      "coordinates": {
+        "latitude": -42.89,
+        "longitude": 147.23
+      },
+      "snippet": "Mount Wellington, officially kunanyi / Mount Wellington, incorporating its Palawa kani name is a mountain in the southeast coastal region of Tasmania, Australia.",
+      "score": 6.6910270925596,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "N__740880502"
+    },
+    {
+      "name": "St John's Anglican Church",
+      "tag_labels": [
+        "architectural_style-gothic_revival_architecture",
+        "poitype-Church",
+        "sightseeing"
+      ],
+      "sightseeing_score": 6.5580949397532,
+      "coordinates": {
+        "latitude": -42.8548976,
+        "longitude": 147.2970337
+      },
+      "snippet": "St John's Anglican Church is an Anglican church located in, Tasmania, Australia, is notable for its unbroken record of use as a parish church, from the first service on 20 December 1835 up to the present.",
+      "score": 6.5580949397532,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "N__98602131"
+    },
+    {
+      "name": "Narryna",
+      "tag_labels": ["museums", "sightseeing"],
+      "sightseeing_score": 6.52741080515619,
+      "coordinates": {
+        "latitude": -42.8893084,
+        "longitude": 147.3315236
+      },
+      "snippet": "Narryna is a gem of Australian colonial architecture containing a rich collection of Tasmanian fine and decorative arts.The fine Greek Revival town house was built by Captain Andrew Haig in 1837-40.",
+      "score": 6.52741080515619,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__491bef060462"
+    },
+    {
+      "name": "Cascade Brewery",
+      "tag_labels": [
+        "lunch",
+        "nightlife",
+        "eatingout",
+        "cuisine-Beer",
+        "feature-Outdoor_seating",
+        "drinks"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -42.895833333333336,
+        "longitude": 147.2925
+      },
+      "snippet": "Australia's oldest brewery offers two tours for you to enjoy.",
+      "score": 6.52085837422391,
+      "eatingout_score": 6.53792220038809,
+      "location_id": "Hobart",
+      "id": "W__23378171"
+    },
+    {
+      "name": "Brunacci Avalon Market",
+      "tag_labels": ["shopping", "do", "markets", "sightseeing"],
+      "sightseeing_score": 6.71246313823704,
+      "coordinates": {
+        "latitude": -42.880558912899915,
+        "longitude": 147.32439214517464
+      },
+      "snippet": "A fairly new Hobart market, located within the heritage listed Avalon Theatre.",
+      "score": 6.5179195352795,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__4f03bf5eb10f"
+    },
+    {
+      "name": "Truckle & co.",
+      "tag_labels": ["sightseeing"],
+      "sightseeing_score": 6.50971112602882,
+      "coordinates": {
+        "latitude": -42.88271078360805,
+        "longitude": 147.3228112727357
+      },
+      "snippet": "For all things Italian Truckle & co. is a one-stop shop.",
+      "score": 6.50971112602882,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__2048e1e6ccb3"
+    },
+    {
+      "name": "General Post Office",
+      "tag_labels": [
+        "architectural_style-neo-baroque_architecture",
+        "architectural_style-edwardian_architecture",
+        "poitype-Sight",
+        "sightseeing"
+      ],
+      "sightseeing_score": 6.44365494211549,
+      "coordinates": {
+        "latitude": -42.8824,
+        "longitude": 147.3301
+      },
+      "snippet": "It stands next to the former Mercury Building and has served as the headquarters of the Tasmanian Postal system since its construction in 1905, though mail processing has now been moved to Glenorchy.",
+      "score": 6.44365494211549,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__d991e4686df5"
+    },
+    {
+      "name": "Royal Hobart Showground",
+      "tag_labels": [
+        "poitype-Music_venue",
+        "musicandshows",
+        "nightlife",
+        "sightseeing"
+      ],
+      "sightseeing_score": 6.39630446932795,
+      "coordinates": {
+        "latitude": -42.83113950288669,
+        "longitude": 147.2850880480951
+      },
+      "snippet": "Great prices.",
+      "score": 6.37638077426105,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "W__148284053"
+    },
+    {
+      "name": "State Library of Tasmania",
+      "tag_labels": ["sightseeing"],
+      "sightseeing_score": 6.36799689813516,
+      "coordinates": {
+        "latitude": -42.881789739490465,
+        "longitude": 147.3247843378275
+      },
+      "snippet": "The State Library of Tasmania is the main library of the library system in the state of Tasmania, Australia.",
+      "score": 6.36799689813516,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "N__301924369"
+    },
+    {
+      "name": "University of Tasmania",
+      "tag_labels": ["poitype-University", "sightseeing"],
+      "sightseeing_score": 6.3578453205377,
+      "coordinates": {
+        "latitude": -42.90322222222222,
+        "longitude": 147.32419444444443
+      },
+      "snippet": "The Tasmania University Union Inc. is the peak body of student representation for tertiary students attending the University of Tasmania.",
+      "score": 6.3578453205377,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__331460ae8269"
+    },
+    {
+      "name": "Sullivans Cove",
+      "tag_labels": ["sightseeing"],
+      "sightseeing_score": 6.34935120274403,
+      "coordinates": {
+        "latitude": -42.88527777777778,
+        "longitude": 147.33444444444444
+      },
+      "snippet": "This area is home to Hobart's main waterfront area and was the original landing point by European settlers in 1804.",
+      "score": 6.34935120274403,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__48432cc16fa7"
+    },
+    {
+      "name": "Mother India Authentic Indian Restaurant",
+      "tag_labels": [
+        "frequented_by_locals",
+        "poitype-Restaurant",
+        "lunch",
+        "dinner",
+        "cuisine-Indian",
+        "eatingout",
+        "cuisine-Vegetarian"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -42.87841426328585,
+        "longitude": 147.32145099666565
+      },
+      "snippet": "Nice food, good meals and excellent bread are on the menu in this indian restaurant.",
+      "score": 6.31442579249935,
+      "eatingout_score": 6.31442579249935,
+      "location_id": "Hobart",
+      "id": "T__aac555be699c"
+    },
+    {
+      "name": "Rosny College",
+      "tag_labels": ["poitype-University", "sightseeing"],
+      "sightseeing_score": 6.31171698323503,
+      "coordinates": {
+        "latitude": -42.86929750086104,
+        "longitude": 147.36524835076602
+      },
+      "snippet": "The College is held in high regard within its community, particularly the business community which provides great support for their vocational programs.The current principal of Rosny College is Ms Deb Day.",
+      "score": 6.31171698323503,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__191a1ec494da"
+    },
+    {
+      "name": "Government House",
+      "tag_labels": [
+        "architectural_style-gothic_revival_architecture",
+        "poitype-Sight",
+        "sightseeing"
+      ],
+      "sightseeing_score": 6.28737324466116,
+      "coordinates": {
+        "latitude": -42.867567,
+        "longitude": 147.333415
+      },
+      "snippet": "Located right next to the Botanic Gardens, Government House is a grand old building.",
+      "score": 6.28737324466116,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "Government_House2C_Hobart"
+    },
+    {
+      "name": "Hobart City Hall",
+      "tag_labels": ["poitype-Sight", "sightseeing"],
+      "sightseeing_score": 6.26610660711047,
+      "coordinates": {
+        "latitude": -42.8807170148459,
+        "longitude": 147.33181750381516
+      },
+      "snippet": "Hobart City Hall is a public auditorium and concert venue in Hobart, Tasmania, which together with the Derwent Entertainment Centre forms one of the two major public venues in the city.",
+      "score": 6.26610660711047,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "W__59340574"
+    },
+    {
+      "name": "Elizabeth Street",
+      "tag_labels": ["poitype-Street", "sightseeing"],
+      "sightseeing_score": 6.26290264299107,
+      "coordinates": {
+        "latitude": -42.88200555555556,
+        "longitude": 147.32888055555554
+      },
+      "snippet": "Elizabeth Street is the major street which runs South-East to North-West through the city and suburbs of Hobart, Tasmania, Australia.",
+      "score": 6.26290264299107,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "N__884191114"
+    },
+    {
+      "name": "Heritage Horse Drawn Carriages",
+      "tag_labels": ["museums", "sightseeing"],
+      "sightseeing_score": 6.24230097467032,
+      "coordinates": {
+        "latitude": -42.886471885398095,
+        "longitude": 147.33444117429175
+      },
+      "snippet": "Heritage Horse Drawn Carriages offers horse and carriage tours of Hobart's wonderful historic waterfront and Battery Point area.",
+      "score": 6.24230097467032,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__bac9b0b8c101"
+    },
+    {
+      "name": "Tasmanian Transport Museum",
+      "tag_labels": ["museums", "frequented_by_locals", "sightseeing"],
+      "sightseeing_score": 6.23380590965217,
+      "coordinates": {
+        "latitude": -42.83119659392647,
+        "longitude": 147.27476280874043
+      },
+      "snippet": "The TTM saves, restores and maintains rail and road items from Tasmania's past.",
+      "score": 6.23380590965217,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "W__35394567"
+    },
+    {
+      "name": "Campbell Street Gaol",
+      "tag_labels": ["museums", "sightseeing"],
+      "sightseeing_score": 6.2201819271572,
+      "coordinates": {
+        "latitude": -42.8774,
+        "longitude": 147.327
+      },
+      "snippet": "Designed in the Georgian Renaissance architectural style by John Lee Archer, what remains of the gaol is now managed by the National Trust of Australia as a historic site.",
+      "score": 6.2201819271572,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__4ee3f634e2e1"
+    },
+    {
+      "name": "Queens Domain",
+      "tag_labels": ["poitype-Park", "relaxinapark", "sightseeing"],
+      "sightseeing_score": 6.18781584619905,
+      "coordinates": {
+        "latitude": -42.88055555555555,
+        "longitude": 147.325
+      },
+      "snippet": "On the side of the hill facing the river sits Government House, one of the finest in the Commonwealth of Nations, and the Royal Tasmanian Botanical Gardens.",
+      "score": 6.18781584619905,
+      "eatingout_score": null,
+      "location_id": "Hobart",
+      "id": "T__d341da2ae093"
+    }
+  ],
+  "estimated_total": 1,
+  "more": true
+}

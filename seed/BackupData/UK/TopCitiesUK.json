@@ -1,0 +1,111 @@
+{
+  "results": [
+    {
+      "snippet": "Europe's financial metropolis and the former heart of the British Empire, packed with all sorts of attractions from sports to museums and two millennia of history.",
+      "score": 9.92214206563861,
+      "intro": "Europe's financial metropolis and the former heart of the British Empire, packed with all sorts of attractions from sports to museums and two millennia of history.",
+      "name": "London",
+      "id": "London"
+    },
+    {
+      "snippet": "Known for shopping. Recommended places to visit are Edinburgh Castle, Scottish National Gallery and Holyrood Palace.",
+      "score": 9.53183355410362,
+      "intro": "Medieval palaces, Gothic churches and fascinating historical buildings rub shoulders with the best of modern architecture, such as the Houses of Scottish Parliament and the refurbished National Museum of Scotland.",
+      "name": "Edinburgh",
+      "id": "Edinburgh"
+    },
+    {
+      "snippet": "Known for shopping. Recommended places to visit are Ashmolean Museum, Oxford University Museum of Natural History and Pitt Rivers Museum.",
+      "score": 9.2461502042126,
+      "intro": "Together with Cambridge (the second oldest university city and Oxford's great rival), Oxford has long represented the English academic establishment and elite (\"Oxbridge\"), a haven of tradition and endeavour.",
+      "name": "Oxford",
+      "id": "Oxford"
+    },
+    {
+      "snippet": "Known for music and shows. Recommended places to visit are Museum of Science and Industry, Manchester Art Gallery and National Football Museum.",
+      "score": 9.15689800478955,
+      "intro": "The region also hosts Manchester Airport, one of the UK's best-run international airports and the busiest British airport outside of South East England.",
+      "name": "Manchester",
+      "id": "Manchester"
+    },
+    {
+      "snippet": "Known for music and shows. Recommended places to visit are Kelvingrove Art Gallery and Museum, Riverside Museum and Gallery of Modern Art.",
+      "score": 8.99518539128735,
+      "intro": "Glasgow has become one of the most visited cities in the British Isles, and visitors will find a revitalised city centre, the best shopping outside London without a doubt, excellent parks and museums (the majority of which are free), and easy access to the Scottish Highlands and Islands.",
+      "name": "Glasgow",
+      "id": "Glasgow"
+    },
+    {
+      "snippet": "Known for music and shows. Recommended places to visit are Museum of Liverpool, Tate Liverpool and World Museum.",
+      "score": 8.96335112669857,
+      "intro": "Liverpool is a city with great cultural heritage and was awarded the title of European Capital of Culture 2008, with the famous Pier Head Waterfront being a UNESCO World Heritage site since 2004.",
+      "name": "Liverpool",
+      "id": "Liverpool"
+    },
+    {
+      "snippet": "Known for lunch. Recommended places to visit are Avon Gorge, M Shed and Bristol Museum & Art Gallery.",
+      "score": 8.82851202676464,
+      "intro": "Young people have flocked to Bristol thanks to the city's stunning and brilliant music scene - the likes of Massive Attack, Portishead, Tricky and Roni Size have contributed some of the most outstanding back catalogue of albums in the history of British music - not bad for a city which even in the early 1980s was considered a backwater of the British music scene.",
+      "name": "Bristol",
+      "id": "Bristol"
+    },
+    {
+      "snippet": "Known for lunch. Recommended places to visit are Roman Baths, Bath Abbey and Royal Crescent.",
+      "score": 8.81839270275576,
+      "intro": "Bath is a historic Roman and Georgian spa city. It is a, situated 100 miles west of London and 15 miles (25 km) south-east of the nearest big city, Bristol.",
+      "name": "Bath",
+      "id": "Bath2C_Somerset"
+    },
+    {
+      "snippet": "Known for lunch. Recommended places to visit are National Railway Museum, York Castle Museum and Yorkshire Museum.",
+      "score": 8.77933995661708,
+      "intro": "It is situated in North Yorkshire, England and is the unofficial capital of the entire region of Yorkshire, with some of the best preserved historical buildings and structures in Europe.",
+      "name": "York",
+      "id": "York"
+    },
+    {
+      "snippet": "Known for lunch. Recommended places to visit are National Museum Cardiff, St Fagans National Museum of History and Cardiff Castle.",
+      "score": 8.71156361328731,
+      "intro": "Sporting venues in the city include the Principality Stadium (the national stadium for the Welsh rugby union team), Sophia Gardens (the home of Glamorgan County Cricket Club), Cardiff City Stadium (the home of Cardiff City football team and the Wales football team), Cardiff International Sports Stadium (the home of Cardiff Amateur Athletic Club), Cardiff Arms Park (the home of Cardiff Blues and Cardiff RFC rugby union teams) and Ice Arena Wales (the home of Cardiff Devils ice hockey team).",
+      "name": "Cardiff",
+      "id": "Cardiff"
+    },
+    {
+      "snippet": "Known for music and shows. Recommended places to visit are Birmingham Museum and Art Gallery, Thinktank and St Martin in the Bull Ring.",
+      "score": 8.68619287757996,
+      "intro": "Birmingham's major cultural institutions – the City of Birmingham Symphony Orchestra, the Birmingham Royal Ballet, the Birmingham Repertory Theatre, the Library of Birmingham and the Barber Institute of Fine Arts – enjoy international reputations, and the city has vibrant and influential grassroots art, music, literary and culinary scenes.",
+      "name": "Birmingham",
+      "id": "Birmingham"
+    },
+    {
+      "snippet": "Known for music and shows. Recommended places to visit are Great North Museum: Hancock, Centre for Life and Great North Museum.",
+      "score": 8.65770554334996,
+      "intro": "The port developed in the 16th century and, along with the shipyards lower down the River Tyne, was amongst the world's largest shipbuilding and ship-repairing centres.",
+      "name": "Newcastle upon Tyne",
+      "id": "Newcastle_upon_Tyne"
+    },
+    {
+      "snippet": "Known for music and shows. Recommended places to visit are Ulster Museum, City Hall and Botanic Gardens.",
+      "score": 8.64977301705906,
+      "intro": "Indeed, the old cliche that you will be welcomed like an old friend by the patrons of Belfast's many pubs and bars is actually true, as the locals love to find out what draws you to their little part of the world and, of course, they like the chance to share a little bit of their history with you! Ask any local and they will tell you that a trip to Belfast will mean that you learn far more about the Irish and British psyche than a trip to a cheesy Irish pub in Dublin or on a tourist-orientated tour in London.",
+      "name": "Belfast",
+      "id": "Belfast"
+    },
+    {
+      "snippet": "Known for lunch. Recommended places to visit are Royal Pavilion, Brighton Toy and Model Museum and Brighton Museum & Art Gallery.",
+      "score": 8.57142438961964,
+      "intro": "In the summer Brighton truly flourishes, with both residents and visitors alike enjoying lazy days and beautiful sunsets on what is perhaps the city's greatest asset, the more than 5-mile stretch of shingle beach, facing south onto the English Channel.",
+      "name": "Brighton",
+      "id": "Brighton"
+    },
+    {
+      "snippet": "Known for music and shows. Recommended places to visit are Leeds Art Gallery, Harewood House and The Tetley.",
+      "score": 8.56439164780902,
+      "intro": "Bolstered by the 1816 Leeds-Liverpool Canal and the Leeds-Selby railway in 1835 (The Middleton Railway was the world's first commercial railway, 1758 Railway Act, from The Middleton colliery to coal-staithes (sidings) at Meadow Lane just south of Leeds Bridge), the city continued to grow and prosper rapidly, with grandiose architectural manifestations of the Victorian city's wealth built in abundance, and expanding affluent suburbs to the north.",
+      "name": "Leeds",
+      "id": "Leeds"
+    }
+  ],
+  "estimated_total": 10128,
+  "more": true
+}

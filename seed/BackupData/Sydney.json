@@ -1,0 +1,234 @@
+{
+  "results": [
+    {
+      "name": "Sydney Harbour Bridge",
+      "tag_labels": ["poitype-Bridge", "topattractions", "sightseeing"],
+      "sightseeing_score": 9.89706518609158,
+      "coordinates": {
+        "latitude": -33.8515983,
+        "longitude": 151.2110991
+      },
+      "snippet": "Under the direction of Dr John Bradfield of the NSW Department of Public Works, the bridge was designed and built by British firm Dorman Long and Co Ltd of Middlesbrough and opened in 1932.",
+      "score": 9.89706518609158,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__18372554"
+    },
+    {
+      "name": "Art Gallery of New South Wales",
+      "tag_labels": [
+        "subtype-Art_museums",
+        "architectural_style-neoclassical_architecture",
+        "topattractions",
+        "museums",
+        "district-sydney_central_business_district",
+        "person_architect-walter_liberty_vernon",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.85792596205538,
+      "coordinates": {
+        "latitude": -33.86887111320513,
+        "longitude": 151.21735127698264
+      },
+      "snippet": "The Art Gallery of New South Wales is the leading museum of art in New South Wales and Sydney, and one of Australia's foremost cultural institutions.",
+      "score": 9.85792596205538,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__13757765"
+    },
+    {
+      "name": "Museum of Contemporary Art",
+      "tag_labels": [
+        "subtype-Art_museums",
+        "subtype-Modern_art_museums",
+        "topattractions",
+        "museums",
+        "architectural_style-art_deco_architecture",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.83879395679778,
+      "coordinates": {
+        "latitude": -33.86008548494921,
+        "longitude": 151.20897477411017
+      },
+      "snippet": "Housed in a fabulous 1930s art deco building, former location of the Maritime Services Board and facing onto the western side of Circular Quay and Sydney Cove, the MCA has been dedicated - since its opening in 1991 - to showcasing great works of modern and contemporary art in all media.",
+      "score": 9.83879395679778,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "W__16599528"
+    },
+    {
+      "name": "Coogee Pavilion",
+      "tag_labels": [
+        "coffee",
+        "district-coogee",
+        "cuisine-Wine",
+        "cuisine-Cocktail",
+        "cuisine-Seafood",
+        "cuisine-Pizza",
+        "poitype-Restaurant",
+        "lunch",
+        "dinner",
+        "character-Kid_friendly",
+        "eatingout",
+        "cuisine-Beer",
+        "breakfast"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -33.9187341,
+        "longitude": 151.2582358
+      },
+      "snippet": "Fans praise the excellent pastries, excellent burgers and awesome cakes.",
+      "score": 9.79580835225306,
+      "eatingout_score": 9.79580835225306,
+      "location_id": "Sydney",
+      "id": "T__b6caa698e860"
+    },
+    {
+      "name": "Sydney Opera House",
+      "tag_labels": [
+        "architectural_style-modernist_architecture",
+        "topattractions",
+        "poitype-Music_venue",
+        "district-sydney_central_business_district",
+        "musicandshows",
+        "nightlife",
+        "architectural_style-expressionist_architecture",
+        "architectural_style-high-tech_architecture",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.95861046418663,
+      "coordinates": {
+        "latitude": -33.856783,
+        "longitude": 151.2155463
+      },
+      "snippet": "The world heritage listed Sydney Opera House in the north east of the city is one of Sydney's most beautiful and unusual buildings; its sail shaped structure, designed by Jørn Utzon, is world famous, and it is the only structure in the world to have been designated a UNESCO World Heritage Site during the lifetime of its architect.",
+      "score": 9.76929908799161,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__1263141006"
+    },
+    {
+      "name": "Tetsuya's",
+      "tag_labels": [
+        "district-darling_harbour",
+        "cuisine-Dessert",
+        "cuisine-Japanese",
+        "cuisine-Wine",
+        "cuisine-Seafood",
+        "district-sydney_central_business_district",
+        "poitype-Restaurant",
+        "lunch",
+        "dinner",
+        "eatingout",
+        "cuisine-Asian"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -33.8751964,
+        "longitude": 151.2051527
+      },
+      "snippet": "Tetsuya's, which serves fusion Japanese and French style food, is one of Sydney's most famous and highly regarded restaurants, generally named in the top three year after year.",
+      "score": 9.76775554208521,
+      "eatingout_score": 9.76775554208521,
+      "location_id": "Sydney",
+      "id": "Tetsuya27s"
+    },
+    {
+      "name": "Royal Botanic Garden",
+      "tag_labels": [
+        "poitype-Park",
+        "district-sydney_central_business_district",
+        "topattractions",
+        "relaxinapark",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.66615034948719,
+      "coordinates": {
+        "latitude": -33.8636544557417,
+        "longitude": 151.216496755485
+      },
+      "snippet": "One of Sydney's greatest assets, from in front of the State Art Gallery, out to Mrs Macquaries chair, across to Farm Cove and onto the Sydney Opera House.",
+      "score": 9.66615034948719,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "N__26526161"
+    },
+    {
+      "name": "Sydney Tower",
+      "tag_labels": [
+        "cuisine-Dessert",
+        "cuisine-Wine",
+        "cuisine-Cocktail",
+        "cuisine-Steak",
+        "poitype-Restaurant",
+        "character-Romantic",
+        "lunch",
+        "dinner",
+        "eatingout",
+        "architectural_style-high-tech_architecture",
+        "district-sydney_central_business_district"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -33.8707038,
+        "longitude": 151.2084686
+      },
+      "snippet": "Towering above the city of Sydney since 1981, when it became the tallest structure in the city, the Sydney Tower reaches a total height of 305m - great views are available from the 250m high viewing level.",
+      "score": 9.63030585647519,
+      "eatingout_score": 9.63030585647519,
+      "location_id": "Sydney",
+      "id": "Sydney_Tower"
+    },
+    {
+      "name": "Carriageworks",
+      "tag_labels": [
+        "subtype-Art_museums",
+        "district-inner_west",
+        "frequented_by_locals",
+        "subtype-Modern_art_museums",
+        "topattractions",
+        "museums",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.5929122002552,
+      "coordinates": {
+        "latitude": -33.89415975509391,
+        "longitude": 151.19160109056025
+      },
+      "snippet": "Carriageworks is a cultural facility of the NSW Government and receives support from Arts NSW and the Australian Government through the Australia Council for the Arts.",
+      "score": 9.5929122002552,
+      "eatingout_score": null,
+      "location_id": "Sydney",
+      "id": "T__e4b887084bbe"
+    },
+    {
+      "name": "Sailors Thai",
+      "tag_labels": [
+        "cuisine-Dessert",
+        "district-the_rocks",
+        "cuisine-Wine",
+        "cuisine-Thai",
+        "poitype-Restaurant",
+        "lunch",
+        "dinner",
+        "cuisine-Spicy",
+        "eatingout",
+        "feature-Outdoor_seating"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": -33.8586771,
+        "longitude": 151.2092784
+      },
+      "snippet": "One of the Thai restaurants owned by David Thompson, probably one of the best Thai chefs in the world.",
+      "score": 9.5600156318833,
+      "eatingout_score": 9.5600156318833,
+      "location_id": "Sydney",
+      "id": "wtl__61532594"
+    }
+  ],
+  "estimated_total": 1,
+  "more": true
+}

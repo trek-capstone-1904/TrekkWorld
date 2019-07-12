@@ -1,0 +1,227 @@
+{
+  "results": [
+    {
+      "name": "Museum of Science and Industry",
+      "tag_labels": [
+        "district-manchester_city_centre",
+        "district-city_centre",
+        "topattractions",
+        "museums",
+        "character-Kid_friendly",
+        "subtype-History_museums",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.64343568708606,
+      "coordinates": {
+        "latitude": 53.47721343055634,
+        "longitude": -2.2562576839905586
+      },
+      "snippet": "This is a great museum for those interested in our (global) industrial heritage: sited at one end of the world's first passenger railway line.",
+      "score": 9.64343568708606,
+      "eatingout_score": null,
+      "location_id": "Manchester",
+      "id": "N__331417866"
+    },
+    {
+      "name": "Manchester Art Gallery",
+      "tag_labels": [
+        "museums",
+        "topattractions",
+        "subtype-Art_museums",
+        "district-chinatown",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.61696692943023,
+      "coordinates": {
+        "latitude": 53.47865588591742,
+        "longitude": -2.2413955564499237
+      },
+      "snippet": "The principal wing is the work of Sir Charles Barry, also architect of the House of Parliament.",
+      "score": 9.61696692943023,
+      "eatingout_score": null,
+      "location_id": "Manchester",
+      "id": "W__30957808"
+    },
+    {
+      "name": "National Football Museum",
+      "tag_labels": [
+        "district-manchester_city_centre",
+        "district-city_centre",
+        "topattractions",
+        "museums",
+        "character-Kid_friendly",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.49803496219134,
+      "coordinates": {
+        "latitude": 53.485836,
+        "longitude": -2.242176
+      },
+      "snippet": "The National Football Museum is England’s national museum of football.",
+      "score": 9.49803496219134,
+      "eatingout_score": null,
+      "location_id": "Manchester",
+      "id": "W__56322788"
+    },
+    {
+      "name": "Imperial War Museum North",
+      "tag_labels": [
+        "museums",
+        "district-the_quays",
+        "character-Kid_friendly",
+        "topattractions",
+        "sightseeing"
+      ],
+      "sightseeing_score": 9.42851089457773,
+      "coordinates": {
+        "latitude": 53.469711646822404,
+        "longitude": -2.298809478035147
+      },
+      "snippet": "The Imperial War Museum in London contains tanks, guns, planes and uniforms.",
+      "score": 9.42851089457773,
+      "eatingout_score": null,
+      "location_id": "Manchester",
+      "id": "W__28249549"
+    },
+    {
+      "name": "Albert Square",
+      "tag_labels": [
+        "poitype-Square",
+        "district-city_centre",
+        "architectural_style-gothic_revival_architecture",
+        "topattractions",
+        "district-manchester_city_centre",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.98508640083622,
+      "coordinates": {
+        "latitude": 53.479494300468474,
+        "longitude": -2.245100618713248
+      },
+      "snippet": "It is dominated by its largest building, the Grade I listed Manchester Town Hall, a Victorian Gothic building by Alfred Waterhouse.",
+      "score": 8.98508640083622,
+      "eatingout_score": null,
+      "location_id": "Manchester",
+      "id": "W__155729951"
+    },
+    {
+      "name": "Sandinista",
+      "tag_labels": [
+        "district-manchester_city_centre",
+        "cuisine-Wine",
+        "cuisine-Cocktail",
+        "cuisine-Mexican",
+        "poitype-Restaurant",
+        "cuisine-Tapas",
+        "lunch",
+        "dinner",
+        "district-city_centre",
+        "eatingout",
+        "cuisine-Beer",
+        "cuisine-Spanish"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 53.482199557765604,
+        "longitude": -2.245056332171915
+      },
+      "snippet": "Spanish buffet and nice staff.",
+      "score": 8.93893985800916,
+      "eatingout_score": 8.93893985800916,
+      "location_id": "Manchester",
+      "id": "106092922807399"
+    },
+    {
+      "name": "Heaton Park",
+      "tag_labels": [
+        "poitype-Park",
+        "character-Kid_friendly",
+        "topattractions",
+        "relaxinapark",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.87801581859168,
+      "coordinates": {
+        "latitude": 53.5360764,
+        "longitude": -2.2528821
+      },
+      "snippet": "It contains an 18-hole golf course, a boating lake, an animal farm, a pitch and putt course, a golf driving range, woodlands, ornamental gardens, an observatory, an adventure playground, a Papal monument and a volunteer-run tram system and museum, and is listed Grade II by Historic England.",
+      "score": 8.87801581859168,
+      "eatingout_score": null,
+      "location_id": "Manchester",
+      "id": "W__26803010"
+    },
+    {
+      "name": "The Old Wellington Inn",
+      "tag_labels": [
+        "district-manchester_city_centre",
+        "cuisine-Ale",
+        "district-city_centre",
+        "poitype-Bar",
+        "feature-Outdoor_seating",
+        "lunch",
+        "dinner",
+        "nightlife",
+        "eatingout",
+        "cuisine-Beer",
+        "badge-Book_now",
+        "drinks"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 53.48468599999999,
+        "longitude": -2.2440218999999995
+      },
+      "snippet": "Reasonable prices at this lovely bar.",
+      "score": 8.82067577805442,
+      "eatingout_score": 8.90084176438259,
+      "location_id": "Manchester",
+      "id": "N__1177311405"
+    },
+    {
+      "name": "Manchester Cathedral",
+      "tag_labels": [
+        "district-city_centre",
+        "architectural_style-gothic_architecture",
+        "poitype-Church",
+        "district-manchester_city_centre",
+        "sightseeing"
+      ],
+      "sightseeing_score": 8.60677090783564,
+      "coordinates": {
+        "latitude": 53.485227262727776,
+        "longitude": -2.2444039724856335
+      },
+      "snippet": "Cathedral Yard (Visitor Centre at 10 Cateaton Street, around the corner).",
+      "score": 8.60677090783564,
+      "eatingout_score": null,
+      "location_id": "Manchester",
+      "id": "W__130040953"
+    },
+    {
+      "name": "The Briton's Protection",
+      "tag_labels": [
+        "district-manchester_city_centre",
+        "cuisine-Ale",
+        "district-city_centre",
+        "eatingout",
+        "nightlife",
+        "poitype-Bar",
+        "cuisine-Beer",
+        "drinks"
+      ],
+      "sightseeing_score": null,
+      "coordinates": {
+        "latitude": 53.47490699713756,
+        "longitude": -2.2473188156093937
+      },
+      "snippet": "Behind the stage door entrance of the Bridgewater Hall.",
+      "score": 8.34469856586864,
+      "eatingout_score": 8.80462250600798,
+      "location_id": "Manchester",
+      "id": "W__23107249"
+    }
+  ],
+  "estimated_total": 1,
+  "more": true
+}
