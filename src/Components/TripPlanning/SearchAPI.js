@@ -59,6 +59,7 @@ function useFetchCities(country, code) {
 export const SearchAPI = props => {
   const { tripId } = props;
   const { code, city, country } = props;
+  const { type } = props;
   // const [hasError, setErrors] = useState({});
   // const [location, setLocation] = useState("Paris,FR");
   // const [searchCity, setSearchCity] = useState(city);
@@ -66,35 +67,43 @@ export const SearchAPI = props => {
   // const [sights, setSights] = useState({});
   const sightsToSee = useFetchSights(city, country, code);
   const popularCities = useFetchCities(country, code);
-  console.log('sightsToSee',sightsToSee.results && sightsToSee.results)
-  return (
-    <div>
-      <h4>Sightseeing Spots</h4>
-      {sightsToSee.results &&
-        sightsToSee.results.map(sight => (
-          <SearchAPICard
-            key={sight.id}
-            sight={sight}
-            country={country}
-            code={code}
-            type="sights"
-            tripId={tripId}
-          />
-        ))}
-      <h4>Popular Cities</h4>
-      {popularCities.results &&
-        popularCities.results.map(sight => (
-          <SearchAPICard
-            key={sight.id}
-            sight={sight}
-            country={country}
-            code={code}
-            type="city"
-            tripId={tripId}
-          />
-        ))}
-    </div>
-  );
+  console.log('sightsToSee', sightsToSee.results && sightsToSee.results);
+
+  if (type === 'sights') {
+    return (
+      <div>
+        <h4>Sightseeing Spots</h4>
+        {sightsToSee.results &&
+          sightsToSee.results.map(sight => (
+            <SearchAPICard
+              key={sight.id}
+              sight={sight}
+              country={country}
+              code={code}
+              type="sights"
+              tripId={tripId}
+            />
+          ))}
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <h4>Popular Cities</h4>
+        {popularCities.results &&
+          popularCities.results.map(sight => (
+            <SearchAPICard
+              key={sight.id}
+              sight={sight}
+              country={country}
+              code={code}
+              type="city"
+              tripId={tripId}
+            />
+          ))}
+      </div>
+    );
+  }
 };
 
 export default SearchAPI;

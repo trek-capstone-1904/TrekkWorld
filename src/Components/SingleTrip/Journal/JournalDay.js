@@ -4,7 +4,7 @@ import Selector from "./Selector";
 import Notes from "./Notes";
 import AllNotes from "./AllNotes";
 import JournalCard from "./JournalCard";
-import { Form, CardDeck, Spinner, Badge } from "react-bootstrap";
+import { Form, CardDeck, Spinner, Badge, CardColumns } from "react-bootstrap";
 import db from "../../../firebase";
 import style from "./journal.module.css";
 import userContext from '../../../Contexts/userContext';
@@ -55,17 +55,17 @@ const JournalDay = props => {
     }
     return (
       <div className={style.card}>
-        <h3>{props.date}</h3>
+        <h3 style={{padding: "1rem"}}>{props.date}</h3>
         <Form style={{ maxWidth: "40rem", margin: "auto" }}>
           {/* query the journal date places map, put the results into an array, map over them, and render a journalCard for each place */}
 
           {/* replace selectedOption with the values you get back from querying the Journal Date Places map */}
           {placesArray && (
-            <CardDeck>
+            <CardColumns style={{alignContent: "middle"}}>
               {placesArray.map(place => (
                 <JournalCard key={place.value} place={place.value} />
               ))}
-            </CardDeck>
+            </CardColumns>
           )}
 
           <Form.Label>
@@ -76,7 +76,7 @@ const JournalDay = props => {
           <div>
             {/* <div>Notes</div> */}
             <AllNotes tripId={props.tripId} date={props.date} />
-            <div>
+            <div style={{display: "flex", justifyContent: "center"}}>
               {isThisAFellowTrekker() && (
                 <>
                 <Notes tripId={props.tripId} date={props.date} />

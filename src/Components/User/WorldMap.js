@@ -43,7 +43,7 @@ export const WorldMap = () => {
               // colorAxis: { colors: 'blue' },
               backgroundColor: "none",
               datalessRegionColor: "lightgray",
-              defaultColor: "#17a2b8"
+              defaultColor: "#D1495B"
             }}
           />
           <span style={{ position: "absolute", top: "0%", left: "0%" }}>

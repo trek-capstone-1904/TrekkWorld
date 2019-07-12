@@ -69,7 +69,7 @@ export const Selector = props => {
     if (datePlaces && datePlaces.length > 0) {
       return (
         <>
-        <Button type="button" onClick={toggle}>Add a Location</Button>
+        <Button style={{margin: ".5rem"}} type="button" onClick={toggle}>Add a Location</Button>
         <Modal show={isShowing} onHide={toggle} size="lg" centered>
         <Modal.Header closeButton>
           <Modal.Title>Add Locations</Modal.Title>
@@ -94,7 +94,7 @@ export const Selector = props => {
     } else {
       return (
         <>
-         <Button type="button" onClick={toggle}>Add a Location</Button>
+         <Button style={{margin: ".5rem"}} type="button" onClick={toggle}>Add a Location</Button>
          <Modal show={isShowing} onHide={toggle} size="lg" centered>
          <Modal.Header closeButton>
           <Modal.Title>Add Locations</Modal.Title>
