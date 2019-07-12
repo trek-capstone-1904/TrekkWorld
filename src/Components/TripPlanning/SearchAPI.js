@@ -32,7 +32,7 @@ function useFetchSights(city, country, code) {
     city = city.split(' ').join('_');
   }
 
-  const query = `https://www.triposo.com/api/20181213/poi.json?tag_labels=eatingout|sightseeing&location_id=${city}&countrycode=${code}&order_by=-score&count=10&fields=snippet,id,name,location_id,score,tag_labels,coordinates&account=${
+  const query = `https://www.triposo.com/api/20181213/poi.json?tag_labels=eatingout|sightseeing&location_id=${city}&countrycode=${code}&order_by=-score&count=50&fields=snippet,id,name,location_id,score,tag_labels,coordinates&account=${
     secret.triposoAccount
   }&token=${secret.triposoToken}`;
 
