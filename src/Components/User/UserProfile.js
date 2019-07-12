@@ -77,7 +77,7 @@ export const UserProfile = props => {
               styles.userProfileBackground
             }`}
           >
-            {userInfo.Trips && <UserProfileTrips trips={userInfo.Trips} />}
+            {userInfo.Trips && <UserProfileTrips userProfile={true} trips={userInfo.Trips} />}
           </div>
           <div className={styles.userStats}>
             <div

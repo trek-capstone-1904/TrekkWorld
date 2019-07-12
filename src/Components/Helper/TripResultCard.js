@@ -54,18 +54,13 @@ export const TripResultCard = props => {
   tripCompleted();
 
   return (
-    <Card
-      style={{
-        // margin: '.5rem',
-        // width: '40rem',
-        padding: '.5rem',
-      }}
-      className={styles.TripCard}
-    >
+    <Card className={styles.TripCard}>
       <Link to={`/trip/${props.tripId}`}>
-        <Card.Title className={styles.TripTitle} style={{fontSize:'1.6rem'}}>{card.tripName}</Card.Title>
+        <Card.Title className={styles.TripTitle} style={{ fontSize: '1.6rem' }}>
+          {card.tripName}
+        </Card.Title>
       </Link>
-      <Card.Subtitle style={{fontSize:'.9rem'}} className="mb-2">
+      <Card.Subtitle style={{ fontSize: '.9rem' }} className="mb-2">
         {moment(card.startDate).format('MMM D, YYYY')}
       </Card.Subtitle>
       {card.placeImage && <img src={card.placeImage} alt="sight" />}
@@ -74,7 +69,7 @@ export const TripResultCard = props => {
           <Badge
             style={{
               color: '#D1495B',
-              backgroundColor: 'lightgray',
+              backgroundColor: 'white',
               margin: '.25rem',
             }}
             key={user[0]}
@@ -108,38 +103,40 @@ export const TripResultCard = props => {
           </Badge>
         )}
         {tripCompleted() && (
-          <Badge className={styles.complete}  display={tripCompleted()}>
+          <Badge className={styles.complete} display={tripCompleted()}>
             {tripCompleted()}
           </Badge>
         )}
       </div>
-      <Accordion>
-        <Accordion.Toggle
-          as={Button}
-          style={{ color: '#00798C' }}
-          variant="link"
-          eventKey="0"
-        >
-          View Places
-        </Accordion.Toggle>
-        <Accordion.Collapse eventKey="0">
-          <ListGroup as="ul">
-            {value &&
-              value.docs
-                .filter(doc => !doc.data().locations)
-                .map(doc => (
-                  <ListGroup.Item as="li">
-                    <TripResultPlaceCard
-                      key={doc.id}
-                      placeId={doc.id}
-                      card={doc.data()}
-                      tripId={tripId}
-                    />
-                  </ListGroup.Item>
-                ))}
-          </ListGroup>
-        </Accordion.Collapse>
-      </Accordion>
+      {!props.userProfile && (
+        <Accordion>
+          <Accordion.Toggle
+            as={Button}
+            style={{ color: '#00798C' }}
+            variant="link"
+            eventKey="0"
+          >
+            View Places
+          </Accordion.Toggle>
+          <Accordion.Collapse eventKey="0">
+            <ListGroup as="ul">
+              {value &&
+                value.docs
+                  .filter(doc => !doc.data().locations)
+                  .map(doc => (
+                    <ListGroup.Item as="li">
+                      <TripResultPlaceCard
+                        key={doc.id}
+                        placeId={doc.id}
+                        card={doc.data()}
+                        tripId={tripId}
+                      />
+                    </ListGroup.Item>
+                  ))}
+            </ListGroup>
+          </Accordion.Collapse>
+        </Accordion>
+      )}
       <div />
     </Card>
   );

@@ -11,11 +11,13 @@
 } */
 .CardUser > div {
   background-color: #30638e;
+
 }
 
 .CardUser > .TripCard {
   margin: 1rem;
   width: 23rem;
+  padding: 1.2rem;
 }
 .CardUser > .TripCard > a {
   color: white;
@@ -47,6 +49,7 @@
   margin: 0.5rem auto;
   max-width: 35rem;
   color: gray;
+  padding: .7rem;
 }
 
 /* .TripSearch > .TripCard > .badge{
