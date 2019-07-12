@@ -1,4 +1,9 @@
-.cardText{
+.cardText {
   font-family: 'Rubik', sans-serif;
-  font-size: .85rem;
+  font-size: 0.85rem;
+}
+
+.specialBlue {
+  background-color: #30638e;
+  border-color: #30638e;
 }

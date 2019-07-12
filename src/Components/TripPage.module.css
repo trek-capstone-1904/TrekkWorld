@@ -5,6 +5,13 @@
   margin-bottom: 0.6rem;
   text-align: left;
 }
+
+.specialBlue {
+  background-color: #30638e;
+  color: #fff;
+  border-color: #30638e;
+}
+
 .headerTrip {
   font-family: 'Oswald', sans-serif;
 }
@@ -19,6 +26,7 @@ h4.headerTrip {
 
 .tripInfoCard {
   /* width: 20rem; */
+  background-color: #30638e;
   text-align: left;
   color: white;
 }
