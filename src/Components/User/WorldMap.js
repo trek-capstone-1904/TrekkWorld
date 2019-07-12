@@ -60,8 +60,8 @@ export const WorldMap = () => {
           onHide={handleClose}
         >
           <Modal.Header>
-            <Modal.Title>
-              Countries Visited (Total: {dataCountries.length - 1})
+            <Modal.Title style={{color: "#003D5B"}}>
+               {dataCountries.length - 1} Countries Visited
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -72,12 +72,12 @@ export const WorldMap = () => {
                 // colorAxis: { colors: 'blue' },
                 backgroundColor: "none",
                 datalessRegionColor: "lightgray",
-                defaultColor: "#17a2b8"
+                defaultColor: "#D1495B"
               }}
             />
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="info" onClick={handleClose}>
+            <Button style={{backgroundColor: "#30638E"}}variant="info" onClick={handleClose}>
               Close
             </Button>
           </Modal.Footer>
