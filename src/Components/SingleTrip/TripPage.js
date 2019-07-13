@@ -25,6 +25,7 @@ import {
 } from '../index.js';
 import firebase from 'firebase/app';
 import styles from '../TripPage.module.css';
+import Toast from '../TripPlanning/Toast'
 
 export const TripPage = props => {
   const loggedInUser = useContext(userContext);
@@ -280,6 +281,7 @@ export const TripPage = props => {
           </div>
           <TripAlbum fellowTrekker={isThisAFellowTrekker()} tripId={tripId} />
         </div>
+        <Toast tripId={tripId}/>
       </div>
     );
   }
