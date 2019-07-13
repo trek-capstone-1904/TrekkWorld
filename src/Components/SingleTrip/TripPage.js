@@ -281,7 +281,7 @@ export const TripPage = props => {
           </div>
           <TripAlbum fellowTrekker={isThisAFellowTrekker()} tripId={tripId} />
         </div>
-        <Toast tripId={tripId}/>
+        {/* <Toast tripId={tripId}/> */}
       </div>
     );
   }
