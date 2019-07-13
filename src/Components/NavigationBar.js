@@ -4,6 +4,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import userContext from '../Contexts/userContext';
 import firebase from 'firebase/app';
 import { Link } from 'react-router-dom';
+import { TripSelectNav } from './index';
 export const NavigationBar = () => {
   let loggedInUser = useContext(userContext);
 
@@ -27,11 +28,24 @@ export const NavigationBar = () => {
       style={{ height: '8vh', justifyContent: 'space-between' }}
     >
       <Nav>
-        <img src="https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/website%2FiconTeal.png?alt=media&token=e04d9ccf-a0cc-4d6f-8f24-f51ecf1bc5b5" alt="travel icon" height="42" width="42"/>
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/trekk-fdf31.appspot.com/o/website%2FiconTeal.png?alt=media&token=e04d9ccf-a0cc-4d6f-8f24-f51ecf1bc5b5"
+          alt="travel icon"
+          height="42"
+          width="42"
+        />
         <Navbar.Brand>Trekk </Navbar.Brand>
-        <p style={{margin:'auto', color:'teal'}}>{loggedInUser.displayName}</p>
+        <p style={{ margin: 'auto', color: 'teal' }}>
+          {loggedInUser.displayName}
+        </p>
       </Nav>
       <Nav className="justify-content-end">
+        {/* <LinkContainer to="/profile">
+          <Nav.Link>
+            <TripSelectNav />
+          </Nav.Link>
+        </LinkContainer> */}
+        <TripSelectNav />
         <LinkContainer to="/profile">
           <Nav.Link>My Profile</Nav.Link>
         </LinkContainer>

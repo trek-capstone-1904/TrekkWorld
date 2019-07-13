@@ -31,13 +31,13 @@ const SignInScreen = props => {
               userPicture:
                 user.providerData[0].photoURL ||
                 `https://robohash.org/${user.displayName}`,
-              Trips:{}
+              Trips: {},
             })
             .then(function() {
-              props.history.push("/user");
+              props.history.push('/user');
             });
         } else {
-          props.history.push("/user");
+          props.history.push('/user');
         }
         return false;
       },

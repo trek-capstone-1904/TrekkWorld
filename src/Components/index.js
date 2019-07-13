@@ -22,6 +22,7 @@ import PhotoLoad from './Helper/PhotoLoad';
 import TripSelect from './TripPlanning/TripSelect';
 import TripSelectButton from './TripPlanning/TripSelectButton';
 import TripSelectButtonTripSearch from './TripPlanning/TripSelectButtonTripSearch';
+import TripSelectNav from './TripPlanning/TripSelectNav';
 
 export { default as UserProfile } from './User/UserProfile';
 export { default as UserProfileHeader } from './User/UserProfileHeader';
@@ -47,3 +48,4 @@ export { default as TripSelectButton } from './TripPlanning/TripSelectButton';
 export {
   default as TripSelectButtonTripSearch,
 } from './TripPlanning/TripSelectButtonTripSearch';
+export { default as TripSelectNav } from './TripPlanning/TripSelectNav';

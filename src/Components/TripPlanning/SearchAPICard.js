@@ -127,14 +127,10 @@ const handleClick = (slicedImage, props, uid, tripId) => {
                 placeImage: slicedImage,
               });
             console.log('Document successfully written!');
-          }).then(function(){
-
-              addToBucketList(slicedImage, uid, props.sight.id, name, snippet);
-
-
-          }
-
-          )
+          })
+          .then(function() {
+            addToBucketList(slicedImage, uid, props.sight.id, name, snippet);
+          })
           .catch(function(error) {
             console.error('Error writing document: ', error);
           });
