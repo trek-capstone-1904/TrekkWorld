@@ -21,24 +21,9 @@ export const SearchAPICard = props => {
 
   const { country } = props;
   const { name, snippet } = props.sight;
-  // const { tripId } = props;
   const [image, setImage] = useState('');
-  // const [tripId, setTripId] = useState('');
 
   const loggedInUser = useContext(userContext);
-
-  // const [snapshot, loading, error] = useDocument(
-  //   db.collection('Users').doc(`${loggedInUser.uid}`),
-  //   {
-  //     snapshotListenOptions: { includeMetadataChanges: false },
-  //   }
-  // );
-
-  // const changeTripId = (evt, type) => {
-  //   if (evt.currentTarget.name === 'tripId') {
-  //     setTripId(evt.target.value);
-  //   }
-  // };
 
   useGoogle(props.sight, country);
   function useGoogle(sight, country) {
@@ -97,25 +82,31 @@ export const SearchAPICard = props => {
 //use a generic handleClick so that it adds a new place to the place db
 // after it adds the place to the db, it assigns the place to either the bucketList or the TrekkList
 
-const handleClick = (slicedImage, props, uid, tripId) => {
+const handleClick = (slicedImage, props, uid) => {
   //query Places
   const placeRef = db.collection('Places').doc(props.sight.id);
-
+  console.log('Handle CLick is Hitting!!!!!!!!!!!!');
   const { name, snippet } = props.sight;
   // debugger;
+  console.log(
+    'args for bucketList',
+    slicedImage,
+    uid,
+    props.sight.id,
+    name,
+    snippet
+  );
+  console.log('props.sight.id', props.sight.id);
   placeRef
     .get()
     .then(function(doc) {
       if (doc.exists) {
-        //add the props.id to the user
         console.log('Document data:', doc.data());
-        // if (tripId) {
-        //   addToTrekk(slicedImage, uid, props.sight.id, name, snippet, tripId);
-        // } else {
+
         addToBucketList(slicedImage, uid, props.sight.id, name, snippet);
-        // }
       } else {
         // doc is created in 'Places' collection
+        console.log('props going to set', props);
         console.log('Place document did not exist');
         db.collection('Places')
           .doc(props.sight.id)
@@ -134,11 +125,8 @@ const handleClick = (slicedImage, props, uid, tripId) => {
           .catch(function(error) {
             console.error('Error writing document: ', error);
           });
-        // if (tripId) {
-        //   addToTrekk(slicedImage, uid, props.sight.id, name, snippet, tripId);
-        // } else {
-        addToBucketList(slicedImage, uid, props.sight.id, name, snippet);
-        // }
+
+        // addToBucketList(slicedImage, uid, props.sight.id, name, snippet);
       }
     })
     .catch(function(error) {
@@ -147,37 +135,47 @@ const handleClick = (slicedImage, props, uid, tripId) => {
 };
 
 const addToBucketList = (slicedImage, uid, placeId, placeName, snippet) => {
-  db.doc(`Users/${uid}`).update({
-    [`bucketList.${placeId}`]: {
-      placeName: placeName,
-      snippet: snippet,
-      placeImage: slicedImage,
-    },
-  });
-};
+  // db.doc(`Users/${uid}`).update({
+  //   [`bucketList.${placeId}`]: {
+  //     placeName: placeName,
+  //     snippet: snippet,
+  //     placeImage: slicedImage,
+  //   },
+  // });
 
-const addToTrekk = (slicedImage, uid, placeId, placeName, snippet, tripId) => {
-  //add to Trekklist
-  db.collection('Trips')
-    .doc(`${tripId}`)
-    .collection('TrekkList')
-    .doc(`${placeId}`)
-    .set(
-      {
+  db.collection(`Users`)
+    .doc(`${uid}`)
+    .update({
+      [`bucketList.${placeId}`]: {
         placeName: placeName,
         snippet: snippet,
         placeImage: slicedImage,
       },
-      { merge: true }
-    );
-
-  // delete from bucketList
-  db.collection('Users')
-    .doc(uid)
-    .update({
-      [`bucketList.${placeId}`]: firebase.firestore.FieldValue.delete(),
     });
 };
+
+// const addToTrekk = (slicedImage, uid, placeId, placeName, snippet, tripId) => {
+//   //add to Trekklist
+//   db.collection('Trips')
+//     .doc(`${tripId}`)
+//     .collection('TrekkList')
+//     .doc(`${placeId}`)
+//     .set(
+//       {
+//         placeName: placeName,
+//         snippet: snippet,
+//         placeImage: slicedImage,
+//       },
+//       { merge: true }
+//     );
+
+//   // delete from bucketList
+//   db.collection('Users')
+//     .doc(uid)
+//     .update({
+//       [`bucketList.${placeId}`]: firebase.firestore.FieldValue.delete(),
+//     });
+// };
 
 // put in render and change to dropdown
 
