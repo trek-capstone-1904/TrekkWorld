@@ -26,7 +26,7 @@ export const TrekkListCard = props => {
           variant="info"
           onClick={() => handleClick(tripId, placeId)}
         >
-          - Trekk List
+          Remove
         </Button>
       </Card.Body>
     </Card>

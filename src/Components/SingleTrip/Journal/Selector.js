@@ -69,7 +69,7 @@ export const Selector = props => {
     if (datePlaces && datePlaces.length > 0) {
       return (
         <>
-        <Button style={{margin: ".5rem"}} type="button" onClick={toggle}>Add a Location</Button>
+        <Button style={{margin: ".5rem", backgroundColor: "#00798C", border: "none"}} type="button" onClick={toggle}>Add a Location</Button>
         <Modal show={isShowing} onHide={toggle} size="lg" centered>
         <Modal.Header closeButton>
           <Modal.Title>Add Locations</Modal.Title>
@@ -82,7 +82,7 @@ export const Selector = props => {
             onChange={onChange}
           />
           <Button
-          style={{ width: "5rem", align: "centered" }}
+          style={{ width: "5rem", backgroundColor: "#00798C", border: "none", align: "centered" }}
           type="button"
           onClick={handleClose}
         >
@@ -94,7 +94,7 @@ export const Selector = props => {
     } else {
       return (
         <>
-         <Button style={{margin: ".5rem"}} type="button" onClick={toggle}>Add a Location</Button>
+         <Button style={{margin: ".5rem", backgroundColor: "#00798C", border: "none"}} type="button" onClick={toggle}>Add a Location</Button>
          <Modal show={isShowing} onHide={toggle} size="lg" centered>
          <Modal.Header closeButton>
           <Modal.Title>Add Locations</Modal.Title>

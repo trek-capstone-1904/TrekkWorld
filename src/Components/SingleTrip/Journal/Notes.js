@@ -37,7 +37,7 @@ export const Notes = props => {
 
   return (
     <div>
-      <Button style={{margin: ".5rem"}} type="button" onClick={toggle}>
+      <Button style={{margin: ".5rem", backgroundColor: "#00798C", border: "none"}} type="button" onClick={toggle}>
         Add a Note
       </Button>
       <Modal show={isShowing} onHide={toggle} size="lg" centered>
@@ -52,7 +52,7 @@ export const Notes = props => {
           placeholder={"Start typing..."}
         />
         <Button
-          style={{ width: "5rem", align: "centered" }}
+          style={{ width: "5rem", backgroundColor: "#00798C", border: "none", align: "centered" }}
           type="button"
           onClick={handleClose}
         >

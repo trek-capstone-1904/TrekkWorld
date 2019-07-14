@@ -114,7 +114,7 @@ export const TripPlanning = props => {
               />
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button style={{backgroundColor: "#EDAE49", border: "none"}}  type="submit">
               Submit
             </Button>
           </Form>
