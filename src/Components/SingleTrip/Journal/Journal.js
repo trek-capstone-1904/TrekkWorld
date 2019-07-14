@@ -59,7 +59,7 @@ export const Journal = props => {
         <span>
           <div>
             <Jumbotron className={style.heading}>{tripInfo.tripName} Journal</Jumbotron>
-            <Button onClick={handleClick} style={{backgroundColor: "#00798C", border: "none"}}className="sticky-top">Close Journal</Button>
+            <Button onClick={handleClick} style={{backgroundColor: "#EDAE49", border: "none"}}className="sticky-top">Close Journal</Button>
             {days.map(date => (
               <Jumbotron className={style.dayJumbo} key={date}>
                 <JournalDay
