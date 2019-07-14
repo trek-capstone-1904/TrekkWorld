@@ -23,20 +23,21 @@ export const BucketList = props => {
         {error && <strong>Error: {error}</strong>}
         {loading && <span>Document: Loading...</span>}
         {/* //TODO: add spinner */}
-        {snapshot && snapshot.data().bucketList && (
-          <span style={{ display: 'flex', flexDirection: 'row' }}>
-            {Object.keys(snapshot.data().bucketList).map(key => {
-              return (
-                <BucketListCard
-                  key={key}
-                  placeId={key}
-                  tripId={tripId}
-                  card={snapshot.data().bucketList[key]}
-                />
-              );
-            })}
-          </span>
-        )}
+        {snapshot &&
+          snapshot.data().bucketList &&
+          // <span style={{ display: 'flex', flexDirection: 'row' }}>
+          Object.keys(snapshot.data().bucketList).map(key => {
+            return (
+              <BucketListCard
+                key={key}
+                placeId={key}
+                tripId={tripId}
+                card={snapshot.data().bucketList[key]}
+              />
+            );
+          })
+          // </span>
+        }
       </CardGroup>
     </div>
   );

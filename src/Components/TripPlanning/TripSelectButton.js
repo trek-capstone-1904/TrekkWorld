@@ -38,6 +38,7 @@ export const TripSelectButton = props => {
           handleClick(slicedImage, button, loggedInUser.uid, evt)
         }
         id="bg-nested-dropdown"
+        variant="info"
       >
         {snapshot &&
           Object.entries(snapshot.data().Trips).map(trip => (

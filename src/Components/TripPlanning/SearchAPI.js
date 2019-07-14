@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import * as secret from '../../secrets';
 import SearchAPICard from './SearchAPICard';
+import { CardColumns } from 'react-bootstrap';
+import styles from '../SearchAPICard.module.css';
 
 function useFetch(url, defaultData) {
   const [data, updateData] = useState(defaultData);
@@ -32,7 +34,7 @@ function useFetchSights(city, country, code) {
     city = city.split(' ').join('_');
   }
 
-  const query = `https://www.triposo.com/api/20181213/poi.json?tag_labels=eatingout|sightseeing&location_id=${city}&countrycode=${code}&order_by=-score&count=10&fields=snippet,id,name,location_id,score,tag_labels,coordinates&account=${
+  const query = `https://www.triposo.com/api/20181213/poi.json?tag_labels=eatingout|sightseeing&location_id=${city}&countrycode=${code}&order_by=-score&count=15&fields=snippet,id,name,location_id,score,tag_labels,coordinates&account=${
     secret.triposoAccount
   }&token=${secret.triposoToken}`;
 
@@ -73,32 +75,36 @@ export const SearchAPI = props => {
     return (
       <div>
         <h4>Sightseeing Spots</h4>
-        {sightsToSee.results &&
-          sightsToSee.results.map(sight => (
-            <SearchAPICard
-              key={sight.id}
-              sight={sight}
-              country={country}
-              code={code}
-              type="sights"
-            />
-          ))}
+        <CardColumns className={styles.CardColumn}>
+          {sightsToSee.results &&
+            sightsToSee.results.map(sight => (
+              <SearchAPICard
+                key={sight.id}
+                sight={sight}
+                country={country}
+                code={code}
+                type="sights"
+              />
+            ))}
+        </CardColumns>
       </div>
     );
   } else {
     return (
       <div>
         <h4>Popular Cities</h4>
-        {popularCities.results &&
-          popularCities.results.map(sight => (
-            <SearchAPICard
-              key={sight.id}
-              sight={sight}
-              country={country}
-              code={code}
-              type="city"
-            />
-          ))}
+        <CardColumns className={styles.CardColumn}>
+          {popularCities.results &&
+            popularCities.results.map(sight => (
+              <SearchAPICard
+                key={sight.id}
+                sight={sight}
+                country={country}
+                code={code}
+                type="city"
+              />
+            ))}
+        </CardColumns>
       </div>
     );
   }
