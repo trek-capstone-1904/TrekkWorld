@@ -7,3 +7,15 @@
   background-color: #30638e;
   border-color: #30638e;
 }
+
+@media (min-width: 768px) {
+  .CardColumn {
+    column-count:2
+  }
+}
+
+/* @media (min-width: 992px) {
+  .CardColumn {
+    column-count:3
+  }
+} */
