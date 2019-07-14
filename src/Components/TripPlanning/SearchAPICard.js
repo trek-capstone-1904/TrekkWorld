@@ -75,15 +75,15 @@ export const SearchAPICard = props => {
   const slicedImage = image.slice(0, image.indexOf('&key'));
 
   return (
-    <Card style={{ margin: '.5rem 1rem' }}>
+    <Card style={{ margin: '.5rem 1rem', width:'25rem' }}>
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">{country}</Card.Subtitle>
         {image && <img src={image} alt="sight" />}
         <Card.Text className={styles.cardText}>{snippet}</Card.Text>
         <Button
-          style={{ margin: '0 1rem' }}
-          variant="info"
+          style={{ margin: '0 1rem', backgroundColor:'#EDAE49', border:'none' }}
+
           onClick={() => handleClick(slicedImage, props, loggedInUser.uid)}
         >
           + Bucket
