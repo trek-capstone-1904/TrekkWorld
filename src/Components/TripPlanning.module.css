@@ -69,4 +69,7 @@
   .tripPlanningJumbo > form {
     width: 80vw;
   }
+  .placeholderTripSearch {
+    width:98vw;
+  }
 }

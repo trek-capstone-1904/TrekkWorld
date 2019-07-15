@@ -8,14 +8,43 @@
   border-color: #30638e;
 }
 
-@media (min-width: 768px) {
+.CardColumn {
+  column-count: 2;
+}
+
+.cardLayout {
+  margin: '.5rem 1rem';
+  width: '25rem';
+  max-width:'25rem'
+}
+
+@media (min-width: 940px) {
   .CardColumn {
-    column-count:2
+    column-count: 2;
+  }
+  .cardLayout{
+    margin: '.5rem 1rem';
+    width: '25rem';
+    max-width:'25rem'
   }
 }
 
-/* @media (min-width: 992px) {
+@media (min-width: 576px) {
   .CardColumn {
-    column-count:3
+    column-count: 1;
   }
-} */
+  .cardLayout{
+    margin: '.5rem 1rem';
+    width: '25rem';
+    max-width:'25rem'
+  }
+}
+
+@media (max-width: 576px) {
+  .CardColumn {
+    column-count: 1;
+  }
+  .cardLayout{
+    width:90vw;
+  }
+}

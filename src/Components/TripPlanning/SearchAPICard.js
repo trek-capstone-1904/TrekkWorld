@@ -60,7 +60,7 @@ export const SearchAPICard = props => {
   const slicedImage = image.slice(0, image.indexOf('&key'));
 
   return (
-    <Card style={{ margin: '.5rem 1rem', width:'25rem' }}>
+    <Card style={{ margin: '.5rem 1rem', width:'21rem' }} className={styles.cardLayout}>
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">{country}</Card.Subtitle>
