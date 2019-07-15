@@ -44,10 +44,10 @@ const JournalDay = props => {
     function isThisAFellowTrekker() {
       let trekkersIds = Object.keys(users);
       if (trekkersIds.includes(userId)) {
-        console.log("GOING ON VACATION");
+
         return true;
       } else {
-        console.log("not my trip");
+
         return false;
       }
     }

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { Spinner, Button, Card, CardDeck } from "react-bootstrap";
-import Rating from "react-rating";
+import { Spinner, Card} from "react-bootstrap";
+
 import { useDocument } from "react-firebase-hooks/firestore";
 import db from "../../../firebase";
 import userContext from "../../../Contexts/userContext";
@@ -30,9 +30,9 @@ export const JournalCard = props => {
           <Card.Body style={{ maxHeight: "6rem", justifyContent: "center" }}>
             <Card.Text>
               {placeInfo.sight.name}
-              <footer style={{ fontSize: ".8rem" }} className="mb-2 text-muted">
+              <Card.Footer style={{ fontSize: ".8rem" }} className="mb-2 text-muted">
                 Added by {props.placeUser}
-              </footer>
+              </Card.Footer>
             </Card.Text>
             {/* <Rating /> */}
           </Card.Body>
