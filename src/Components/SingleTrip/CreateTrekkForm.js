@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useContext } from 'react';
-import { Form, Button, Col, Spinner } from 'react-bootstrap';
-import db from '../../firebase';
-import userContext from '../../Contexts/userContext';
-import CountriesSelect from '../Helper/CountrySelect';
-import history from '../../history';
-import { useDocumentOnce } from 'react-firebase-hooks/firestore';
-import { CountrySelect } from '../index.js';
+import React, { useState, useContext } from "react";
+import { Form, Button, Col, Spinner } from "react-bootstrap";
+import db from "../../firebase";
+import userContext from "../../Contexts/userContext";
+import CountriesSelect from "../Helper/CountrySelect";
+import history from "../../history";
+import { useDocumentOnce } from "react-firebase-hooks/firestore";
+import { CountrySelect } from "../index.js";
 
 //TODO add a created by for Trips, add trip to user with submit
 
@@ -15,38 +15,38 @@ export const CreateTrekkForm = props => {
   const loggedInUser = useContext(userContext);
   const userId = `${loggedInUser.uid}`;
   const userName = `${loggedInUser.displayName}`;
-  const [userPicture, setUserPicture] = useState('');
+  const [userPicture, setUserPicture] = useState("");
 
   const [values, setValues] = useState({
-    tripName: '',
-    locations: '',
+    tripName: "",
+    locations: "",
     users: {
       [userId]: {
         userName: userName,
-        userPicture: props.userDoc.user.userPicture,
-      },
+        userPicture: props.userDoc.user.userPicture
+      }
     },
-    startDate: '',
-    endDate: '',
-    tripImageUrl: '',
-    tripTags: '',
+    startDate: "",
+    endDate: "",
+    tripImageUrl: "",
+    tripTags: ""
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [tripId, setTripId] = useState('');
+  const [tripId, setTripId] = useState("");
 
   const handleChange = event => {
     event.persist();
-    if (event.target.name === 'locations') {
+    if (event.target.name === "locations") {
       //TODO currently only allows for one country to be selected otherwise will overwrite maybe?
       setValues(values => ({
         ...values,
-        [event.target.name]: [event.target.value],
+        [event.target.name]: [event.target.value]
       }));
     } else {
       setValues(values => ({
         ...values,
-        [event.target.name]: event.target.value,
+        [event.target.name]: event.target.value
       }));
     }
   };
@@ -58,10 +58,9 @@ export const CreateTrekkForm = props => {
 
     try {
       //Create Trip
-      const docRef = await db.collection('Trips').add(values);
+      const docRef = await db.collection("Trips").add(values);
       const tripDocId = docRef.id;
       setTripId(tripDocId);
-      console.log('Created trip/doc id:', tripDocId);
 
       //Add Trekk List SubCollection
       // const trekkListCollection = await db
@@ -78,8 +77,8 @@ export const CreateTrekkForm = props => {
         [`Trips.${tripDocId}`]: {
           tripName: values.tripName,
           startDate: values.startDate,
-          endDate: values.endDate,
-        },
+          endDate: values.endDate
+        }
       });
       //reset state to remove spinner & show comment of Trip Created Successfully!
       setLoading(false);
@@ -92,8 +91,8 @@ export const CreateTrekkForm = props => {
     history.push(`/trip/${tripId}`);
   }
 
-  function handleClickPlan(event){
-    history.push(`/plantrip`)
+  function handleClickPlan(event) {
+    history.push(`/plantrip`);
   }
 
   return (
@@ -131,7 +130,7 @@ export const CreateTrekkForm = props => {
               name="startDate"
               value={values.startDate}
               onChange={handleChange}
-              style={{ width: '15rem' }}
+              style={{ width: "15rem" }}
             />
             <Form.Label>End Date</Form.Label>
             <Form.Control
@@ -139,7 +138,7 @@ export const CreateTrekkForm = props => {
               name="endDate"
               value={values.endDate}
               onChange={handleChange}
-              style={{ width: '15rem' }}
+              style={{ width: "15rem" }}
             />
           </Form.Group>
           <Form.Group>

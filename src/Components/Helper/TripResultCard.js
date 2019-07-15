@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 import {
   Card,
   Badge,
@@ -7,30 +7,28 @@ import {
   Dropdown,
   Accordion,
   Button,
-  ListGroup,
-} from 'react-bootstrap';
-import moment from 'moment';
-import { Link } from 'react-router-dom';
-import SearchAPICard from '../TripPlanning/SearchAPICard';
-import db from '../../firebase';
-import userContext from '../../Contexts/userContext';
-import { useCollection } from 'react-firebase-hooks/firestore';
-import './scrollbar.css';
-import TripResultPlaceCard from '../TripPlanning/TripResultPlaceCard';
-import styles from '../UserProfile.module.css';
+  ListGroup
+} from "react-bootstrap";
+import moment from "moment";
+import { Link } from "react-router-dom";
+import SearchAPICard from "../TripPlanning/SearchAPICard";
+import db from "../../firebase";
+import userContext from "../../Contexts/userContext";
+import { useCollection } from "react-firebase-hooks/firestore";
+import "./scrollbar.css";
+import TripResultPlaceCard from "../TripPlanning/TripResultPlaceCard";
+import styles from "../UserProfile.module.css";
 
 export const TripResultCard = props => {
-  console.log('card:', props.card);
-
   const { card, tripId } = props;
 
   const [value, loading, error] = useCollection(
     db
-      .collection('Trips')
+      .collection("Trips")
       .doc(tripId)
-      .collection('TrekkList'),
+      .collection("TrekkList"),
     {
-      snapshotListenOptions: { includeMetadataChanges: true },
+      snapshotListenOptions: { includeMetadataChanges: true }
     }
   );
 
@@ -44,9 +42,9 @@ export const TripResultCard = props => {
     const daysUntilStart = Math.floor((start - today) / _MS_PER_DAY);
 
     if (daysUntilEnd > 0 && daysUntilStart < 0) {
-      return 'Trip In Progress';
+      return "Trip In Progress";
     } else if (daysUntilEnd < 0) {
-      return 'Trip Completed';
+      return "Trip Completed";
     } else {
       return false;
     }
@@ -56,21 +54,21 @@ export const TripResultCard = props => {
   return (
     <Card className={styles.TripCard}>
       <Link to={`/trip/${props.tripId}`}>
-        <Card.Title className={styles.TripTitle} style={{ fontSize: '1.6rem' }}>
+        <Card.Title className={styles.TripTitle} style={{ fontSize: "1.6rem" }}>
           {card.tripName}
         </Card.Title>
       </Link>
-      <Card.Subtitle style={{ fontSize: '.9rem' }} className="mb-2">
-        {moment(card.startDate).format('MMM D, YYYY')}
+      <Card.Subtitle style={{ fontSize: ".9rem" }} className="mb-2">
+        {moment(card.startDate).format("MMM D, YYYY")}
       </Card.Subtitle>
       {card.placeImage && <img src={card.placeImage} alt="sight" />}
       <div>
         {Object.entries(card.users).map(user => (
           <Badge
             style={{
-              color: '#D1495B',
-              backgroundColor: 'white',
-              margin: '.25rem',
+              color: "#D1495B",
+              backgroundColor: "white",
+              margin: ".25rem"
             }}
             key={user[0]}
           >
@@ -85,7 +83,7 @@ export const TripResultCard = props => {
           style={{
             // backgroundColor: '#EDAE49',
             // color: '#EDAE49',
-            margin: '.25rem',
+            margin: ".25rem"
           }}
         >
           {card.tripTags} Trip
@@ -94,11 +92,11 @@ export const TripResultCard = props => {
           <Badge
             style={{
               // backgroundColor: '#D1495B',
-              color: 'lightgray',
-              margin: '.25rem',
+              color: "lightgray",
+              margin: ".25rem"
             }}
           >
-            {' '}
+            {" "}
             Upcoming
           </Badge>
         )}
@@ -112,7 +110,7 @@ export const TripResultCard = props => {
         <Accordion>
           <Accordion.Toggle
             as={Button}
-            style={{ color: '#00798C' }}
+            style={{ color: "#00798C" }}
             variant="link"
             eventKey="0"
           >

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Jumbotron,
   Image,
@@ -6,42 +6,49 @@ import {
   Row,
   Container,
   Button,
-  Modal,
-} from 'react-bootstrap';
+  Modal
+} from "react-bootstrap";
 // import WorldMap from './WorldMap'
-import { CreateTrekkForm } from '../SingleTrip/CreateTrekkForm';
-import { WorldMap } from '../index';
+import { CreateTrekkForm } from "../SingleTrip/CreateTrekkForm";
+import { WorldMap } from "../index";
 
 export const UserProfileHeader = props => {
   const { bio, email, userName, userPicture } = props.user;
   const [isShowing, setIsShowing] = useState(false);
-  // console.log('userprofileheader', props.user)
+
   function toggle() {
     setIsShowing(!isShowing);
   }
 
   function handleClose() {
     setIsShowing(false);
-    // props.history.push(`/trip/${trip}`);
   }
 
   return (
     <div>
-      <Jumbotron style={{backgroundColor: "#30638E"}}>
+      <Jumbotron style={{ backgroundColor: "#30638E" }}>
         <Container>
           <Row>
             <Col>
               <Image
                 src={userPicture}
                 roundedCircle
-              style={{ width: '10rem', borderColor: "white", borderStyle: "solid", borderWidth: ".05rem"}}
+                style={{
+                  width: "10rem",
+                  borderColor: "white",
+                  borderStyle: "solid",
+                  borderWidth: ".05rem"
+                }}
               />
             </Col>
-            <Col style={{color: "white"}}>
+            <Col style={{ color: "white" }}>
               <h1>{userName}</h1>
               <p>{bio}</p>
               {/* <p>Trekking somewhere new?</p> */}
-              <Button style={{backgroundColor: "#D55969", borderColor: "#D55969"}} onClick={toggle}>
+              <Button
+                style={{ backgroundColor: "#D55969", borderColor: "#D55969" }}
+                onClick={toggle}
+              >
                 + Create New Trekk
               </Button>
               <Modal show={isShowing} onHide={handleClose}>

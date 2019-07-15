@@ -1,90 +1,66 @@
-import React, { useState, useContext, useEffect } from 'react';
-import { Jumbotron, Form, Button, Tabs, Tab } from 'react-bootstrap';
-import styles from '../TripPlanning.module.css';
-import {
-  SearchAPI,
-  TripSearch,
-  BucketList,
-  TrekkList,
-  CountrySelect,
-} from '../index.js';
-import 'firebase/auth';
-import userContext from '../../Contexts/userContext';
-import db from '../../firebase';
-import { useDocument } from 'react-firebase-hooks/firestore';
-import history from '../../history';
-import { Link } from 'react-router-dom';
+import React, { useState, useContext, useEffect } from "react";
+import { Jumbotron, Form, Button, Tabs, Tab } from "react-bootstrap";
+import styles from "../TripPlanning.module.css";
+import { SearchAPI, TripSearch, CountrySelect } from "../index.js";
+import "firebase/auth";
+import userContext from "../../Contexts/userContext";
+import db from "../../firebase";
+import { useDocument } from "react-firebase-hooks/firestore";
+import history from "../../history";
 
 export const TripPlanning = props => {
   const query = props.location.search;
   const countryIdx = 9;
-  const cityIdx = query.indexOf('&city=') + 6;
-  const codeIdx = query.indexOf('&code=') + 6;
-  // let countryQuery = query.substr(countryIdx, cityIdx - countryIdx - 6);
-  // let cityQuery = query.substr(cityIdx, codeIdx - cityIdx - 6);
-  // let codeQuery = query.substr(codeIdx, query.length);
+  const cityIdx = query.indexOf("&city=") + 6;
+  const codeIdx = query.indexOf("&code=") + 6;
 
-  // const TripSearch = memo();
+  const [city, setCity] = useState("");
+  const [country, setCountry] = useState("");
+  const [code, setCode] = useState("");
+  const [tripId, setTripId] = useState("");
 
-  // export const TripPlanning = () => {
-  const [city, setCity] = useState('');
-  const [country, setCountry] = useState('');
-  const [code, setCode] = useState('');
-  const [tripId, setTripId] = useState('');
-
-  // console.log(countryQuery, ',', cityQuery, ',', codeQuery);
-  // const [url, setUrl] = useState(props.location.search);
-  // const [city, setCity] = useState(cityQuery);
-  // const [country, setCountry] = useState(countryQuery);
-  // const [code, setCode] = useState(codeQuery);
   const [submitted, setSubmit] = useState(false);
 
   const loggedInUser = useContext(userContext);
 
   const [snapshot, loading, error] = useDocument(
-    db.collection('Users').doc(`${loggedInUser.uid}`),
+    db.collection("Users").doc(`${loggedInUser.uid}`),
     {
-      snapshotListenOptions: { includeMetadataChanges: false },
+      snapshotListenOptions: { includeMetadataChanges: false }
     }
   );
 
-  useEffect(() => {
-    console.log('useEffect', props.location);
-    // console.log(props.history);
-  }, [props.location]);
-
   const handleChange = (evt, type) => {
     setSubmit(false);
-    if (evt.currentTarget.name === 'city') {
+    if (evt.currentTarget.name === "city") {
       setCity(evt.target.value);
-    } else if (evt.currentTarget.name === 'country') {
-      // history.push('/plantrip')
-      setCity('');
+    } else if (evt.currentTarget.name === "country") {
+      setCity("");
       setCountry(evt.target.value);
       setCode(evt.target.selectedOptions[0].dataset.code);
     }
   };
 
   const changeTripId = (evt, type) => {
-    if (evt.currentTarget.name === 'tripId') {
+    if (evt.currentTarget.name === "tripId") {
       setTripId(evt.target.value);
     }
   };
 
   const handleSubmit = evt => {
     evt.preventDefault();
-    if (country === 'Select a Country...' || country === '') {
-      alert('Please select a country');
+    if (country === "Select a Country..." || country === "") {
+      alert("Please select a country");
     } else {
       history.replace(`/plantrip?country=${country}&city=${city}&code=${code}`);
-      setSubmit('true');
+      setSubmit("true");
     }
   };
 
   //create route for trips associated with loggedInUser
 
   if (loggedInUser) {
-    console.log('render!');
+    console.log("render!");
     return (
       <div className={styles.background}>
         <Jumbotron className={styles.tripPlanningJumbo}>
@@ -114,7 +90,10 @@ export const TripPlanning = props => {
               />
             </Form.Group>
 
-            <Button style={{backgroundColor: "#EDAE49", border: "none"}}  type="submit">
+            <Button
+              style={{ backgroundColor: "#EDAE49", border: "none" }}
+              type="submit"
+            >
               Submit
             </Button>
           </Form>
@@ -124,16 +103,13 @@ export const TripPlanning = props => {
           <>
             <div
               style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'space-around',
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-around"
               }}
             >
-              <h1 style={{ width: '65%' }} className={styles.headerFont}>
+              <h1 style={{ width: "65%" }} className={styles.headerFont}>
                 Search Results
-                {/* </h1> */}
-                {/* <h1 style={{ width: '35%' }} className={styles.headerFont}>
-            My Trips */}
               </h1>
             </div>
             <div className={styles.searchResults}>
@@ -147,9 +123,8 @@ export const TripPlanning = props => {
                       <SearchAPI
                         city={city}
                         country={country}
-                        // tripId={tripId}
                         code={code}
-                        type={'sights'}
+                        type={"sights"}
                       />
                     )}
                   </Tab>
@@ -158,9 +133,8 @@ export const TripPlanning = props => {
                       <SearchAPI
                         city={city}
                         country={country}
-                        // tripId={tripId}
                         code={code}
-                        type={'cities'}
+                        type={"cities"}
                       />
                     )}
                   </Tab>
@@ -177,50 +151,3 @@ export const TripPlanning = props => {
 };
 
 export default TripPlanning;
-{
-  /* <div className={styles.BucketList} /> */
-}
-
-{
-  /* // <Tabs defaultActiveKey="Trekk List" id="Trekk-Bucket-List"> */
-}
-{
-  /* // <Tab eventKey="Bucket List" title="Bucket List"> */
-}
-{
-  /* //   <BucketList tripId={'d26eX8KPoeNu1WtKhVfF'} />
-// </Tab>  */
-}
-{
-  /* // <Tab eventKey="Trekk List" >
-//   <Form.Control */
-}
-{
-  /* //     name="tripId"
-//     value={tripId}
-//     as="select"
-//     onChange={changeTripId}
-//   >
-//     <option>select a trip to plan</option>
-//     {snapshot && */
-}
-{
-  /* //       Object.entries(snapshot.data().Trips).map(trip => (
-//         <option key={trip[0]} value={trip[0]}>
-//           {trip[1].tripName}
-//         </option>
-//       ))}
-//   </Form.Control> */
-}
-{
-  /* //   <div>
-//     <Link to={`trip/${tripId}`}>
-//       <Button variant="info">Trip Page</Button>
-//     </Link>
-//   </div>
-//   {tripId && <TrekkList list={'trekkList'} tripId={tripId} />}
-// </Tab> */
-}
-{
-  /* // // // // // </Tabs> */
-}

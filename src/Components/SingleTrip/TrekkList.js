@@ -10,8 +10,7 @@ import { validateArgCount } from '@firebase/util';
 export const TrekkList = props => {
   const { tripId } = props;
 
-  console.log('tripId on trekklist', tripId && tripId[0].key);
-  // console.log('trekk List props', props);
+
 
   const [value, loading, error] = useCollection(
     db
