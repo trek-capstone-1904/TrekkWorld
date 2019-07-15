@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { useDocument } from "react-firebase-hooks/firestore";
 import Selector from "./Selector";
 import Notes from "./Notes";
@@ -7,12 +7,11 @@ import JournalCard from "./JournalCard";
 import { Form, CardDeck, Spinner, Badge, CardColumns } from "react-bootstrap";
 import db from "../../../firebase";
 import style from "./journal.module.css";
-import userContext from '../../../Contexts/userContext';
-
+import userContext from "../../../Contexts/userContext";
 
 const JournalDay = props => {
   //get Trekk List collection for the current trip
-  console.log(props)
+
   const loggedInUser = useContext(userContext);
   const userId = `${loggedInUser.uid}`;
   const [value, loading, error] = useDocument(
@@ -23,64 +22,61 @@ const JournalDay = props => {
       .doc(props.date)
   );
 
-  const [tripValue, tripLoading, tripError] = useDocument(db.collection('Trips').doc(props.tripId),
-  {
-    valueListenOptions: { includeMetadataChanges: true },
-  })
+  const [tripValue, tripLoading, tripError] = useDocument(
+    db.collection("Trips").doc(props.tripId),
+    {
+      valueListenOptions: { includeMetadataChanges: true }
+    }
+  );
 
-  if(tripLoading || tripError){
-    return <Spinner animation="grow" variant="info" />
+  if (tripLoading || tripError) {
+    return <Spinner animation="grow" variant="info" />;
   }
-  const {users} = tripValue.data()
+  const { users } = tripValue.data();
   //create an array to store all of the places on the Trekk List to be used in the selector drop down options
   let placesArray;
 
   if (error) throw error;
   if (loading) return <Spinner animation="grow" variant="info" />;
   if (value) {
-    console.log("value", value);
     placesArray = value.get("places");
-    console.log(placesArray);
 
     function isThisAFellowTrekker() {
-      console.log('users on trip', users);
       let trekkersIds = Object.keys(users);
       if (trekkersIds.includes(userId)) {
-        console.log('GOING ON VACATION');
+        console.log("GOING ON VACATION");
         return true;
       } else {
-        console.log('not my trip');
+        console.log("not my trip");
         return false;
       }
     }
     return (
       <div className={style.card}>
-        <h3 style={{padding: "1rem"}}>{props.date}</h3>
+        <h3 style={{ padding: "1rem" }}>{props.date}</h3>
         <Form style={{ maxWidth: "40rem", margin: "auto" }}>
           {/* query the journal date places map, put the results into an array, map over them, and render a journalCard for each place */}
 
-          {/* replace selectedOption with the values you get back from querying the Journal Date Places map */}
           {placesArray && (
-            <CardColumns style={{alignContent: "middle"}}>
+            <CardColumns style={{ alignContent: "middle" }}>
               {placesArray.map(place => (
-                <JournalCard key={place.value} place={place.value} placeUser={place.user}/>
+                <JournalCard
+                  key={place.value}
+                  place={place.value}
+                  placeUser={place.user}
+                />
               ))}
             </CardColumns>
           )}
 
-          <Form.Label>
-            {/* <Badge pill variant="info">
-              Add a Location:
-            </Badge> */}
-          </Form.Label>
+          <Form.Label />
           <div>
-            {/* <div>Notes</div> */}
             <AllNotes tripId={props.tripId} date={props.date} />
-            <div style={{display: "flex", justifyContent: "center"}}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
               {isThisAFellowTrekker() && (
                 <>
-                <Notes tripId={props.tripId} date={props.date} />
-                <Selector tripId={props.tripId} date={props.date} />
+                  <Notes tripId={props.tripId} date={props.date} />
+                  <Selector tripId={props.tripId} date={props.date} />
                 </>
               )}
             </div>

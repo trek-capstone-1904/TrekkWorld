@@ -1,6 +1,6 @@
-import React, { useState, useContext } from 'react';
-import moment from 'moment';
-import db from '../../firebase';
+import React, { useState, useContext } from "react";
+import moment from "moment";
+import db from "../../firebase";
 import {
   Spinner,
   Jumbotron,
@@ -9,32 +9,32 @@ import {
   Modal,
   Card,
   Badge,
-  InputGroup,
-} from 'react-bootstrap';
-import userContext from '../../Contexts/userContext';
-import { useDocument } from 'react-firebase-hooks/firestore';
-import { Link } from 'react-router-dom';
-import { AddTrekker, TripMap, PhotoLoad } from '../index';
+  InputGroup
+} from "react-bootstrap";
+import userContext from "../../Contexts/userContext";
+import { useDocument } from "react-firebase-hooks/firestore";
+import { Link } from "react-router-dom";
+import { AddTrekker, TripMap, PhotoLoad } from "../index";
 import {
   SearchAPI,
   TripSearch,
   BucketList,
   TrekkList,
   CountrySelect,
-  TripAlbum,
-} from '../index.js';
-import firebase from 'firebase/app';
-import styles from '../TripPage.module.css';
-import Toast from '../TripPlanning/Toast'
+  TripAlbum
+} from "../index.js";
+import firebase from "firebase/app";
+import styles from "../TripPage.module.css";
+import Toast from "../TripPlanning/Toast";
 
 export const TripPage = props => {
   const loggedInUser = useContext(userContext);
   const userId = `${loggedInUser.uid}`;
 
   const [trip, loading, error] = useDocument(
-    db.collection('Trips').doc(props.match.params.tripId),
+    db.collection("Trips").doc(props.match.params.tripId),
     {
-      valueListenOptions: { includeMetadataChanges: true },
+      valueListenOptions: { includeMetadataChanges: true }
     }
   );
   const tripId = props.match.params.tripId;
@@ -60,18 +60,18 @@ export const TripPage = props => {
 
   const handleDelete = (uid, tripId) => {
     //remove entry from User
-    const userRef = db.collection('Users').doc(uid);
-    const tripRef = db.collection('Trips').doc(tripId);
+    const userRef = db.collection("Users").doc(uid);
+    const tripRef = db.collection("Trips").doc(tripId);
 
     // Remove the Trip from the User collection
 
     const removeTripfromUser = userRef.update({
-      [`Trips.${tripId}`]: firebase.firestore.FieldValue.delete(),
+      [`Trips.${tripId}`]: firebase.firestore.FieldValue.delete()
     });
 
     // //Remove User from Trip Collection doc
     const removeUserfromTrip = tripRef.update({
-      [`users.${uid}`]: firebase.firestore.FieldValue.delete(),
+      [`users.${uid}`]: firebase.firestore.FieldValue.delete()
     });
   };
 
@@ -85,7 +85,7 @@ export const TripPage = props => {
       startDate,
       tripTags,
       tripImageUrl,
-      users,
+      users
     } = trip.data();
 
     const today = new Date();
@@ -95,34 +95,32 @@ export const TripPage = props => {
     const _MS_PER_DAY = 1000 * 60 * 60 * 24;
     const daysRemaining = Math.floor((start - today) / _MS_PER_DAY);
     const totalDays = Math.floor((end - start) / _MS_PER_DAY);
-    console.log('days left', daysRemaining);
 
     function isThisAFellowTrekker() {
-      console.log('users on trip', users);
       let trekkersIds = Object.keys(users);
       if (trekkersIds.includes(userId)) {
-        console.log('GOING ON VACATION');
+        console.log("GOING ON VACATION");
         return true;
       } else {
-        console.log('not my trip');
+        console.log("not my trip");
         return false;
       }
     }
 
     return (
       <div className={styles.tripPage}>
-        <div className={styles.mobile} style={{ width: '70vw' }}>
+        <div className={styles.mobile} style={{ width: "70vw" }}>
           <Jumbotron className={styles.Jumbotron}>
             <div>
               <h1 className={styles.headerTrip}>{tripName}</h1>
               {daysRemaining < 0 ? (
-                <Badge style={{ margin: '.5rem' }} variant="success">
+                <Badge style={{ margin: ".5rem" }} variant="success">
                   Trip completed
                 </Badge>
               ) : (
                 <div>
                   <h3>
-                    Days until Trekk:{' '}
+                    Days until Trekk:{" "}
                     <Badge className="badge-pill" variant="success">
                       {daysRemaining}
                     </Badge>
@@ -138,7 +136,7 @@ export const TripPage = props => {
                 <Button
                   variant="info"
                   className={styles.specialBlue}
-                  style={{ marginTop: '1rem' }}
+                  style={{ marginTop: "1rem" }}
                   onClick={openTrekkPlan}
                 >
                   Add Activities to Trekk
@@ -148,19 +146,19 @@ export const TripPage = props => {
             <TripMap countries={locations} />
           </Jumbotron>
           <h3
-            style={{ textAlign: 'left', marginLeft: '1rem' }}
+            style={{ textAlign: "left", marginLeft: "1rem" }}
             className={styles.headerTrip}
           >
             Trekk Activities Planned
           </h3>
-          {/* {daysRemaining > 0 && <Button>Add Activities to Trekk</Button>} */}
+
           <TrekkList tripId={tripId} />
         </div>
         <div
           style={{
-            backgroundColor: '#30638E',
-            width: '30vw',
-            minHeight: '100vh',
+            backgroundColor: "#30638E",
+            width: "30vw",
+            minHeight: "100vh"
           }}
         >
           <Card className={styles.tripInfoCard}>
@@ -168,44 +166,43 @@ export const TripPage = props => {
               <Card.Title className={styles.headerTrip}>
                 <h4>Trip Details</h4>
               </Card.Title>
-              <Card.Text style={{ padding: '0 1rem' }}>
-                Dates: {moment(startDate).format('MMM D, YYYY')} -{' '}
-                {moment(endDate).format('MMM D, YYYY')}{' '}
+              <Card.Text style={{ padding: "0 1rem" }}>
+                Dates: {moment(startDate).format("MMM D, YYYY")} -{" "}
+                {moment(endDate).format("MMM D, YYYY")}{" "}
               </Card.Text>
-              <Card.Text style={{ padding: '0 1rem' }}>
-                Total Days: {totalDays}{' '}
+              <Card.Text style={{ padding: "0 1rem" }}>
+                Total Days: {totalDays}{" "}
               </Card.Text>
-              <Card.Text style={{ padding: '0 1rem' }}>
+              <Card.Text style={{ padding: "0 1rem" }}>
                 Countries:
                 {locations.map(country => (
                   <Badge variant="info"> {country}</Badge>
                 ))}
               </Card.Text>
-              <Card.Text style={{ padding: '0 1rem' }}>
-                {' '}
-                Trip type: {tripTags}{' '}
+              <Card.Text style={{ padding: "0 1rem" }}>
+                {" "}
+                Trip type: {tripTags}{" "}
               </Card.Text>
             </Card.Body>
           </Card>
           <div>
             <hr />
-            <h4 className={styles.headerTrip} style={{ margin: '1rem' }}>
+            <h4 className={styles.headerTrip} style={{ margin: "1rem" }}>
               Trekkers
             </h4>
             <ul className={`list-unstyled ${styles.listTrekkers}`}>
-              {/* <h5>Fellow Trekkers</h5> */}
               {Object.entries(users).map(user => (
                 <Media
                   key={user[0]}
                   as="li"
                   style={{
-                    alignItems: 'center',
+                    alignItems: "center",
                     // border: '1px dotted teal',
-                    float: 'left',
-                    backgroundColor: '#e9ecef',
-                    justifyContent: 'center',
-                    margin: '.1rem',
-                    width: '15rem',
+                    float: "left",
+                    backgroundColor: "#e9ecef",
+                    justifyContent: "center",
+                    margin: ".1rem",
+                    width: "15rem"
                   }}
                 >
                   <img
@@ -217,8 +214,8 @@ export const TripPage = props => {
                   />
                   <Link to={`/profile/${user[0]}`}>
                     <Media.Body>
-                      <p style={{ margin: '0', paddingRight: '.3rem' }}>
-                        {' '}
+                      <p style={{ margin: "0", paddingRight: ".3rem" }}>
+                        {" "}
                         {user[1].userName}
                       </p>
                     </Media.Body>
@@ -238,7 +235,7 @@ export const TripPage = props => {
               {isThisAFellowTrekker() && (
                 <Button
                   variant="light"
-                  style={{ margin: '.5rem' }}
+                  style={{ margin: ".5rem" }}
                   onClick={toggleForm}
                 >
                   + New Trekker
@@ -267,13 +264,13 @@ export const TripPage = props => {
           <hr />
           <div
             style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignContent: 'start',
+              display: "flex",
+              justifyContent: "space-between",
+              alignContent: "start"
             }}
           >
-            <h4 className={styles.headerTrip} style={{ margin: '.2rem 1rem' }}>
-              Trip Images from Trekkers{' '}
+            <h4 className={styles.headerTrip} style={{ margin: ".2rem 1rem" }}>
+              Trip Images from Trekkers{" "}
             </h4>
             {isThisAFellowTrekker() && (
               <PhotoLoad from="trip" tripId={props.tripId} />

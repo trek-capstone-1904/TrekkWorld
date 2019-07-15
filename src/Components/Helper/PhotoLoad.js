@@ -11,7 +11,7 @@ export const PhotoLoad = props => {
   const loggedInUser = useContext(userContext);
   const userName = `${loggedInUser.displayName}`;
   const userId = `${loggedInUser.uid}`;
-  console.log(loggedInUser);
+
   const [progressValue, setProgressValue] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [addImage, setAddImage] = useState(false);
