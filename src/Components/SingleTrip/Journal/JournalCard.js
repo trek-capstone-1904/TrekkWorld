@@ -27,13 +27,17 @@ export const JournalCard = props => {
             src={`${placeInfo.sight.placeImage}&key=${secret.places}`}
           />
 
-          <Card.Body style={{ maxHeight: "6rem", justifyContent: "center" }}>
+          <Card.Body style={{ justifyContent: "center" }}>
+          <>
             <Card.Text>
               {placeInfo.sight.name}
-              <Card.Footer style={{ fontSize: ".8rem" }} className="mb-2 text-muted">
+              <br />
+              <span style={{ fontSize: ".8rem" }} className="mb-2 text-muted">
                 Added by {props.placeUser}
-              </Card.Footer>
+              </span>
+
             </Card.Text>
+            </>
             {/* <Rating /> */}
           </Card.Body>
 
