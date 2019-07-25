@@ -25,7 +25,6 @@ export const BucketList = props => {
         {/* //TODO: add spinner */}
         {snapshot &&
           snapshot.data().bucketList &&
-          // <span style={{ display: 'flex', flexDirection: 'row' }}>
           Object.keys(snapshot.data().bucketList).map(key => {
             return (
               <BucketListCard
@@ -36,7 +35,7 @@ export const BucketList = props => {
               />
             );
           })
-          // </span>
+
         }
       </CardGroup>
     </div>

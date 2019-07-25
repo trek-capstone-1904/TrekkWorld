@@ -40,11 +40,6 @@ export const NavigationBar = () => {
         </p>
       </Nav>
       <Nav className="justify-content-end">
-        {/* <LinkContainer to="/profile">
-          <Nav.Link>
-            <TripSelectNav />
-          </Nav.Link>
-        </LinkContainer> */}
         <TripSelectNav />
         <LinkContainer to="/profile">
           <Nav.Link>My Profile</Nav.Link>
