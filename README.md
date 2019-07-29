@@ -45,22 +45,11 @@ See the section about deployment for more information.
 npm run eject
 Note: this is a one-way operation. Once you eject, you can’t go back!
 
-If you aren’t satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except eject will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use eject. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.\_
-
-_What does your user need to know to get everything ready after installation?_
-_Think about databases, config files, and settings._
-
-_Set up a cloud Firestore Account_
+Set up a cloud Firestore Account
 
 ## Usage
 
 _Give your users a sense of the workflow for using your project/tool._
-_For a website this might include code for running locally._
-_For an API this might include method and parameter specs._
 
 ## Demo
 
@@ -89,4 +78,4 @@ Your patches are welcome. Here's our suggested workflow:
 
 ## Copyright and attribution
 
-Copyright (c) 2016 DataMade. Released under the [MIT License](https://github.com/datamade/your-repo-here/blob/master/LICENSE).
+Copyright (c) 2019 DataMade. Released under the [MIT License](https://github.com/datamade/your-repo-here/blob/master/LICENSE).
