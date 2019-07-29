@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import * as secret from '../../secrets';
-import SearchAPICard from './SearchAPICard';
-import { CardColumns } from 'react-bootstrap';
-import styles from '../SearchAPICard.module.css';
+import React, { useState, useEffect } from "react";
+import * as secret from "../../secrets";
+import SearchAPICard from "./SearchAPICard";
+import { CardColumns } from "react-bootstrap";
+import styles from "../SearchAPICard.module.css";
 
 function useFetch(url, defaultData) {
   const [data, updateData] = useState(defaultData);
@@ -20,18 +20,18 @@ function useFetch(url, defaultData) {
 
 function fakeData(type) {
   let data;
-  if (type === 'sights') {
-    data = require('../../TestAPIResults/ParisQuery.json');
-  } else if (type === 'cities') {
-    data = require('../../TestAPIResults/FranceQuery.json');
+  if (type === "sights") {
+    data = require("../../TestAPIResults/ParisQuery.json");
+  } else if (type === "cities") {
+    data = require("../../TestAPIResults/FranceQuery.json");
   }
   return data;
 }
 
 function useFetchSights(city, country, code) {
   city = city.slice(0, 1).toUpperCase() + city.slice(1);
-  if (city.includes(' ')) {
-    city = city.split(' ').join('_');
+  if (city.includes(" ")) {
+    city = city.split(" ").join("_");
   }
 
   const query = `https://www.triposo.com/api/20181213/poi.json?tag_labels=eatingout|sightseeing&location_id=${city}&countrycode=${code}&order_by=-score&count=15&fields=snippet,id,name,location_id,score,tag_labels,coordinates&account=${
@@ -69,9 +69,8 @@ export const SearchAPI = props => {
   // const [sights, setSights] = useState({});
   const sightsToSee = useFetchSights(city, country, code);
   const popularCities = useFetchCities(country, code);
-  console.log('sightsToSee', sightsToSee.results && sightsToSee.results);
 
-  if (type === 'sights') {
+  if (type === "sights") {
     return (
       <div>
         <h4>Sightseeing Spots</h4>

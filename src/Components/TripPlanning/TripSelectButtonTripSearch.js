@@ -1,60 +1,55 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState } from "react";
 import {
   Card,
   Button,
   ButtonGroup,
   DropdownButton,
   Dropdown,
-  Form,
-} from 'react-bootstrap';
-import { useDocument } from 'react-firebase-hooks/firestore';
-import styles from '../SearchAPICard.module.css';
-import db from '../../firebase';
-import userContext from '../../Contexts/userContext';
-import firebase from 'firebase/app';
-import * as secret from '../../secrets';
-import Axios from 'axios';
+  Form
+} from "react-bootstrap";
+import { useDocument } from "react-firebase-hooks/firestore";
+import styles from "../SearchAPICard.module.css";
+import db from "../../firebase";
+import userContext from "../../Contexts/userContext";
+import firebase from "firebase/app";
+import * as secret from "../../secrets";
+import Axios from "axios";
 
 export const TripSelectButtonTripSearch = props => {
-  console.log(
-    'tripselectButtonTripSearch is hitting and here are the props',
-    props
-  );
   const loggedInUser = useContext(userContext);
   const { placeId } = props.button;
   const { placeImage, placeName, snippet } = props.button.card;
   const { uid } = loggedInUser;
-  console.log('placeName outside handleClick', placeId);
 
   const [snapshot, loading, error] = useDocument(
-    db.collection('Users').doc(`${loggedInUser.uid}`),
+    db.collection("Users").doc(`${loggedInUser.uid}`),
     {
-      snapshotListenOptions: { includeMetadataChanges: false },
+      snapshotListenOptions: { includeMetadataChanges: false }
     }
   );
 
   const handleClick = (slicedImage, uid, placeId, placeName, snippet, evt) => {
     //add to Trekklist
     const tripId = evt;
-    console.log('handleClick Args', tripId);
-    db.collection('Trips')
+
+    db.collection("Trips")
       .doc(`${tripId}`)
-      .collection('TrekkList')
+      .collection("TrekkList")
       .doc(`${placeId}`)
       .set(
         {
           placeName: placeName,
           snippet: snippet,
-          placeImage: slicedImage,
+          placeImage: slicedImage
         },
         { merge: true }
       );
 
     // delete from bucketList
-    db.collection('Users')
+    db.collection("Users")
       .doc(uid)
       .update({
-        [`bucketList.${placeId}`]: firebase.firestore.FieldValue.delete(),
+        [`bucketList.${placeId}`]: firebase.firestore.FieldValue.delete()
       });
   };
 
