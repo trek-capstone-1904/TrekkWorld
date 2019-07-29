@@ -55,3 +55,12 @@
     margin: 2rem;
   }
 }
+
+@media (max-width: 1100px) {
+  .CardColumn {
+    column-count:2
+  }
+  .dayJumbo {
+    margin: 2rem;
+  }
+}
